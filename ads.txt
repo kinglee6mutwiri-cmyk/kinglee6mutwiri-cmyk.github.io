@@ -1,1 +1,0 @@
-echo "google.com, pub-5799841502846177, DIRECT, f08c47fec0942fa0" > ads.txt
