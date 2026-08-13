@@ -1,5 +1,5 @@
 /* =========================================
-   AMERICA-AI — PROFESSIONAL WEBSITE THEME
+   AMERICA AI — PREMIUM GLOBAL DESIGN
    ========================================= */
 
 * {
@@ -14,38 +14,149 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #0b1020;
-    color: #f5f7ff;
+    background: #f4f7fb !important;
+    color: #172033 !important;
     line-height: 1.7;
     min-height: 100vh;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
+/* Links */
 a {
-    color: inherit;
     text-decoration: none;
 }
 
-button,
-a {
-    -webkit-tap-highlight-color: transparent;
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
 }
 
-/* Main page container */
-.container {
-    width: 92%;
-    max-width: 1200px;
-    margin: 0 auto;
+/* Main content */
+main,
+section {
+    position: relative;
 }
 
 /* Selection */
 ::selection {
-    background: #6c63ff;
+    background: #315bea;
     color: #ffffff;
 }
 
+/* =========================================
+   HEADER
+   ========================================= */
+
+header {
+    position: relative;
+    z-index: 1000;
+}
+
+/* =========================================
+   NAVIGATION
+   ========================================= */
+
+.navbar {
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+/* Navigation links */
+.navbar a {
+    transition: all 0.25s ease;
+}
+
+.navbar a:hover {
+    transform: translateY(-2px);
+    opacity: 0.85;
+}
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+
+button,
+.btn,
+a[role="button"] {
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease,
+                opacity 0.25s ease;
+}
+
+button:hover,
+.btn:hover,
+a[role="button"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================================
+   CARDS
+   ========================================= */
+
+.card,
+.category-card,
+.article-card {
+    border-radius: 20px;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.card:hover,
+.category-card:hover,
+.article-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(20, 35, 70, 0.15);
+}
+
+/* =========================================
+   CONTENT IMAGES
+   ========================================= */
+
+section img {
+    border-radius: 16px;
+}
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    .container {
+        width: 92%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    body {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: clamp(2rem, 9vw, 3.2rem);
+    }
+
+    h2 {
+        font-size: clamp(1.5rem, 7vw, 2.3rem);
+    }
+
+    .navbar {
+        padding: 12px !important;
+    }
+
+    button,
+    .btn {
+        min-height: 48px;
+    }
+}
+
+/* =========================================
+   ACCESSIBILITY
+   ========================================= */
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #315bea;
+    outline-offset: 3px;
+}
