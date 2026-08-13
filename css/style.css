@@ -160,3 +160,50 @@ button:focus-visible {
     outline: 3px solid #315bea;
     outline-offset: 3px;
 }
+/* =========================================
+   PREMIUM HEADER
+   ========================================= */
+
+header {
+    background: linear-gradient(135deg, #061a38, #0b3b78) !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
+}
+
+header .logo {
+    letter-spacing: -0.5px;
+}
+
+.navbar {
+    background: rgba(4, 24, 52, 0.92) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.navbar a {
+    color: #ffffff !important;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+.navbar a:hover {
+    color: #8fb7ff !important;
+    transform: translateY(-2px);
+}
+/* =========================================
+   MOBILE NAVIGATION
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px 14px;
+        padding: 14px 10px !important;
+    }
+
+    .navbar a {
+        font-size: 14px;
+        padding: 5px 2px;
+    }
+}
