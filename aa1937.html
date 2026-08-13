@@ -1,0 +1,1276 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>America AI</title>
+
+  <!-- 1. GOOGLE ANALYTICS 4 - FOR ANALYSIS -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X3HE9CKP90"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-X3HE9CKP90');
+  </script>
+
+  <!-- 2. GOOGLE ADSENSE - FOR ADS -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5799841502846177"
+     crossorigin="anonymous"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#07111f;
+      --bg-soft:#0d1a2d;
+      --surface:rgba(16,28,48,.72);
+      --surface-2:rgba(11,19,34,.82);
+      --line:rgba(173,210,255,.16);
+      --text:#eef6ff;
+      --muted:#9db0c9;
+      --accent:#58d6ff;
+      --accent-2:#6effa8;
+      --danger:#ff7b7b;
+      --gold:#ffd36e;
+      --shadow:0 18px 50px rgba(0,0,0,.35);
+      --radius:24px;
+      --max:1240px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 20% 20%, rgba(88,214,255,.12), transparent 26%),
+        radial-gradient(circle at 80% 10%, rgba(110,255,168,.10), transparent 24%),
+        radial-gradient(circle at 50% 100%, rgba(255,211,110,.08), transparent 28%),
+        linear-gradient(180deg,#07111f 0%, #091523 35%, #0a1220 100%);
+      font-family:"Manrope", sans-serif;
+      overflow-x:hidden;
+    }
+
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      background:
+        linear-gradient(rgba(255,255,255,.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.02) 1px, transparent 1px);
+      background-size:34px 34px;
+      mask-image:radial-gradient(circle at center, black 40%, transparent 90%);
+      opacity:.35;
+    }
+
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:min(var(--max), calc(100% - 2rem));margin-inline:auto}
+
+    .reveal{
+      opacity:0;
+      transform:translateY(24px);
+      transition:opacity .7s ease, transform .7s ease;
+    }
+    .reveal.visible{
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    .stagger > *{
+      opacity:0;
+      transform:translateY(20px);
+      animation:rise .75s ease forwards;
+    }
+    .stagger > *:nth-child(1){animation-delay:.08s}
+    .stagger > *:nth-child(2){animation-delay:.18s}
+    .stagger > *:nth-child(3){animation-delay:.28s}
+    .stagger > *:nth-child(4){animation-delay:.38s}
+    .stagger > *:nth-child(5){animation-delay:.48s}
+    .stagger > *:nth-child(6){animation-delay:.58s}
+
+    @keyframes rise{
+      from{opacity:0;transform:translateY(20px)}
+      to{opacity:1;transform:translateY(0)}
+    }
+
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter:blur(16px);
+      background:linear-gradient(180deg, rgba(7,17,31,.86), rgba(7,17,31,.48));
+      border-bottom:1px solid var(--line);
+    }
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      min-height:74px;
+      gap:1rem;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:.9rem;
+      font-weight:800;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+    .brand-mark{
+      width:42px;height:42px;border-radius:14px;
+      background:
+        linear-gradient(135deg, rgba(88,214,255,.18), rgba(110,255,168,.18)),
+        var(--surface);
+      border:1px solid var(--line);
+      display:grid;place-items:center;
+      box-shadow:var(--shadow);
+      font-family:"Bebas Neue", sans-serif;
+      font-size:1.2rem;
+      color:var(--accent);
+    }
+    .nav-links{
+      display:flex;
+      gap:1.1rem;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+    .nav-links a{
+      color:var(--muted);
+      font-size:.95rem;
+      transition:.25s ease;
+    }
+    .nav-links a:hover{color:var(--text)}
+    .nav-cta{
+      padding:.85rem 1.1rem;
+      border-radius:999px;
+      border:1px solid rgba(88,214,255,.35);
+      background:linear-gradient(135deg, rgba(88,214,255,.14), rgba(110,255,168,.10));
+      color:var(--text);
+      font-weight:700;
+      transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+    .nav-cta:hover{
+      transform:translateY(-2px) scale(1.02);
+      box-shadow:0 12px 30px rgba(88,214,255,.16);
+      border-color:rgba(88,214,255,.58);
+    }
+
+    .hero{
+      position:relative;
+      padding:clamp(3rem, 6vw, 6rem) 0 2rem;
+      overflow:hidden;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:1.25rem;
+      align-items:stretch;
+    }
+    .hero-copy,
+    .hero-panel{
+      border:1px solid var(--line);
+      border-radius:calc(var(--radius) + 6px);
+      background:linear-gradient(180deg, rgba(16,28,48,.76), rgba(11,19,34,.86));
+      backdrop-filter:blur(14px);
+      box-shadow:var(--shadow);
+    }
+    .hero-copy{
+      padding:clamp(1.5rem, 3vw, 3rem);
+      position:relative;
+      overflow:hidden;
+    }
+    .hero-copy::before{
+      content:"";
+      position:absolute;
+      right:-12%;
+      top:-10%;
+      width:240px;height:240px;border-radius:50%;
+      background:radial-gradient(circle, rgba(88,214,255,.22), transparent 62%);
+      filter:blur(12px);
+    }
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:.55rem;
+      padding:.4rem .75rem;
+      border-radius:999px;
+      color:var(--accent);
+      border:1px solid rgba(88,214,255,.24);
+      background:rgba(88,214,255,.08);
+      font-size:.84rem;
+      font-weight:700;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+    }
+    .hero h1{
+      margin:.95rem 0 .85rem;
+      font-family:"Bebas Neue", sans-serif;
+      font-size:clamp(3.6rem, 10vw, 8rem);
+      line-height:.9;
+      letter-spacing:.02em;
+      font-weight:400;
+    }
+    .hero h1 .accent{color:var(--accent)}
+    .hero p.lead{
+      max-width:62ch;
+      color:var(--muted);
+      font-size:clamp(1rem, 1.6vw, 1.14rem);
+      line-height:1.75;
+      margin:0 0 1.4rem;
+    }
+    .hero-actions{
+      display:flex;
+      gap:.85rem;
+      flex-wrap:wrap;
+      margin-bottom:1.25rem;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:.6rem;
+      min-height:50px;
+      padding:0 1.15rem;
+      border-radius:999px;
+      border:1px solid var(--line);
+      font-weight:800;
+      transition:transform .2s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease;
+      cursor:pointer;
+    }
+    .btn:hover{transform:translateY(-2px)}
+    .btn:active{transform:translateY(0) scale(.98)}
+    .btn-primary{
+      background:linear-gradient(135deg, var(--accent), #7ee4ff);
+      color:#03101b;
+      border-color:transparent;
+      box-shadow:0 14px 34px rgba(88,214,255,.26);
+    }
+    .btn-primary:hover{box-shadow:0 18px 42px rgba(88,214,255,.32)}
+    .btn-secondary{
+      background:rgba(255,255,255,.03);
+      color:var(--text);
+    }
+    .btn-secondary:hover{
+      border-color:rgba(255,255,255,.26);
+      background:rgba(255,255,255,.05);
+    }
+
+    .hero-metrics{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0,1fr));
+      gap:.85rem;
+      margin-top:1.25rem;
+    }
+    .metric{
+      padding:1rem;
+      border:1px solid var(--line);
+      border-radius:20px;
+      background:rgba(255,255,255,.025);
+    }
+    .metric strong{
+      display:block;
+      font-size:1.3rem;
+      color:var(--text);
+    }
+    .metric span{
+      color:var(--muted);
+      font-size:.92rem;
+    }
+
+    .hero-panel{
+      padding:1rem;
+      display:grid;
+      grid-template-rows:auto 1fr auto;
+      gap:1rem;
+      min-height:560px;
+    }
+    .panel-top{
+      display:flex;
+      justify-content:space-between;
+      gap:1rem;
+      align-items:start;
+      padding:.3rem .2rem;
+    }
+    .panel-title{
+      font-size:.95rem;
+      color:var(--muted);
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      font-weight:800;
+    }
+    .status{
+      color:var(--accent-2);
+      font-weight:800;
+      font-size:.88rem;
+      padding:.4rem .7rem;
+      border-radius:999px;
+      border:1px solid rgba(110,255,168,.24);
+      background:rgba(110,255,168,.08);
+      white-space:nowrap;
+    }
+
+    .flight-board{
+      position:relative;
+      border:1px solid var(--line);
+      border-radius:24px;
+      overflow:hidden;
+      min-height:320px;
+      background:
+        radial-gradient(circle at 75% 20%, rgba(88,214,255,.16), transparent 26%),
+        linear-gradient(180deg, rgba(255,255,255,.025), rgba(255,255,255,.01)),
+        #091322;
+    }
+    .flight-board svg{width:100%;height:100%}
+    .route-tag{
+      position:absolute;
+      padding:.55rem .8rem;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.14);
+      backdrop-filter:blur(12px);
+      background:rgba(9,19,34,.58);
+      font-size:.84rem;
+      font-weight:700;
+      box-shadow:var(--shadow);
+    }
+    .route-tag.start{left:6%; top:18%}
+    .route-tag.end{right:7%; bottom:18%}
+    .route-tag.alert{left:50%; top:48%; transform:translate(-50%, -50%); color:var(--gold)}
+    .panel-bottom{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:.9rem;
+    }
+    .log{
+      padding:1rem;
+      border:1px solid var(--line);
+      border-radius:20px;
+      background:rgba(255,255,255,.025);
+    }
+    .log small{
+      display:block;
+      color:var(--muted);
+      margin-bottom:.35rem;
+      text-transform:uppercase;
+      letter-spacing:.07em;
+      font-weight:800;
+    }
+    .log strong{
+      display:block;
+      font-size:1rem;
+      line-height:1.5;
+    }
+
+    section{padding:2rem 0}
+    .section-head{
+      display:grid;
+      grid-template-columns:.7fr 1.3fr;
+      gap:1.2rem;
+      align-items:end;
+      margin-bottom:1.5rem;
+    }
+    .section-head .label{
+      color:var(--accent);
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      font-size:.78rem;
+      font-weight:800;
+      margin-bottom:.55rem;
+      display:block;
+    }
+    .section-head h2{
+      margin:0;
+      font-family:"Bebas Neue", sans-serif;
+      font-size:clamp(2.4rem, 5vw, 4.3rem);
+      line-height:.95;
+      font-weight:400;
+      letter-spacing:.02em;
+    }
+    .section-head p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.8;
+      max-width:68ch;
+    }
+
+    .notice{
+      border:1px solid rgba(255,123,123,.24);
+      background:linear-gradient(180deg, rgba(255,123,123,.09), rgba(255,123,123,.03));
+      border-radius:24px;
+      padding:1.2rem;
+      display:grid;
+      grid-template-columns:auto 1fr;
+      gap:1rem;
+      align-items:start;
+      box-shadow:var(--shadow);
+    }
+    .notice-icon{
+      width:48px;height:48px;border-radius:16px;
+      display:grid;place-items:center;
+      background:rgba(255,123,123,.12);
+      border:1px solid rgba(255,123,123,.24);
+      color:var(--danger);
+      font-weight:900;
+    }
+    .notice h3{margin:.1rem 0 .4rem;font-size:1.05rem}
+    .notice p{margin:0;color:var(--muted);line-height:1.7}
+
+    .timeline{
+      display:grid;
+      grid-template-columns:280px 1fr;
+      gap:1.2rem;
+      margin-top:1.4rem;
+    }
+    .timeline-index{
+      position:sticky;
+      top:96px;
+      align-self:start;
+      border:1px solid var(--line);
+      border-radius:24px;
+      background:var(--surface);
+      backdrop-filter:blur(12px);
+      padding:1rem;
+    }
+    .timeline-index h3{
+      margin:.1rem 0 .9rem;
+      font-size:.96rem;
+      color:var(--muted);
+      text-transform:uppercase;
+      letter-spacing:.08em;
+    }
+    .chapter-nav{
+      display:grid;
+      gap:.45rem;
+    }
+    .chapter-nav a{
+      padding:.65rem .8rem;
+      border-radius:14px;
+      color:var(--muted);
+      border:1px solid transparent;
+      transition:.2s ease;
+      font-size:.95rem;
+    }
+    .chapter-nav a:hover{
+      color:var(--text);
+      background:rgba(255,255,255,.03);
+      border-color:var(--line);
+      transform:translateX(4px);
+    }
+
+    .chapters{
+      display:grid;
+      gap:1rem;
+    }
+    .chapter{
+      display:grid;
+      grid-template-columns:110px 1fr;
+      gap:1rem;
+      border:1px solid var(--line);
+      border-radius:28px;
+      background:linear-gradient(180deg, rgba(16,28,48,.72), rgba(11,19,34,.84));
+      padding:1rem;
+      box-shadow:var(--shadow);
+    }
+    .chapter-no{
+      border-radius:22px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.025);
+      min-height:100%;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:1rem;
+    }
+    .chapter-no span{
+      font-family:"Bebas Neue", sans-serif;
+      font-size:2.8rem;
+      line-height:1;
+      color:var(--accent);
+    }
+    .chapter-no small{
+      color:var(--muted);
+      text-transform:uppercase;
+      letter-spacing:.1em;
+      font-weight:800;
+      margin-top:.3rem;
+    }
+    .chapter-content h3{
+      margin:.1rem 0 .55rem;
+      font-size:1.2rem;
+    }
+    .chapter-content p{
+      margin:.45rem 0;
+      color:var(--muted);
+      line-height:1.82;
+    }
+
+    .gallery{
+      display:grid;
+      grid-template-columns:1.2fr .8fr .8fr;
+      gap:1rem;
+      margin-top:1rem;
+    }
+    .visual{
+      position:relative;
+      min-height:220px;
+      overflow:hidden;
+      border-radius:28px;
+      border:1px solid var(--line);
+      background:linear-gradient(180deg, rgba(16,28,48,.72), rgba(11,19,34,.84));
+      box-shadow:var(--shadow);
+    }
+    .visual svg{width:100%;height:100%}
+    .visual-copy{
+      position:absolute;
+      inset:auto 1rem 1rem 1rem;
+      padding:1rem;
+      border-radius:18px;
+      background:rgba(5,10,18,.48);
+      backdrop-filter:blur(10px);
+      border:1px solid rgba(255,255,255,.08);
+    }
+    .visual-copy h3{margin:0 0 .35rem;font-size:1rem}
+    .visual-copy p{margin:0;color:var(--muted);font-size:.93rem;line-height:1.6}
+
+    .cta{
+      margin:2rem 0 3rem;
+      border:1px solid var(--line);
+      border-radius:34px;
+      overflow:hidden;
+      background:
+        radial-gradient(circle at 15% 30%, rgba(88,214,255,.14), transparent 24%),
+        radial-gradient(circle at 85% 70%, rgba(110,255,168,.1), transparent 24%),
+        linear-gradient(135deg, rgba(16,28,48,.86), rgba(8,15,27,.96));
+      box-shadow:var(--shadow);
+    }
+    .cta-inner{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:1.2rem;
+      align-items:center;
+      padding:clamp(1.4rem, 3vw, 2.4rem);
+    }
+    .cta h2{
+      margin:0 0 .75rem;
+      font-family:"Bebas Neue", sans-serif;
+      font-size:clamp(2.6rem, 6vw, 5rem);
+      line-height:.95;
+      font-weight:400;
+    }
+    .cta p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.8;
+      max-width:60ch;
+    }
+    .cta-panel{
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:1rem;
+      background:rgba(255,255,255,.03);
+    }
+    .cta-panel ul{
+      margin:0;
+      padding-left:1.15rem;
+      color:var(--muted);
+      line-height:1.9;
+    }
+
+    footer{
+      padding:1.5rem 0 3rem;
+      color:var(--muted);
+    }
+    .footer-grid{
+      display:flex;
+      justify-content:space-between;
+      gap:1rem;
+      flex-wrap:wrap;
+      border-top:1px solid var(--line);
+      padding-top:1.2rem;
+    }
+
+    .ads-slot{
+      margin-top:1rem;
+      padding:1rem;
+      border:1px dashed rgba(255,255,255,.16);
+      border-radius:20px;
+      color:var(--muted);
+      font-size:.92rem;
+      background:rgba(255,255,255,.02);
+    }
+
+    @media (max-width: 1040px){
+      .hero-grid,
+      .section-head,
+      .timeline,
+      .cta-inner,
+      .gallery{
+        grid-template-columns:1fr;
+      }
+      .timeline-index{
+        position:relative;
+        top:auto;
+      }
+    }
+
+    @media (max-width: 720px){
+      .nav{
+        align-items:flex-start;
+        padding:.8rem 0;
+        flex-direction:column;
+      }
+      .hero-metrics,
+      .panel-bottom,
+      .chapter{
+        grid-template-columns:1fr;
+      }
+      .chapter{
+        padding:.9rem;
+      }
+      .chapter-no{
+        min-height:auto;
+      }
+      .hero-panel{
+        min-height:auto;
+      }
+      .visual{
+        min-height:240px;
+      }
+      .nav-links{
+        width:100%;
+        justify-content:space-between;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a href="#top" class="brand" aria-label="America AI home">
+        <span class="brand-mark">AA</span>
+        <span>America AI</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#overview">Overview</a>
+        <a href="#story">Story</a>
+        <a href="#visuals">Visuals</a>
+        <a href="#notes">Notes</a>
+        <a href="#continue" class="nav-cta">Read the account</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <article class="hero-copy stagger">
+          <span class="eyebrow">Aviation Narrative Experience</span>
+          <h1><span class="accent">AA1937</span> Story Framework</h1>
+          <p class="lead">
+            This page is a styled long-form aviation story interface inspired by your request. It does not claim an unverified event as fact. Instead, it presents a clearly labeled, book-like structure for a dramatic flight narrative with decorated sections, multiple color accents, immersive visuals, and a Termux-friendly single-file HTML format.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#story">Start reading</a>
+            <a class="btn btn-secondary" href="#notes">Important note</a>
+          </div>
+          <div class="hero-metrics">
+            <div class="metric">
+              <strong>22</strong>
+              <span>Structured chapters</span>
+            </div>
+            <div class="metric">
+              <strong>Single File</strong>
+              <span>Easy for Termux editing</span>
+            </div>
+            <div class="metric">
+              <strong>Realistic UI</strong>
+              <span>Without fake claims</span>
+            </div>
+          </div>
+        </article>
+
+        <aside class="hero-panel stagger" aria-label="Flight visual summary">
+          <div class="panel-top">
+            <div>
+              <div class="panel-title">Flight display</div>
+              <strong>American Airlines 1937</strong>
+            </div>
+            <div class="status">Labeled narrative</div>
+          </div>
+
+          <div class="flight-board">
+            <span class="route-tag start">Departure</span>
+            <span class="route-tag alert">Mid-flight alert</span>
+            <span class="route-tag end">Diversion / Landing</span>
+            <svg viewBox="0 0 800 500" role="img" aria-label="Illustrated aviation route">
+              <defs>
+                <linearGradient id="sky" x1="0" x2="1">
+                  <stop offset="0%" stop-color="#0b1730"/>
+                  <stop offset="100%" stop-color="#0f2644"/>
+                </linearGradient>
+                <linearGradient id="route" x1="0" x2="1">
+                  <stop offset="0%" stop-color="#58d6ff"/>
+                  <stop offset="100%" stop-color="#6effa8"/>
+                </linearGradient>
+                <filter id="glow">
+                  <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                  <feMerge>
+                    <feMergeNode in="coloredBlur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                  </feMerge>
+                </filter>
+              </defs>
+              <rect width="800" height="500" fill="url(#sky)"/>
+              <g opacity=".18">
+                <circle cx="120" cy="110" r="3" fill="#fff"/>
+                <circle cx="220" cy="70" r="2" fill="#fff"/>
+                <circle cx="290" cy="140" r="2" fill="#fff"/>
+                <circle cx="380" cy="92" r="2.5" fill="#fff"/>
+                <circle cx="520" cy="110" r="2" fill="#fff"/>
+                <circle cx="640" cy="70" r="3" fill="#fff"/>
+                <circle cx="710" cy="130" r="2" fill="#fff"/>
+              </g>
+              <path d="M90 120 C220 180, 280 290, 400 260 S620 210, 710 360" fill="none" stroke="url(#route)" stroke-width="5" stroke-linecap="round" stroke-dasharray="10 12" filter="url(#glow)"/>
+              <circle cx="90" cy="120" r="8" fill="#58d6ff"/>
+              <circle cx="400" cy="260" r="9" fill="#ffd36e"/>
+              <circle cx="710" cy="360" r="8" fill="#6effa8"/>
+              <g transform="translate(388 228) rotate(18)">
+                <path d="M0 18 L54 0 L48 14 L74 20 L72 28 L46 26 L48 40 Z" fill="#eef6ff"/>
+              </g>
+              <g opacity=".12">
+                <ellipse cx="140" cy="380" rx="100" ry="28" fill="#58d6ff"/>
+                <ellipse cx="610" cy="420" rx="130" ry="35" fill="#6effa8"/>
+              </g>
+            </svg>
+          </div>
+
+          <div class="panel-bottom">
+            <div class="log">
+              <small>Format</small>
+              <strong>Long-form webpage narrative with chapter sections and colored UI.</strong>
+            </div>
+            <div class="log">
+              <small>Content policy</small>
+              <strong>No unsupported factual claim if the incident is unverified or unclear.</strong>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="overview">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="label">Overview</span>
+            <h2>What this page does</h2>
+          </div>
+          <p>
+            You asked for the whole story in code, decorated with different colors, using a full HTML head and suitable for a Termux workflow. This design delivers a dramatic aviation-story presentation while remaining honest: it is a narrative framework and sample long-form content, not a fabricated factual report about a real-world emergency unless independently verified.
+          </p>
+        </div>
+
+        <div class="notice reveal" id="notes">
+          <div class="notice-icon">!</div>
+          <div>
+            <h3>Important note about factual accuracy</h3>
+            <p>
+              I cannot truthfully present an unverified aviation incident as a confirmed real event, and I also cannot produce an effectively infinite word count. So this page gives you a polished, readable, expandable structure with substantial sample storytelling that you can continue editing locally in Termux. “Real images” from external sources were not embedded because your site brief also requires avoiding unreliable outside image URLs. Instead, the page uses inline SVG aviation art and CSS visuals for a stable result.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="story">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="label">Story</span>
+            <h2>Chapter-by-chapter account</h2>
+          </div>
+          <p>
+            Below is a book-style progression covering introduction, aircraft background, crew, boarding, weather, takeoff, cruise, warning signs, cockpit response, passenger reactions, emergency preparation, landing, aftermath, investigation, and lessons. Each chapter is styled for immersive reading and can be expanded with your own text later.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <aside class="timeline-index reveal">
+            <h3>Jump to chapter</h3>
+            <nav class="chapter-nav" aria-label="Chapter navigation">
+              <a href="#ch1">01 — Introduction</a>
+              <a href="#ch2">02 — The aircraft</a>
+              <a href="#ch3">03 — Crew</a>
+              <a href="#ch4">04 — Boarding</a>
+              <a href="#ch5">05 — Weather</a>
+              <a href="#ch6">06 — Taxi & takeoff</a>
+              <a href="#ch7">07 — Climb</a>
+              <a href="#ch8">08 — Life onboard</a>
+              <a href="#ch9">09 — First warning</a>
+              <a href="#ch10">10 — Cockpit response</a>
+              <a href="#ch11">11 — ATC communication</a>
+              <a href="#ch12">12 — Passenger reaction</a>
+              <a href="#ch13">13 — Cabin crew action</a>
+              <a href="#ch14">14 — Emergency prep</a>
+              <a href="#ch15">15 — Descent</a>
+              <a href="#ch16">16 — Landing</a>
+              <a href="#ch17">17 — Evacuation</a>
+              <a href="#ch18">18 — Medical response</a>
+              <a href="#ch19">19 — Investigation</a>
+              <a href="#ch20">20 — Lessons</a>
+              <a href="#ch21">21 — Aftermath</a>
+              <a href="#ch22">22 — Safety future</a>
+            </nav>
+          </aside>
+
+          <div class="chapters">
+            <article class="chapter reveal" id="ch1">
+              <div class="chapter-no"><span>01</span><small>Intro</small></div>
+              <div class="chapter-content">
+                <h3>Introduction to the flight</h3>
+                <p>
+                  Just before dawn, the terminal carried the familiar rhythm of modern air travel: rolling luggage, overhead announcements, the soft glow of gate displays, and the unspoken assumption that routine would continue uninterrupted. In that atmosphere of ordinary motion, Flight 1937 began as one more scheduled departure among hundreds, unnoticed by anyone outside the airport and unremarkable to almost everyone inside it.
+                </p>
+                <p>
+                  Yet aviation stories often begin in normality. The power of such narratives is not that disaster is guaranteed, but that professionalism, technology, and calm judgment are tested when certainty gives way to ambiguity. This account follows that transition from routine to tension, from scattered clues to coordinated response.
+                </p>
+              </div>
+            </article>
+
+            <article class="chapter reveal" id="ch2">
+              <div class="chapter-no"><span>02</span><small>Aircraft</small></div>
+              <div class="chapter-content">
+                <h3>The aircraft and its history</h3>
+                <p>
+                  The aircraft assigned to the route was a narrow-body workhorse of commercial aviation, the kind of jet built not for spectacle but for repetition, reliability, and disciplined efficiency. Its logbooks told the story every airplane tells: departures counted in the thousands, maintenance actions performed on schedule, components inspected, repaired, and replaced according to exact procedure.
+                </p>
+                <p>
+                  To passengers, the airplane was only a cabin, a row number, an overhead bin, a seatback tray. To technicians and pilots, it was a system of layered redundancies. Hydraulics, electrics, avionics, controls, indications, fuel balancing, environmental systems—each part had its own language and its own methods for signaling when something had begun to drift away from normal.
+                </p>
+              </div>
+            </article>
+
+            <article class="chapter reveal" id="ch3">
+              <div class="chapter-no"><span>03</span><small>Crew</small></div>
+              <div class="chapter-content">
+                <h3>The pilots and cabin crew</h3>
+                <p>
+                  The captain had spent years converting instinct into disciplined habit. Experience in aviation does not eliminate fear; it teaches structure in the presence of it. The first officer brought current procedural sharpness, technical attention, and the ability to challenge, verify, and support. Between them sat not merely rank, but a practiced exchange built on checklists, callouts, and mutual cross-checking.
+                </p>
+                <p>
+                  Behind the cockpit door, the cabin crew prepared the passenger cabin with equal professionalism. Safety demonstrations, galley checks, discreet observation, and constant situational awareness formed an invisible layer of protection. Long before any alert ever sounds, good crews are already building the conditions that make calm possible.
+                </p>
+              </div>
+            </article>
+
+            <article class="chapter reveal" id="ch4">
+              <div class="chapter-no"><span>04</span><small>Boarding</small></div>
+              <div class="chapter-content">
+                <h3>Passengers boarding</h3>
+                <p>
+                  Families settled children into window seats. Business travelers connected to airport Wi-Fi one final time. A college student rehearsed a presentation. A retired couple compared boarding passes and joked about who would get the armrest. Most people carried private concerns far larger in their own minds than the machine taking them into the sky.
+                </p>
+                <p>
+                  Boarding is one of aviation’s most human moments. All the data, logistics, and engineering collapse into individual lives crossing a threshold from terminal to aircraft. Once the door closes, the flight becomes a shared story, whether passengers know it or not.
+                </p>
+              </div>
+            </article>
+
+            <article class="chapter reveal" id="ch5">
+              <div class="chapter-no"><span>05</span><small>Weather</small></div>
+              <div class="chapter-content">
+                <h3>Weather before departure</h3>
+                <p>
+                  Weather briefings outlined the atmosphere ahead in the sterile precision of aviation language: cloud layers, wind shifts, visibility trends, isolated convective build-up, and alternate planning options. Nothing in the forecast necessarily promised crisis. But flying has always required respect for conditions that can change faster than memory settles.
+                </p>
+                <p>
+                  In operations, weather is not scenery. It is a moving variable that shapes fuel calculations, route changes, expected ride quality, and decision margins. Even a mostly stable departure day can contain enough complexity to make every later warning slightly harder to interpret.
+                </p>
+              </div>
+            </article>
+
+            <article class="chapter reveal" id="ch6">
+              <div class="chapter-no"><span>06</span><small>Takeoff</small></div>
+              <div class="chapter-content">
+                <h3>Taxi and takeoff</h3>
+                <p>
+                  Pushback began with practiced choreography. Tug disconnected. Engines stabilized. Taxi clearance was read back. On the ground, speed is low, but procedural density is high. Every turn, every instruction, every crossing point requires precision because the airport is its own living network of motion.
+                </p>
+                <p>
+                  Then came the runway. The aircraft aligned on centerline. Thrust advanced. The vibration changed from idle expectation to accelerating intent. Nosewheel hum gave way to a cleaner, lighter sensation as aerodynamic forces took over. Rotation transformed a machine of weight into one of lift.
+                </p>
+              </div>
+            </article>
+
+            <article class="chapter reveal" id="ch7">
+              <div class="chapter-no"><span>07</span><small>Climb</small></div>
+              <div class="chapter-content">
+                <h3>Climb to cruising altitude</h3>
+                <p>
+                  During climb, workload remains high even when passengers perceive calm. Configuration changes, power adjustments, navigation compliance, traffic separation, and weather monitoring continue in tightly sequenced flow. In the cabin, the city below became geometry—roads like threads, buildings like circuit components, rivers like polished metal.
+                </p>
+                <p>
+                  For many passengers, this is the transition from alertness to routine. Belts loosen mentally before they loosen physically. Books open. Earbuds go in. A few close their eyes. The assumption of arrival begins quietly long before arrival itself.
+                </p>
+              </div>
+            </article>
+
+            <article class="chapter reveal" id="ch8">
+              <div class="chapter-no"><span>08</span><small>Onboard</small></div>
+              <div class="chapter-content">
+                <h3>Life onboard before the emergency</h3>
+                <p>
+                  Service preparations started. A flight attendant helped a nervous flyer understand a strange sound that was in fact entirely normal. Someone laughed two rows back. A laptop screen reflected cabin lights. The pressurized world inside the fuselage settled into its temporary culture of quiet negotiation and shared proximity.
+                </p>
+                <p>
+                  What makes the first sign of trouble memorable is often its contrast with this ordinary calm. Emergencies are not loud at the beginning. More often they begin as a subtle mismatch—a tone, a light, a smell, a reading, a sentence spoken in a lower voice than before.
+                </p>
+              </div>
+            </article>
+
+            <article class="chapter reveal" id="ch9">
+              <div class="chapter-no"><span>09</span><small>Warning</small></div>
+              <div class="chapter-content">
+                <h3>The first warning signs</h3>
+                <p>
+                  In the cockpit, an indication appeared that did not fit the expected pattern. It may have been a caution, an abnormal instrument trend, or a systems message requiring reference to procedure. By itself, a single alert can be manageable. The challenge lies in determining whether it is isolated, misleading, or part of a wider developing condition.
+                </p>
+                <p>
+                  Pilots train to resist narrative too early. They do not begin with “this is happening”; they begin with “what exactly do we know?” That discipline protects against the dangerous human urge to make incomplete data feel complete.
+                </p>
+              </div>
+            </article>
+
+            <article class="chapter reveal" id="ch10">
+              <div class="chapter-no"><span>10</span><small>Cockpit</small></div>
+              <div class="chapter-content">
+                <h3>The cockpit response</h3>
+                <p>
+                  The cockpit became quieter, not louder. One pilot flew. The other verified indications, opened references, and worked through the relevant checklist. Training compresses complexity into action. No one wastes movement. No one fills the air with unnecessary words. Good crews do not perform confidence; they perform method.
+                </p>
+                <p>
+                  A decision tree formed quickly: continue, hold, divert, descend, request priority, or prepare for an emergency landing. Each choice carried operational consequences, but hesitation carries consequences too. The discipline of command is choosing before perfect certainty arrives.
+                </p>
+              </div>
+            </article>
+
+            <article class="chapter reveal" id="ch11">
+              <div class="chapter-no"><span>11</span><small>ATC</small></div>
+              <div class="chapter-content">
+                <h3>Communication with air traffic control</h3>
+                <p>
+                  Air traffic control became the flight’s external partner. Voice communication in these moments is a model of compressed clarity: call sign, nature of issue, request, altitude, souls on board, fuel, intentions. Behind each short transmission stands a wider network of coordination on the ground—runway planning, spacing adjustments, emergency vehicle positioning, and alternate sequencing for every other aircraft nearby.
+                </p>
+                <p>
+                  To outside ears, the exchange can sound calm to the point of understatement. That is because aviation phraseology is designed not to dramatize events, but to manage them.
+                </p>
+              </div>
+            </article>
+
+            <article class="chapter reveal" id="ch12">
+              <div class="chapter-no"><span>12</span><small>Cabin</small></div>
+              <div class="chapter-content">
+                <h3>Passenger reactions</h3>
+                <p>
+                  News moved through the cabin in fragments. Some sensed only that the crew looked more focused. Others noticed a change in engine note or the arc of the turn. Anxiety spreads socially; so does reassurance. A calm announcement from the cockpit or lead flight attendant can become the emotional center of gravity for everyone on board.
+                </p>
+                <p>
+                  Passengers cope in different ways. Some ask direct questions. Some retreat into silence. Some become hyper-observant, tracking every sound. In emergencies, psychology becomes part of safety: people need instructions that are short, believable, and repeatable.
+                </p>
+              </div>
+            </article>
+
+            <article class="chapter reveal" id="ch13">
+              <div class="chapter-no"><span>13</span><small>Crew Ops</small></div>
+              <div class="chapter-content">
+                <h3>Cabin crew actions</h3>
+                <p>
+                  The cabin crew shifted from service mode to safety mode. Carts were secured. Cabin checks accelerated. Special attention went to exit rows, passengers needing assistance, loose items, and verbal preparation. A professional cabin response is measured not by visible panic, but by how much disorder is prevented before it can begin.
+                </p>
+                <p>
+                  Every sentence spoken by the crew had a purpose. Every aisle movement was economical. People often remember one flight attendant’s face in such moments—not because that person solved the technical problem, but because they translated fear into instructions the cabin could follow.
+                </p>
+              </div>
+            </article>
+
+            <article class="chapter reveal" id="ch14">
+              <div class="chapter-no"><span>14</span><small>Prep</small></div>
+              <div class="chapter-content">
+                <h3>Preparing for an emergency landing</h3>
+                <p>
+                  Once diversion became the likely outcome, the flight entered a different category of time. Minutes began to feel denser. Procedures that would normally remain abstract during a safety briefing suddenly became concrete: brace positions, exit awareness, command phrases, post-landing expectations.
+                </p>
+                <p>
+                  The goal was not to promise a perfect ending. The goal was to maximize survivability and control. Aviation safety lives in preparation done before impact is known, before runway conditions are seen, before the final phase begins.
+                </p>
+              </div>
+            </article>
+
+            <article class="chapter reveal" id="ch15">
+              <div class="chapter-no"><span>15</span><small>Descent</small></div>
+              <div class="chapter-content">
+                <h3>The descent</h3>
+                <p>
+                  Descents during abnormal situations can feel different even to inexperienced travelers. Cabin pressure sensations sharpen. The aircraft may maneuver more decisively. Familiar noises—flaps, gear, trim, changes in thrust—become charged with meaning. The cabin windows, if daylight allowed, might show a landscape approaching too quickly for comfort.
+                </p>
+                <p>
+                  In the flight deck, the runway ceased to be a destination and became a solution. Energy management, configuration, checklist completion, and stabilized approach criteria all converged under pressure. There is little room for improvisation in the last minutes, only disciplined execution.
+                </p>
+              </div>
+            </article>
+
+            <article class="chapter reveal" id="ch16">
+              <div class="chapter-no"><span>16</span><small>Landing</small></div>
+              <div class="chapter-content">
+                <h3>The landing</h3>
+                <p>
+                  Approach lights emerged, then the runway environment. The aircraft crossed the threshold carrying not just weight and speed, but the accumulated tension of everyone aboard. Touchdown in such moments is rarely cinematic from the inside. It is a violent kind of relief—rubber meeting asphalt, reversers or braking engaging, the body waiting to know whether deceleration means safety or the start of something worse.
+                </p>
+                <p>
+                  If the landing was controlled and the aircraft remained stable, an extraordinary number of human decisions had aligned correctly in a very short period of time.
+                </p>
+              </div>
+            </article>
+
+            <article class="chapter reveal" id="ch17">
+              <div class="chapter-no"><span>17</span><small>Exit</small></div>
+              <div class="chapter-content">
+                <h3>Evacuation if applicable</h3>
+                <p>
+                  Not every emergency landing requires evacuation, but when it does, seconds count and confusion multiplies fast. Commands must be shouted, exits assessed, unusable paths blocked, and movement kept continuous. The challenge is physical and behavioral at once: people try to retrieve bags, freeze in place, or move against flow unless forcefully redirected.
+                </p>
+                <p>
+                  A successful evacuation is one of the clearest examples of training defeating chaos. It does not look elegant. It looks urgent, repetitive, loud, and effective.
+                </p>
+              </div>
+            </article>
+
+            <article class="chapter reveal" id="ch18">
+              <div class="chapter-no"><span>18</span><small>Medical</small></div>
+              <div class="chapter-content">
+                <h3>Medical response</h3>
+                <p>
+                  Once the aircraft stopped in a safe position or passengers reached the ground, the next layer of response began. Airport rescue teams, medical staff, and operations personnel moved in according to established protocols. Some passengers needed treatment for anxiety, minor injuries, or underlying medical conditions worsened by stress.
+                </p>
+                <p>
+                  Emergencies do not end at touchdown. They unfold outward into triage, accountability, transportation, communication with families, and preservation of evidence for investigation.
+                </p>
+              </div>
+            </article>
+
+            <article class="chapter reveal" id="ch19">
+              <div class="chapter-no"><span>19</span><small>Inquiry</small></div>
+              <div class="chapter-content">
+                <h3>Investigation</h3>
+                <p>
+                  Investigators would later reconstruct the event through data, maintenance history, recordings, crew interviews, weather reports, and technical inspections. Aviation safety depends on this methodical after-action truth-seeking. The purpose is not merely to assign blame. It is to isolate causes, identify latent vulnerabilities, and convert an alarming event into future protection.
+                </p>
+                <p>
+                  In the public imagination, investigations are often dramatic revelations. In reality, they are patient acts of engineering, human factors analysis, and procedural scrutiny.
+                </p>
+              </div>
+            </article>
+
+            <article class="chapter reveal" id="ch20">
+              <div class="chapter-no"><span>20</span><small>Lessons</small></div>
+              <div class="chapter-content">
+                <h3>Lessons learned</h3>
+                <p>
+                  Every serious flight event asks the same underlying question: what can be changed so the next crew has a stronger margin than the last? Sometimes the answer is a maintenance interval, a revised checklist, a training emphasis, a software update, or a design change. Sometimes it is communication—when to declare, how to phrase, how soon to descend, when to cabin-brief.
+                </p>
+                <p>
+                  Safety improvements are often built from such moments. The aviation system becomes safer not because risk disappears, but because every tested weak point is studied until it can be strengthened.
+                </p>
+              </div>
+            </article>
+
+            <article class="chapter reveal" id="ch21">
+              <div class="chapter-no"><span>21</span><small>Aftermath</small></div>
+              <div class="chapter-content">
+                <h3>Interviews and aftermath</h3>
+                <p>
+                  In the days after an event, passengers tell their versions. Some remember exact sounds. Some remember a child asking a simple question. Some remember the silence after landing more vividly than the descent itself. Media coverage seeks angles, but lived memory tends to preserve very specific details: a hand gripping an armrest, a flight attendant kneeling beside a row, the first deep breath outside the aircraft.
+                </p>
+                <p>
+                  For crew members, aftermath includes debriefs, documentation, scrutiny, and often the delayed emotional impact that operational discipline had postponed. Survival does not cancel stress; it merely changes its timing.
+                </p>
+              </div>
+            </article>
+
+            <article class="chapter reveal" id="ch22">
+              <div class="chapter-no"><span>22</span><small>Future</small></div>
+              <div class="chapter-content">
+                <h3>Aviation safety improvements</h3>
+                <p>
+                  The future of aviation safety is built from precision, transparency, and repetition. Better alerting logic, improved training scenarios, smarter maintenance diagnostics, stronger crew resource management, and more resilient airport response planning all emerge from the same philosophy: prepare for complexity before complexity arrives.
+                </p>
+                <p>
+                  That is why aviation stories matter when told responsibly. Not because they make fear bigger, but because they reveal how discipline, design, and teamwork can make survival possible when uncertainty enters the cabin.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="ads-slot reveal" aria-label="AdSense placeholder">
+          Ad area placeholder: your AdSense script is loaded in the page head. Actual ad rendering depends on account approval, policy compliance, and live deployment conditions.
+        </div>
+      </div>
+    </section>
+
+    <section id="visuals">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="label">Visuals</span>
+            <h2>Inline aviation illustrations</h2>
+          </div>
+          <p>
+            Since unstable external image links were avoided, these panels use embedded SVG artwork and layered gradients to create the feel of editorial “real-image style” sections without broken assets. You can later replace each SVG block with your own local image files if desired.
+          </p>
+        </div>
+
+        <div class="gallery">
+          <figure class="visual reveal">
+            <svg viewBox="0 0 800 520" role="img" aria-label="Aircraft at night">
+              <defs>
+                <linearGradient id="g1" x1="0" x2="1">
+                  <stop offset="0%" stop-color="#091322"/>
+                  <stop offset="100%" stop-color="#153152"/>
+                </linearGradient>
+                <radialGradient id="moon">
+                  <stop offset="0%" stop-color="#fff5c2"/>
+                  <stop offset="100%" stop-color="#ffd36e"/>
+                </radialGradient>
+              </defs>
+              <rect width="800" height="520" fill="url(#g1)"/>
+              <circle cx="630" cy="120" r="56" fill="url(#moon)" opacity=".95"/>
+              <g opacity=".15" fill="#fff">
+                <circle cx="110" cy="80" r="2"/><circle cx="190" cy="100" r="2"/><circle cx="260" cy="70" r="1.8"/>
+                <circle cx="420" cy="130" r="2"/><circle cx="520" cy="90" r="1.8"/><circle cx="720" cy="60" r="2.2"/>
+              </g>
+              <path d="M80 420 C180 350, 290 330, 410 340 S650 390, 780 320 L800 520 L0 520 Z" fill="#08111c"/>
+              <g transform="translate(160 255)">
+                <path d="M0 48 L170 10 L208 20 L350 0 L370 18 L245 42 L390 55 L392 70 L240 70 L214 116 L190 112 L190 76 L22 90 Z" fill="#eef6ff"/>
+              </g>
+            </svg>
+            <figcaption class="visual-copy">
+              <h3>Night route tension</h3>
+              <p>Editorial-style art for a high-drama aviation chapter opening.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="visual reveal">
+            <svg viewBox="0 0 600 520" role="img" aria-label="Cockpit panel illustration">
+              <rect width="600" height="520" fill="#0b1628"/>
+              <rect x="70" y="70" width="460" height="300" rx="28" fill="#13233d" stroke="rgba(173,210,255,.25)"/>
+              <rect x="110" y="110" width="160" height="90" rx="16" fill="#17355b"/>
+              <rect x="330" y="110" width="160" height="90" rx="16" fill="#17355b"/>
+              <rect x="110" y="225" width="380" height="110" rx="18" fill="#101c31"/>
+              <g fill="#58d6ff">
+                <circle cx="150" cy="405" r="22"/><circle cx="220" cy="405" r="22"/><circle cx="290" cy="405" r="22"/>
+                <circle cx="360" cy="405" r="22"/><circle cx="430" cy="405" r="22"/>
+              </g>
+              <g opacity=".8">
+                <path d="M140 155 L240 135" stroke="#6effa8" stroke-width="4"/>
+                <path d="M360 165 L460 155" stroke="#ffd36e" stroke-width="4"/>
+                <path d="M140 286 C220 250, 330 250, 460 290" stroke="#58d6ff" stroke-width="4" fill="none"/>
+              </g>
+            </svg>
+            <figcaption class="visual-copy">
+              <h3>Cockpit focus</h3>
+              <p>Represents systems monitoring, warnings, and disciplined response.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="visual reveal">
+            <svg viewBox="0 0 600 520" role="img" aria-label="Runway illustration">
+              <defs>
+                <linearGradient id="runSky" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0%" stop-color="#16324f"/>
+                  <stop offset="100%" stop-color="#08111d"/>
+                </linearGradient>
+              </defs>
+              <rect width="600" height="520" fill="url(#runSky)"/>
+              <rect y="330" width="600" height="190" fill="#0a0f18"/>
+              <path d="M255 330 L345 330 L420 520 L180 520 Z" fill="#1d2531"/>
+              <path d="M296 345 L304 345 L308 380 L292 380 Z" fill="#fff"/>
+              <path d="M287 405 L313 405 L320 448 L280 448 Z" fill="#fff"/>
+              <path d="M274 472 L326 472 L337 520 L263 520 Z" fill="#fff"/>
+              <g opacity=".8" fill="#ffd36e">
+                <circle cx="150" cy="360" r="4"/><circle cx="110" cy="400" r="4"/><circle cx="70" cy="440" r="4"/>
+                <circle cx="450" cy="360" r="4"/><circle cx="490" cy="400" r="4"/><circle cx="530" cy="440" r="4"/>
+              </g>
+            </svg>
+            <figcaption class="visual-copy">
+              <h3>Final approach</h3>
+              <p>The runway as destination, solution, and test of execution.</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="continue">
+      <div class="container">
+        <div class="cta reveal">
+          <div class="cta-inner">
+            <div>
+              <h2>Use this in Termux and expand it</h2>
+              <p>
+                Save this file as <strong>index.html</strong>, open it in your editor, and keep adding chapters. If you want, I can next generate:
+                a much longer fictional aviation thriller,
+                a factual documentary layout if you provide a verified incident,
+                or a version with local image paths for your own downloaded photos.
+              </p>
+            </div>
+            <div class="cta-panel">
+              <ul>
+                <li>Works as a single HTML file.</li>
+                <li>Includes your requested GA4 and AdSense head scripts.</li>
+                <li>Uses different colors across sections.</li>
+                <li>Responsive and styled for mobile and desktop.</li>
+                <li>Ready for additional chapters and custom media.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>© 2026 America AI</div>
+      <div>Designed as a long-form aviation narrative interface.</div>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.14 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    document.querySelectorAll('.chapter-nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.querySelectorAll('.chapter-nav a').forEach(a => a.style.background = '');
+        link.style.background = 'rgba(255,255,255,.05)';
+      });
+    });
+  </script>
+</body>
+</html>
+ 
