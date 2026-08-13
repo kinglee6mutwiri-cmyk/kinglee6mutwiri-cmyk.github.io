@@ -268,4 +268,42 @@ header .logo {
         padding: 12px !important;
     }
 }
+@media (max-width: 768px) {
+    .navbar .menu-toggle {
+        display: block !important;
+        cursor: pointer;
+        font-size: 32px;
+        color: white;
+        text-align: center;
+        width: 100%;
+        padding: 8px;
+    }
+
+    .navbar #menu-toggle {
+        display: none !important;
+    }
+
+    .navbar nav {
+        display: none !important;
+        width: 100% !important;
+    }
+
+    .navbar #menu-toggle:checked + .menu-toggle + nav {
+        display: block !important;
+    }
+
+    .navbar nav ul {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .navbar nav li {
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+    }
+}
 
