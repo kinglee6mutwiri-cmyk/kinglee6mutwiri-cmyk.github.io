@@ -388,3 +388,48 @@ header .logo {
         margin-right: auto;
     }
 }
+/* =========================================
+   SOCIAL MEDIA BUTTONS
+   ========================================= */
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 25px 0;
+}
+
+.social-links a {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff !important;
+    font-size: 20px;
+    font-weight: 700;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: transform 0.25s ease,
+                background 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.social-links a:hover {
+    transform: translateY(-5px) scale(1.05);
+    background: #315bea;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 768px) {
+    .social-links {
+        margin: 20px 0;
+    }
+
+    .social-links a {
+        width: 44px;
+        height: 44px;
+    }
+}
