@@ -573,7 +573,33 @@
 
     }
 
-  </style></head><body><!-- TOP BAR --><div class="topbar">
+  </style>
+<style>
+/* Michael Jackson photo display fix */
+.mj-photo,
+.mj-photo img,
+.mj-gallery img,
+figure img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    display: block !important;
+}
+
+.mj-photo {
+    margin: 30px auto;
+    text-align: center;
+}
+
+.mj-photo img {
+    max-width: 900px !important;
+    border-radius: 20px;
+}
+</style>
+
+</head><body><!-- TOP BAR --><div class="topbar">
   ⭐ AMERICA AI • MUSIC • CULTURE • HISTORY • STORIES ⭐
 </div><!-- HERO --><header class="hero">  <div class="hero-content"><div class="hero-label">
   Original America AI Feature
@@ -849,7 +875,17 @@ experience.
   Use a properly licensed historical performance photograph.
 </div>
 
-  </figure>  <p>
+  </figure>
+
+<figure class="mj-photo">
+  <img
+    src="images/michael-jackson-1984.jpg"
+    alt="Michael Jackson in 1984"
+    loading="lazy">
+  <figcaption>Michael Jackson during his historic career in the 1980s.</figcaption>
+</figure>
+
+  <p>
     In 1983, Michael performed Billie Jean during the Motown
     25 television celebration.
   </p>  <p>
@@ -1238,6 +1274,77 @@ data-ad-slot="1217574823">
 
   </div>  <p style="margin-top:25px;">
     © 2026 America AI. All rights reserved.
-  </p></footer><script src="header-loader.js"></script>
+  </p></footer>
+<section class="mj-new-gallery">
+  <h2>More Michael Jackson Moments</h2>
+  <p>Explore more memorable photographs from Michael Jackson's extraordinary career.</p>
+
+  <div class="mj-gallery">
+    
+
+    <figure>
+      <img src="images/michael-jackson-4.jpg"
+           alt="Michael Jackson"
+           loading="lazy">
+      <figcaption>A memorable moment from Michael Jackson's career.</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/michael-jackson-5.jpg"
+           alt="Michael Jackson"
+           loading="lazy">
+      <figcaption>Another remarkable moment in Michael Jackson's journey.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<style>
+.mj-new-gallery {
+  margin: 45px auto;
+  padding: 25px;
+  max-width: 1000px;
+  text-align: center;
+}
+
+.mj-new-gallery h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.mj-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin-top: 25px;
+}
+
+.mj-gallery figure {
+  margin: 0;
+  padding: 15px;
+  border-radius: 20px;
+  background: rgba(128,128,128,0.12);
+}
+
+.mj-gallery img {
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  border-radius: 16px;
+}
+
+.mj-gallery figcaption {
+  padding: 12px 5px;
+  font-size: 16px;
+}
+
+@media (min-width: 700px) {
+  .mj-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+</style>
+
 </body>
 </html>
