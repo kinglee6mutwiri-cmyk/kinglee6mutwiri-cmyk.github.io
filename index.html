@@ -592,9 +592,154 @@ footer a {
 
 </style>
 
+
+<style id="top-author-social-style">
+
+#top-author-social-bar {
+    background: #ffffff;
+    color: #111111;
+    border-bottom: 1px solid #ded6c5;
+    font-family: Arial, sans-serif;
+}
+
+#top-author-social-bar .top-inner {
+    max-width: 1150px;
+    margin: auto;
+    padding: 9px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+#top-author-social-bar .author-name {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #111111;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#top-author-social-bar .author-name i {
+    color: #b18a16;
+    font-size: 17px;
+}
+
+#top-author-social-bar .follow-text {
+    color: #555555;
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+#top-author-social-bar .top-social {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+#top-author-social-bar .top-social a {
+    width: 31px;
+    height: 31px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #111111;
+    color: #ffffff;
+
+    text-decoration: none;
+    font-size: 13px;
+
+    transition: .2s ease;
+}
+
+#top-author-social-bar .top-social a:hover {
+    background: #d4af37;
+    color: #111111;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 650px) {
+
+    #top-author-social-bar .top-inner {
+        padding: 8px 12px;
+    }
+
+    #top-author-social-bar .author-name {
+        font-size: 12px;
+    }
+
+    #top-author-social-bar .follow-text {
+        display: none;
+    }
+
+    #top-author-social-bar .top-social a {
+        width: 29px;
+        height: 29px;
+    }
+}
+
+</style>
+
 </head>
 
 <body>
+
+<div id="top-author-social-bar">
+
+<div class="top-inner">
+
+<div class="author-name">
+<i class="fa-solid fa-pen-nib"></i>
+<span>By Kinglee Mutwiri</span>
+</div>
+
+<div class="top-social">
+
+<span class="follow-text">Follow for new stories</span>
+
+<a
+href="https://www.facebook.com/profile.php?id=61568056696688"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="Follow Kinglee Mutwiri on Facebook">
+<i class="fa-brands fa-facebook-f"></i>
+</a>
+
+<a
+href="https://www.instagram.com/mutwiri.eliphas/"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="Follow Kinglee Mutwiri on Instagram">
+<i class="fa-brands fa-instagram"></i>
+</a>
+
+<a
+href="https://x.com/KingleeMut40701"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="Follow Kinglee Mutwiri on X">
+<i class="fa-brands fa-x-twitter"></i>
+</a>
+
+<a
+href="https://wa.me/254736280522"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="Contact Kinglee Mutwiri on WhatsApp">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
+
+</div>
+
+</div>
+
+</div>
+
 
 <!-- ========================================================
      HEADER
