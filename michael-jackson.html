@@ -808,6 +808,52 @@ header p {
 }
 </style>
 
+
+<style id="mj-real-header-fix">
+/* Fix the actual site header */
+header h1,
+.site-header h1,
+.navbar h1,
+.brand h1 {
+    background: transparent !important;
+    color: #000000 !important;
+    border: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
+
+header h1 *,
+.site-header h1 *,
+.navbar h1 *,
+.brand h1 * {
+    color: #000000 !important;
+}
+
+/* Make the site header itself clean and readable */
+header,
+.site-header,
+.navbar {
+    background: #ffffff !important;
+    color: #000000 !important;
+}
+
+/* Header links */
+header a,
+.site-header a,
+.navbar a {
+    color: #000000 !important;
+}
+
+/* Keep the Michael Jackson article title separate */
+article h1,
+.article h1,
+.page-content h1 {
+    background: #000000 !important;
+    color: #ffffff !important;
+    border-left: 6px solid #d4af37 !important;
+}
+</style>
+
 </head>
 
 <body>
