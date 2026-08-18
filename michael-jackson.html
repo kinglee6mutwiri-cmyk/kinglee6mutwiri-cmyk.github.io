@@ -771,6 +771,43 @@ footer a {
 
 </style>
 
+
+<style id="mj-top-title-fix">
+/* Top title visibility fix */
+h1 {
+    background: #000000 !important;
+    color: #ffffff !important;
+    border-left: 6px solid #d4af37 !important;
+    text-shadow: none !important;
+}
+
+h1 span,
+h1 a {
+    color: #ffffff !important;
+}
+
+h1::first-line {
+    color: #ffffff !important;
+}
+
+/* Any title/subtitle immediately around the top heading */
+.hero h1,
+.hero h1 span,
+.hero h1 a,
+header h1,
+header h1 span,
+header h1 a {
+    background: transparent !important;
+    color: #ffffff !important;
+}
+
+/* Make introductory text readable */
+.hero p,
+header p {
+    color: #ffffff !important;
+}
+</style>
+
 </head>
 
 <body>
