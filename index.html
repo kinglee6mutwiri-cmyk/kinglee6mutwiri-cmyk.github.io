@@ -1,527 +1,614 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
 <title>Stories, Lives & Lessons | Kinglee Mutwiri</title>
 
-<meta name="description" content="Stories, Lives & Lessons explores celebrity biographies, meaningful life stories and practical lessons that readers can reflect on and apply to everyday life.">
+<meta name="description"
+content="Stories, Lives & Lessons explores the lives of remarkable people, real human experiences, music, personal growth, challenges, success and the lessons we can apply to everyday life.">
 
-<meta name="author" content="Kinglee Mutwiri">
+<meta name="author"
+content="Kinglee Mutwiri">
 
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X3HE9CKP90"></script>
+<meta name="robots"
+content="index, follow">
+
+<link rel="canonical"
+href="https://kinglee6mutwiri-cmyk.github.io/">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<!-- ========================================================
+     GOOGLE ANALYTICS 4
+======================================================== -->
+
+<script async
+src="https://www.googletagmanager.com/gtag/js?id=G-X3HE9CKP90"></script>
+
 <script>
 window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
+
+function gtag(){
+    dataLayer.push(arguments);
+}
+
 gtag('js', new Date());
+
 gtag('config', 'G-X3HE9CKP90');
 </script>
 
-<!-- Google AdSense -->
+<!-- ========================================================
+     GOOGLE ADSENSE
+======================================================== -->
+
 <script async
 src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5799841502846177"
 crossorigin="anonymous"></script>
 
-<!-- Social Icons -->
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<!-- ========================================================
+     HOMEPAGE DESIGN
+======================================================== -->
 
 <style>
-*{
-box-sizing:border-box;
-margin:0;
-padding:0;
+
+:root {
+    --black: #080808;
+    --black2: #151515;
+    --gold: #d4af37;
+    --gold-light: #f4df91;
+    --cream: #fffaf0;
+    --white: #ffffff;
+    --text: #292929;
+    --muted: #666666;
+    --border: #eadfc8;
+    --shadow: 0 12px 35px rgba(0,0,0,.12);
 }
 
-body{
-font-family:Arial,Helvetica,sans-serif;
-background:#f4f7fb;
-color:#172033;
-line-height:1.8;
+* {
+    box-sizing: border-box;
 }
 
-a{
-text-decoration:none;
+html {
+    scroll-behavior: smooth;
 }
 
-img{
-max-width:100%;
-height:auto;
+body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--text);
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+    line-height: 1.8;
 }
 
-/* HEADER */
+/* ========================================================
+   HEADER
+======================================================== */
 
-header{
-background:linear-gradient(135deg,#101827,#294878);
-color:white;
+.site-header {
+    background: var(--black);
+    color: white;
+    border-bottom: 3px solid var(--gold);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.header{
-max-width:1100px;
-margin:auto;
-padding:18px 20px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:20px;
+.nav-container {
+    max-width: 1150px;
+    margin: auto;
+    padding: 15px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
 }
 
-.logo{
-font-size:1.4rem;
-font-weight:bold;
-color:white;
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 23px;
+    font-weight: bold;
+    line-height: 1.2;
 }
 
-.logo span{
-color:#79a9ff;
+.logo span {
+    color: var(--gold);
 }
 
-/* SOCIAL ICONS */
-
-.social{
-display:flex;
-align-items:center;
-gap:12px;
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
 }
 
-.social a{
-width:44px;
-height:44px;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-color:white;
-font-size:20px;
-border:2px solid rgba(255,255,255,.45);
-background:rgba(255,255,255,.14);
-transition:transform .25s ease, background .25s ease, opacity .25s ease;
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
 }
 
-.social a:hover{
-transform:translateY(-3px) scale(1.05);
-background:rgba(255,255,255,.28);
-opacity:.95;
+.nav-links a:hover {
+    color: var(--gold-light);
 }
 
-.social a:hover{
-transform:translateY(-3px);
-background:rgba(255,255,255,.25);
+/* ========================================================
+   HERO
+======================================================== */
+
+.hero {
+    background:
+        linear-gradient(
+            135deg,
+            #050505,
+            #1c1c1c
+        );
+
+    color: white;
+    padding: 85px 20px 90px;
+    text-align: center;
+
+    border-bottom: 5px solid var(--gold);
 }
 
-/* AUTHOR */
-
-.author{
-max-width:900px;
-margin:30px auto 20px;
-padding:25px;
-background:white;
-border-radius:18px;
-display:flex;
-align-items:center;
-justify-content:center;
-gap:25px;
-box-shadow:0 5px 20px rgba(0,0,0,.07);
+.hero-inner {
+    max-width: 950px;
+    margin: auto;
 }
 
-.author img{
-width:200px;
-height:200px;
-border-radius:50%;
-object-fit:cover;
-border:5px solid #315bea;
-box-shadow:0 6px 18px rgba(0,0,0,.18);
-flex-shrink:0;
+.hero .eyebrow {
+    color: var(--gold-light);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
 }
 
-.author h1{
-margin-bottom:4px;
+.hero h1 {
+    margin: 15px 0;
+    color: white !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    font-size: clamp(2.5rem, 7vw, 5rem);
+    line-height: 1.05;
 }
 
-.author p{
-color:#315bea;
-font-weight:bold;
+.hero h1 span {
+    color: var(--gold);
 }
 
-.author small{
-color:#596579;
+.hero p {
+    max-width: 780px;
+    margin: 20px auto;
+    color: #eeeeee;
+    font-size: 19px;
 }
 
-/* NAVIGATION */
-
-nav{
-background:white;
-border-bottom:1px solid #e2e7ee;
-box-shadow:0 2px 8px rgba(0,0,0,.04);
+.hero-buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
 }
 
-.nav{
-max-width:1100px;
-margin:auto;
-padding:13px 20px;
-display:flex;
-justify-content:center;
-gap:22px;
-flex-wrap:wrap;
+.btn {
+    display: inline-block;
+    padding: 13px 23px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
 }
 
-.nav a{
-color:#172033;
-font-weight:bold;
-font-size:.94rem;
+.btn-gold {
+    background: var(--gold);
+    color: #080808;
 }
 
-.nav a:hover{
-color:#315bea;
+.btn-dark {
+    border: 1px solid #777;
+    color: white;
 }
 
-/* HERO */
+/* ========================================================
+   CONTAINER
+======================================================== */
 
-.hero{
-max-width:950px;
-margin:55px auto;
-padding:0 22px;
-text-align:center;
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
 }
 
-.label{
-display:inline-block;
-padding:6px 14px;
-border-radius:30px;
-background:#e6edff;
-color:#315bea;
-font-weight:bold;
-font-size:.82rem;
-margin-bottom:15px;
+.section-title {
+    text-align: center;
+    margin-bottom: 35px;
 }
 
-.hero h2{
-font-size:clamp(2.2rem,6vw,3.8rem);
-line-height:1.2;
-margin-bottom:20px;
+.section-title h2 {
+    font-size: 32px;
+    color: #111;
+    margin-bottom: 8px;
 }
 
-.hero h2 span{
-color:#315bea;
+.section-title p {
+    max-width: 750px;
+    margin: auto;
+    color: var(--muted);
 }
 
-.hero p{
-max-width:800px;
-margin:auto;
-font-size:1.08rem;
-color:#596579;
+/* ========================================================
+   INTRO
+======================================================== */
+
+.intro {
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    margin-bottom: 50px;
 }
 
-/* SECTIONS */
-
-section{
-max-width:1100px;
-margin:0 auto 60px;
-padding:0 22px;
+.intro h2 {
+    color: #111;
+    border-left: 5px solid var(--gold);
+    padding-left: 15px;
 }
 
-.heading{
-font-size:2rem;
-margin-bottom:10px;
+.intro p {
+    font-size: 18px;
 }
 
-.heading span{
-color:#315bea;
+/* ========================================================
+   CATEGORY CARDS
+======================================================== */
+
+.cards {
+    display: grid;
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+    gap: 22px;
 }
 
-.intro{
-color:#596579;
-max-width:850px;
-margin-bottom:25px;
+.card {
+    background: white;
+    padding: 28px;
+    border-radius: 18px;
+    border: 1px solid var(--border);
+    box-shadow: 0 7px 22px rgba(0,0,0,.07);
+    transition: transform .25s ease,
+                box-shadow .25s ease;
 }
 
-/* INTRO BOX */
-
-.box{
-background:white;
-padding:35px;
-border-radius:16px;
-box-shadow:0 5px 20px rgba(0,0,0,.06);
-border-left:5px solid #315bea;
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
 }
 
-.box p{
-margin-bottom:18px;
+.card-icon {
+    font-size: 32px;
+    color: var(--gold);
+    margin-bottom: 10px;
 }
 
-.box p:last-child{
-margin-bottom:0;
+.card h3 {
+    color: #111;
+    margin-top: 0;
 }
 
-/* ADS */
-
-.ad{
-max-width:1050px;
-margin:30px auto 55px;
-padding:0 22px;
-text-align:center;
+.card a {
+    color: #765700;
+    font-weight: bold;
 }
 
-.ad-label{
-display:block;
-font-size:.7rem;
-color:#8b94a3;
-margin-bottom:8px;
-text-transform:uppercase;
+/* ========================================================
+   FEATURED STORY
+======================================================== */
+
+.featured {
+    background: #111;
+    color: white;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
-/* CARDS */
-
-.cards{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:24px;
+.featured-image {
+    min-height: 400px;
 }
 
-.card{
-background:white;
-padding:28px;
-border-radius:16px;
-box-shadow:0 5px 18px rgba(0,0,0,.06);
-border:1px solid #e7ebf0;
+.featured-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    object-fit: cover;
+    display: block;
 }
 
-.card h3{
-margin-bottom:10px;
-font-size:1.35rem;
+.featured-content {
+    padding: 45px;
 }
 
-.card p{
-color:#596579;
+.featured-content .label {
+    color: var(--gold-light);
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-weight: bold;
 }
 
-.read{
-display:inline-block;
-margin-top:14px;
-color:#315bea;
-font-weight:bold;
+.featured-content h2 {
+    color: white;
+    font-size: 34px;
+    border-left: 5px solid var(--gold);
+    padding-left: 15px;
 }
 
-/* THREE CARDS */
-
-.three{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:22px;
+.featured-content p {
+    color: #dddddd;
 }
 
-.three .card{
-text-align:center;
+.read-more {
+    display: inline-block;
+    background: var(--gold);
+    color: #080808;
+    padding: 12px 22px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
 }
 
-.three i{
-font-size:2rem;
-color:#315bea;
-margin-bottom:12px;
+/* ========================================================
+   ARTICLE LINKS
+======================================================== */
+
+.story-list {
+    display: grid;
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+    gap: 20px;
 }
 
-/* FEATURE */
-
-.feature{
-display:grid;
-grid-template-columns:1fr 1fr;
-background:white;
-border-radius:17px;
-overflow:hidden;
-box-shadow:0 5px 22px rgba(0,0,0,.07);
+.story-link {
+    display: block;
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    border-left: 4px solid var(--gold);
+    text-decoration: none;
+    color: var(--text);
+    box-shadow: 0 5px 18px rgba(0,0,0,.07);
 }
 
-.feature img{
-width:100%;
-height:100%;
-min-height:330px;
-object-fit:cover;
+.story-link:hover {
+    transform: translateY(-3px);
 }
 
-.feature-content{
-padding:35px;
+.story-link h3 {
+    margin: 0 0 8px;
+    color: #111;
 }
 
-.feature-content h3{
-font-size:1.8rem;
-margin-bottom:15px;
+.story-link span {
+    color: #765700;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
 }
 
-.feature-content p{
-color:#596579;
-margin-bottom:15px;
+/* ========================================================
+   EDITORIAL APPROACH
+======================================================== */
+
+.approach {
+    background:
+        linear-gradient(
+            135deg,
+            #fff4c9,
+            #fffdf6
+        );
+
+    border: 1px solid #e7d28d;
+    padding: 40px;
+    border-radius: 20px;
 }
 
-/* AUTHOR INFORMATION */
-
-.author-section{
-background:#172033;
-color:white;
-padding:40px;
-border-radius:18px;
+.approach h2 {
+    margin-top: 0;
+    color: #4c3908;
 }
 
-.author-section p{
-color:#dbe2ed;
-margin-top:15px;
+.approach ul {
+    padding-left: 25px;
 }
 
-/* FOOTER */
-
-footer{
-background:#101827;
-color:white;
-text-align:center;
-padding:40px 20px;
+.approach li {
+    margin-bottom: 12px;
 }
 
-footer p{
-color:#cbd4e2;
-margin:8px auto;
-max-width:750px;
+/* ========================================================
+   AUTHOR
+======================================================== */
+
+.author {
+    background: white;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    padding: 40px;
+
+    display: grid;
+    grid-template-columns: 190px 1fr;
+    gap: 35px;
+    align-items: center;
 }
 
-.footer-links{
-margin:20px 0;
+.author img {
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--gold);
 }
 
-.footer-links a{
-color:white;
-margin:0 8px;
+.author h2 {
+    margin-top: 0;
 }
 
-.footer-links a:hover{
-text-decoration:underline;
+/* ========================================================
+   SOCIAL
+======================================================== */
+
+.social {
+    background: var(--black);
+    color: white;
+    text-align: center;
+    padding: 55px 20px;
+    border-top: 4px solid var(--gold);
 }
 
-/* MOBILE */
-
-@media(max-width:750px){
-
-.header{
-flex-direction:column;
-text-align:center;
+.social h2 {
+    color: var(--gold-light);
 }
 
-.author{
-margin:25px 20px;
-flex-direction:column;
-text-align:center;
+.social p {
+    max-width: 650px;
+    margin: auto auto 25px;
+    color: #ddd;
 }
 
-.nav{
-gap:12px;
+.social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
 }
 
-.cards,
-.feature,
-.three{
-grid-template-columns:1fr;
+.social-links a {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: white;
+    color: #111;
+
+    text-decoration: none;
+    font-size: 18px;
 }
 
-.feature img{
-min-height:240px;
+.social-links a:hover {
+    background: var(--gold);
 }
 
-.box,
-.feature-content,
-.author-section{
-padding:25px;
+/* ========================================================
+   FOOTER
+======================================================== */
+
+footer {
+    background: #050505;
+    color: #bbb;
+    text-align: center;
+    padding: 35px 20px;
+    font-family: Arial, sans-serif;
 }
 
+footer a {
+    color: var(--gold-light);
 }
+
+/* ========================================================
+   MOBILE
+======================================================== */
+
+@media (max-width: 800px) {
+
+    .nav-container {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        justify-content: center;
+    }
+
+    .cards,
+    .story-list,
+    .featured,
+    .author {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-image,
+    .featured-image img {
+        min-height: 280px;
+    }
+
+    .featured-content {
+        padding: 30px 22px;
+    }
+
+    .author {
+        text-align: center;
+    }
+
+    .author img {
+        margin: auto;
+    }
+
+    .hero {
+        padding: 60px 18px 70px;
+    }
+
+    .container {
+        padding: 45px 15px;
+    }
+
+    .intro,
+    .approach {
+        padding: 25px 20px;
+    }
+
+}
+
 </style>
 
-<style id="homepage-background">
-body{
-    background-image:
-        linear-gradient(rgba(244,247,251,.82),rgba(244,247,251,.82)),
-        url('images/homepage-background.jpeg') !important;
-    background-size: cover;
-    background-position: center top;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-}
-</style>
 </head>
 
 <body>
-<!-- HEADER -->
 
-<header>
+<!-- ========================================================
+     HEADER
+======================================================== -->
 
-<div class="header">
+<header class="site-header">
 
-<div class="logo">
+<div class="nav-container">
+
+<a href="index.html" class="logo">
 Stories, Lives <span>&</span> Lessons
-</div>
-
-<div class="social">
-
-<a href="https://www.facebook.com/profile.php?id=61568056696688"
-target="_blank"
-rel="noopener noreferrer"
-aria-label="Facebook">
-<i class="fa-brands fa-facebook-f"></i>
 </a>
 
-<a href="https://www.instagram.com/mutwiri.eliphas/"
-target="_blank"
-rel="noopener noreferrer"
-aria-label="Instagram">
-<i class="fa-brands fa-instagram"></i>
-</a>
-
-<a href="https://x.com/KingleeMut40701"
-target="_blank"
-rel="noopener noreferrer"
-aria-label="X">
-<i class="fa-brands fa-x-twitter"></i>
-</a>
-
-<a href="https://wa.me/254736280522"
-target="_blank"
-rel="noopener noreferrer"
-aria-label="WhatsApp">
-<i class="fa-brands fa-whatsapp"></i>
-</a>
-
-</div>
-
-</div>
-
-</header>
-
-
-<!-- AUTHOR AT TOP -->
-
-<div class="author">
-
-<img src="images/author-v2.png"
-alt="Kinglee Mutwiri, founder and author">
-
-<div>
-
-<h1>Kinglee Mutwiri</h1>
-
-<p>Founder and Author</p>
-
-<small>
-Stories, biographies and practical lessons from everyday life.
-</small>
-
-</div>
-
-</div>
-
-
-<!-- NAVIGATION -->
-
-<nav>
-
-<div class="nav">
+<nav class="nav-links">
 
 <a href="index.html">Home</a>
 
@@ -529,427 +616,541 @@ Stories, biographies and practical lessons from everyday life.
 
 <a href="#life">Life Stories</a>
 
-<a href="#lessons">Everyday Lessons</a>
+<a href="#lessons">Lessons</a>
 
 <a href="about.html">About</a>
 
 <a href="contact.html">Contact</a>
 
-</div>
-
 </nav>
 
+</div>
+
+</header>
+
+
+<!-- ========================================================
+     HERO
+======================================================== -->
+
+<section class="hero">
+
+<div class="hero-inner">
+
+<div class="eyebrow">
+Stories • People • Music • Lessons
+</div>
+
+<h1>
+Stories, Lives <span>&</span> Lessons
+</h1>
+
+<p>
+Stories, Lives & Lessons is a place for original storytelling,
+biographies, human experiences, music stories and practical reflections
+about the lessons that can be found in ordinary and extraordinary lives.
+</p>
+
+<p>
+We look beyond a name or a headline. We explore the journey behind the
+person, the choices behind the outcome and the experiences that can teach
+us something about our own lives.
+</p>
+
+<div class="hero-buttons">
+
+<a class="btn btn-gold" href="#featured">
+Explore Featured Story
+</a>
+
+<a class="btn btn-dark" href="#stories">
+Explore Stories
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ========================================================
+     MAIN
+======================================================== -->
 
 <main>
 
+<div class="container">
 
-<!-- HERO -->
+<!-- INTRO -->
 
-<div class="hero">
+<section class="intro">
 
-<div class="label">
-STORIES • LIVES • LESSONS
-</div>
-
-<h2>
-Stories That Tell More Than
-<span>A Name</span>
-</h2>
+<h2>Welcome to Stories, Lives & Lessons</h2>
 
 <p>
-Welcome to Stories, Lives & Lessons, a storytelling website
-exploring celebrity biographies, meaningful life stories and
-practical ideas that readers can reflect on and apply to everyday
-life.
-</p>
-
-</div>
-
-
-<!-- INTRODUCTION -->
-
-<section>
-
-<div class="box">
-
-<h2 class="heading">
-Welcome to <span>Stories, Lives & Lessons</span>
-</h2>
-
-<p>
-Every person has a story. Some stories become known around the
-world because the people behind them become musicians, actors,
-athletes, entrepreneurs or other public figures. Other stories
-remain within families, communities and ordinary daily life.
-Yet both can teach us something about ambition, decisions,
-difficult moments, persistence and personal growth.
+Every person has a story. Some stories become famous because millions of
+people hear them. Others remain private, known only to families, friends
+and communities. Yet both can contain experiences worth understanding.
+Stories, Lives & Lessons was created around that idea.
 </p>
 
 <p>
-Stories, Lives & Lessons was created around this idea. The website
-brings together celebrity biographies, meaningful life stories
-and practical reflections in one place.
+This website explores the journeys of people, the experiences that shape
+them, the successes that inspire them and the difficulties that test them.
+The purpose is not simply to repeat facts about well-known people. It is
+to put their journeys into context and ask what readers can learn from
+them.
 </p>
 
 <p>
-Our celebrity stories look beyond a person's name and explore
-their background, career, achievements, important moments and
-influence. Our life stories focus on experiences that ordinary
-readers can relate to. Our everyday lessons section considers
-what readers can reasonably learn from those experiences.
+Our stories may cover musicians, entertainers, public figures, ordinary
+people, personal experiences, work, money, relationships, resilience,
+decision-making and other subjects connected to everyday life.
 </p>
 
 <p>
-The purpose is not simply to present disconnected facts. A story
-becomes more meaningful when readers understand the journey,
-the challenges, the decisions and the circumstances surrounding
-important moments.
+A good story should leave a reader with something more than information.
+It can provide perspective, encourage reflection or simply help someone
+understand another person's journey from a different point of view.
 </p>
-
-<p>
-As the website grows, new stories and biographies will be added
-with the goal of creating useful, readable and engaging content
-for visitors interested in people and the experiences that shape
-their lives.
-</p>
-
-</div>
 
 </section>
 
 
-<!-- TOP ADSENSE -->
+<!-- ========================================================
+     WHAT WE CREATE
+======================================================== -->
 
-<div class="ad">
+<section id="stories">
 
-<span class="ad-label">Advertisement</span>
+<div class="section-title">
 
-<ins class="adsbygoogle"
-style="display:block"
-data-ad-client="ca-pub-5799841502846177"
-data-ad-slot="6388196362"
-data-ad-format="auto"
-data-full-width-responsive="true">
-</ins>
-
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-</div>
-
-
-<!-- FEATURED STORY -->
-
-<section>
-
-<h2 class="heading">
-Featured <span>Story</span>
-</h2>
-
-<p class="intro">
-Explore one of the biographies currently available on the website.
-</p>
-
-<div class="feature">
-
-<img src="images/michael-jackson-home.jpeg"
-alt="Michael Jackson during his music career"
-loading="lazy">
-
-<div class="feature-content">
-
-<h3>
-Michael Jackson: His Life, Music and Legacy
-</h3>
+<h2>What We Create</h2>
 
 <p>
-Michael Jackson became one of the most recognizable figures in
-popular music. His career involved years of performance,
-recording, international success and cultural influence.
+Different kinds of stories, connected by one goal: making information
+interesting, understandable and useful.
 </p>
-
-<p>
-His story provides an opportunity to look beyond fame and
-consider the development of a career, the pressures associated
-with public attention and the lasting influence of creative work.
-</p>
-
-<a class="read"
-href="michael-jackson.html">
-Read the full biography →
-</a>
 
 </div>
-
-</div>
-
-</section>
-
-
-<!-- CELEBRITY STORIES -->
-
-<section id="celebrity">
-
-<h2 class="heading">
-Celebrity <span>Stories</span>
-</h2>
-
-<p class="intro">
-Celebrity biographies can help readers understand the background,
-career development, achievements and experiences behind a public
-figure's success.
-</p>
 
 <div class="cards">
 
-<article class="card">
+<div class="card">
 
-<h3>Tupac Shakur</h3>
+<div class="card-icon">
+<i class="fa-solid fa-microphone"></i>
+</div>
 
-<p>
-Explore Tupac Shakur's journey, music career, achievements,
-challenges, public influence and continuing cultural legacy.
-</p>
-
-<a class="read"
-href="Tupac%20Shakur.html">
-Read the story →
-</a>
-
-</article>
-
-
-<article class="card">
-
-<h3>Lucky Dube</h3>
+<h3>Celebrity Stories</h3>
 
 <p>
-Learn about Lucky Dube's musical journey, his reggae career,
-messages and influence on audiences across generations.
+Explore the lives and careers of musicians, entertainers and other
+well-known personalities. We look at their beginnings, important
+turning points, achievements, difficulties and lasting influence.
 </p>
 
-<a class="read"
-href="lucky-dube.html">
-Read the story →
+<a href="#celebrity">
+Explore celebrity stories →
 </a>
 
-</article>
+</div>
 
 
-<article class="card">
+<div class="card">
+
+<div class="card-icon">
+<i class="fa-solid fa-book-open"></i>
+</div>
+
+<h3>Life Stories</h3>
+
+<p>
+Original human-centered stories about experiences, challenges, choices,
+setbacks and moments that can change the direction of a person's life.
+</p>
+
+<a href="#life">
+Explore life stories →
+</a>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">
+<i class="fa-solid fa-lightbulb"></i>
+</div>
+
+<h3>Everyday Lessons</h3>
+
+<p>
+Practical reflections on money, work, personal growth, relationships,
+decisions, resilience and the small lessons that can influence everyday
+life.
+</p>
+
+<a href="#lessons">
+Explore lessons →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ========================================================
+     FEATURED STORY
+======================================================== -->
+
+<section id="featured" style="margin-top:60px;">
+
+<div class="section-title">
+
+<h2>Featured Story</h2>
+
+<p>
+A detailed look at one of the most influential entertainers in modern
+music history.
+</p>
+
+</div>
+
+<div class="featured">
+
+<div class="featured-image">
+
+<img
+src="images/michael-jackson-home.jpeg"
+alt="Michael Jackson during his music career"
+loading="lazy">
+
+</div>
+
+<div class="featured-content">
+
+<div class="label">
+Featured Biography
+</div>
+
+<h2>Michael Jackson: The Life Behind the Legend</h2>
+
+<p>
+Michael Jackson's journey began as a young performer and eventually
+developed into a career that transformed popular music, dance and
+entertainment.
+</p>
+
+<p>
+Our biography explores his childhood, family, rise to fame, music,
+performances, relationships, challenges, final years and the legacy he
+left behind.
+</p>
+
+<p>
+It also looks beyond fame by asking what his journey can teach us about
+discipline, creativity, pressure, ambition and the complicated nature of
+being a public figure.
+</p>
+
+<a class="read-more" href="michael-jackson.html">
+Read the Full Story
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ========================================================
+     CELEBRITY STORIES
+======================================================== -->
+
+<section id="celebrity" style="margin-top:70px;">
+
+<div class="section-title">
+
+<h2>Celebrity Stories</h2>
+
+<p>
+Discover the people behind some of the most recognizable names in music
+and entertainment.
+</p>
+
+</div>
+
+<div class="story-list">
+
+<a class="story-link" href="michael-jackson.html">
 
 <h3>Michael Jackson</h3>
 
 <p>
-Explore Michael Jackson's career, achievements, music and lasting
-influence on popular culture.
+From childhood performances to global fame, explore the life, music,
+challenges and legacy of Michael Jackson.
 </p>
 
-<a class="read"
-href="michael-jackson.html">
-Read the story →
+<span>Read biography →</span>
+
 </a>
 
-</article>
+
+<a class="story-link" href="Tupac%20Shakur.html">
+
+<h3>Tupac Shakur</h3>
+
+<p>
+Explore Tupac's life, artistic expression, struggles, influence and the
+ideas that continue to surround his legacy.
+</p>
+
+<span>Read biography →</span>
+
+</a>
 
 
-<article class="card">
+<a class="story-link" href="lucky-dube.html">
+
+<h3>Lucky Dube</h3>
+
+<p>
+Discover the life and music of the South African reggae artist whose
+songs carried messages about society, love, struggle and hope.
+</p>
+
+<span>Read biography →</span>
+
+</a>
+
+
+<a class="story-link" href="rihanna.html">
 
 <h3>Rihanna</h3>
 
 <p>
-Follow Rihanna's journey through music, entrepreneurship,
-achievements and influence in entertainment and business.
+Explore Rihanna's journey from her early life and music career to global
+success, entrepreneurship and cultural influence.
 </p>
 
-<a class="read"
-href="rihanna.html">
-Read the story →
-</a>
+<span>Read biography →</span>
 
-</article>
+</a>
 
 </div>
 
 </section>
 
 
-<!-- IN ARTICLE ADSENSE -->
+<!-- ========================================================
+     LIFE STORIES
+======================================================== -->
 
-<div class="ad">
+<section id="life" style="margin-top:70px;">
 
-<span class="ad-label">Advertisement</span>
+<div class="section-title">
 
-<ins class="adsbygoogle"
-style="display:block;text-align:center;"
-data-ad-layout="in-article"
-data-ad-format="fluid"
-data-ad-client="ca-pub-5799841502846177"
-data-ad-slot="1217574823">
-</ins>
+<h2>Life Stories</h2>
 
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+<p>
+Stories about human experiences, decisions, challenges and the moments
+that can change a person's direction.
+</p>
 
 </div>
 
-
-<!-- LIFE STORIES -->
-
-<section id="life">
-
-<h2 class="heading">
-Life <span>Stories</span>
-</h2>
-
-<p class="intro">
-Not every meaningful story belongs to a celebrity. Everyday
-experiences can also reveal important ideas about choices,
-challenges, relationships, responsibility and personal growth.
-</p>
-
 <div class="cards">
 
-<article class="card">
+<div class="card">
 
-<h3>Stories With Meaning</h3>
-
-<p>
-Meaningful storytelling can help readers connect experiences with
-questions they encounter in their own lives.
-</p>
-
-</article>
-
-
-<article class="card">
+<div class="card-icon">
+<i class="fa-solid fa-road"></i>
+</div>
 
 <h3>The Journey Behind the Story</h3>
 
 <p>
-A final outcome rarely tells the entire story. Understanding what
-happened before an achievement or setback can reveal useful lessons.
+A person's final outcome rarely tells the entire story. Understanding
+the journey can reveal the preparation, mistakes, sacrifices and choices
+that came before success or failure.
 </p>
 
-</article>
+</div>
 
 
-<article class="card">
+<div class="card">
 
-<h3>Everyday Experiences</h3>
+<div class="card-icon">
+<i class="fa-solid fa-people-group"></i>
+</div>
+
+<h3>People and Experiences</h3>
 
 <p>
-Ordinary situations can raise useful questions about communication,
-patience, responsibility and preparation.
+Our lives are shaped by the people we meet. Family, friends, teachers,
+colleagues and communities can influence the decisions we make and the
+person we become.
 </p>
 
-</article>
+</div>
 
 
-<article class="card">
+<div class="card">
 
-<h3>Reflection</h3>
+<div class="card-icon">
+<i class="fa-solid fa-arrows-to-circle"></i>
+</div>
+
+<h3>Turning Points</h3>
 
 <p>
-A story can become more useful when readers pause, consider what
-happened and decide what they can learn from it.
+Some moments appear small when they happen but become important later.
+We explore how decisions, opportunities and unexpected challenges can
+create turning points.
 </p>
 
-</article>
+</div>
 
 </div>
 
 </section>
 
 
-<!-- EVERYDAY LESSONS -->
+<!-- ========================================================
+     EVERYDAY LESSONS
+======================================================== -->
 
-<section id="lessons">
+<section id="lessons" style="margin-top:70px;">
 
-<h2 class="heading">
-Everyday <span>Lessons</span>
-</h2>
+<div class="section-title">
 
-<p class="intro">
-The lessons section connects storytelling with everyday life and
-encourages readers to think about practical ideas.
-</p>
-
-<div class="three">
-
-<article class="card">
-
-<i class="fa-solid fa-lightbulb"></i>
-
-<h3>Learning From Success</h3>
+<h2>Everyday Lessons</h2>
 
 <p>
-Success stories can encourage us to consider preparation,
-consistency, discipline and long-term goals.
+Useful reflections that connect stories to decisions people face in
+ordinary life.
 </p>
 
-</article>
+</div>
 
+<div class="cards">
 
-<article class="card">
+<div class="card">
 
-<i class="fa-solid fa-person-running"></i>
+<div class="card-icon">
+<i class="fa-solid fa-coins"></i>
+</div>
 
-<h3>Learning From Challenges</h3>
+<h3>Money and Decisions</h3>
 
 <p>
-Difficult experiences can provide perspectives about resilience,
-patience and responsibility.
+Income, saving, spending and financial decisions can shape opportunities.
+Understanding everyday money choices can help people plan more carefully.
 </p>
 
-</article>
+</div>
 
 
-<article class="card">
+<div class="card">
 
-<i class="fa-solid fa-book-open"></i>
+<div class="card-icon">
+<i class="fa-solid fa-briefcase"></i>
+</div>
 
-<h3>Making Better Decisions</h3>
+<h3>Work and Growth</h3>
 
 <p>
-Stories often contain decisions that can encourage readers to
-consider consequences and available choices.
+Careers are rarely perfectly straight. Experience, mistakes, persistence
+and learning can all influence professional growth.
 </p>
 
-</article>
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">
+<i class="fa-solid fa-heart"></i>
+</div>
+
+<h3>Relationships and Character</h3>
+
+<p>
+Communication, trust, boundaries, patience and respect influence the
+relationships people build throughout their lives.
+</p>
+
+</div>
 
 </div>
 
 </section>
 
 
-<!-- AUTHOR -->
+<!-- ========================================================
+     EDITORIAL APPROACH
+======================================================== -->
 
-<section>
+<section style="margin-top:70px;">
 
-<div class="author-section">
+<div class="approach">
 
-<h2>
-About the Author
-</h2>
+<h2>How We Approach Our Stories</h2>
 
 <p>
-Kinglee Mutwiri is the founder and author of Stories, Lives &
-Lessons. The website was created around an interest in storytelling
-and the experiences that shape people's lives.
+Stories, Lives & Lessons is built around original writing and thoughtful
+presentation. A biography should not simply be a collection of dates,
+names and achievements. A useful story gives those facts context.
 </p>
 
 <p>
-The goal is to give readers a place where they can learn about
-notable people while also thinking about the broader ideas found
-within their journeys.
+When researching a person or subject, we aim to distinguish established
+information from interpretation. Where appropriate, readers should be
+encouraged to consult reliable sources and explore the subject further.
 </p>
 
+<ul>
+
+<li>
+We focus on original explanations rather than copying material from
+other websites.
+</li>
+
+<li>
+We aim to provide context so readers can understand why an event or
+achievement mattered.
+</li>
+
+<li>
+We connect stories with practical reflections and lessons where those
+lessons are reasonable and clearly presented.
+</li>
+
+<li>
+We avoid presenting speculation as established fact.
+</li>
+
+<li>
+We aim to make long-form stories readable through clear headings,
+sections and useful navigation.
+</li>
+
+<li>
+We recognize that public figures are people with complicated lives,
+rather than simply names attached to achievements.
+</li>
+
+</ul>
+
 <p>
-Celebrity biographies, life stories and everyday reflections form
-the central focus of the website.
+The goal is simple: when a reader finishes an article, they should have
+learned something, understood a journey better or found a useful idea to
+think about.
 </p>
 
 </div>
@@ -957,42 +1158,200 @@ the central focus of the website.
 </section>
 
 
-<!-- FINAL SECTION -->
+<!-- ========================================================
+     ABOUT THE AUTHOR
+======================================================== -->
 
-<section>
+<section style="margin-top:70px;">
 
-<div class="box">
+<div class="section-title">
 
-<h2 class="heading">
-Explore the <span>Stories</span>
-</h2>
+<h2>About the Author</h2>
+
+</div>
+
+<div class="author">
+
+<img
+src="images/author-v2.png"
+alt="Kinglee Mutwiri, founder and author"
+loading="lazy">
+
+<div>
+
+<h2>Kinglee Mutwiri</h2>
 
 <p>
-A good story does not necessarily end when the final sentence is
-read. It can continue as a question, an idea or a reflection that
-stays with the reader.
+Kinglee Mutwiri is the founder and author behind Stories, Lives &
+Lessons. The website was created to explore stories about people,
+experiences, music, challenges and the lessons that can be found within
+them.
 </p>
 
 <p>
-Whether you are interested in the life of a famous musician, the
-journey of an influential public figure or an everyday experience
-that carries a deeper meaning, Stories, Lives & Lessons is built
-around the idea that experiences can teach us something.
+The aim is to make stories accessible while giving readers more than a
+simple summary. Each subject is approached as an opportunity to
+understand a journey and consider what it may teach us.
 </p>
 
-<p>
-Explore the biographies, read the stories and consider the lessons
-that may apply to your own everyday life.
-</p>
+<a class="read-more"
+href="about.html">
+Learn More About the Author
+</a>
+
+</div>
 
 </div>
 
 </section>
+
+
+<!-- ========================================================
+     EXPLORE
+======================================================== -->
+
+<section style="margin-top:70px;">
+
+<div class="section-title">
+
+<h2>Explore the Website</h2>
+
+<p>
+Use these pages to learn more about the publication and find more stories.
+</p>
+
+</div>
+
+<div class="story-list">
+
+<a class="story-link" href="about.html">
+
+<h3>About Stories, Lives & Lessons</h3>
+
+<p>
+Learn about the purpose, editorial approach and vision behind the website.
+</p>
+
+<span>Visit About →</span>
+
+</a>
+
+
+<a class="story-link" href="contact.html">
+
+<h3>Contact</h3>
+
+<p>
+Have a question, suggestion or feedback? Find our contact information.
+</p>
+
+<span>Contact us →</span>
+
+</a>
+
+
+<a class="story-link" href="privacy-policy.html">
+
+<h3>Privacy Policy</h3>
+
+<p>
+Read information about privacy, cookies, advertising and how website
+information may be handled.
+</p>
+
+<span>Read Privacy Policy →</span>
+
+</a>
+
+
+<a class="story-link" href="disclaimer.html">
+
+<h3>Disclaimer</h3>
+
+<p>
+Read the website's general disclaimer and information about the nature
+of its published content.
+</p>
+
+<span>Read Disclaimer →</span>
+
+</a>
+
+</div>
+
+</section>
+
+</div>
 
 </main>
 
 
-<!-- FOOTER -->
+<!-- ========================================================
+     SOCIAL
+======================================================== -->
+
+<section class="social">
+
+<h2>Follow Stories, Lives & Lessons</h2>
+
+<p>
+Follow our social pages for new stories, biographies, useful articles
+and updates when new content is published.
+</p>
+
+<div class="social-links">
+
+<a
+href="https://www.facebook.com/profile.php?id=61568056696688"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="Facebook">
+
+<i class="fa-brands fa-facebook-f"></i>
+
+</a>
+
+
+<a
+href="https://www.instagram.com/mutwiri.eliphas/"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="Instagram">
+
+<i class="fa-brands fa-instagram"></i>
+
+</a>
+
+
+<a
+href="https://x.com/KingleeMut40701"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="X">
+
+<i class="fa-brands fa-x-twitter"></i>
+
+</a>
+
+
+<a
+href="https://wa.me/254736280522"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="WhatsApp">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+</div>
+
+</section>
+
+
+<!-- ========================================================
+     FOOTER
+======================================================== -->
 
 <footer>
 
@@ -1001,31 +1360,51 @@ that may apply to your own everyday life.
 </p>
 
 <p>
-Celebrity biographies, meaningful stories and practical reflections
-for everyday life.
+Original stories, biographies, experiences and practical reflections.
 </p>
 
-<div class="footer-links">
+<p>
 
-<a href="index.html">Home</a>
+<a href="index.html">Home</a> ·
 
-<a href="about.html">About</a>
+<a href="about.html">About</a> ·
 
-<a href="contact.html">Contact</a>
+<a href="contact.html">Contact</a> ·
 
-<a href="privacy-policy.html">Privacy Policy</a>
+<a href="privacy-policy.html">Privacy</a> ·
 
-<a href="terms.html">Terms</a>
+<a href="terms.html">Terms</a> ·
 
 <a href="disclaimer.html">Disclaimer</a>
 
-</div>
+</p>
 
 <p>
 © 2026 Stories, Lives & Lessons. All rights reserved.
 </p>
 
 </footer>
+
+
+<!-- ========================================================
+     HOMEPAGE TOP AD
+======================================================== -->
+
+<div style="max-width:1100px;margin:30px auto;padding:0 20px;">
+
+<ins class="adsbygoogle"
+style="display:block"
+data-ad-client="ca-pub-5799841502846177"
+data-ad-slot="6388196362"
+data-ad-format="auto"
+data-full-width-responsive="true"></ins>
+
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
 
 </body>
 </html>
