@@ -1,1211 +1,693 @@
- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy | America AI Data, Cookies, Security & User Rights</title>
-  <meta name="description" content="Read the privacy policy for America AI, covering data collection, analytics, cookies, Google services, user rights, content usage, and contact information." />
-
-  <!-- Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X3HE9CKP90"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-0DVD5VSFYW');
-  </script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <style>
-    :root{
-      --bg:#f4f8ff;
-      --paper:#ffffff;
-      --paper-2:#eef5ff;
-      --text:#12233f;
-      --muted:#5d6b82;
-      --line:#d8e3f2;
-      --navy:#0e2748;
-      --blue:#2563eb;
-      --blue-2:#3b82f6;
-      --cyan:#dff5ff;
-      --violet:#6d28d9;
-      --violet-soft:#efe7ff;
-      --green:#15803d;
-      --green-soft:#e9fff0;
-      --gold:#d79a1e;
-      --gold-soft:#fff1cc;
-      --shadow:0 24px 60px rgba(14,39,72,.12);
-      --shadow-soft:0 10px 28px rgba(18,35,63,.08);
-      --radius:28px;
-      --radius-sm:18px;
-      --max:1280px;
-    }
-
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family:'Manrope', sans-serif;
-      color:var(--text);
-      line-height:1.82;
-      background:
-        radial-gradient(circle at top left, rgba(37,99,235,.10), transparent 24%),
-        radial-gradient(circle at top right, rgba(109,40,217,.08), transparent 22%),
-        linear-gradient(180deg, #f4f8ff 0%, #ffffff 100%);
-      overflow-x:hidden;
-    }
-
-    a{text-decoration:none;color:inherit}
-    img,svg{display:block;max-width:100%}
-    code{
-      background:#edf4ff;
-      padding:.12rem .38rem;
-      border-radius:8px;
-      font-size:.92em;
-    }
-    ::selection{background:var(--navy);color:#fff}
-
-    .container{
-      width:min(var(--max), calc(100% - 2rem));
-      margin-inline:auto;
-    }
-
-    .float-links{
-      position:fixed;
-      right:16px;
-      top:50%;
-      transform:translateY(-50%);
-      z-index:50;
-      display:flex;
-      flex-direction:column;
-      gap:.9rem;
-    }
-
-    .float-link{
-      display:flex;
-      align-items:center;
-      gap:.85rem;
-      min-width:230px;
-      padding:.92rem 1rem;
-      border-radius:18px;
-      background:rgba(255,255,255,.92);
-      border:1px solid rgba(216,227,242,.98);
-      box-shadow:var(--shadow-soft);
-      backdrop-filter:blur(14px);
-      transition:transform .28s ease, box-shadow .28s ease;
-    }
-
-    .float-link:hover{
-      transform:translateX(-4px);
-      box-shadow:var(--shadow);
-    }
-
-    .float-link .icon{
-      width:44px;height:44px;border-radius:14px;
-      display:grid;place-items:center;
-      flex:0 0 auto;
-      background:linear-gradient(135deg, #e8f0ff, #ffffff);
-      color:var(--blue);
-    }
-
-    .float-link strong{
-      display:block;
-      line-height:1.2;
-      font-size:.95rem;
-    }
-
-    .float-link span{
-      display:block;
-      color:var(--muted);
-      font-size:.82rem;
-      line-height:1.25;
-    }
-
-    .site-header{
-      position:relative;
-      overflow:hidden;
-      color:#fff;
-      background:
-        linear-gradient(135deg, rgba(14,39,72,.80), rgba(37,99,235,.56)),
-        url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-      border-bottom:1px solid rgba(255,255,255,.14);
-    }
-
-    .site-header::before,
-    .site-header::after{
-      content:"";
-      position:absolute;
-      border-radius:50%;
-      background:radial-gradient(circle, rgba(255,255,255,.16), transparent 68%);
-      filter:blur(8px);
-      pointer-events:none;
-    }
-    .site-header::before{width:420px;height:420px;left:-120px;top:-180px}
-    .site-header::after{width:390px;height:390px;right:-90px;bottom:-170px}
-
-    .nav{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:1rem;
-      padding:1rem 0;
-      position:sticky;
-      top:0;
-      z-index:20;
-      backdrop-filter:blur(12px);
-      background:linear-gradient(180deg, rgba(14,39,72,.42), rgba(14,39,72,.10));
-      border-bottom:1px solid rgba(255,255,255,.06);
-    }
-
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:.9rem;
-      font-family:'Plus Jakarta Sans', sans-serif;
-      font-weight:800;
-      letter-spacing:.02em;
-    }
-
-    .brand-mark{
-      width:52px;height:52px;border-radius:18px;
-      display:grid;place-items:center;
-      background:rgba(255,255,255,.12);
-      border:1px solid rgba(255,255,255,.2);
-      box-shadow:0 12px 30px rgba(0,0,0,.16);
-      backdrop-filter:blur(12px);
-    }
-
-    .nav-links{
-      display:flex;
-      align-items:center;
-      gap:1rem 1.2rem;
-      flex-wrap:wrap;
-    }
-
-    .nav-links a{
-      color:rgba(255,255,255,.94);
-      font-weight:700;
-      font-size:.95rem;
-      position:relative;
-    }
-
-    .nav-links a::after{
-      content:"";
-      position:absolute;
-      left:0;bottom:-4px;
-      width:0;height:2px;background:#fff;
-      transition:width .3s ease;
-    }
-    .nav-links a:hover::after{width:100%}
-
-    .hero{
-      padding:3.5rem 0 4.8rem;
-      position:relative;
-      z-index:2;
-    }
-
-    .hero-grid{
-      display:grid;
-      grid-template-columns:1.08fr .92fr;
-      gap:2rem;
-      align-items:end;
-    }
-
-    .eyebrow{
-      display:inline-flex;
-      align-items:center;
-      gap:.65rem;
-      padding:.55rem .95rem;
-      border-radius:999px;
-      background:rgba(255,255,255,.12);
-      border:1px solid rgba(255,255,255,.24);
-      backdrop-filter:blur(10px);
-      font-size:.82rem;
-      text-transform:uppercase;
-      letter-spacing:.13em;
-      font-weight:800;
-    }
-
-    .eyebrow span{
-      width:9px;height:9px;border-radius:50%;
-      background:#ffd166;
-      box-shadow:0 0 0 6px rgba(255,209,102,.16);
-    }
-
-    h1,h2,h3,h4{
-      font-family:'Plus Jakarta Sans', sans-serif;
-      line-height:1.02;
-      letter-spacing:-.03em;
-      margin:0 0 1rem;
-    }
-
-    h1{
-      font-size:clamp(3rem, 6vw, 5.8rem);
-      max-width:10ch;
-      margin-top:1rem;
-    }
-
-    .lead{
-      margin:0;
-      max-width:64ch;
-      color:rgba(255,255,255,.92);
-      font-size:clamp(1.04rem, 1.8vw, 1.18rem);
-    }
-
-    .hero-actions{
-      display:flex;
-      flex-wrap:wrap;
-      gap:1rem;
-      margin-top:1.8rem;
-    }
-
-    .btn{
-      min-height:54px;
-      padding:0 1.2rem;
-      border-radius:999px;
-      border:none;
-      cursor:pointer;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:.7rem;
-      font-weight:800;
-      transition:transform .28s ease, box-shadow .28s ease, background .28s ease;
-    }
-
-    .btn-primary{
-      background:#fff;
-      color:var(--navy);
-      box-shadow:0 12px 30px rgba(0,0,0,.18);
-    }
-    .btn-primary:hover{
-      transform:translateY(-3px);
-      box-shadow:0 18px 38px rgba(0,0,0,.22);
-    }
-
-    .btn-secondary{
-      background:rgba(255,255,255,.12);
-      color:#fff;
-      border:1px solid rgba(255,255,255,.22);
-      backdrop-filter:blur(10px);
-    }
-    .btn-secondary:hover{
-      transform:translateY(-3px);
-      background:rgba(255,255,255,.18);
-    }
-
-    .hero-media{
-      display:grid;
-      gap:1rem;
-    }
-
-    .hero-photo,
-    .hero-mini{
-      border-radius:28px;
-      overflow:hidden;
-      border:1px solid rgba(255,255,255,.18);
-      box-shadow:0 20px 50px rgba(0,0,0,.18);
-      background:#ffffff18;
-      backdrop-filter:blur(8px);
-    }
-
-    .hero-photo{height:360px}
-    .hero-mini-wrap{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:1rem;
-    }
-    .hero-mini{height:180px}
-
-    .hero-photo img,
-    .hero-mini img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-    }
-
-    main section{padding:5rem 0}
-
-    .section-head{
-      display:grid;
-      grid-template-columns:.92fr 1.08fr;
-      gap:2rem;
-      align-items:end;
-      margin-bottom:2rem;
-    }
-
-    .kicker{
-      display:block;
-      margin-bottom:.75rem;
-      text-transform:uppercase;
-      letter-spacing:.14em;
-      font-weight:800;
-      font-size:.78rem;
-      color:var(--violet);
-    }
-
-    .section-head h2{
-      font-size:clamp(2rem, 4vw, 4rem);
-      max-width:12ch;
-    }
-
-    .section-head p{
-      margin:0;
-      color:var(--muted);
-      font-size:1.05rem;
-      max-width:68ch;
-    }
-
-    .overview{
-      display:grid;
-      grid-template-columns:1.08fr .92fr;
-      gap:2rem;
-      align-items:start;
-    }
-
-    .paper{
-      background:linear-gradient(180deg, #ffffff, #f9fbff);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow-soft);
-      padding:1.55rem;
-      position:relative;
-      overflow:hidden;
-    }
-
-    .paper::before{
-      content:"";
-      position:absolute;
-      width:220px;height:220px;border-radius:50%;
-      right:-70px;top:-70px;
-      background:radial-gradient(circle, rgba(37,99,235,.08), transparent 70%);
-      pointer-events:none;
-    }
-
-    .content-flow{
-      columns:2 320px;
-      column-gap:2rem;
-    }
-
-    .content-flow p{
-      margin:0 0 1.15rem;
-      color:var(--muted);
-      break-inside:avoid;
-    }
-
-    .side-notes{
-      display:grid;
-      gap:1rem;
-    }
-
-    .note{
-      border:1px solid var(--line);
-      border-radius:22px;
-      background:linear-gradient(180deg, #f8fbff, #eef5ff);
-      padding:1.15rem 1.2rem;
-      box-shadow:var(--shadow-soft);
-    }
-
-    .note strong{
-      display:block;
-      font-family:'Plus Jakarta Sans', sans-serif;
-      color:var(--navy);
-      font-size:1.28rem;
-      margin-bottom:.25rem;
-    }
-
-    .note span{
-      color:var(--muted);
-    }
-
-    .showcase{
-      background:linear-gradient(180deg, #f5f9ff 0%, #ffffff 100%);
-      border-top:1px solid var(--line);
-      border-bottom:1px solid var(--line);
-    }
-
-    .card-grid{
-      display:grid;
-      grid-template-columns:repeat(12,1fr);
-      gap:1rem;
-    }
-
-    .policy-card{
-      grid-column:span 4;
-      border:1px solid var(--line);
-      border-radius:24px;
-      overflow:hidden;
-      background:#fff;
-      box-shadow:var(--shadow-soft);
-      transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease;
-    }
-
-    .policy-card:hover{
-      transform:translateY(-8px);
-      box-shadow:var(--shadow);
-      border-color:#bfd4f7;
-    }
-
-    .card-photo{
-      height:210px;
-      overflow:hidden;
-      border-bottom:1px solid var(--line);
-      background:#eaf2ff;
-    }
-
-    .card-photo img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-    }
-
-    .card-body{
-      padding:1.2rem;
-    }
-
-    .tag{
-      display:inline-flex;
-      margin-bottom:.8rem;
-      padding:.35rem .72rem;
-      border-radius:999px;
-      background:var(--gold-soft);
-      color:#8a5b00;
-      font-size:.78rem;
-      font-weight:800;
-      text-transform:uppercase;
-      letter-spacing:.08em;
-    }
-
-    .policy-card h3{
-      font-size:1.3rem;
-      margin-bottom:.5rem;
-    }
-
-    .policy-card p{
-      margin:0;
-      color:var(--muted);
-    }
-
-    .deep-section{
-      display:grid;
-      grid-template-columns:.95fr 1.05fr;
-      gap:2rem;
-      align-items:start;
-    }
-
-    .timeline{
-      display:grid;
-      gap:1rem;
-      position:relative;
-    }
-
-    .timeline::before{
-      content:"";
-      position:absolute;
-      left:18px;top:8px;bottom:8px;width:2px;
-      background:linear-gradient(#e3dbff, #6d28d9, #e3dbff);
-    }
-
-    .step{
-      display:grid;
-      grid-template-columns:50px 1fr;
-      gap:1rem;
-      align-items:start;
-    }
-
-    .dot{
-      width:38px;height:38px;border-radius:50%;
-      display:grid;place-items:center;
-      background:linear-gradient(135deg, var(--violet), var(--blue));
-      color:#fff;font-weight:800;
-      box-shadow:0 10px 22px rgba(109,40,217,.22);
-      z-index:1;
-      margin-top:.1rem;
-    }
-
-    .step article{
-      border:1px solid var(--line);
-      border-radius:20px;
-      padding:1.1rem 1.15rem;
-      background:#fff;
-      box-shadow:var(--shadow-soft);
-    }
-
-    .step h3{
-      font-size:1.16rem;
-      margin-bottom:.35rem;
-    }
-
-    .step p{
-      margin:0;
-      color:var(--muted);
-    }
-
-    .feature-quote{
-      margin-top:1.5rem;
-      padding:1.4rem 1.5rem;
-      border-radius:24px;
-      background:linear-gradient(135deg, var(--navy), var(--blue));
-      color:#fff;
-      box-shadow:var(--shadow);
-      position:relative;
-      overflow:hidden;
-    }
-
-    .feature-quote::after{
-      content:"";
-      position:absolute;
-      right:-40px;top:-20px;
-      width:180px;height:180px;border-radius:50%;
-      background:radial-gradient(circle, rgba(255,255,255,.16), transparent 68%);
-    }
-
-    .feature-quote p{
-      margin:0;
-      max-width:62ch;
-      font-size:1.08rem;
-    }
-
-    .contact{
-      background:linear-gradient(180deg, #f4f8ff, #ffffff);
-      border-top:1px solid var(--line);
-    }
-
-    .contact-box{
-      border:1px solid var(--line);
-      background:linear-gradient(180deg, #ffffff, #f8fbff);
-      border-radius:30px;
-      padding:1.5rem;
-      box-shadow:var(--shadow);
-      display:grid;
-      grid-template-columns:1fr .9fr;
-      gap:1.4rem;
-      position:relative;
-      overflow:hidden;
-    }
-
-    .contact-box::before{
-      content:"";
-      position:absolute;
-      width:240px;height:240px;border-radius:50%;
-      right:-60px;top:-70px;
-      background:radial-gradient(circle, rgba(37,99,235,.12), transparent 70%);
-    }
-
-    .contact-items{
-      display:grid;
-      gap:1rem;
-      align-content:start;
-    }
-
-    .contact-item{
-      display:flex;
-      align-items:center;
-      gap:1rem;
-      padding:1rem 1.1rem;
-      border-radius:20px;
-      background:#fff;
-      border:1px solid var(--line);
-      box-shadow:var(--shadow-soft);
-      transition:transform .28s ease, box-shadow .28s ease;
-    }
-
-    .contact-item:hover{
-      transform:translateY(-4px);
-      box-shadow:var(--shadow);
-    }
-
-    .contact-icon{
-      width:54px;height:54px;border-radius:18px;
-      display:grid;place-items:center;
-      background:linear-gradient(135deg, #e6efff, #fff);
-      color:var(--blue);
-      flex:0 0 auto;
-    }
-
-    footer{
-      padding:2rem 0 3rem;
-      color:var(--muted);
-      border-top:1px solid var(--line);
-      background:#fff;
-    }
-
-    .footer-row{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:1rem;
-      flex-wrap:wrap;
-    }
-
-    .reveal{
-      opacity:0;
-      transform:translateY(22px);
-      transition:opacity .78s ease, transform .78s ease;
-    }
-
-    .reveal.visible{
-      opacity:1;
-      transform:translateY(0);
-    }
-
-    .stagger > *{
-      opacity:0;
-      transform:translateY(18px);
-      animation:rise .85s ease forwards;
-    }
-
-    .stagger > *:nth-child(1){animation-delay:.08s}
-    .stagger > *:nth-child(2){animation-delay:.18s}
-    .stagger > *:nth-child(3){animation-delay:.28s}
-    .stagger > *:nth-child(4){animation-delay:.38s}
-    .stagger > *:nth-child(5){animation-delay:.48s}
-
-    @keyframes rise{
-      to{opacity:1;transform:translateY(0)}
-    }
-
-    @media (max-width: 1180px){
-      .float-links{
-        right:12px;
-        top:auto;
-        bottom:12px;
-        transform:none;
-        flex-direction:row;
-        width:calc(100% - 24px);
-        overflow:auto;
-        padding-bottom:2px;
-      }
-      .float-link{
-        min-width:240px;
-        flex:0 0 auto;
-      }
-    }
-
-    @media (max-width: 1020px){
-      .hero-grid,
-      .section-head,
-      .overview,
-      .deep-section,
-      .contact-box{
-        grid-template-columns:1fr;
-      }
-      .policy-card{grid-column:span 6}
-    }
-
-    @media (max-width: 720px){
-      .nav{
-        flex-direction:column;
-        align-items:flex-start;
-      }
-      .card-grid{
-        grid-template-columns:1fr;
-      }
-      .policy-card{grid-column:span 1}
-      .content-flow{columns:1}
-      .hero{padding:3rem 0 4rem}
-      .hero-photo{height:260px}
-      .hero-mini{height:150px}
-      h1{max-width:100%}
-      main section{padding:4rem 0}
-      .float-link{min-width:220px}
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Privacy Policy | Stories, Lives & Lessons</title>
+
+<meta name="description" content="Read the Privacy Policy for Stories, Lives & Lessons and learn how information, cookies, analytics, advertising and external services are handled.">
+<meta name="author" content="Kinglee Mutwiri">
+<meta name="robots" content="index, follow">
+
+<!-- GOOGLE ANALYTICS 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X3HE9CKP90"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-X3HE9CKP90');
+</script>
+
+<!-- GOOGLE ADSENSE -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5799841502846177"
+     crossorigin="anonymous"></script>
+
+<style>
+*{
+box-sizing:border-box;
+}
+
+body{
+margin:0;
+font-family:Arial,Helvetica,sans-serif;
+line-height:1.75;
+color:#263244;
+background:#f5f7fb;
+}
+
+header{
+background:linear-gradient(135deg,#101d3b,#315bea);
+color:white;
+padding:24px 20px;
+}
+
+.header{
+max-width:1100px;
+margin:auto;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px;
+}
+
+.logo{
+font-size:24px;
+font-weight:800;
+}
+
+.logo span{
+color:#79a9ff;
+}
+
+nav{
+background:white;
+border-bottom:1px solid #e5e9f2;
+}
+
+.nav-inner{
+max-width:1100px;
+margin:auto;
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+padding:14px 20px;
+}
+
+nav a{
+color:#263244;
+text-decoration:none;
+font-weight:700;
+padding:8px 12px;
+border-radius:8px;
+}
+
+nav a:hover{
+background:#eef3ff;
+color:#315bea;
+}
+
+.container{
+max-width:950px;
+margin:35px auto;
+padding:0 20px;
+}
+
+.hero{
+background:white;
+border-radius:18px;
+padding:35px;
+box-shadow:0 6px 25px rgba(0,0,0,.07);
+margin-bottom:25px;
+}
+
+.hero h1{
+margin-top:0;
+font-size:38px;
+color:#172442;
+}
+
+.hero p{
+font-size:17px;
+color:#596579;
+}
+
+.content{
+background:white;
+border-radius:18px;
+padding:40px;
+box-shadow:0 6px 25px rgba(0,0,0,.06);
+}
+
+h2{
+color:#172442;
+margin-top:38px;
+font-size:27px;
+}
+
+h3{
+color:#315bea;
+margin-top:28px;
+}
+
+p{
+margin:14px 0;
+}
+
+ul{
+padding-left:25px;
+}
+
+li{
+margin-bottom:9px;
+}
+
+.info{
+background:#f0f5ff;
+border-left:5px solid #315bea;
+padding:18px 20px;
+border-radius:8px;
+margin:25px 0;
+}
+
+.contact-box{
+background:#172442;
+color:white;
+padding:25px;
+border-radius:14px;
+margin-top:30px;
+}
+
+.contact-box a{
+color:#9fc0ff;
+}
+
+footer{
+margin-top:40px;
+background:#101d3b;
+color:white;
+padding:35px 20px;
+text-align:center;
+}
+
+footer a{
+color:#9fc0ff;
+text-decoration:none;
+margin:0 8px;
+}
+
+.small{
+font-size:14px;
+color:#6b7687;
+}
+
+@media(max-width:700px){
+.header{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.hero h1{
+font-size:30px;
+}
+
+.content{
+padding:25px 20px;
+}
+
+h2{
+font-size:23px;
+}
+}
+</style>
 </head>
+
 <body>
-  <aside class="float-links" aria-label="Quick page links">
-    <a class="float-link" href="index.html">
-      <span class="icon" aria-hidden="true">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-          <path d="M4 18h16M6 18V8l6-4 6 4v10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M10 18v-5h4v5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </span>
-      <span>
-        <strong>Back Home</strong>
-        <span>Return to homepage</span>
-      </span>
-    </a>
 
-    <a class="float-link" href="contact.html">
-      <span class="icon" aria-hidden="true">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-          <path d="M4 6.5h16a1.5 1.5 0 0 1 1.5 1.5v8A1.5 1.5 0 0 1 20 17.5H4A1.5 1.5 0 0 1 2.5 16V8A1.5 1.5 0 0 1 4 6.5z" stroke="currentColor" stroke-width="1.8"/>
-          <path d="M3 8l9 6 9-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </span>
-      <span>
-        <strong>Contact</strong>
-        <span>Reach America AI</span>
-      </span>
-    </a>
-  </aside>
+<header>
+<div class="header">
+<div class="logo">
+Stories, Lives <span>&</span> Lessons
+</div>
+</div>
+</header>
 
-  <header class="site-header" id="top">
-    <div class="container">
-      <nav class="nav">
-        <a class="brand" href="index.html" aria-label="America AI home">
-          <span class="brand-mark" aria-hidden="true">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
-              <path d="M12 3l7 4v10l-7 4-7-4V7l7-4z" stroke="white" stroke-width="1.8" stroke-linejoin="round"/>
-              <path d="M8.5 9.2h7M8.5 12h7M8.5 14.8h4.8" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
-            </svg>
-          </span>
-          <span>AMERICA AI PRIVACY</span>
-        </a>
+<nav>
+<div class="nav-inner">
+<a href="https://kinglee6mutwiri-cmyk.github.io/">Home</a>
+<a href="https://kinglee6mutwiri-cmyk.github.io/about.html">About</a>
+<a href="https://kinglee6mutwiri-cmyk.github.io/contact.html">Contact</a>
+<a href="https://kinglee6mutwiri-cmyk.github.io/privacy-policy.html">Privacy</a>
+<a href="https://kinglee6mutwiri-cmyk.github.io/terms.html">Terms</a>
+</div>
+</nav>
 
-        <div class="nav-links">
-          <a href="index.html">Home</a>
-          <a href="#overview">Overview</a>
-          <a href="#data">Data Use</a>
-          <a href="#rights">User Rights</a>
-          <a href="#contact">Contact</a>
-        </div>
-      </nav>
+<div class="container">
 
-      <section class="hero">
-        <div class="hero-grid">
-          <div class="stagger">
-            <div class="eyebrow"><span></span> Privacy • Data • Cookies • Transparency</div>
-            <h1>Privacy policy built with clarity, trust, and professional structure.</h1>
-            <p class="lead">
-              This Privacy Policy explains how America AI may collect, use, protect, and process information in connection with this website,
-              including analytics, cookies, contact forms, content interaction, and user communication.
-            </p>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="#overview">Read Policy</a>
-              <a class="btn btn-secondary" href="index.html">Back Home</a>
-            </div>
-          </div>
+<section class="hero">
+<h1>Privacy Policy</h1>
 
-          <div class="hero-media reveal" aria-label="Privacy and security visuals">
-            <div class="hero-photo">
-              <img src="https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=1400&q=80" alt="Digital security and privacy workspace" loading="lazy">
-            </div>
-            <div class="hero-mini-wrap">
-              <div class="hero-mini">
-                <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1200&q=80" alt="Laptop showing secure online activity" loading="lazy">
-              </div>
-              <div class="hero-mini">
-                <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=1200&q=80" alt="Technology and privacy protection environment" loading="lazy">
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  </header>
+<p>
+<strong>Stories, Lives & Lessons</strong> respects the privacy of people
+who visit and interact with this website. This Privacy Policy explains
+what information may be collected when you use our website, why that
+information may be collected, how certain third-party services may use
+information, and the choices available to visitors.
+</p>
 
-  <main>
-    <section id="overview">
-      <div class="container">
-        <div class="section-head reveal">
-          <div>
-            <span class="kicker">Overview</span>
-            <h2>Why privacy matters on a modern digital platform.</h2>
-          </div>
-          <p>
-            Privacy is not only a legal requirement. It is also a sign of respect. A strong privacy policy helps users understand
-            what information may be collected, why it may be used, how third-party tools may operate, and what choices people have while using the site.
-          </p>
-        </div>
+<p>
+This policy applies to the website available at
+<strong>kinglee6mutwiri-cmyk.github.io</strong> and is intended to explain
+our privacy practices in clear and understandable language.
+</p>
 
-        <div class="overview">
-          <article class="paper reveal">
-            <div class="content-flow">
-              <p>
-                A professional website should not treat privacy as a hidden afterthought. It should explain it clearly. When people visit a website,
-                they are not only consuming content. They are also interacting with systems: browsers, analytics tools, advertising scripts, cookies,
-                page tracking technologies, device settings, and communication channels. Because of that, privacy becomes part of the user experience itself.
-                It shapes trust. It shapes transparency. It shapes whether a person feels respected while engaging with the content.
-              </p>
-              <p>
-                America AI is built as a professional digital platform focused on jobs, AI ethics, information resources, stories, and public-facing content.
-                That means readers deserve a privacy policy that is readable, serious, and transparent. This page explains how information may be handled in practical terms.
-                It covers the role of cookies, advertising tools, analytics, contact communications, third-party services, and user rights.
-              </p>
-              <p>
-                Privacy matters because internet users today are more aware than ever that digital interactions generate data. Some of that data is personal.
-                Some is technical. Some is behavioral. Some is collected directly when a user chooses to send a message. Other parts may be collected indirectly through analytics
-                or ad-serving technologies that help site owners understand traffic and support the website financially. A good privacy policy should not hide this reality.
-                It should explain it calmly and clearly.
-              </p>
-              <p>
-                The purpose of this document is therefore twofold. First, it informs users about how America AI may process data in connection with site operation.
-                Second, it reinforces the platform’s professional identity by showing that digital trust matters. A visitor should be able to read this page and understand
-                not only that privacy is acknowledged, but that it is being taken seriously enough to describe in full sentences instead of vague statements.
-              </p>
-              <p>
-                This page should also be read together with the broader character of the site. America AI may include pages about USA jobs, Kenya AI ethics, contact details,
-                stories, About information, and legal-style pages such as terms and conditions. Some sections may link to external resources. Some pages may use embedded scripts,
-                Google services, or third-party integrations. All of that influences privacy and should therefore be mentioned openly.
-              </p>
-              <p>
-                Good privacy writing also means setting expectations. Users should know that no website can promise absolute perfection in every technical situation.
-                However, a professional site can still strive to use reasonable security, clear disclosure, limited necessary collection, and respectful handling of information.
-                That is the spirit behind this policy.
-              </p>
-              <p>
-                Finally, privacy is not only about compliance. It is also about dignity. People deserve to know what may happen to their information when they browse,
-                click, read, communicate, or return to a website. That is why this policy exists, and why it has been structured carefully.
-              </p>
-            </div>
-          </article>
+<p class="small">
+Last updated: August 18, 2026
+</p>
+</section>
 
-          <aside class="side-notes reveal">
-            <div class="note">
-              <strong>Transparency First</strong>
-              <span>This policy is written to help users understand data practices in plain, professional language.</span>
-            </div>
-            <div class="note">
-              <strong>Google Services</strong>
-              <span>America AI may use Google Analytics and AdSense, which can involve cookies and measurement technologies.</span>
-            </div>
-            <div class="note">
-              <strong>User Trust</strong>
-              <span>Privacy is part of digital respect, not just a legal checkbox at the bottom of a page.</span>
-            </div>
-          </aside>
-        </div>
-      </div>
-    </section>
+<section class="content">
 
-    <section class="showcase" id="data">
-      <div class="container">
-        <div class="section-head reveal">
-          <div>
-            <span class="kicker">Data practices</span>
-            <h2>What may be collected and how it may be used.</h2>
-          </div>
-          <p>
-            Different types of information can be involved when users visit a website. Some data is shared directly by users.
-            Other data is collected automatically through tools that help operate, analyze, and support the site.
-          </p>
-        </div>
+<h2>1. About Stories, Lives & Lessons</h2>
 
-        <div class="card-grid">
-          <article class="policy-card reveal">
-            <div class="card-photo">
-              <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1200&q=80" alt="Analytics and reporting dashboard" loading="lazy">
-            </div>
-            <div class="card-body">
-              <span class="tag">Analytics</span>
-              <h3>Traffic and usage insights</h3>
-              <p>Tools such as Google Analytics may help measure page visits, user behavior patterns, device types, and general traffic trends.</p>
-            </div>
-          </article>
+<p>
+Stories, Lives & Lessons is a storytelling and educational website
+created to publish original articles about people, experiences,
+biographies, achievements, challenges, careers, culture, personal
+development and practical lessons that readers can consider in their
+own lives.
+</p>
 
-          <article class="policy-card reveal">
-            <div class="card-photo">
-              <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=80" alt="Cookies and browser activity concept" loading="lazy">
-            </div>
-            <div class="card-body">
-              <span class="tag">Cookies</span>
-              <h3>Cookie-based functionality</h3>
-              <p>Cookies may be used for preferences, analytics, advertising behavior, and improving how pages are delivered and understood.</p>
-            </div>
-          </article>
+<p>
+The website is designed for readers who want to explore meaningful
+stories and information rather than simply consume headlines. Articles
+may discuss public figures, historical experiences, career journeys,
+life lessons, educational subjects and other topics that can help
+readers understand people and the world around them.
+</p>
 
-          <article class="policy-card reveal">
-            <div class="card-photo">
-              <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80" alt="Cybersecurity and data protection concept" loading="lazy">
-            </div>
-            <div class="card-body">
-              <span class="tag">Security</span>
-              <h3>Reasonable protection efforts</h3>
-              <p>The site may use practical steps to reduce misuse, unauthorized access, or insecure handling of information.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
+<p>
+Because the website is publicly accessible, visitors may browse pages
+without creating an account or providing personal information directly.
+Some information can nevertheless be collected automatically through
+normal website technology and through services used to understand
+website traffic and display advertising.
+</p>
 
-    <section id="rights">
-      <div class="container">
-        <div class="section-head reveal">
-          <div>
-            <span class="kicker">Full privacy policy</span>
-            <h2>Detailed explanation of privacy, cookies, ads, analytics, and user rights.</h2>
-          </div>
-          <p>
-            The following long-form privacy content explains the main areas users may want to understand when visiting America AI.
-          </p>
-        </div>
+<h2>2. Information You Choose to Provide</h2>
 
-        <div class="deep-section">
-          <div class="timeline reveal">
-            <div class="step">
-              <div class="dot">1</div>
-              <article>
-                <h3>Information users provide directly</h3>
-                <p>This can include emails, messages, contact details, or inquiries submitted through communication channels.</p>
-              </article>
-            </div>
+<p>
+You can visit most areas of Stories, Lives & Lessons without submitting
+personal information. However, you may voluntarily provide information
+when you contact us, send feedback, suggest a story, report an error,
+ask a question, or communicate with us through another available
+contact method.
+</p>
 
-            <div class="step">
-              <div class="dot">2</div>
-              <article>
-                <h3>Information collected automatically</h3>
-                <p>This may include browser type, device data, visit timing, page paths, approximate location signals, and interactions.</p>
-              </article>
-            </div>
+<p>
+Depending on how you contact us, information you choose to provide may
+include your name, email address, telephone or WhatsApp contact,
+message content, subject of your inquiry, and any other information
+you decide to include in your communication.
+</p>
 
-            <div class="step">
-              <div class="dot">3</div>
-              <article>
-                <h3>Third-party service involvement</h3>
-                <p>Services like Google Analytics and Google AdSense may use cookies or similar technologies to support measurement and advertising.</p>
-              </article>
-            </div>
+<p>
+We encourage visitors to avoid sending sensitive personal information
+that is not necessary to answer their question. For example, there is
+normally no reason to send passwords, financial account details,
+identification numbers, medical records, or other highly sensitive
+information when contacting the website about an ordinary article or
+story.
+</p>
 
-            <div class="step">
-              <div class="dot">4</div>
-              <article>
-                <h3>User choices and controls</h3>
-                <p>Users may control some cookie settings, browser permissions, and how they choose to contact the site.</p>
-              </article>
-            </div>
+<h2>3. How Contact Information May Be Used</h2>
 
-            <div class="step">
-              <div class="dot">5</div>
-              <article>
-                <h3>Policy updates</h3>
-                <p>This page may change over time as the website evolves, tools change, or privacy expectations are updated.</p>
-              </article>
-            </div>
+<p>
+If you contact Stories, Lives & Lessons, information you provide may be
+used to respond to your message, understand your request, investigate a
+reported factual error, consider a story suggestion, address a website
+problem, or communicate with you about the matter you raised.
+</p>
 
-            <div class="feature-quote">
-              <p>
-                “A good privacy policy does not hide behind legal fog. It explains, reassures, and shows that user trust matters.”
-              </p>
-            </div>
-          </div>
+<p>
+We may also keep correspondence when it is reasonably necessary for
+record-keeping, resolving future questions, preventing repeated
+misunderstandings, or maintaining an accurate history of communication.
+We do not use ordinary contact messages as a reason to collect unrelated
+personal information.
+</p>
 
-          <article class="paper reveal">
-            <div class="content-flow">
-              <p>
-                <strong>1. Introduction.</strong> This Privacy Policy explains how America AI may collect, use, process, store, protect, or disclose information in connection with the operation of this website.
-                It applies to content pages, contact interactions, analytics integrations, advertising technologies, and general browsing activity associated with the site.
-                By using America AI, users acknowledge that some data processing may occur as described in this policy.
-              </p>
-              <p>
-                <strong>2. Scope of this Policy.</strong> This policy applies to the main website and connected pages such as the homepage, USA jobs pages, About page, AI ethics pages, contact page,
-                terms page, stories or article pages, and other website sections operated under the America AI platform identity. It may not automatically apply to third-party websites linked from this site,
-                since those platforms maintain their own privacy rules and responsibilities.
-              </p>
-              <p>
-                <strong>3. Information Collected Directly from Users.</strong> Users may choose to provide information voluntarily by sending an email, using a contact page, clicking to communicate through
-                published contact channels, or otherwise interacting with America AI. This information may include names, email addresses, phone numbers, message content, project requests, and any other details
-                a user decides to share intentionally.
-              </p>
-              <p>
-                <strong>4. Information Collected Automatically.</strong> Like many websites, America AI may automatically receive technical information when users browse the site.
-                This can include IP-related signals, browser type, operating system, device characteristics, screen size, language settings, referring pages, visit timing, page views, scrolling or interaction behavior,
-                and approximate geographic data inferred from technical signals. Such information is often used in aggregate to understand how the site is performing and how users engage with it.
-              </p>
-              <p>
-                <strong>5. Cookies and Similar Technologies.</strong> America AI may use cookies, tags, scripts, or similar tracking technologies to improve user experience, understand traffic behavior,
-                remember preferences, support performance analysis, and enable advertising features. Cookies are small text files placed on a user’s device through the browser.
-                Some cookies may be set directly by the site, while others may be set by integrated third-party services.
-              </p>
-              <p>
-                <strong>6. Use of Google Analytics.</strong> This site may use Google Analytics 4 to measure and analyze how visitors interact with the site.
-                Google Analytics can collect information such as page views, session duration, device information, user flow behavior, traffic sources, and general engagement patterns.
-                This helps America AI understand what content is being read, how pages perform, and where improvements may be useful.
-              </p>
-              <p>
-                <strong>7. Use of Google AdSense.</strong> America AI may use Google AdSense Auto Ads or related advertising technologies to display advertisements on the site.
-                Google and its partners may use cookies or similar technologies to serve ads based on a user’s visit to this site and other websites.
-                This can include personalized advertising, measurement of ad performance, fraud prevention, and frequency management.
-              </p>
-              <p>
-                <strong>8. Advertising Personalization.</strong> Depending on user settings, browser behavior, jurisdiction, or applicable platform rules,
-                advertisements shown through Google AdSense may be personalized or non-personalized. Personalized ads may rely on browsing behavior or inferred interests,
-                while non-personalized ads may be served based on contextual signals rather than individual profiling.
-              </p>
-              <p>
-                <strong>9. Why Information May Be Used.</strong> Information collected through America AI may be used for several legitimate site-related purposes.
-                These can include responding to user messages, improving website performance, understanding audience interests, maintaining security, troubleshooting technical problems,
-                measuring content effectiveness, supporting advertising display, managing communication requests, and protecting the integrity of the platform.
-              </p>
-              <p>
-                <strong>10. Legal Basis and Good-Faith Handling.</strong> Where privacy principles require a basis for processing, America AI may rely on user consent where voluntarily given,
-                legitimate interest in operating and improving the site, communication necessity when responding to inquiries, and technical necessity where cookies or scripts are required for core site operation.
-                The site aims to handle information in good faith, proportionately, and with practical respect for users.
-              </p>
-              <p>
-                <strong>11. Contact Communications.</strong> If a user contacts America AI through email or other listed contact channels,
-                the information shared may be retained for the purpose of responding, following up, keeping context for the conversation, or managing related project discussions.
-                Users should avoid sending highly sensitive personal data unless they are prepared to do so and understand the ordinary risks of electronic communication.
-              </p>
-              <p>
-                <strong>12. Data Sharing.</strong> America AI does not present itself as a data brokerage platform. However, certain information may be processed or accessed by service providers,
-                infrastructure tools, analytics providers, advertising networks, or hosting-related services that help the website operate. This kind of data handling may be necessary for site performance,
-                measurement, security, or monetization functions.
-              </p>
-              <p>
-                <strong>13. Third-Party Services.</strong> The platform may rely on third-party providers such as Google services, web hosting providers, email services, embedded fonts,
-                or linked content platforms. These providers may process technical information independently according to their own privacy policies.
-                Users should review relevant third-party policies where deeper platform-specific understanding is important.
-              </p>
-              <p>
-                <strong>14. External Links.</strong> America AI may include links to external job pages, reference sites, research sources, policy pages, or other web destinations.
-                Clicking an external link means the user leaves the America AI environment and becomes subject to the privacy practices of the destination website.
-                America AI cannot control all third-party privacy practices and encourages users to review them directly.
-              </p>
-              <p>
-                <strong>15. Data Retention.</strong> Information may be retained for as long as reasonably necessary to fulfill the purposes described in this policy,
-                maintain communication history, analyze traffic trends, comply with legal obligations where applicable, or protect the website from misuse.
-                Retention periods may vary depending on the type of data and the reason it was processed.
-              </p>
-              <p>
-                <strong>16. Security Measures.</strong> America AI may use reasonable administrative, technical, or organizational measures to help protect information from unauthorized access,
-                misuse, alteration, or disclosure. However, no internet-based system can guarantee absolute security in every circumstance.
-                Users should understand that digital communication and online browsing always involve some degree of risk.
-              </p>
-              <p>
-                <strong>17. User Rights and Choices.</strong> Depending on location and applicable privacy principles, users may have rights relating to access, correction, deletion, objection,
-                limitation of processing, cookie control, or data-related inquiry. Because America AI is a lightweight content-driven platform rather than a massive account system,
-                the practical form of these rights may vary depending on what data has actually been collected and how it can be identified.
-              </p>
-              <p>
-                <strong>18. Browser Controls.</strong> Most users can control certain cookies through browser settings. Browsers may allow users to block cookies, delete existing cookies,
-                or configure tracking preferences. Some features of the site or integrated tools may work differently if cookies are fully disabled.
-                Users can also use browser privacy modes, device-level tracking settings, or ad personalization controls offered by major platforms.
-              </p>
-              <p>
-                <strong>19. Google-Specific Controls.</strong> Users can learn more about how Google uses information from sites and apps that use its services by reviewing Google’s own privacy resources.
-                Ad settings, analytics opt-out tools, and browser-based privacy controls may also be available depending on user region, device, and Google account settings.
-              </p>
-              <p>
-                <strong>20. Children’s Privacy.</strong> America AI is not intentionally designed to target young children as a primary audience for data collection purposes.
-                If it becomes known that personal data from a child has been collected in a way that should not have occurred, reasonable steps may be taken to address the situation.
-              </p>
-              <p>
-                <strong>21. International Access.</strong> Users may access this site from different countries or jurisdictions.
-                As a result, information may be processed in environments where privacy laws differ from those in the user’s location.
-                By using the website, users acknowledge that digital processing may occur across technical infrastructures that are not limited to one local jurisdiction.
-              </p>
-              <p>
-                <strong>22. No Absolute Guarantee.</strong> While America AI aims to present privacy practices responsibly, the website cannot guarantee that every tool, browser, third-party provider,
-                or internet transmission path will always operate without risk. Users should approach the web with general caution and informed awareness.
-              </p>
-              <p>
-                <strong>23. Policy Updates.</strong> This Privacy Policy may be revised from time to time as the website grows, tools change, analytics evolve, advertising configurations are updated,
-                or legal expectations shift. When updates occur, revised wording may be posted on this page. Continued use of the site after updates indicates acceptance of the revised policy to the extent applicable.
-              </p>
-              <p>
-                <strong>24. Relationship to Terms.</strong> This policy should be read alongside the Terms & Conditions of the site. Together, those documents help explain how the site operates,
-                how users may engage with it, what responsibilities apply, and what expectations should guide the relationship between the platform and its visitors.
-              </p>
-              <p>
-                <strong>25. Contact About Privacy.</strong> Users who have questions, concerns, or requests relating to this Privacy Policy may reach out using the published contact information provided on the site.
-                Privacy inquiries should be as specific as possible so they can be understood and addressed more effectively.
-              </p>
-              <p>
-                Overall, this policy exists to support transparency. It explains that America AI may rely on modern web tools including analytics, ads, cookies, and contact channels.
-                It also makes clear that privacy matters as part of the site’s professional identity. A strong digital platform should not only look polished. It should also communicate honestly about how it works.
-              </p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
+<h2>4. Information Collected Automatically</h2>
 
-    <section class="contact" id="contact">
-      <div class="container">
-        <div class="section-head reveal">
-          <div>
-            <span class="kicker">Privacy contact</span>
-            <h2>Questions about this privacy policy?</h2>
-          </div>
-          <p>
-            If you want to ask about privacy, page work, or anything related to America AI, use the contact details below.
-          </p>
-        </div>
+<p>
+When you visit a website, certain technical information can be
+automatically transmitted by your browser or device. Depending on the
+technology available and your settings, this can include information
+such as browser type, device type, operating system, approximate
+location derived from technical information, pages visited, referring
+pages, date and time of a visit, and general interaction information.
+</p>
 
-        <div class="contact-box reveal">
-          <div>
-            <h3 style="font-size:clamp(2rem,4vw,3.4rem);max-width:10ch;">Reach out for privacy inquiries or web work.</h3>
-            <p style="color:var(--muted);max-width:60ch;margin-top:0;">
-              This bottom section completes the page professionally and keeps communication clear and accessible.
-            </p>
-            <div class="hero-actions" style="margin-top:1.2rem;">
-              <a class="btn btn-primary" href="mailto:kinglee6mutwiri@gmail.com">Email Now</a>
-              <a class="btn btn-secondary" href="index.html">Back Home</a>
-            </div>
-          </div>
+<p>
+This type of information is generally used to understand how a website
+is being accessed and to help maintain, improve and secure the website.
+It does not necessarily identify you personally.
+</p>
 
-          <div class="contact-items">
-            <a class="contact-item" href="mailto:kinglee6mutwiri@gmail.com" aria-label="Email contact">
-              <div class="contact-icon">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
-                  <path d="M4 6.5h16a1.5 1.5 0 0 1 1.5 1.5v8A1.5 1.5 0 0 1 20 17.5H4A1.5 1.5 0 0 1 2.5 16V8A1.5 1.5 0 0 1 4 6.5z" stroke="currentColor" stroke-width="1.8"/>
-                  <path d="M3 8l9 6 9-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </div>
-              <div>
-                <strong>Email Contact</strong>
-                <span>kinglee6mutwiri@gmail.com</span>
-              </div>
-            </a>
+<p>
+Stories, Lives & Lessons does not require visitors to create personal
+profiles simply to read articles. We aim to collect and use information
+only for legitimate website purposes and services that support the
+operation of the site.
+</p>
 
-            <a class="contact-item" href="contact.html">
-              <div class="contact-icon">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
-                  <path d="M4 6.5h16a1.5 1.5 0 0 1 1.5 1.5v8A1.5 1.5 0 0 1 20 17.5H4A1.5 1.5 0 0 1 2.5 16V8A1.5 1.5 0 0 1 4 6.5z" stroke="currentColor" stroke-width="1.8"/>
-                  <path d="M3 8l9 6 9-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </div>
-              <div>
-                <strong>Contact Page</strong>
-                <span>Open full communication details</span>
-              </div>
-            </a>
+<h2>5. Google Analytics</h2>
 
-            <div class="contact-item" aria-label="Suggested file name">
-              <div class="contact-icon">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
-                  <path d="M7 3.5h7l4 4V20a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-15a1.5 1.5 0 0 1 1-1.5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
-                  <path d="M14 3.5V8h4" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
-                  <path d="M9 12h6M9 16h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-                </svg>
-              </div>
-              <div>
-                <strong>Suggested file name</strong>
-                <span>privacy-policy.html</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+<p>
+Stories, Lives & Lessons uses Google Analytics to better understand how
+visitors use the website. Google Analytics can provide information such
+as the number of visitors, pages viewed, approximate engagement,
+traffic sources, device categories and other statistical information.
+</p>
 
-  <footer>
-    <div class="container footer-row">
-      <div>© 2026 America AI. Privacy Policy page designed with clarity, trust, and professional digital presentation.</div>
-      <div>Contact: <a href="mailto:kinglee6mutwiri@gmail.com">kinglee6mutwiri@gmail.com</a></div>
-    </div>
-  </footer>
+<p>
+The purpose of using analytics is to understand which areas of the
+website are useful to readers, identify technical problems, improve
+navigation, evaluate content performance and make informed decisions
+about future website improvements.
+</p>
 
-  <script>
-    const observer = new IntersectionObserver((entries)=>{
-      entries.forEach(entry=>{
-        if(entry.isIntersecting){
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, {threshold:0.15});
+<p>
+Analytics information is primarily used in an aggregated or statistical
+way. The website does not use Google Analytics as a way of asking
+visitors to provide passwords or other sensitive account credentials.
+</p>
 
-    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-  </script>
-<script src="header-loader.js"></script>
+<p>
+Google may process information in accordance with its own privacy
+policies and technology practices. Visitors who want more information
+about Google's handling of data should review Google's current privacy
+documentation and available privacy controls.
+</p>
+
+<h2>6. Google AdSense and Advertising</h2>
+
+<p>
+Stories, Lives & Lessons may display advertisements through Google
+AdSense. Advertising helps support the operation and continued
+development of the website.
+</p>
+
+<p>
+Advertising services may use cookies or similar technologies to
+deliver, measure or personalize advertisements depending on available
+settings, applicable policies and the choices made by the visitor.
+</p>
+
+<p>
+Advertising providers may process information associated with a
+browser or device in order to understand advertising interactions,
+measure performance, prevent abuse and provide relevant advertising.
+The website itself does not ask visitors to submit financial details
+in order to view ordinary articles.
+</p>
+
+<p>
+Visitors may have options to control certain advertising
+personalization and privacy settings through Google's available
+advertising controls. Those controls can change over time, so visitors
+should consult Google's current documentation for the latest options.
+</p>
+
+<div class="info">
+<strong>Important:</strong> The appearance of an advertisement on
+Stories, Lives & Lessons does not mean that the website personally
+endorses every product, service or claim contained in that
+advertisement. Readers should evaluate advertisements independently
+and use appropriate caution when dealing with third-party businesses.
+</div>
+
+<h2>7. Cookies and Similar Technologies</h2>
+
+<p>
+Cookies are small files or pieces of information that websites and
+related services may store or access through a browser. They can be
+used for functions such as remembering preferences, measuring traffic,
+supporting advertising and understanding how visitors interact with a
+website.
+</p>
+
+<p>
+Some cookies may be necessary for a service to operate, while others
+may be used for analytics or advertising purposes. The exact cookies
+available to you can depend on the services being used, your device,
+your browser and your privacy choices.
+</p>
+
+<p>
+Most modern browsers provide controls that allow users to manage,
+block or delete cookies. Blocking certain cookies can sometimes affect
+the way websites or advertising services function.
+</p>
+
+<h2>8. Third-Party Services</h2>
+
+<p>
+Stories, Lives & Lessons may rely on third-party services to provide
+functions such as analytics, advertising, website hosting, security,
+social media connections or other technical features.
+</p>
+
+<p>
+These third parties operate under their own terms and privacy policies.
+Their practices are not completely controlled by Stories, Lives &
+Lessons. When you interact directly with a third-party website or
+service, the privacy policy of that service may also apply.
+</p>
+
+<p>
+Examples may include Google services used for analytics and advertising
+and social platforms linked from the website. A visitor should review
+the relevant third-party privacy information when using those services.
+</p>
+
+<h2>9. Social Media Links</h2>
+
+<p>
+Stories, Lives & Lessons may provide links to social media profiles or
+other external platforms. Clicking such a link takes you away from the
+website and may allow the external platform to collect information
+according to its own policies.
+</p>
+
+<p>
+We do not control how an external social network collects, stores or
+uses information. Before providing personal information on an external
+platform, visitors should review that platform's privacy settings and
+terms.
+</p>
+
+<h2>10. External Links</h2>
+
+<p>
+Articles and pages on Stories, Lives & Lessons may occasionally contain
+links to external websites when those links are useful to readers.
+External websites are independently operated and are not controlled by
+us.
+</p>
+
+<p>
+A link to another website does not automatically mean that Stories,
+Lives & Lessons guarantees the privacy practices, security, accuracy,
+availability or content of that external website.
+</p>
+
+<p>
+Visitors should review the privacy policy of an external website before
+providing personal information there.
+</p>
+
+<h2>11. How We Use Information</h2>
+
+<p>
+Information available to Stories, Lives & Lessons may be used for
+legitimate purposes such as:
+</p>
+
+<ul>
+<li>Operating and maintaining the website.</li>
+<li>Responding to visitor questions and messages.</li>
+<li>Considering story suggestions and feedback.</li>
+<li>Investigating reported factual or technical problems.</li>
+<li>Understanding website traffic and reader behavior.</li>
+<li>Improving articles, navigation and website performance.</li>
+<li>Supporting advertising and analytics services.</li>
+<li>Protecting the website against abuse, spam and security problems.</li>
+<li>Complying with applicable legal obligations.</li>
+</ul>
+
+<h2>12. Information Sharing</h2>
+
+<p>
+Stories, Lives & Lessons does not sell ordinary visitor contact
+information simply because someone visits the website.
+</p>
+
+<p>
+Information may nevertheless be processed by service providers that
+help operate the website, such as analytics, advertising, hosting,
+security or communication services. Information may also be disclosed
+when reasonably necessary to comply with legal obligations, protect
+the website, investigate abuse, enforce applicable terms, or protect
+the rights and safety of people and services.
+</p>
+
+<h2>13. Data Retention</h2>
+
+<p>
+The length of time information is retained depends on what the
+information is and why it was collected. Ordinary website analytics
+may be retained according to the settings and retention practices of
+the relevant analytics service.
+</p>
+
+<p>
+Correspondence may be retained for a reasonable period when necessary
+to respond to a visitor, maintain communication records, investigate a
+problem or address a legitimate administrative purpose.
+</p>
+
+<p>
+We do not intend to retain personal information indefinitely when there
+is no reasonable purpose for doing so, subject to legitimate
+record-keeping, technical and legal requirements.
+</p>
+
+<h2>14. Data Security</h2>
+
+<p>
+Reasonable measures are used to protect the website and information
+associated with it. However, no website, internet connection, email
+system or online service can guarantee absolute security.
+</p>
+
+<p>
+Visitors should therefore avoid sending unnecessary confidential
+information through ordinary website contact channels.
+</p>
+
+<h2>15. Children's Privacy</h2>
+
+<p>
+Stories, Lives & Lessons is not designed as a service for collecting
+personal information from children. We do not knowingly request
+sensitive personal information from children for ordinary website
+access.
+</p>
+
+<p>
+If a parent or guardian believes that a child has provided personal
+information to the website unnecessarily, they may contact us so that
+the matter can be reviewed and appropriate steps considered.
+</p>
+
+<h2>16. Your Choices</h2>
+
+<p>
+Depending on the technology involved, visitors may have choices about
+cookies, advertising personalization, analytics and browser settings.
+You can also choose not to provide personal information when it is not
+necessary to use a particular website feature.
+</p>
+
+<p>
+You may also contact us if you have a reasonable privacy question about
+information that you voluntarily provided directly to the website.
+Requests will be considered according to the circumstances and any
+applicable legal or technical limitations.
+</p>
+
+<h2>17. Accuracy of Information</h2>
+
+<p>
+Visitors should provide accurate information when contacting Stories,
+Lives & Lessons. If you send a message about an article, including the
+article title or page address and explaining the issue clearly can help
+us understand and respond to the matter more efficiently.
+</p>
+
+<h2>18. Changes to This Privacy Policy</h2>
+
+<p>
+This Privacy Policy may be updated when the website changes its
+services, technology, advertising arrangements, analytics practices or
+legal requirements.
+</p>
+
+<p>
+When changes are made, the updated version will be published on this
+page. The date shown near the beginning of the policy can help visitors
+identify when the policy was most recently reviewed or updated.
+</p>
+
+<h2>19. Contacting Stories, Lives & Lessons About Privacy</h2>
+
+<p>
+If you have a question about this Privacy Policy, believe that you
+provided personal information that needs attention, or want to ask
+about the way information is handled on the website, you can contact
+Stories, Lives & Lessons directly.
+</p>
+
+<div class="contact-box">
+<h3>Privacy Contact</h3>
+
+<p>
+<strong>Email:</strong>
+<a href="mailto:kinglee6mutwiri@gmail.com">
+kinglee6mutwiri@gmail.com
+</a>
+</p>
+
+<p>
+<strong>WhatsApp:</strong>
+<a href="https://wa.me/254736280522"
+target="_blank"
+rel="noopener noreferrer">
+0736280522
+</a>
+</p>
+
+<p>
+When contacting us about privacy, please explain your question clearly
+and provide only the information necessary for us to understand and
+respond to your request.
+</p>
+</div>
+
+<h2>20. Final Statement</h2>
+
+<p>
+Privacy is an important part of maintaining trust between a website and
+its readers. Stories, Lives & Lessons aims to be transparent about the
+technologies used to operate the website and about the role of
+analytics, advertising and external services.
+</p>
+
+<p>
+Our goal is to provide readers with meaningful stories, biographies,
+educational information and practical lessons while treating visitor
+information responsibly. Because online technologies and third-party
+services can change, this policy may also be reviewed and updated when
+necessary.
+</p>
+
+<p>
+By continuing to use the website, visitors acknowledge that they have
+had an opportunity to read this Privacy Policy and understand the
+general ways information may be processed as described above.
+</p>
+
+</section>
+</div>
+
+<footer>
+<p>
+&copy; 2026 Stories, Lives & Lessons. All rights reserved.
+</p>
+
+<p>
+<a href="https://kinglee6mutwiri-cmyk.github.io/">Home</a>
+<a href="https://kinglee6mutwiri-cmyk.github.io/about.html">About</a>
+<a href="https://kinglee6mutwiri-cmyk.github.io/contact.html">Contact</a>
+<a href="https://kinglee6mutwiri-cmyk.github.io/privacy-policy.html">Privacy Policy</a>
+<a href="https://kinglee6mutwiri-cmyk.github.io/terms.html">Terms</a>
+</p>
+
+<p class="small">
+Stories, Lives & Lessons — stories, lives and practical lessons for readers.
+</p>
+</footer>
+
 </body>
 </html>
- 
