@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About Stories, Lives & Lessons | Kinglee Mutwiri</title>
+
+<meta name="description" content="Learn about Stories, Lives & Lessons, a storytelling website founded by Kinglee Mutwiri that explores biographies, life experiences, meaningful stories and practical lessons.">
+
+<meta name="author" content="Kinglee Mutwiri">
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X3HE9CKP90"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-X3HE9CKP90');
+</script>
+
+<!-- Google AdSense -->
+<script async
+src="https://pagead2.googlesyndication.com/pagead/js?client=ca-pub-5799841502846177"
+crossorigin="anonymous"></script>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+line-height:1.7;
+background:#f4f7fb;
+color:#202938;
+}
+
+header{
+background:linear-gradient(135deg,#102a56,#315bea);
+color:white;
+padding:18px 20px;
+}
+
+.header{
+max-width:1100px;
+margin:auto;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px;
+}
+
+.logo{
+font-size:24px;
+font-weight:800;
+}
+
+.logo span{
+color:#79a9ff;
+}
+
+.social{
+display:flex;
+gap:10px;
+}
+
+.social a{
+width:42px;
+height:42px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+text-decoration:none;
+border:1px solid rgba(255,255,255,.4);
+background:rgba(255,255,255,.12);
+font-size:18px;
+transition:.25s;
+}
+
+.social a:hover{
+transform:translateY(-3px);
+background:rgba(255,255,255,.25);
+}
+
+nav{
+background:white;
+box-shadow:0 3px 15px rgba(0,0,0,.08);
+}
+
+.nav-inner{
+max-width:1100px;
+margin:auto;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:8px;
+padding:12px;
+}
+
+nav a{
+text-decoration:none;
+color:#26344d;
+font-weight:600;
+padding:9px 14px;
+border-radius:8px;
+}
+
+nav a:hover{
+background:#eef3ff;
+color:#315bea;
+}
+
+.hero{
+max-width:1000px;
+margin:35px auto 20px;
+padding:55px 25px;
+text-align:center;
+background:white;
+border-radius:20px;
+box-shadow:0 6px 25px rgba(0,0,0,.07);
+}
+
+.hero h1{
+font-size:42px;
+color:#172b4d;
+margin-bottom:12px;
+}
+
+.hero h1 span{
+color:#315bea;
+}
+
+.hero p{
+max-width:760px;
+margin:auto;
+font-size:18px;
+color:#566275;
+}
+
+.author{
+max-width:1000px;
+margin:25px auto;
+padding:28px;
+background:white;
+border-radius:20px;
+display:flex;
+align-items:center;
+gap:25px;
+box-shadow:0 5px 20px rgba(0,0,0,.07);
+}
+
+.author img{
+width:150px;
+height:150px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid #315bea;
+}
+
+.author h2{
+margin-bottom:5px;
+color:#172b4d;
+}
+
+.author p{
+color:#315bea;
+font-weight:bold;
+}
+
+.content{
+max-width:1000px;
+margin:25px auto;
+background:white;
+padding:40px;
+border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,.06);
+}
+
+.content h2{
+color:#172b4d;
+margin:30px 0 12px;
+font-size:28px;
+}
+
+.content h2:first-child{
+margin-top:0;
+}
+
+.content p{
+margin-bottom:17px;
+color:#46546a;
+}
+
+.content ul{
+margin:10px 0 20px 25px;
+color:#46546a;
+}
+
+.content li{
+margin-bottom:9px;
+}
+
+.ad-container{
+margin:30px 0;
+min-height:100px;
+}
+
+.contact-box{
+margin-top:30px;
+padding:25px;
+border-radius:15px;
+background:#eef3ff;
+border-left:5px solid #315bea;
+}
+
+.contact-box h2{
+margin-top:0;
+}
+
+.contact-box a{
+color:#315bea;
+font-weight:bold;
+text-decoration:none;
+}
+
+footer{
+margin-top:40px;
+background:#172033;
+color:#dce3ef;
+padding:30px 20px;
+text-align:center;
+}
+
+.footer-links{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:15px;
+margin-bottom:15px;
+}
+
+.footer-links a{
+color:white;
+text-decoration:none;
+}
+
+.footer-links a:hover{
+text-decoration:underline;
+}
+
+@media(max-width:700px){
+
+.header{
+flex-direction:column;
+text-align:center;
+}
+
+.hero h1{
+font-size:32px;
+}
+
+.author{
+flex-direction:column;
+text-align:center;
+}
+
+.content{
+padding:25px 20px;
+}
+
+nav a{
+font-size:14px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="header">
+
+<div class="logo">
+Stories, Lives <span>&</span> Lessons
+</div>
+
+<div class="social">
+
+<a href="https://www.facebook.com/profile.php?id=61568056696688"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="Facebook">
+<i class="fa-brands fa-facebook-f"></i>
+</a>
+
+<a href="https://www.instagram.com/mutwiri.eliphas/"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="Instagram">
+<i class="fa-brands fa-instagram"></i>
+</a>
+
+<a href="https://x.com/KingleeMut40701"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="X">
+<i class="fa-brands fa-x-twitter"></i>
+</a>
+
+<a href="https://wa.me/254736280522"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="WhatsApp">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
+
+</div>
+
+</div>
+
+</header>
+
+<nav>
+
+<div class="nav-inner">
+
+<a href="../index.html">Home</a>
+
+<a href="../index.html#celebrity">
+Celebrity Stories
+</a>
+
+<a href="../index.html#life-stories">
+Life Stories
+</a>
+
+<a href="../index.html#lessons">
+Everyday Lessons
+</a>
+
+<a href="about.html">
+About
+</a>
+
+<a href="../contact.html">
+Contact
+</a>
+
+</div>
+
+</nav>
+
+<section class="hero">
+
+<h1>
+About <span>Stories, Lives & Lessons</span>
+</h1>
+
+<p>
+Stories, Lives & Lessons is a storytelling website created to explore
+the experiences, journeys, achievements and challenges behind the
+people and stories that capture our attention.
+</p>
+
+</section>
+
+<section class="author">
+
+<img src="../images/author-v2.png"
+alt="Kinglee Mutwiri, founder and author">
+
+<div>
+
+<h2>Kinglee Mutwiri</h2>
+
+<p>Founder and Author</p>
+
+<p>
+Stories, Lives & Lessons was created by Kinglee Mutwiri with the aim
+of presenting stories in a way that goes beyond simply describing
+what happened.
+</p>
+
+</div>
+
+</section>
+
+<main class="content">
+
+<h2>
+Why This Website Exists
+</h2>
+
+<p>
+Every person has a story. Some stories are remembered because of
+extraordinary achievements, while others are meaningful because of
+the ordinary experiences, difficult decisions and personal changes
+that shaped someone's life.
+</p>
+
+<p>
+Stories, Lives & Lessons was created around the idea that a good
+story can do more than entertain. It can help readers understand
+people, consider different experiences and reflect on decisions in
+their own lives.
+</p>
+
+<p>
+The website focuses on biographies, life stories, cultural stories
+and practical reflections. The goal is to present information in a
+clear and readable way while helping readers identify meaningful
+lessons within each story.
+</p>
+
+<h2>
+What You Will Find Here
+</h2>
+
+<p>
+The website covers several types of storytelling. Celebrity
+biographies look at the lives and careers of public figures, while
+life stories explore experiences that can provide broader lessons
+about determination, choices, challenges and personal growth.
+</p>
+
+<ul>
+
+<li>
+Celebrity biographies and career journeys
+</li>
+
+<li>
+Life stories and meaningful experiences
+</li>
+
+<li>
+Stories about success, challenges and change
+</li>
+
+<li>
+Practical reflections from real-life experiences
+</li>
+
+<li>
+Lessons that readers can consider in everyday life
+</li>
+
+</ul>
+
+<!-- IN-ARTICLE ADSENSE -->
+
+<div class="ad-container">
+
+<ins class="adsbygoogle"
+style="display:block;text-align:center;"
+data-ad-layout="in-article"
+data-ad-format="fluid"
+data-ad-client="ca-pub-5799841502846177"
+data-ad-slot="1217574823"></ins>
+
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+<h2>
+Our Approach to Storytelling
+</h2>
+
+<p>
+A person's public image is only one part of a story. Behind a career,
+achievement or difficult period there are often years of decisions,
+opportunities, setbacks and changes that are not immediately visible.
+</p>
+
+<p>
+Our approach is to provide context rather than simply listing
+achievements. Where appropriate, stories discuss the background,
+important events, career development, challenges and influence of
+the person or subject being discussed.
+</p>
+
+<p>
+The aim is not to tell readers what they must think. Instead, the
+stories are presented to encourage readers to consider the information
+for themselves and reflect on how similar ideas may apply to their own
+experiences.
+</p>
+
+<h2>
+Learning From Stories
+</h2>
+
+<p>
+A biography can teach lessons about persistence. A difficult life
+experience can demonstrate the importance of decisions. A successful
+career can reveal years of preparation that may not be visible from
+the outside.
+</p>
+
+<p>
+For this reason, Stories, Lives & Lessons places importance on the
+meaning behind a story. After learning about someone's journey, a
+reader may ask what decisions contributed to the outcome, what
+challenges were overcome and what useful principles can be applied in
+everyday life.
+</p>
+
+<h2>
+Original and Responsible Content
+</h2>
+
+<p>
+We aim to create original articles that are useful and readable rather
+than simply reproducing information from other websites. When research
+is necessary, information is considered carefully and presented in
+our own words.
+</p>
+
+<p>
+Public figures and historical subjects may be discussed using
+information from reliable sources. Readers should understand that
+biographical articles are intended for general information and
+storytelling purposes.
+</p>
+
+<h2>
+For Our Readers
+</h2>
+
+<p>
+The website is intended for readers who enjoy discovering people's
+stories and thinking about the lessons that can come from them.
+Whether you are interested in music, entertainment, personal
+experiences or everyday decisions, the goal is to provide something
+useful to take away from each article.
+</p>
+
+<p>
+We also welcome thoughtful feedback. Reader feedback can help improve
+the clarity, accuracy and usefulness of future articles.
+</p>
+
+<div class="contact-box">
+
+<h2>
+Get in Touch
+</h2>
+
+<p>
+If you have a question, suggestion, correction or feedback about
+Stories, Lives & Lessons, you can contact the author through the
+website's contact page or connect through the social platforms listed
+at the top of this page.
+</p>
+
+<p>
+<a href="../contact.html">
+Visit the Contact Page
+</a>
+</p>
+
+</div>
+
+</main>
+
+<footer>
+
+<div class="footer-links">
+
+<a href="../index.html">
+Home
+</a>
+
+<a href="about.html">
+About
+</a>
+
+<a href="../contact.html">
+Contact
+</a>
+
+<a href="../privacy-policy.html">
+Privacy Policy
+</a>
+
+<a href="../terms.html">
+Terms
+</a>
+
+<a href="../disclaimer.html">
+Disclaimer
+</a>
+
+</div>
+
+<p>
+© 2026 Stories, Lives & Lessons. All rights reserved.
+</p>
+
+<p>
+Founded and authored by Kinglee Mutwiri.
+</p>
+
+</footer>
+
+</body>
+</html>
