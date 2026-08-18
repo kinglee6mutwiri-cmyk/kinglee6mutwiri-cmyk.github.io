@@ -1,0 +1,953 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Disclaimer | America AI Educational Information & General Guidance</title>
+  <!-- 1. GOOGLE ANALYTICS 4 - FOR ANALYSIS -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X3HE9CKP90"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-X3HE9CKP90');
+  </script>
+  <!-- 2. GOOGLE ADSENSE - FOR ADS -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5799841502846177"
+     crossorigin="anonymous"></script>
+  <style>
+    :root{
+      --bg:#fbfbfe;
+      --paper:#ffffff;
+      --paper-soft:#f4f6ff;
+      --text:#14233d;
+      --muted:#5d6980;
+      --line:#dce4f2;
+      --navy:#11284a;
+      --blue:#275df1;
+      --sky:#4f7cff;
+      --gold:#d79a1e;
+      --gold-soft:#fff2cf;
+      --green:#15803d;
+      --green-soft:#eafff0;
+      --red:#c62828;
+      --red-soft:#fff0f0;
+      --violet:#6d28d9;
+      --violet-soft:#f2ebff;
+      --shadow:0 24px 60px rgba(17,40,74,.12);
+      --shadow-soft:0 10px 28px rgba(20,35,61,.08);
+      --radius:28px;
+      --max:1280px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:'Manrope', sans-serif;
+      color:var(--text);
+      line-height:1.85;
+      background:
+        radial-gradient(circle at top left, rgba(39,93,241,.08), transparent 24%),
+        radial-gradient(circle at top right, rgba(215,154,30,.08), transparent 20%),
+        linear-gradient(180deg, #fbfbfe 0%, #ffffff 100%);
+      overflow-x:hidden;
+    }
+
+    a{text-decoration:none;color:inherit}
+    img,svg{display:block;max-width:100%}
+    code{
+      background:#eef4ff;
+      padding:.12rem .38rem;
+      border-radius:8px;
+      font-size:.92em;
+    }
+    ::selection{background:var(--navy);color:#fff}
+
+    .container{
+      width:min(var(--max), calc(100% - 2rem));
+      margin-inline:auto;
+    }
+
+    .site-header{
+      position:relative;
+      overflow:hidden;
+      color:#fff;
+      background:
+        linear-gradient(135deg, rgba(17,40,74,.82), rgba(39,93,241,.52)),
+        url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1800&q=80') center/cover no-repeat;
+      border-bottom:1px solid rgba(255,255,255,.14);
+    }
+
+    .site-header::before,
+    .site-header::after{
+      content:"";
+      position:absolute;
+      border-radius:50%;
+      background:radial-gradient(circle, rgba(255,255,255,.16), transparent 68%);
+      filter:blur(8px);
+      pointer-events:none;
+    }
+    .site-header::before{width:420px;height:420px;left:-120px;top:-180px}
+    .site-header::after{width:390px;height:390px;right:-90px;bottom:-170px}
+
+    .nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:1rem;
+      padding:1rem 0;
+      position:sticky;
+      top:0;
+      z-index:30;
+      backdrop-filter:blur(12px);
+      background:linear-gradient(180deg, rgba(17,40,74,.42), rgba(17,40,74,.10));
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:.9rem;
+      font-family:'Sora', sans-serif;
+      font-weight:800;
+      letter-spacing:.02em;
+    }
+
+    .brand-mark{
+      width:52px;height:52px;border-radius:18px;
+      display:grid;place-items:center;
+      background:rgba(255,255,255,.12);
+      border:1px solid rgba(255,255,255,.20);
+      box-shadow:0 12px 30px rgba(0,0,0,.16);
+      backdrop-filter:blur(12px);
+    }
+
+    .nav-links{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      gap:1rem 1.1rem;
+    }
+
+    .nav-links a{
+      color:rgba(255,255,255,.94);
+      font-weight:700;
+      font-size:.95rem;
+      position:relative;
+    }
+
+    .nav-links a::after{
+      content:"";
+      position:absolute;
+      left:0;bottom:-4px;
+      width:0;height:2px;background:#fff;
+      transition:width .3s ease;
+    }
+    .nav-links a:hover::after{width:100%}
+
+    .hero{
+      padding:3.8rem 0 5rem;
+      position:relative;
+      z-index:2;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:2rem;
+      align-items:end;
+    }
+
+    .small-heading{
+      display:inline-block;
+      background:linear-gradient(90deg, rgba(255,209,102,.18), rgba(255,255,255,.10));
+      color:#ffd166;
+      border:1px solid rgba(255,209,102,.25);
+      padding:.5rem .9rem;
+      border-radius:999px;
+      font-weight:800;
+      text-transform:uppercase;
+      letter-spacing:.16em;
+      font-size:.74rem;
+      margin-bottom:1rem;
+    }
+
+    h1,h2,h3,h4{
+      font-family:'Sora', sans-serif;
+      line-height:1.02;
+      letter-spacing:-.03em;
+      margin:0 0 1rem;
+    }
+
+    h1{
+      font-size:clamp(3rem, 6vw, 5.8rem);
+      max-width:10ch;
+      margin-top:.3rem;
+    }
+
+    .lead{
+      margin:0;
+      max-width:64ch;
+      color:rgba(255,255,255,.93);
+      font-size:clamp(1.05rem, 1.8vw, 1.18rem);
+    }
+
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:1rem;
+      margin-top:1.8rem;
+    }
+
+    .btn{
+      min-height:54px;
+      padding:0 1.2rem;
+      border-radius:999px;
+      border:none;
+      cursor:pointer;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:.7rem;
+      font-weight:800;
+      transition:transform .28s ease, box-shadow .28s ease, background .28s ease;
+    }
+
+    .btn-primary{
+      background:#fff;
+      color:var(--navy);
+      box-shadow:0 12px 30px rgba(0,0,0,.18);
+    }
+    .btn-primary:hover{
+      transform:translateY(-3px);
+      box-shadow:0 18px 38px rgba(0,0,0,.22);
+    }
+
+    .btn-secondary{
+      background:rgba(255,255,255,.12);
+      color:#fff;
+      border:1px solid rgba(255,255,255,.22);
+      backdrop-filter:blur(10px);
+    }
+    .btn-secondary:hover{
+      transform:translateY(-3px);
+      background:rgba(255,255,255,.18);
+    }
+
+    .hero-side{
+      display:grid;
+      gap:1rem;
+    }
+
+    .hero-photo,
+    .hero-mini{
+      border:1px solid rgba(255,255,255,.18);
+      border-radius:24px;
+      overflow:hidden;
+      box-shadow:0 18px 40px rgba(0,0,0,.18);
+      backdrop-filter:blur(12px);
+      background:#ffffff18;
+    }
+
+    .hero-photo{height:270px}
+    .hero-mini-wrap{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:1rem;
+    }
+    .hero-mini{height:150px}
+
+    .hero-photo img,
+    .hero-mini img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    main section{padding:5rem 0}
+
+    .section-head{
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      gap:2rem;
+      align-items:end;
+      margin-bottom:2rem;
+    }
+
+    .kicker{
+      display:block;
+      margin-bottom:.75rem;
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      font-weight:800;
+      font-size:.78rem;
+    }
+
+    .kicker.blue{color:var(--blue)}
+    .kicker.green{color:var(--green)}
+    .kicker.gold{color:var(--gold)}
+    .kicker.red{color:var(--red)}
+    .kicker.violet{color:var(--violet)}
+
+    .section-head h2{
+      font-size:clamp(2rem, 4vw, 4rem);
+      max-width:12ch;
+    }
+
+    .section-head p{
+      margin:0;
+      color:var(--muted);
+      font-size:1.04rem;
+      max-width:68ch;
+    }
+
+    .content-layout{
+      display:grid;
+      grid-template-columns:1.06fr .94fr;
+      gap:2rem;
+      align-items:start;
+    }
+
+    .paper{
+      background:linear-gradient(180deg, #ffffff, #fafbff);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow-soft);
+      padding:1.6rem;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .paper::before{
+      content:"";
+      position:absolute;
+      width:220px;height:220px;border-radius:50%;
+      right:-70px;top:-70px;
+      background:radial-gradient(circle, rgba(39,93,241,.08), transparent 70%);
+      pointer-events:none;
+    }
+
+    .content-flow{
+      columns:2 320px;
+      column-gap:2rem;
+    }
+
+    .content-flow p{
+      margin:0 0 1.15rem;
+      color:var(--muted);
+      break-inside:avoid;
+    }
+
+    .sidebar{
+      display:grid;
+      gap:1rem;
+    }
+
+    .mini{
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:1.15rem 1.2rem;
+      box-shadow:var(--shadow-soft);
+      background:#fff;
+    }
+
+    .mini.blue{background:linear-gradient(180deg, #f7fbff, #eef5ff)}
+    .mini.green{background:linear-gradient(180deg, #f8fff9, #ecfff1)}
+    .mini.gold{background:linear-gradient(180deg, #fffdf7, #fff6dd)}
+    .mini.red{background:linear-gradient(180deg, #fff8f8, #fff0f0)}
+
+    .mini strong{
+      display:block;
+      font-family:'Sora', sans-serif;
+      font-size:1.2rem;
+      margin-bottom:.3rem;
+    }
+
+    .mini.blue strong{color:var(--blue)}
+    .mini.green strong{color:var(--green)}
+    .mini.gold strong{color:#a56b00}
+    .mini.red strong{color:var(--red)}
+
+    .mini span{color:var(--muted)}
+
+    .showcase{
+      background:linear-gradient(180deg, #f6f9ff 0%, #ffffff 100%);
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(12,1fr);
+      gap:1rem;
+    }
+
+    .card{
+      grid-column:span 4;
+      border:1px solid var(--line);
+      border-radius:24px;
+      overflow:hidden;
+      background:#fff;
+      box-shadow:var(--shadow-soft);
+      transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+      box-shadow:var(--shadow);
+      border-color:#bfd4f7;
+    }
+
+    .card-photo{
+      height:220px;
+      overflow:hidden;
+      border-bottom:1px solid var(--line);
+      background:#eaf2ff;
+    }
+
+    .card-photo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .card-body{padding:1.2rem}
+
+    .tag{
+      display:inline-flex;
+      margin-bottom:.8rem;
+      padding:.35rem .72rem;
+      border-radius:999px;
+      font-size:.78rem;
+      font-weight:800;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+    }
+
+    .tag.blue{background:#e7f0ff;color:#1747c6}
+    .tag.green{background:#e9fff0;color:#126a34}
+    .tag.gold{background:#fff1cc;color:#8a5b00}
+
+    .card h3{
+      font-size:1.22rem;
+      margin-bottom:.5rem;
+    }
+
+    .card p{
+      margin:0;
+      color:var(--muted);
+    }
+
+    .contact-strip{
+      background:linear-gradient(180deg, #f4f8ff, #ffffff);
+      border-top:1px solid var(--line);
+    }
+
+    .contact-box{
+      border:1px solid var(--line);
+      background:linear-gradient(180deg, #ffffff, #f8fbff);
+      border-radius:30px;
+      padding:1.5rem;
+      box-shadow:var(--shadow);
+      display:grid;
+      grid-template-columns:1fr .95fr;
+      gap:1.4rem;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .contact-box::before{
+      content:"";
+      position:absolute;
+      width:240px;height:240px;border-radius:50%;
+      right:-60px;top:-70px;
+      background:radial-gradient(circle, rgba(39,93,241,.12), transparent 70%);
+    }
+
+    .contact-items{
+      display:grid;
+      gap:1rem;
+      align-content:start;
+    }
+
+    .contact-item{
+      display:flex;
+      align-items:center;
+      gap:1rem;
+      padding:1rem 1.1rem;
+      border-radius:20px;
+      background:#fff;
+      border:1px solid var(--line);
+      box-shadow:var(--shadow-soft);
+      transition:transform .28s ease, box-shadow .28s ease;
+    }
+
+    .contact-item:hover{
+      transform:translateY(-4px);
+      box-shadow:var(--shadow);
+    }
+
+    .contact-icon{
+      width:56px;height:56px;border-radius:18px;
+      display:grid;place-items:center;
+      background:linear-gradient(135deg, #e6efff, #fff);
+      color:var(--blue);
+      flex:0 0 auto;
+    }
+
+    footer{
+      padding:2rem 0 3rem;
+      color:var(--muted);
+      border-top:1px solid var(--line);
+      background:#fff;
+    }
+
+    .footer-row{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:1rem;
+      flex-wrap:wrap;
+    }
+
+    .reveal{
+      opacity:0;
+      transform:translateY(22px);
+      transition:opacity .78s ease, transform .78s ease;
+    }
+
+    .reveal.visible{
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    .stagger > *{
+      opacity:0;
+      transform:translateY(18px);
+      animation:rise .85s ease forwards;
+    }
+
+    .stagger > *:nth-child(1){animation-delay:.08s}
+    .stagger > *:nth-child(2){animation-delay:.18s}
+    .stagger > *:nth-child(3){animation-delay:.28s}
+    .stagger > *:nth-child(4){animation-delay:.38s}
+    .stagger > *:nth-child(5){animation-delay:.48s}
+
+    @keyframes rise{
+      to{opacity:1;transform:translateY(0)}
+    }
+
+    @media (max-width: 1020px){
+      .hero-grid,
+      .section-head,
+      .content-layout,
+      .contact-box{
+        grid-template-columns:1fr;
+      }
+      .card{grid-column:span 6}
+    }
+
+    @media (max-width: 720px){
+      .nav{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+      .cards{
+        grid-template-columns:1fr;
+      }
+      .card{grid-column:span 1}
+      .content-flow{columns:1}
+      h1{max-width:100%}
+      main section{padding:4rem 0}
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container">
+      <nav class="nav">
+        <a class="brand" href="index.html" aria-label="America AI homepage">
+          <span class="brand-mark" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+              <path d="M12 3l7 4v10l-7 4-7-4V7l7-4z" stroke="white" stroke-width="1.8" stroke-linejoin="round"/>
+              <path d="M8.5 9.2h7M8.5 12h7M8.5 14.8h4.8" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span>AMERICA AI DISCLAIMER</span>
+        </a>
+
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="#intro">Introduction</a>
+          <a href="#core-points">Core Points</a>
+          <a href="#full-disclaimer">Full Disclaimer</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+
+      <section class="hero">
+        <div class="hero-grid">
+          <div class="stagger">
+            <span class="small-heading">Optional but Recommended</span>
+            <h1>Disclaimer for educational content, general guidance, and platform transparency.</h1>
+            <p class="lead">
+              This disclaimer page explains that content on America AI is provided for <strong>educational and informational purposes</strong>,
+              may not always be fully complete or perfectly accurate, and should <strong>not be taken as legal, financial, or medical advice</strong>
+              unless a properly qualified professional explicitly says so.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#full-disclaimer">Read Disclaimer</a>
+              <a class="btn btn-secondary" href="index.html">Back Home</a>
+            </div>
+          </div>
+
+          <div class="hero-side reveal">
+            <div class="hero-photo">
+              <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1400&q=80" alt="Professional legal and document review environment" loading="lazy">
+            </div>
+            <div class="hero-mini-wrap">
+              <div class="hero-mini">
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80" alt="Professional meeting and advice discussion" loading="lazy">
+              </div>
+              <div class="hero-mini">
+                <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80" alt="Financial review and document analysis" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </header>
+
+  <main>
+    <section id="intro">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="kicker gold">Small introduction</span>
+            <h2>Why a disclaimer page should exist on a serious website.</h2>
+          </div>
+          <p>
+            A disclaimer is not only legal decoration. It is a clarity tool. It helps users understand how content should be interpreted and where the limits of reliance begin.
+          </p>
+        </div>
+
+        <div class="content-layout">
+          <article class="paper reveal">
+            <div class="content-flow">
+              <p>
+                A modern website should explain not only what it offers but also what it does not guarantee. That is the purpose of a disclaimer.
+                On a platform like America AI, which may include content about jobs, AI, privacy, side hustles, ethics, opportunity, global work, and other practical subjects,
+                people may read information with real intention. They may use it to guide their next decisions. Because of that, it is responsible to say clearly:
+                the material on this website is for educational and informational use, not absolute certainty or professional instruction in every case.
+              </p>
+              <p>
+                This matters because the internet changes quickly. Opportunities change, laws change, markets change, technology changes, and personal circumstances differ from one user to another.
+                Even well-written pages cannot promise to cover every possible detail or remain perfect forever. A disclaimer makes room for that reality in a calm and professional way.
+              </p>
+              <p>
+                It also protects trust. When a website openly explains the limits of its content, it appears more honest. Visitors can engage with better understanding.
+                That honesty is part of professional presentation. It shows that the platform takes responsibility seriously instead of pretending to be more than it is.
+              </p>
+            </div>
+          </article>
+
+          <aside class="sidebar reveal">
+            <div class="mini gold">
+              <strong>Educational Purpose</strong>
+              <span>The site shares knowledge, context, guidance, and ideas intended to help readers learn and think more clearly.</span>
+            </div>
+            <div class="mini red">
+              <strong>No Absolute Guarantee</strong>
+              <span>Content may be helpful, but it should not be treated as complete, final, or universally correct in every case.</span>
+            </div>
+            <div class="mini blue">
+              <strong>Professional Limits</strong>
+              <span>Unless explicitly stated by a qualified expert, content is not formal legal, financial, or medical advice.</span>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="showcase" id="core-points">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="kicker blue">Core points</span>
+            <h2>The three most important ideas in this disclaimer.</h2>
+          </div>
+          <p>
+            These are the exact ideas you asked to include, expanded professionally so they are useful, readable, and clear.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card reveal">
+            <div class="card-photo">
+              <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80" alt="Educational learning and digital reading space" loading="lazy">
+            </div>
+            <div class="card-body">
+              <span class="tag blue">Educational</span>
+              <h3>Information is for educational purposes</h3>
+              <p>The content on this platform is created to inform, explain, guide, and support learning rather than to replace qualified personal advice.</p>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-photo">
+              <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80" alt="People discussing details and verifying information" loading="lazy">
+            </div>
+            <div class="card-body">
+              <span class="tag gold">Accuracy</span>
+              <h3>No guarantee of completeness or accuracy</h3>
+              <p>Content may be carefully prepared, but no website can promise every page will always remain fully complete, current, or error-free.</p>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-photo">
+              <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80" alt="Financial documents and professional advice environment" loading="lazy">
+            </div>
+            <div class="card-body">
+              <span class="tag green">Professional Advice</span>
+              <h3>Not legal, financial, or medical advice</h3>
+              <p>Unless clearly stated by someone appropriately qualified, site material should not be treated as formal professional advice.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="full-disclaimer">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="kicker red">Full disclaimer</span>
+            <h2>Detailed disclaimer for America AI.</h2>
+          </div>
+          <p>
+            The long-form content below expands the meaning of the core disclaimer points and explains how users should interpret the information published on the site.
+          </p>
+        </div>
+
+        <div class="content-layout">
+          <article class="paper reveal">
+            <div class="content-flow">
+              <p>
+                <strong>1. General Purpose of the Website.</strong> America AI is a content-based platform created to present educational, informational, and professionally arranged material
+                relating to themes such as jobs, AI, ethics, privacy, side hustles, web content, digital direction, communication, and other subjects that may be relevant to its audience.
+                The goal of the site is to inform, explain, and support broader understanding. It is not to create a guaranteed basis for major personal decisions without independent verification.
+              </p>
+              <p>
+                <strong>2. Educational Purposes Only.</strong> All information made available on America AI should be understood as educational or general informational content unless explicitly stated otherwise.
+                This means the material is intended to help users think, learn, compare, reflect, and better understand a topic. It may provide context, suggestions, structure, or examples.
+                However, it does not automatically become official guidance, final authority, or a guaranteed answer to every real-world situation.
+              </p>
+              <p>
+                <strong>3. No Guarantee of Completeness.</strong> While reasonable effort may be made to write clearly and provide useful information,
+                no representation is made that every article, page, statement, or explanation is fully complete in every possible respect.
+                Topics may be summarized rather than exhaustively covered. Some practical details may be omitted. Some pages may be introductory rather than comprehensive.
+                Users should therefore understand that helpful information is not the same as total information.
+              </p>
+              <p>
+                <strong>4. No Guarantee of Accuracy at All Times.</strong> Information on the internet can become outdated quickly.
+                Markets change, jobs change, laws change, technology changes, platforms update their rules, and public conditions evolve.
+                Even carefully prepared content may eventually become less current. America AI does not guarantee that every page will always remain perfectly accurate,
+                fully updated, or suitable for every user’s situation at every moment in time.
+              </p>
+              <p>
+                <strong>5. User Responsibility to Verify.</strong> Users remain responsible for checking important details through official or qualified sources,
+                especially where real-life consequences are involved. If a user is relying on information related to employment, law, immigration, health, money,
+                contracts, or any other high-impact subject, that user should independently verify the relevant facts before acting.
+              </p>
+              <p>
+                <strong>6. Not Legal Advice.</strong> Nothing on America AI should be interpreted as formal legal advice unless specifically provided by a properly qualified legal professional
+                who is authorized and competent to give such advice in the relevant jurisdiction. Articles, summaries, explanations, or discussions about rules, rights, privacy, terms,
+                contracts, employment, or public policy are intended for general understanding only.
+              </p>
+              <p>
+                <strong>7. Not Financial Advice.</strong> Nothing on this website constitutes investment advice, financial planning advice, tax advice, accounting advice,
+                or any other form of licensed financial instruction unless explicitly stated and given by a qualified professional authorized to do so.
+                Information about work, income, opportunities, side hustles, earnings, markets, or economic conditions should not be treated as a guaranteed financial outcome or personal recommendation.
+              </p>
+              <p>
+                <strong>8. Not Medical Advice.</strong> Nothing on America AI should be relied upon as medical advice, diagnosis, treatment guidance,
+                or substitute professional healthcare instruction unless clearly written by a medically qualified professional acting within proper scope.
+                If a user has a health-related concern, qualified healthcare services should be consulted directly.
+              </p>
+              <p>
+                <strong>9. Professional Qualification Principle.</strong> Where professional advice is required, users should seek help from a person properly qualified in that field.
+                A disclaimer is not meant to reduce the value of information on the site. Rather, it is meant to remind readers that different categories of knowledge require different levels of authority.
+              </p>
+              <p>
+                <strong>10. Job and Opportunity Information.</strong> America AI may discuss job markets, USA opportunities, Kenyan work conditions, side hustles,
+                digital careers, remote work, and related ideas. Such content is intended to guide and inform, not to promise employment, visa approval, sponsorship,
+                income level, business success, or guaranteed personal results. Individual outcomes depend on skill, timing, legal status, economic conditions, and many other external factors.
+              </p>
+              <p>
+                <strong>11. AI and Technology Content.</strong> Content about AI, digital tools, innovation, ethics, or future technology is offered for learning and public understanding.
+                Technology changes rapidly, and discussions on this website may simplify complex topics for readability. Readers should not assume that all tools, policies,
+                systems, or ethical discussions are exhaustively represented on the site.
+              </p>
+              <p>
+                <strong>12. Privacy and Policy Discussions.</strong> When America AI discusses privacy, cookies, analytics, or policy-related issues,
+                that content is meant to explain general concepts and site-specific expectations. It should not be treated as a substitute for direct legal interpretation where legal advice is actually needed.
+              </p>
+              <p>
+                <strong>13. External Links and Third-Party Platforms.</strong> The site may reference or link to external platforms, sources, tools, employers, services, or informational resources.
+                Those third-party websites operate independently. America AI does not automatically guarantee their reliability, safety, policy quality, or current accuracy simply because they are mentioned.
+                Users should review third-party materials directly and make their own decisions carefully.
+              </p>
+              <p>
+                <strong>14. No Professional Relationship Created by Reading.</strong> Merely visiting, browsing, or reading content on America AI does not create a lawyer-client relationship,
+                doctor-patient relationship, financial advisor relationship, fiduciary relationship, or other specialized professional relationship.
+                Reading content is not the same as entering a formal advisory arrangement.
+              </p>
+              <p>
+                <strong>15. Content May Be Simplified.</strong> In order to make topics readable, some pages may simplify technical or complex issues.
+                That simplification is useful for learning, but it also means the content may not include every nuance that a specialist discussion would contain.
+                Users should approach major decisions with that understanding in mind.
+              </p>
+              <p>
+                <strong>16. Opinions and Interpretive Material.</strong> Some content on the site may include opinions, interpretation, commentary, or directional suggestions.
+                Those elements should be understood as part of informative communication, not as universally binding truth or formal professional instruction.
+              </p>
+              <p>
+                <strong>17. Use at Own Discretion.</strong> Users decide how they interpret and act upon content found on the site.
+                If someone chooses to make a career move, financial decision, application, legal assumption, or lifestyle choice based in part on site information,
+                they do so at their own discretion and should first seek appropriate verification where necessary.
+              </p>
+              <p>
+                <strong>18. No Liability for Reliance Alone.</strong> To the fullest extent reasonably applicable, America AI does not accept responsibility for loss, harm, disappointment,
+                or missed opportunity resulting solely from a user’s reliance on website material without further verification or qualified advice where required.
+              </p>
+              <p>
+                <strong>19. Content May Change Without Notice.</strong> The website may revise, expand, edit, remove, or restructure its content at any time.
+                A page viewed today may not remain identical in future. Users should therefore interpret content in context and recognize that digital platforms evolve.
+              </p>
+              <p>
+                <strong>20. Good-Faith Intent.</strong> This disclaimer is not written to scare users away. It is written to communicate honestly.
+                America AI aims to be helpful, useful, and professionally presented, but also realistic about the limits of general web content.
+              </p>
+              <p>
+                <strong>21. Conclusion.</strong> In summary, users should read America AI as an educational and informational platform. They should appreciate its guidance and perspective,
+                but also understand its limits. Important decisions deserve proper verification. Specialized matters deserve qualified professionals.
+                That balance of usefulness and clarity is exactly why this disclaimer exists.
+              </p>
+            </div>
+          </article>
+
+          <aside class="sidebar reveal">
+            <div class="mini blue">
+              <strong>Best way to use this site</strong>
+              <span>Read it to learn, compare, understand, and prepare questions — not to replace expert help where expert help is truly needed.</span>
+            </div>
+            <div class="mini gold">
+              <strong>Important reminder</strong>
+              <span>Useful content can still be limited content. Verification always matters when the stakes are serious.</span>
+            </div>
+            <div class="mini red">
+              <strong>Do not confuse</strong>
+              <span>Educational explanation is not the same as licensed legal, medical, or financial advice.</span>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-strip" id="contact">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="kicker green">Contact</span>
+            <h2>Questions about this disclaimer?</h2>
+          </div>
+          <p>
+            If you need to ask about the disclaimer, the platform, or page work, the contact information below provides a clear and professional path.
+          </p>
+        </div>
+
+        <div class="contact-box reveal">
+          <div>
+            <h3 style="font-size:clamp(2rem,4vw,3.4rem);max-width:10ch;">Clarity protects trust.</h3>
+            <p style="color:var(--muted);max-width:60ch;margin-top:0;">
+              This disclaimer page is built to support transparency, readability, and strong professional structure across the America AI project.
+            </p>
+            <div class="hero-actions" style="margin-top:1.2rem;">
+              <a class="btn btn-primary" href="mailto:kinglee6mutwiri@gmail.com">Email Now</a>
+              <a class="btn btn-secondary" href="index.html">Back Home</a>
+            </div>
+          </div>
+
+          <div class="contact-items">
+            <a class="contact-item" href="mailto:kinglee6mutwiri@gmail.com" aria-label="Email contact">
+              <div class="contact-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                  <path d="M4 6.5h16a1.5 1.5 0 0 1 1.5 1.5v8A1.5 1.5 0 0 1 20 17.5H4A1.5 1.5 0 0 1 2.5 16V8A1.5 1.5 0 0 1 4 6.5z" stroke="currentColor" stroke-width="1.8"/>
+                  <path d="M3 8l9 6 9-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div>
+                <strong>Email Contact</strong>
+                <span>kinglee6mutwiri@gmail.com</span>
+              </div>
+            </a>
+
+            <a class="contact-item" href="index.html" aria-label="Back home">
+              <div class="contact-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                  <path d="M4 18h16M6 18V8l6-4 6 4v10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M10 18v-5h4v5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div>
+                <strong>Back Home</strong>
+                <span>Return to America AI homepage</span>
+              </div>
+            </a>
+
+            <div class="contact-item" aria-label="Suggested file name">
+              <div class="contact-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                  <path d="M7 3.5h7l4 4V20a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-15a1.5 1.5 0 0 1 1-1.5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                  <path d="M14 3.5V8h4" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                  <path d="M9 12h6M9 16h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div>
+                <strong>Suggested file name</strong>
+                <span>disclaimer.html</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <div>© 2026 America AI. Disclaimer page for educational content, informational guidance, and professional transparency.</div>
+      <div>Contact: <a href="mailto:kinglee6mutwiri@gmail.com">kinglee6mutwiri@gmail.com</a></div>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.15});
+
+    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+  </script>
+<script src="header-loader.js"></script>
+</body>
+</html>
+ 
