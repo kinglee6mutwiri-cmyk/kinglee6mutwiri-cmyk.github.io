@@ -438,9 +438,79 @@ body{
 }
 </style>
 
+
+<style id="top-social-style">
+.top-social{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:14px;
+    padding:14px 10px;
+    background:#ffffff;
+}
+
+.top-social a{
+    width:44px;
+    height:44px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:#172033;
+    color:#ffffff;
+    font-size:20px;
+    transition:transform .25s ease, opacity .25s ease;
+}
+
+.top-social a:hover{
+    transform:translateY(-3px);
+    opacity:.85;
+}
+
+@media(max-width:600px){
+    .top-social a{
+        width:40px;
+        height:40px;
+        font-size:18px;
+    }
+}
+</style>
+
 </head>
 
 <body>
+
+<!-- SOCIAL LINKS -->
+<div class="top-social">
+    <a href="https://www.facebook.com/profile.php?id=61568056696688"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Facebook">
+        <i class="fa-brands fa-facebook-f"></i>
+    </a>
+
+    <a href="https://www.instagram.com/mutwiri.eliphas/"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+    </a>
+
+    <a href="https://x.com/KingleeMut40701"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="X">
+        <i class="fa-brands fa-x-twitter"></i>
+    </a>
+
+    <a href="https://wa.me/254736280522"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+</div>
+
 
 <!-- HEADER -->
 
