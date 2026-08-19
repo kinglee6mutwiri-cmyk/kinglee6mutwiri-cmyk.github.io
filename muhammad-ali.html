@@ -398,6 +398,67 @@ footer a:hover{
         letter-spacing:2px;
     }
 }
+
+.author-box{
+    display:flex;
+    align-items:center;
+    gap:13px;
+    margin:15px 0 28px;
+    padding:12px 15px;
+    background:#fafafa;
+    border:1px solid #e1e1e1;
+    border-radius:12px;
+    width:max-content;
+    max-width:100%;
+}
+
+.author-photo{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    object-fit:cover;
+    border:2px solid #c9a227;
+}
+
+.author-info{
+    display:flex;
+    flex-direction:column;
+    gap:2px;
+}
+
+.author-info strong{
+    font-size:15px;
+    color:#222;
+}
+
+.author-info span{
+    font-size:12px;
+    color:#777;
+}
+
+.facebook-follow{
+    display:inline-block;
+    margin-top:4px;
+    padding:5px 10px;
+    border-radius:15px;
+    background:#1877f2;
+    color:white !important;
+    text-decoration:none;
+    font-size:12px;
+    font-weight:bold;
+    width:max-content;
+}
+
+.facebook-follow:hover{
+    opacity:.85;
+}
+
+@media(max-width:500px){
+    .author-box{
+        width:100%;
+    }
+}
+
 </style>
 </head>
 
@@ -435,8 +496,22 @@ footer a:hover{
 
 <h1>Muhammad Ali: His Life, History, Struggles and the Lessons He Left Behind</h1>
 
-<div class="byline">
-By Kinglee Mutwiri
+<div class="author-box">
+  <img src="images/author-v2.jpg"
+       alt="Kinglee Mutwiri"
+       class="author-photo">
+
+  <div class="author-info">
+    <strong>Kinglee Mutwiri</strong>
+    <span>Writer & Storyteller</span>
+
+    <a class="facebook-follow"
+       href="https://www.facebook.com/profile.php?id=61568056696688"
+       target="_blank"
+       rel="noopener">
+       Follow on Facebook
+    </a>
+  </div>
 </div>
 
 <figure class="hero">
