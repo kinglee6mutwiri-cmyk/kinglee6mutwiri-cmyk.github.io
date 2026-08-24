@@ -432,6 +432,320 @@ position:static;
 }
 
 </style>
+
+<style id="lil-wayne-premium-decoration">
+
+/* ===== PREMIUM LIL WAYNE DESIGN ===== */
+
+body{
+    background:
+        radial-gradient(circle at 10% 10%, rgba(155,89,182,.18), transparent 25%),
+        radial-gradient(circle at 90% 20%, rgba(241,196,15,.14), transparent 25%),
+        linear-gradient(135deg,#08080c,#11101a 45%,#08080c);
+    background-attachment:fixed;
+}
+
+article{
+    position:relative;
+    overflow:hidden;
+    border:2px solid rgba(212,175,55,.35);
+    box-shadow:
+        0 0 25px rgba(212,175,55,.10),
+        0 20px 60px rgba(0,0,0,.45);
+}
+
+/* Gold glowing top line */
+
+article::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:5px;
+    background:linear-gradient(
+        90deg,
+        #9b59b6,
+        #f1c40f,
+        #e84393,
+        #3498db,
+        #9b59b6
+    );
+    background-size:300% 100%;
+    animation:rainbowLine 7s linear infinite;
+}
+
+@keyframes rainbowLine{
+    0%{background-position:0%}
+    100%{background-position:300%}
+}
+
+/* Headings */
+
+article h1{
+    color:#f1c40f !important;
+    text-shadow:0 0 15px rgba(241,196,15,.25);
+}
+
+article h2{
+    color:#f1c40f !important;
+    border-left-color:#9b59b6 !important;
+    background:linear-gradient(
+        90deg,
+        rgba(155,89,182,.15),
+        transparent
+    ) !important;
+}
+
+article h3{
+    color:#d98cff !important;
+}
+
+/* Intro */
+
+.intro{
+    background:
+        linear-gradient(
+            135deg,
+            rgba(155,89,182,.16),
+            rgba(241,196,15,.08),
+            rgba(52,152,219,.08)
+        ) !important;
+    border:1px solid rgba(241,196,15,.30) !important;
+    box-shadow:0 8px 30px rgba(0,0,0,.20);
+}
+
+/* Lesson cards */
+
+.lesson{
+    background:
+        linear-gradient(
+            135deg,
+            rgba(155,89,182,.12),
+            rgba(241,196,15,.07)
+        ) !important;
+    border:1px solid rgba(241,196,15,.30) !important;
+    border-left:6px solid #f1c40f !important;
+    transition:transform .3s ease, box-shadow .3s ease;
+}
+
+.lesson:hover{
+    transform:translateY(-5px);
+    box-shadow:0 12px 30px rgba(241,196,15,.15);
+}
+
+/* Quote */
+
+.quote{
+    background:linear-gradient(
+        135deg,
+        rgba(155,89,182,.18),
+        rgba(52,152,219,.10)
+    ) !important;
+    border-color:#9b59b6 !important;
+    color:#f1c40f !important;
+    box-shadow:0 0 25px rgba(155,89,182,.12);
+}
+
+/* Hero image */
+
+.hero{
+    background:
+        linear-gradient(
+            135deg,
+            #9b59b6,
+            #f1c40f,
+            #e84393,
+            #3498db
+        ) !important;
+    background-size:300% 300%;
+    animation:heroGlow 8s ease infinite;
+}
+
+@keyframes heroGlow{
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+.hero img{
+    transition:transform .5s ease;
+}
+
+.hero img:hover{
+    transform:scale(1.015);
+}
+
+/* Facebook button */
+
+.facebook-follow{
+    display:inline-block;
+    margin:15px 0 25px;
+    padding:13px 25px;
+    border-radius:30px;
+    background:linear-gradient(135deg,#1877f2,#4267B2);
+    color:white !important;
+    text-decoration:none !important;
+    font-weight:bold;
+    box-shadow:0 8px 25px rgba(24,119,242,.30);
+    transition:transform .3s ease, box-shadow .3s ease;
+}
+
+.facebook-follow:hover{
+    transform:translateY(-4px) scale(1.03);
+    box-shadow:0 12px 35px rgba(24,119,242,.45);
+}
+
+/* ===== FLOATING FLOWERS ===== */
+
+.floating-flower{
+    position:fixed;
+    top:-60px;
+    z-index:9999;
+    pointer-events:none;
+    user-select:none;
+    animation:flowerFall linear forwards;
+    filter:drop-shadow(0 0 5px rgba(255,255,255,.35));
+}
+
+@keyframes flowerFall{
+
+    0%{
+        transform:
+            translateY(-70px)
+            translateX(0)
+            rotate(0deg);
+        opacity:0;
+    }
+
+    10%{
+        opacity:.95;
+    }
+
+    50%{
+        transform:
+            translateY(50vh)
+            translateX(45px)
+            rotate(180deg);
+    }
+
+    100%{
+        transform:
+            translateY(115vh)
+            translateX(-45px)
+            rotate(360deg);
+        opacity:.05;
+    }
+}
+
+/* Decorative glow */
+
+.glow-orb{
+    position:fixed;
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    pointer-events:none;
+    z-index:-1;
+    background:radial-gradient(
+        circle,
+        rgba(155,89,182,.18),
+        transparent 70%
+    );
+    animation:orbMove 10s ease-in-out infinite alternate;
+}
+
+@keyframes orbMove{
+    from{
+        transform:translate(0,0);
+    }
+    to{
+        transform:translate(80px,100px);
+    }
+}
+
+/* Mobile */
+
+@media(max-width:700px){
+
+    article h1{
+        text-shadow:0 0 10px rgba(241,196,15,.18);
+    }
+
+    .floating-flower{
+        font-size:18px !important;
+    }
+
+}
+
+</style>
+
+<script>
+/* ===== LIL WAYNE FLOATING FLOWERS ===== */
+
+(function(){
+
+    const flowers = ["🌸","🌺","🌼","🌷","💮","✿","❀"];
+
+    function createFlower(){
+
+        const flower = document.createElement("div");
+
+        flower.className = "floating-flower";
+
+        flower.textContent =
+            flowers[Math.floor(Math.random()*flowers.length)];
+
+        flower.style.left =
+            Math.random()*100 + "vw";
+
+        flower.style.fontSize =
+            (16 + Math.random()*22) + "px";
+
+        flower.style.animationDuration =
+            (7 + Math.random()*8) + "s";
+
+        flower.style.opacity =
+            .45 + Math.random()*.5;
+
+        document.body.appendChild(flower);
+
+        setTimeout(function(){
+            flower.remove();
+        },16000);
+    }
+
+    setInterval(createFlower,900);
+
+    /* Create a few immediately */
+    for(let i=0;i<6;i++){
+        setTimeout(createFlower,i*400);
+    }
+
+})();
+
+/* Decorative glowing orbs */
+
+(function(){
+
+    for(let i=0;i<3;i++){
+
+        const orb=document.createElement("div");
+
+        orb.className="glow-orb";
+
+        orb.style.left=(Math.random()*90)+"vw";
+        orb.style.top=(Math.random()*90)+"vh";
+
+        orb.style.animationDelay=(Math.random()*4)+"s";
+
+        document.body.appendChild(orb);
+    }
+
+})();
+
+</script>
+
 </head>
 
 <body>
