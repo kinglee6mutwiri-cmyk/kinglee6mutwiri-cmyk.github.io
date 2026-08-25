@@ -2667,207 +2667,149 @@ footer a:hover{
 </script>
 
 
-<style id="visible-welcome-fix">
 
-.moving-welcome{
-    position:relative;
-    width:100%;
-    height:68px;
-    overflow:hidden;
-    z-index:99999;
 
-    display:flex;
-    align-items:center;
 
-    background:#050505 !important;
 
-    border-top:3px solid #f6c945;
-    border-bottom:3px solid #f6c945;
-
-    box-shadow:
-        0 0 25px rgba(246,201,69,.35);
-
-}
-
-.welcome-track{
-
-    display:flex;
-    width:max-content;
-
-    white-space:nowrap;
-
-    animation:
-        welcomeMove 16s linear infinite;
-
-}
-
-.welcome-track span{
-
-    display:inline-block;
-
-    padding-right:100px;
-
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-    font-size:25px;
-
-    font-weight:1000;
-
-    letter-spacing:2px;
-
-    color:#ffffff !important;
-
-    -webkit-text-fill-color:#ffffff !important;
-
-    text-shadow:
-        0 0 3px #ffffff,
-        0 0 8px #f6c945,
-        0 0 16px #f6c945,
-        2px 2px 0 #000000;
-
-}
-
-@keyframes welcomeMove{
-
-    from{
-        transform:translateX(100vw);
-    }
-
-    to{
-        transform:translateX(-100%);
-    }
-
-}
-
-@media(max-width:600px){
-
-    .moving-welcome{
-        height:58px;
-    }
-
-    .welcome-track span{
-
-        font-size:19px;
-
-        letter-spacing:1px;
-
-        padding-right:70px;
-
-    }
-
-}
-
-</style>
-
-
-<style id="welcome-left-to-right">
-
-.moving-welcome{
-    position:relative;
-    width:100%;
-    height:68px;
-    overflow:hidden;
-    z-index:99999;
-
-    display:flex;
-    align-items:center;
-
-    background:#050505 !important;
-
-    border-top:3px solid #f6c945;
-    border-bottom:3px solid #f6c945;
-
-    box-shadow:
-        0 0 30px rgba(246,201,69,.4);
-}
-
-.welcome-track{
-
-    display:flex;
-    width:max-content;
-
-    white-space:nowrap;
-
-    /* LEFT → RIGHT */
-    animation:
-        welcomeLeftToRight 16s linear infinite;
-
-}
-
-.welcome-track span{
-
-    display:inline-block;
-
-    padding-right:100px;
-
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-    font-size:25px;
-
-    font-weight:1000;
-
-    letter-spacing:2px;
-
-    color:#ffffff !important;
-
-    -webkit-text-fill-color:#ffffff !important;
-
-    text-shadow:
-        0 0 3px #ffffff,
-        0 0 8px #f6c945,
-        0 0 16px #f6c945,
-        2px 2px 0 #000000;
-}
-
-/* Starts on LEFT and travels RIGHT */
-@keyframes welcomeLeftToRight{
-
-    from{
-        transform:translateX(-100%);
-    }
-
-    to{
-        transform:translateX(100vw);
-    }
-
-}
-
-@media(max-width:600px){
-
-    .moving-welcome{
-        height:58px;
-    }
-
-    .welcome-track span{
-
-        font-size:19px;
-
-        padding-right:70px;
-
-    }
-
-}
-
-</style>
 
 </head>
 
 <body>
 
-<!-- MOVING WELCOME BANNER -->
-<div class="moving-welcome">
-  <div class="welcome-track">
-    <span>🌸 WELCOME TO ELIPHAS MUTWIRI'S WEBSITE 🌸</span>
-    <span>✦ WELCOME TO ELIPHAS MUTWIRI'S WEBSITE ✦</span>
-    <span>🌺 WELCOME TO ELIPHAS MUTWIRI'S WEBSITE 🌺</span>
-    <span>✦ WELCOME TO ELIPHAS MUTWIRI'S WEBSITE ✦</span>
-  </div>
+<!-- ELIPHAS MOVING WELCOME -->
+<div class="eliphas-welcome">
+    <div class="eliphas-welcome-track">
+        <span>🌸 WELCOME TO ELIPHAS MUTWIRI'S WEBSITE 🌸</span>
+        <span>✦ WELCOME TO ELIPHAS MUTWIRI'S WEBSITE ✦</span>
+        <span>🌺 WELCOME TO ELIPHAS MUTWIRI'S WEBSITE 🌺</span>
+    </div>
+</div>
+
+<style id="eliphas-welcome-final">
+
+.eliphas-welcome{
+
+    position:relative;
+
+    width:100%;
+
+    height:70px;
+
+    overflow:hidden;
+
+    background:#050505;
+
+    border-top:
+        4px solid #f6c945;
+
+    border-bottom:
+        4px solid #f6c945;
+
+    display:flex;
+
+    align-items:center;
+
+    z-index:999999;
+
+    box-shadow:
+        0 0 30px rgba(246,201,69,.45);
+
+}
+
+.eliphas-welcome-track{
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    height:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    width:max-content;
+
+    white-space:nowrap;
+
+    animation:
+        ELIPHAS_LEFT_RIGHT
+        14s
+        linear
+        infinite;
+
+}
+
+.eliphas-welcome-track span{
+
+    display:block;
+
+    margin-right:120px;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size:26px;
+
+    font-weight:900;
+
+    letter-spacing:2px;
+
+    color:#ffffff;
+
+    -webkit-text-fill-color:#ffffff;
+
+    text-shadow:
+        0 0 4px #ffffff,
+        0 0 10px #f6c945,
+        0 0 20px #f6c945,
+        2px 2px 4px #000000;
+
+}
+
+@keyframes ELIPHAS_LEFT_RIGHT{
+
+    0%{
+
+        transform:
+            translateX(-100%);
+
+    }
+
+    100%{
+
+        transform:
+            translateX(100vw);
+
+    }
+
+}
+
+@media(max-width:600px){
+
+    .eliphas-welcome{
+
+        height:60px;
+
+    }
+
+    .eliphas-welcome-track span{
+
+        font-size:19px;
+
+        margin-right:80px;
+
+    }
+
+}
+
+</style>
+
+
 </div>
 
 <style>
