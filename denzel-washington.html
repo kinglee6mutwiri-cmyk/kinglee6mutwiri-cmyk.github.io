@@ -659,6 +659,966 @@ scroll-behavior:auto !important;
 }
 
 </style>
+
+<style id="premium-denzel-design">
+
+/* =========================================
+   DENZEL WASHINGTON PREMIUM DESIGN
+   ========================================= */
+
+:root{
+    --gold:#f1c40f;
+    --gold2:#d4af37;
+    --purple:#9b59b6;
+    --dark:#080808;
+    --cream:#fffaf0;
+}
+
+/* Main background */
+body{
+    background:
+        radial-gradient(circle at 10% 10%,rgba(241,196,15,.13),transparent 24%),
+        radial-gradient(circle at 90% 20%,rgba(155,89,182,.14),transparent 25%),
+        radial-gradient(circle at 20% 80%,rgba(52,152,219,.10),transparent 25%),
+        linear-gradient(135deg,#fffdf7,#f5f0e7,#ffffff);
+    overflow-x:hidden;
+}
+
+/* =========================================
+   FLOATING FLOWERS
+   ========================================= */
+
+.floating-flower{
+    position:fixed;
+    top:-80px;
+    z-index:2;
+    pointer-events:none;
+    user-select:none;
+    opacity:.72;
+    animation:
+        flowerFall linear infinite,
+        flowerSwing ease-in-out infinite;
+}
+
+@keyframes flowerFall{
+    0%{
+        transform:translateY(-100px) rotate(0deg);
+    }
+
+    100%{
+        transform:translateY(115vh) rotate(360deg);
+    }
+}
+
+@keyframes flowerSwing{
+    0%,100%{
+        margin-left:-20px;
+    }
+
+    50%{
+        margin-left:20px;
+    }
+}
+
+.flower1{
+    left:4%;
+    font-size:27px;
+    animation-duration:13s,3s;
+}
+
+.flower2{
+    left:15%;
+    font-size:20px;
+    animation-duration:18s,4s;
+    animation-delay:3s;
+}
+
+.flower3{
+    left:29%;
+    font-size:31px;
+    animation-duration:15s,3.5s;
+    animation-delay:6s;
+}
+
+.flower4{
+    left:48%;
+    font-size:23px;
+    animation-duration:20s,4s;
+    animation-delay:1s;
+}
+
+.flower5{
+    left:66%;
+    font-size:29px;
+    animation-duration:16s,3s;
+    animation-delay:5s;
+}
+
+.flower6{
+    left:82%;
+    font-size:21px;
+    animation-duration:19s,4s;
+    animation-delay:2s;
+}
+
+.flower7{
+    left:94%;
+    font-size:30px;
+    animation-duration:14s,3s;
+    animation-delay:7s;
+}
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+header{
+    position:relative;
+    overflow:hidden;
+
+    background:
+        radial-gradient(circle at 50% 0%,
+        rgba(241,196,15,.22),
+        transparent 35%),
+        linear-gradient(
+        135deg,
+        #050505,
+        #24180d,
+        #090909
+        );
+
+    border-bottom:
+        5px solid var(--gold2);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.35);
+}
+
+header:before{
+    content:"✦  ✧  ✦  ✧  ✦";
+    position:absolute;
+    top:18px;
+    left:0;
+    width:100%;
+    text-align:center;
+    color:rgba(241,196,15,.5);
+    font-size:24px;
+    letter-spacing:25px;
+    animation:starsMove 8s linear infinite;
+}
+
+@keyframes starsMove{
+    from{
+        transform:translateX(-30px);
+    }
+
+    to{
+        transform:translateX(30px);
+    }
+}
+
+header h1{
+    position:relative;
+    z-index:3;
+
+    background:
+        linear-gradient(
+        90deg,
+        #fff,
+        #f1c40f,
+        #fff,
+        #d4af37,
+        #fff
+        );
+
+    background-size:300% auto;
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    color:transparent;
+
+    animation:
+        titleGlow 7s linear infinite;
+
+    text-shadow:
+        0 0 30px rgba(241,196,15,.15);
+}
+
+@keyframes titleGlow{
+    0%{
+        background-position:0% center;
+    }
+
+    100%{
+        background-position:300% center;
+    }
+}
+
+/* =========================================
+   NAVIGATION
+   ========================================= */
+
+nav{
+    backdrop-filter:blur(12px);
+    background:rgba(5,5,5,.94);
+}
+
+.nav-inner a{
+    position:relative;
+}
+
+.nav-inner a:after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-7px;
+    width:0;
+    height:2px;
+
+    background:var(--gold);
+
+    transition:.35s;
+}
+
+.nav-inner a:hover:after{
+    width:100%;
+}
+
+/* =========================================
+   ARTICLE
+   ========================================= */
+
+article{
+    position:relative;
+
+    background:
+        linear-gradient(
+        145deg,
+        rgba(255,255,255,.98),
+        rgba(255,252,244,.98)
+        );
+
+    border:
+        1px solid rgba(212,175,55,.25);
+
+    box-shadow:
+        0 25px 80px rgba(0,0,0,.13),
+        inset 0 1px 0 rgba(255,255,255,.8);
+
+    overflow:hidden;
+}
+
+article:before{
+    content:"";
+    position:absolute;
+
+    width:250px;
+    height:250px;
+
+    top:-120px;
+    right:-120px;
+
+    background:
+        radial-gradient(
+        circle,
+        rgba(241,196,15,.18),
+        transparent 70%
+        );
+
+    border-radius:50%;
+
+    pointer-events:none;
+}
+
+/* =========================================
+   ARTICLE TITLE
+   ========================================= */
+
+article > h1{
+    position:relative;
+
+    color:#25190d;
+
+    text-shadow:
+        1px 2px 0 #fff,
+        0 8px 25px rgba(0,0,0,.08);
+}
+
+article > h1:after{
+    content:"";
+    display:block;
+
+    width:130px;
+    height:5px;
+
+    margin-top:20px;
+
+    border-radius:20px;
+
+    background:
+        linear-gradient(
+        90deg,
+        var(--purple),
+        var(--gold),
+        transparent
+        );
+}
+
+/* =========================================
+   SECTION HEADINGS
+   ========================================= */
+
+article h2{
+    position:relative;
+
+    color:#f1c40f !important;
+
+    background:
+        linear-gradient(
+        90deg,
+        rgba(155,89,182,.23),
+        rgba(241,196,15,.13),
+        transparent
+        ) !important;
+
+    border-left:
+        9px solid #9b59b6 !important;
+
+    border-radius:
+        13px;
+
+    padding:
+        16px 20px;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.10);
+
+    overflow:hidden;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+article h2:hover{
+    transform:translateX(7px);
+
+    box-shadow:
+        0 12px 32px rgba(155,89,182,.18);
+}
+
+article h2:before{
+    content:"✦";
+    color:#d4af37;
+    margin-right:10px;
+
+    animation:
+        sparkle 2s ease-in-out infinite;
+}
+
+@keyframes sparkle{
+    0%,100%{
+        opacity:.45;
+        transform:scale(.8);
+    }
+
+    50%{
+        opacity:1;
+        transform:scale(1.2);
+    }
+}
+
+/* =========================================
+   PARAGRAPHS
+   ========================================= */
+
+article p{
+    position:relative;
+    color:#303030;
+}
+
+article p:first-letter{
+    font-weight:700;
+}
+
+/* =========================================
+   INTRO BOX
+   ========================================= */
+
+.intro{
+    position:relative;
+
+    background:
+        linear-gradient(
+        135deg,
+        #fff8df,
+        #ffffff,
+        #f8f0ff
+        );
+
+    border:
+        1px solid rgba(212,175,55,.35);
+
+    border-left:
+        9px solid #d4af37;
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,.07);
+}
+
+.intro:after{
+    content:"✦";
+    position:absolute;
+    right:25px;
+    top:18px;
+
+    color:#d4af37;
+    font-size:32px;
+
+    animation:
+        sparkle 2.5s ease-in-out infinite;
+}
+
+/* =========================================
+   CATEGORY
+   ========================================= */
+
+.category{
+    background:
+        linear-gradient(
+        135deg,
+        #9b59b6,
+        #d4af37,
+        #f1c40f
+        );
+
+    color:#fff;
+
+    box-shadow:
+        0 8px 25px rgba(155,89,182,.25);
+
+    animation:
+        categoryPulse 3s ease-in-out infinite;
+}
+
+@keyframes categoryPulse{
+    0%,100%{
+        box-shadow:
+            0 8px 25px rgba(155,89,182,.2);
+    }
+
+    50%{
+        box-shadow:
+            0 8px 35px rgba(241,196,15,.35);
+    }
+}
+
+/* =========================================
+   BYLINE
+   ========================================= */
+
+.byline{
+    background:
+        linear-gradient(
+        90deg,
+        rgba(212,175,55,.10),
+        rgba(155,89,182,.06),
+        transparent
+        );
+
+    border-left:
+        6px solid #d4af37;
+}
+
+/* =========================================
+   IMAGE
+   ========================================= */
+
+.hero{
+    position:relative;
+
+    background:
+        linear-gradient(
+        135deg,
+        #111,
+        #d4af37,
+        #9b59b6,
+        #111,
+        #d4af37
+        );
+
+    background-size:
+        300% 300%;
+
+    animation:
+        imageBorder 8s ease infinite;
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.3);
+}
+
+@keyframes imageBorder{
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+}
+
+.hero img{
+    transition:
+        transform .6s ease,
+        filter .6s ease;
+}
+
+.hero:hover img{
+    transform:scale(1.025);
+
+    filter:
+        brightness(1.04)
+        contrast(1.03);
+}
+
+/* =========================================
+   LESSON BOXES
+   ========================================= */
+
+.lesson{
+    position:relative;
+
+    background:
+        linear-gradient(
+        135deg,
+        rgba(241,196,15,.13),
+        #fff,
+        rgba(155,89,182,.07)
+        );
+
+    border:
+        1px solid rgba(212,175,55,.3);
+
+    border-left:
+        8px solid #d4af37;
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,.08);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.lesson:hover{
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,.13);
+}
+
+.lesson:before{
+    content:"✿";
+
+    position:absolute;
+
+    right:22px;
+    top:13px;
+
+    color:#9b59b6;
+
+    font-size:28px;
+
+    animation:
+        flowerSpin 4s linear infinite;
+}
+
+@keyframes flowerSpin{
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+/* =========================================
+   QUOTE
+   ========================================= */
+
+.quote{
+    position:relative;
+
+    border:
+        2px solid rgba(241,196,15,.45);
+
+    background:
+        radial-gradient(
+        circle at center,
+        #51391b,
+        #080808
+        );
+
+    overflow:hidden;
+}
+
+.quote:before,
+.quote:after{
+    content:"✦";
+
+    position:absolute;
+
+    color:
+        rgba(241,196,15,.5);
+
+    font-size:30px;
+
+    animation:
+        sparkle 2s ease-in-out infinite;
+}
+
+.quote:before{
+    top:12px;
+    left:20px;
+}
+
+.quote:after{
+    bottom:12px;
+    right:20px;
+}
+
+/* =========================================
+   ADS
+   ========================================= */
+
+.ad{
+    padding:
+        10px;
+
+    border-radius:
+        14px;
+
+    background:
+        rgba(0,0,0,.015);
+}
+
+/* =========================================
+   FACEBOOK
+   ========================================= */
+
+.facebook-top a,
+.follow a,
+.facebook-footer{
+    background:
+        linear-gradient(
+        135deg,
+        #1877f2,
+        #6c5ce7
+        );
+
+    box-shadow:
+        0 10px 30px rgba(24,119,242,.25);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.facebook-top a:hover,
+.follow a:hover,
+.facebook-footer:hover{
+    transform:
+        translateY(-5px)
+        scale(1.03);
+
+    box-shadow:
+        0 15px 40px rgba(24,119,242,.35);
+}
+
+/* =========================================
+   SUMMARY
+   ========================================= */
+
+.summary-box{
+    background:
+        linear-gradient(
+        135deg,
+        #fffdf3,
+        #fff,
+        #f8f0ff
+        );
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.08);
+}
+
+.summary-box li{
+    position:relative;
+    padding-left:8px;
+}
+
+.summary-box li::marker{
+    color:#d4af37;
+}
+
+/* =========================================
+   FOLLOW SECTION
+   ========================================= */
+
+.follow{
+    position:relative;
+    overflow:hidden;
+
+    background:
+        radial-gradient(
+        circle at 50% 0%,
+        rgba(241,196,15,.17),
+        transparent 40%
+        ),
+        linear-gradient(
+        135deg,
+        #050505,
+        #2b1d10,
+        #080808
+        );
+}
+
+.follow:before{
+    content:"🌸  ✦  🌸  ✦  🌸";
+
+    position:absolute;
+
+    top:12px;
+    left:0;
+
+    width:100%;
+
+    color:
+        rgba(241,196,15,.4);
+
+    font-size:20px;
+
+    animation:
+        flowerWave 6s ease-in-out infinite;
+}
+
+@keyframes flowerWave{
+    0%,100%{
+        transform:translateX(-15px);
+    }
+
+    50%{
+        transform:translateX(15px);
+    }
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer{
+    position:relative;
+    overflow:hidden;
+
+    background:
+        radial-gradient(
+        circle at 20% 20%,
+        rgba(241,196,15,.12),
+        transparent 25%
+        ),
+        radial-gradient(
+        circle at 80% 80%,
+        rgba(155,89,182,.10),
+        transparent 25%
+        ),
+        linear-gradient(
+        135deg,
+        #050505,
+        #21150b,
+        #050505
+        );
+}
+
+footer:before{
+    content:"✿   ✦   ❀   ✦   ✿   ✦   ❀";
+
+    position:absolute;
+
+    top:12px;
+    left:0;
+
+    width:100%;
+
+    text-align:center;
+
+    color:
+        rgba(241,196,15,.32);
+
+    letter-spacing:18px;
+
+    animation:
+        footerFlowers 9s linear infinite;
+}
+
+@keyframes footerFlowers{
+    0%{
+        transform:translateX(-20px);
+    }
+
+    50%{
+        transform:translateX(20px);
+    }
+
+    100%{
+        transform:translateX(-20px);
+    }
+}
+
+/* =========================================
+   SCROLL BAR
+   ========================================= */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#111;
+}
+
+::-webkit-scrollbar-thumb{
+    background:
+        linear-gradient(
+        #9b59b6,
+        #d4af37
+        );
+
+    border-radius:20px;
+}
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media(max-width:700px){
+
+    .floating-flower{
+        opacity:.45;
+    }
+
+    article h2{
+        font-size:25px;
+    }
+
+    article p{
+        line-height:1.85;
+    }
+
+    header h1{
+        font-size:34px;
+    }
+
+}
+
+/* =========================================
+   REDUCED MOTION
+   ========================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+    *,
+    *::before,
+    *::after{
+        animation:none !important;
+        transition:none !important;
+    }
+
+}
+
+</style>
+
+<!-- FLOATING FLOWERS -->
+<div class="floating-flower flower1">🌸</div>
+<div class="floating-flower flower2">🌼</div>
+<div class="floating-flower flower3">🌺</div>
+<div class="floating-flower flower4">🌸</div>
+<div class="floating-flower flower5">🌻</div>
+<div class="floating-flower flower6">🌼</div>
+<div class="floating-flower flower7">🌺</div>
+
+<script>
+
+/* Gentle moving flower system */
+
+(function(){
+
+    const flowers = [
+        "🌸",
+        "🌼",
+        "🌺",
+        "🌻",
+        "🌷",
+        "✿"
+    ];
+
+    function createFlower(){
+
+        const flower =
+            document.createElement("div");
+
+        flower.className =
+            "floating-flower";
+
+        flower.textContent =
+            flowers[
+                Math.floor(
+                    Math.random() *
+                    flowers.length
+                )
+            ];
+
+        flower.style.left =
+            Math.random() * 100 + "%";
+
+        flower.style.fontSize =
+            (15 + Math.random() * 18) + "px";
+
+        const duration =
+            12 + Math.random() * 13;
+
+        flower.style.animationDuration =
+            duration + "s, " +
+            (2.5 + Math.random() * 3) + "s";
+
+        flower.style.animationDelay =
+            Math.random() * 8 + "s";
+
+        document.body.appendChild(flower);
+
+        setTimeout(function(){
+
+            flower.remove();
+
+        },(duration + 10) * 1000);
+
+    }
+
+    setInterval(
+        createFlower,
+        3500
+    );
+
+})();
+
+</script>
+
 </head>
 
 <body>
