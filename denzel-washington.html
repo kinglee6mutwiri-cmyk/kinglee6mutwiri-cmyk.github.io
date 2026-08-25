@@ -2846,6 +2846,1038 @@ article p b{
 
 <body>
 
+<!-- DENZEL PROFESSIONAL UPGRADE START -->
+
+<style id="denzel-professional-upgrade">
+
+/* ==========================================
+   READING PROGRESS
+   ========================================== */
+
+#reading-progress{
+    position:fixed;
+    top:0;
+    left:0;
+    width:0%;
+    height:5px;
+    z-index:1000000;
+
+    background:
+        linear-gradient(
+            90deg,
+            #7c3aed,
+            #2563eb,
+            #22d3ee,
+            #f6c945,
+            #e11d48
+        );
+
+    box-shadow:
+        0 0 12px rgba(246,201,69,.65);
+
+    transition:width .08s linear;
+}
+
+
+/* ==========================================
+   TABLE OF CONTENTS
+   ========================================== */
+
+.denzel-toc{
+
+    margin:30px 0;
+
+    padding:24px;
+
+    border-radius:18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #111827,
+            #241044,
+            #09203d
+        );
+
+    border:
+        2px solid rgba(246,201,69,.55);
+
+    box-shadow:
+        0 15px 45px rgba(0,0,0,.18);
+
+    color:#fff;
+
+}
+
+.denzel-toc h3{
+
+    margin-top:0;
+
+    color:#f6c945;
+
+    font-size:24px;
+
+    text-shadow:
+        0 0 12px rgba(246,201,69,.35);
+
+}
+
+.denzel-toc ul{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:10px;
+
+}
+
+.denzel-toc a{
+
+    display:block;
+
+    padding:12px 15px;
+
+    border-radius:10px;
+
+    color:#fff !important;
+
+    text-decoration:none;
+
+    background:
+        rgba(255,255,255,.07);
+
+    border:
+        1px solid rgba(255,255,255,.08);
+
+    transition:
+        .3s ease;
+
+}
+
+.denzel-toc a:hover{
+
+    background:
+        linear-gradient(
+            90deg,
+            #7c3aed,
+            #2563eb
+        );
+
+    transform:
+        translateX(5px);
+
+}
+
+
+/* ==========================================
+   QUICK FACTS
+   ========================================== */
+
+.denzel-facts{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:15px;
+
+    margin:30px 0;
+
+}
+
+.denzel-fact{
+
+    padding:20px;
+
+    border-radius:15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff,
+            #fff8df,
+            #f5efff
+        );
+
+    border:
+        1px solid rgba(124,58,237,.15);
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.07);
+
+}
+
+.denzel-fact strong{
+
+    display:block;
+
+    margin-bottom:6px;
+
+    color:#7c3aed;
+
+    font-size:14px;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+}
+
+.denzel-fact span{
+
+    color:#111827;
+
+    font-weight:800;
+
+}
+
+
+/* ==========================================
+   BIOGRAPHY TIMELINE
+   ========================================== */
+
+.denzel-timeline{
+
+    position:relative;
+
+    margin:40px 0;
+
+    padding-left:32px;
+
+}
+
+.denzel-timeline:before{
+
+    content:"";
+
+    position:absolute;
+
+    left:9px;
+
+    top:0;
+
+    bottom:0;
+
+    width:4px;
+
+    border-radius:20px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #7c3aed,
+            #2563eb,
+            #22d3ee,
+            #f6c945,
+            #e11d48
+        );
+
+}
+
+.denzel-event{
+
+    position:relative;
+
+    margin-bottom:28px;
+
+    padding:22px;
+
+    border-radius:16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #faf7ff,
+            #fffaf0
+        );
+
+    border:
+        1px solid rgba(124,58,237,.14);
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.07);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
+}
+
+.denzel-event:hover{
+
+    transform:
+        translateX(6px);
+
+    box-shadow:
+        0 15px 38px rgba(124,58,237,.15);
+
+}
+
+.denzel-event:before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-32px;
+
+    top:25px;
+
+    width:17px;
+
+    height:17px;
+
+    border-radius:50%;
+
+    background:#f6c945;
+
+    border:
+        4px solid #7c3aed;
+
+    box-shadow:
+        0 0 15px rgba(246,201,69,.6);
+
+}
+
+.denzel-event .year{
+
+    display:inline-block;
+
+    margin-bottom:8px;
+
+    padding:6px 12px;
+
+    border-radius:20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #7c3aed,
+            #2563eb
+        );
+
+    color:#fff;
+
+    font-weight:900;
+
+}
+
+
+/* ==========================================
+   LESSON CARDS
+   ========================================== */
+
+.denzel-lesson-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:18px;
+
+    margin:30px 0;
+
+}
+
+.denzel-lesson-card{
+
+    padding:24px;
+
+    border-radius:18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #f7f1ff,
+            #eef7ff
+        );
+
+    border-top:
+        5px solid #7c3aed;
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,.08);
+
+    transition:
+        transform .3s ease;
+
+}
+
+.denzel-lesson-card:hover{
+
+    transform:
+        translateY(-7px);
+
+}
+
+.denzel-lesson-card .icon{
+
+    font-size:32px;
+
+    margin-bottom:10px;
+
+}
+
+.denzel-lesson-card h3{
+
+    margin:5px 0 10px;
+
+    color:#7c3aed;
+
+}
+
+.denzel-lesson-card p{
+
+    margin:0;
+
+    color:#333;
+
+}
+
+
+/* ==========================================
+   DAILY APPLICATION BOX
+   ========================================== */
+
+.daily-application{
+
+    padding:28px;
+
+    margin:35px 0;
+
+    border-radius:20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #07152b,
+            #241044,
+            #4b1027
+        );
+
+    color:#fff;
+
+    box-shadow:
+        0 20px 55px rgba(0,0,0,.25);
+
+}
+
+.daily-application h3{
+
+    color:#f6c945;
+
+    font-size:25px;
+
+}
+
+.daily-application li{
+
+    margin-bottom:12px;
+
+    line-height:1.7;
+
+}
+
+
+/* ==========================================
+   BACK TO TOP
+   ========================================== */
+
+#denzel-top{
+
+    position:fixed;
+
+    right:20px;
+
+    bottom:20px;
+
+    width:52px;
+
+    height:52px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    z-index:99998;
+
+    color:#fff;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7c3aed,
+            #2563eb,
+            #e11d48
+        );
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.25);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:
+        translateY(15px);
+
+    transition:
+        .3s ease;
+
+}
+
+#denzel-top.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:
+        translateY(0);
+
+}
+
+#denzel-top:hover{
+
+    transform:
+        translateY(-5px);
+
+}
+
+
+/* ==========================================
+   RELATED ARTICLES
+   ========================================== */
+
+.denzel-related{
+
+    margin:40px 0;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff8df,
+            #f4edff,
+            #edf7ff
+        );
+
+}
+
+.denzel-related h3{
+
+    color:#111827;
+
+    margin-top:0;
+
+}
+
+.denzel-related-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:14px;
+
+}
+
+.denzel-related a{
+
+    display:block;
+
+    padding:18px;
+
+    border-radius:13px;
+
+    color:#fff !important;
+
+    text-decoration:none;
+
+    font-weight:800;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7c3aed,
+            #2563eb
+        );
+
+    transition:
+        .3s ease;
+
+}
+
+.denzel-related a:hover{
+
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        0 12px 30px rgba(37,99,235,.25);
+
+}
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+@media(max-width:700px){
+
+    .denzel-toc ul{
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+    .denzel-facts{
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+    .denzel-lesson-grid{
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+    .denzel-related-grid{
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+    .denzel-timeline{
+
+        padding-left:27px;
+
+    }
+
+    .denzel-event:before{
+
+        left:-27px;
+
+    }
+
+}
+
+</style>
+
+<!-- READING PROGRESS -->
+<div id="reading-progress"></div>
+
+<script>
+
+window.addEventListener("scroll", function(){
+
+    const doc =
+        document.documentElement;
+
+    const scrollTop =
+        window.scrollY;
+
+    const scrollHeight =
+        doc.scrollHeight -
+        window.innerHeight;
+
+    const percentage =
+        scrollHeight > 0
+        ? (scrollTop / scrollHeight) * 100
+        : 0;
+
+    const bar =
+        document.getElementById(
+            "reading-progress"
+        );
+
+    if(bar){
+        bar.style.width =
+            percentage + "%";
+    }
+
+});
+
+</script>
+
+<!-- TABLE OF CONTENTS -->
+<div class="denzel-toc">
+
+    <h3>📖 Explore Denzel Washington's Story</h3>
+
+    <ul>
+
+        <li>
+            <a href="#denzel-biography">
+                👤 Biography
+            </a>
+        </li>
+
+        <li>
+            <a href="#denzel-early-life">
+                🌱 Early Life
+            </a>
+        </li>
+
+        <li>
+            <a href="#denzel-career">
+                🎬 Career Journey
+            </a>
+        </li>
+
+        <li>
+            <a href="#denzel-achievements">
+                🏆 Achievements
+            </a>
+        </li>
+
+        <li>
+            <a href="#denzel-lessons">
+                💡 Lessons
+            </a>
+        </li>
+
+        <li>
+            <a href="#denzel-daily-life">
+                🌟 Applying the Lessons
+            </a>
+        </li>
+
+        <li>
+            <a href="#denzel-legacy">
+                👑 Legacy
+            </a>
+        </li>
+
+    </ul>
+
+</div>
+
+<!-- QUICK FACTS -->
+<div class="denzel-facts">
+
+    <div class="denzel-fact">
+        <strong>Profession</strong>
+        <span>Actor, Director and Producer</span>
+    </div>
+
+    <div class="denzel-fact">
+        <strong>Known For</strong>
+        <span>Major Film and Television Roles</span>
+    </div>
+
+    <div class="denzel-fact">
+        <strong>Career</strong>
+        <span>Decades of Work in Film and Television</span>
+    </div>
+
+    <div class="denzel-fact">
+        <strong>Legacy</strong>
+        <span>Performance, Discipline and Leadership</span>
+    </div>
+
+</div>
+
+<!-- TIMELINE -->
+<div class="denzel-timeline">
+
+    <div class="denzel-event">
+
+        <span class="year">
+            EARLY YEARS
+        </span>
+
+        <h3>Building the Foundation</h3>
+
+        <p>
+            Denzel Washington's journey began long before
+            international fame. His early experiences,
+            education and determination helped establish
+            the foundation for the career that followed.
+        </p>
+
+    </div>
+
+    <div class="denzel-event">
+
+        <span class="year">
+            EARLY CAREER
+        </span>
+
+        <h3>Learning the Craft</h3>
+
+        <p>
+            Before becoming one of the world's most
+            recognized actors, Washington spent years
+            developing his abilities and gaining experience.
+            His journey demonstrates that excellence is
+            normally built through preparation and patience.
+        </p>
+
+    </div>
+
+    <div class="denzel-event">
+
+        <span class="year">
+            BREAKTHROUGH
+        </span>
+
+        <h3>Recognition Arrives</h3>
+
+        <p>
+            His performances eventually brought wider
+            recognition. Opportunities grew, but so did the
+            responsibility that came with becoming a major
+            figure in entertainment.
+        </p>
+
+    </div>
+
+    <div class="denzel-event">
+
+        <span class="year">
+            ESTABLISHED CAREER
+        </span>
+
+        <h3>Becoming a Major Film Figure</h3>
+
+        <p>
+            Washington continued taking demanding roles and
+            developing a reputation for powerful performances.
+            His career expanded beyond simply appearing in
+            films to include directing and producing.
+        </p>
+
+    </div>
+
+    <div class="denzel-event">
+
+        <span class="year">
+            TODAY
+        </span>
+
+        <h3>A Lasting Legacy</h3>
+
+        <p>
+            His career continues to be discussed not only
+            because of individual performances but also
+            because of the discipline, professionalism and
+            longevity associated with his work.
+        </p>
+
+    </div>
+
+</div>
+
+<!-- LESSONS -->
+<div class="denzel-lesson-grid">
+
+    <div class="denzel-lesson-card">
+
+        <div class="icon">🎯</div>
+
+        <h3>Stay Focused</h3>
+
+        <p>
+            A meaningful goal requires consistency.
+            Progress becomes easier when daily actions
+            remain connected to a long-term purpose.
+        </p>
+
+    </div>
+
+    <div class="denzel-lesson-card">
+
+        <div class="icon">⏳</div>
+
+        <h3>Be Patient</h3>
+
+        <p>
+            Success rarely appears instantly. Developing
+            valuable skills and earning trust can take years.
+        </p>
+
+    </div>
+
+    <div class="denzel-lesson-card">
+
+        <div class="icon">📚</div>
+
+        <h3>Keep Learning</h3>
+
+        <p>
+            Growth does not stop after the first achievement.
+            Continue improving your knowledge and abilities.
+        </p>
+
+    </div>
+
+    <div class="denzel-lesson-card">
+
+        <div class="icon">💪</div>
+
+        <h3>Work With Discipline</h3>
+
+        <p>
+            Talent can create an opportunity, but discipline
+            helps a person remain prepared when opportunity
+            arrives.
+        </p>
+
+    </div>
+
+</div>
+
+<!-- DAILY APPLICATION -->
+<div class="daily-application">
+
+    <h3>🌟 How We Can Apply These Lessons Daily</h3>
+
+    <ul>
+
+        <li>
+            Set one meaningful goal and work toward it
+            consistently instead of constantly changing
+            direction.
+        </li>
+
+        <li>
+            Improve one useful skill every day, even if the
+            improvement appears small.
+        </li>
+
+        <li>
+            Treat people with respect regardless of their
+            position or financial situation.
+        </li>
+
+        <li>
+            Learn from mistakes instead of allowing them
+            to become reasons to stop.
+        </li>
+
+        <li>
+            Build a reputation through consistent actions
+            rather than trying to impress people with words.
+        </li>
+
+        <li>
+            Understand that a successful life is usually
+            built through many ordinary disciplined days.
+        </li>
+
+    </ul>
+
+</div>
+
+<!-- RELATED ARTICLES -->
+<div class="denzel-related">
+
+    <h3>📚 Explore More Stories</h3>
+
+    <div class="denzel-related-grid">
+
+        <a href="lil-wayne.html">
+            🎵 Lil Wayne
+        </a>
+
+        <a href="pop-smoke.html">
+            🎤 Pop Smoke
+        </a>
+
+        <a href="tupac-shakur.html">
+            🎙️ Tupac Shakur
+        </a>
+
+    </div>
+
+</div>
+
+<!-- BACK TO TOP -->
+<button
+    id="denzel-top"
+    aria-label="Back to top"
+    title="Back to top">
+    ↑
+</button>
+
+<script>
+
+const denzelTop =
+    document.getElementById(
+        "denzel-top"
+    );
+
+window.addEventListener(
+    "scroll",
+    function(){
+
+        if(
+            window.scrollY > 500
+        ){
+
+            denzelTop.classList.add(
+                "show"
+            );
+
+        }else{
+
+            denzelTop.classList.remove(
+                "show"
+            );
+
+        }
+
+    }
+);
+
+denzelTop.addEventListener(
+    "click",
+    function(){
+
+        window.scrollTo({
+
+            top:0,
+
+            behavior:"smooth"
+
+        });
+
+    }
+);
+
+</script>
+
+<!-- DENZEL PROFESSIONAL UPGRADE END -->
+
+
 <!-- ELIPHAS MOVING WELCOME -->
 <div class="eliphas-welcome">
     <div class="eliphas-welcome-track">
