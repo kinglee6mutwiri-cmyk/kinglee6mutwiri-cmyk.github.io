@@ -2670,6 +2670,159 @@ footer a:hover{
 
 <body>
 
+<!-- MOVING WELCOME BANNER -->
+<div class="moving-welcome">
+  <div class="welcome-track">
+    <span>🌸 WELCOME TO ELIPHAS MUTWIRI'S WEBSITE 🌸</span>
+    <span>✦ WELCOME TO ELIPHAS MUTWIRI'S WEBSITE ✦</span>
+    <span>🌺 WELCOME TO ELIPHAS MUTWIRI'S WEBSITE 🌺</span>
+    <span>✦ WELCOME TO ELIPHAS MUTWIRI'S WEBSITE ✦</span>
+  </div>
+</div>
+
+<style>
+.moving-welcome{
+    position:relative;
+    width:100%;
+    height:58px;
+    overflow:hidden;
+    z-index:10000;
+
+    display:flex;
+    align-items:center;
+
+    background:
+        linear-gradient(
+            90deg,
+            #050507,
+            #241044,
+            #082f49,
+            #64132f,
+            #5b3a00,
+            #050507
+        );
+
+    background-size:400% 100%;
+
+    border-bottom:3px solid #f6c945;
+
+    box-shadow:
+        0 5px 25px rgba(0,0,0,.35);
+
+    animation:welcomeBackground 8s ease infinite;
+}
+
+.welcome-track{
+    display:flex;
+    width:max-content;
+
+    white-space:nowrap;
+
+    animation:
+        welcomeMove 18s linear infinite;
+}
+
+.welcome-track span{
+    display:inline-block;
+
+    padding-right:80px;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size:22px;
+    font-weight:900;
+    letter-spacing:2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #f6c945,
+            #ffffff,
+            #a855f7,
+            #22d3ee,
+            #ff4d6d,
+            #f6c945
+        );
+
+    background-size:500% auto;
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    color:transparent;
+
+    animation:
+        welcomeColors 5s linear infinite;
+
+    text-shadow:
+        0 0 15px rgba(246,201,69,.25);
+}
+
+@keyframes welcomeMove{
+
+    from{
+        transform:translateX(100vw);
+    }
+
+    to{
+        transform:translateX(-100%);
+    }
+
+}
+
+@keyframes welcomeColors{
+
+    0%{
+        background-position:0% center;
+    }
+
+    100%{
+        background-position:500% center;
+    }
+
+}
+
+@keyframes welcomeBackground{
+
+    0%,100%{
+        background-position:0% center;
+    }
+
+    50%{
+        background-position:100% center;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .moving-welcome{
+        height:50px;
+    }
+
+    .welcome-track span{
+        font-size:17px;
+        letter-spacing:1px;
+        padding-right:50px;
+    }
+
+}
+
+@media(prefers-reduced-motion:reduce){
+
+    .moving-welcome,
+    .welcome-track,
+    .welcome-track span{
+        animation:none !important;
+    }
+
+}
+</style>
+
+
 <header>
 
 <h1>
