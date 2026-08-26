@@ -538,9 +538,200 @@ padding:15px 20px 55px;
 
 </style>
 
+
+<style id="eliphas-decoration">
+
+/* ===== DECORATION ONLY — EXISTING PAGE UNCHANGED ===== */
+
+body{
+    position:relative;
+    overflow-x:hidden;
+}
+
+/* Soft decorative background circles */
+body::before{
+    content:"";
+    position:fixed;
+    width:280px;
+    height:280px;
+    left:-140px;
+    top:100px;
+    border-radius:50%;
+    background:rgba(20,140,70,.08);
+    pointer-events:none;
+    z-index:-1;
+    animation:eliphasFloat 9s ease-in-out infinite;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    width:240px;
+    height:240px;
+    right:-120px;
+    bottom:100px;
+    border-radius:50%;
+    background:rgba(230,190,40,.09);
+    pointer-events:none;
+    z-index:-1;
+    animation:eliphasFloat2 11s ease-in-out infinite;
+}
+
+@keyframes eliphasFloat{
+    0%,100%{
+        transform:translate(0,0);
+    }
+    50%{
+        transform:translate(45px,35px);
+    }
+}
+
+@keyframes eliphasFloat2{
+    0%,100%{
+        transform:translate(0,0);
+    }
+    50%{
+        transform:translate(-40px,-30px);
+    }
+}
+
+/* Floating decorative flowers */
+.eliphas-flower{
+    position:fixed;
+    pointer-events:none;
+    z-index:5;
+    opacity:.45;
+    font-size:24px;
+    animation:flowerMove 10s ease-in-out infinite;
+}
+
+.eliphas-flower.one{
+    top:24%;
+    left:12px;
+}
+
+.eliphas-flower.two{
+    top:55%;
+    right:12px;
+    animation-delay:3s;
+}
+
+.eliphas-flower.three{
+    top:78%;
+    left:18px;
+    animation-delay:6s;
+}
+
+@keyframes flowerMove{
+    0%,100%{
+        transform:translateY(0) rotate(0deg);
+    }
+
+    50%{
+        transform:translateY(-28px) rotate(180deg);
+    }
+}
+
+/* Elegant heading decoration */
+h2{
+    position:relative;
+}
+
+h2::after{
+    content:"";
+    display:block;
+    width:65px;
+    height:4px;
+    margin-top:8px;
+    border-radius:20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #087f3d,
+            #e8bd2f,
+            #c62828
+        );
+}
+
+/* Subtle image decoration */
+img{
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+}
+
+img:hover{
+    transform:scale(1.015);
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,.16);
+}
+
+/* Gentle link animation */
+a{
+    transition:
+        color .25s ease,
+        opacity .25s ease;
+}
+
+/* Decorative cards without changing their layout */
+article,
+.card,
+.content-box{
+    transition:
+        box-shadow .35s ease;
+}
+
+article:hover,
+.card:hover,
+.content-box:hover{
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.08);
+}
+
+/* Mobile */
+@media(max-width:600px){
+
+    body::before{
+        width:180px;
+        height:180px;
+    }
+
+    body::after{
+        width:160px;
+        height:160px;
+    }
+
+    .eliphas-flower{
+        font-size:19px;
+        opacity:.3;
+    }
+}
+
+/* Accessibility */
+@media(prefers-reduced-motion:reduce){
+
+    *,
+    *::before,
+    *::after{
+        animation:none !important;
+        transition:none !important;
+    }
+
+}
+
+</style>
+
 </head>
 
 <body>
+
+<div class="eliphas-flower one">✿</div>
+<div class="eliphas-flower two">❀</div>
+<div class="eliphas-flower three">✦</div>
+
+
 
 
 <!-- MOVING WELCOME -->
