@@ -100,6 +100,20 @@ body{
     z-index:9999;
 }
 
+
+.tom-pushing{
+    width:90px;
+    height:60px;
+    object-fit:contain;
+    flex-shrink:0;
+    display:block;
+    margin:0;
+    padding:0;
+    background:transparent;
+    border:0;
+    z-index:3;
+}
+
 .welcome-track{
     display:flex;
     width:max-content;
@@ -931,6 +945,16 @@ p{
 <div class="welcome-bar">
 
 <div class="welcome-track">
+
+<video
+    class="tom-pushing"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="auto">
+    <source src="tom-pushing.mp4" type="video/mp4">
+</video>
 
 <span class="welcome-message">
 
