@@ -1,1740 +1,679 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+<title>America AI | Stories About People, Life and the Human Experience</title>
 
-<title>Stories, Lives & Lessons | Kinglee Mutwiri</title>
+<meta name="description" content="America AI is a storytelling website sharing original stories about people, human experiences, remarkable journeys, life lessons and the moments that shape our lives.">
 
-<meta name="description"
-content="Stories, Lives & Lessons explores the lives of remarkable people, real human experiences, music, personal growth, challenges, success and the lessons we can apply to everyday life.">
+<meta name="author" content="Eliphas Mutwiri">
+<meta name="robots" content="index, follow">
 
-<meta name="author"
-content="Kinglee Mutwiri">
+<link rel="canonical" href="https://kinglee6mutwiri-cmyk.github.io/">
 
-<meta name="robots"
-content="index, follow">
+<meta property="og:title" content="America AI | Stories About People, Life and the Human Experience">
+<meta property="og:description" content="Discover thoughtful stories about people, life, human experiences and remarkable journeys.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kinglee6mutwiri-cmyk.github.io/">
 
-<link rel="canonical"
-href="https://kinglee6mutwiri-cmyk.github.io/">
-
-<!-- Font Awesome -->
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-<!-- ========================================================
-     GOOGLE ANALYTICS 4
-======================================================== -->
-
-<script async
-src="https://www.googletagmanager.com/gtag/js?id=G-X3HE9CKP90"></script>
-
+<!-- GOOGLE ANALYTICS 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X3HE9CKP90"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
-
-function gtag(){
-    dataLayer.push(arguments);
-}
-
+function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-
 gtag('config', 'G-X3HE9CKP90');
 </script>
 
-<!-- ========================================================
-     GOOGLE ADSENSE
-======================================================== -->
-
+<!-- GOOGLE ADSENSE -->
 <script async
-src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5799841502846177"
+src="https://pagead2.googlesyndication.com/pagead/js?client=ca-pub-5799841502846177"
 crossorigin="anonymous"></script>
-
-<!-- ========================================================
-     HOMEPAGE DESIGN
-======================================================== -->
 
 <style>
 
-:root {
-    --black: #080808;
-    --black2: #151515;
-    --gold: #d4af37;
-    --gold-light: #f4df91;
-    --cream: #fffaf0;
-    --white: #ffffff;
-    --text: #292929;
-    --muted: #666666;
-    --border: #eadfc8;
-    --shadow: 0 12px 35px rgba(0,0,0,.12);
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-* {
-    box-sizing: border-box;
+html{
+scroll-behavior:smooth;
 }
 
-html {
-    scroll-behavior: smooth;
+body{
+font-family:Georgia,"Times New Roman",serif;
+background:#f8f7f3;
+color:#171717;
+line-height:1.75;
 }
 
-body {
-    margin: 0;
-    background: var(--cream);
-    color: var(--text);
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-    line-height: 1.8;
+a{
+text-decoration:none;
+color:inherit;
 }
 
-/* ========================================================
-   HEADER
-======================================================== */
-
-.site-header {
-    background: var(--black);
-    color: white;
-    border-bottom: 3px solid var(--gold);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+img{
+max-width:100%;
+display:block;
 }
 
-.nav-container {
-    max-width: 1150px;
-    margin: auto;
-    padding: 15px 20px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+.container{
+width:92%;
+max-width:1180px;
+margin:auto;
 }
 
-.logo {
-    color: white;
-    text-decoration: none;
-    font-size: 23px;
-    font-weight: bold;
-    line-height: 1.2;
+/* HEADER */
+
+header{
+background:#111;
+color:#fff;
+position:sticky;
+top:0;
+z-index:1000;
+border-bottom:1px solid #292929;
 }
 
-.logo span {
-    color: var(--gold);
+.nav{
+min-height:72px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:25px;
 }
 
-.nav-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 18px;
+.logo{
+font-size:27px;
+font-weight:bold;
+letter-spacing:-1px;
 }
 
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
+.logo span{
+color:#d5a74b;
 }
 
-.nav-links a:hover {
-    color: var(--gold-light);
+nav{
+display:flex;
+gap:27px;
+font-family:Arial,sans-serif;
 }
 
-/* ========================================================
-   HERO
-======================================================== */
-
-.hero {
-    background:
-        linear-gradient(
-            135deg,
-            #050505,
-            #1c1c1c
-        );
-
-    color: white;
-    padding: 85px 20px 90px;
-    text-align: center;
-
-    border-bottom: 5px solid var(--gold);
+nav a{
+font-size:14px;
+color:#ddd;
 }
 
-.hero-inner {
-    max-width: 950px;
-    margin: auto;
+nav a:hover{
+color:#d5a74b;
 }
 
-.hero .eyebrow {
-    color: var(--gold-light);
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-family: Arial, sans-serif;
-    font-size: 13px;
-    font-weight: bold;
+.facebook{
+background:#1877f2;
+color:#fff;
+padding:8px 14px;
+border-radius:5px;
+font-family:Arial,sans-serif;
+font-size:13px;
+font-weight:bold;
 }
 
-.hero h1 {
-    margin: 15px 0;
-    color: white !important;
-    background: transparent !important;
-    border: 0 !important;
-    box-shadow: none !important;
-    font-size: clamp(2.5rem, 7vw, 5rem);
-    line-height: 1.05;
+/* HERO */
+
+.hero{
+min-height:570px;
+display:flex;
+align-items:center;
+background:
+linear-gradient(rgba(0,0,0,.70),rgba(0,0,0,.70)),
+url("images/hero.jpg") center/cover;
+color:#fff;
 }
 
-.hero h1 span {
-    color: var(--gold);
+.hero-content{
+max-width:820px;
+padding:90px 0;
 }
 
-.hero p {
-    max-width: 780px;
-    margin: 20px auto;
-    color: #eeeeee;
-    font-size: 19px;
+.eyebrow{
+font-family:Arial,sans-serif;
+font-size:12px;
+font-weight:bold;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#d5a74b;
+margin-bottom:17px;
 }
 
-.hero-buttons {
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 14px;
+.hero h1{
+font-size:clamp(45px,7vw,76px);
+line-height:1.04;
+letter-spacing:-2px;
+margin-bottom:25px;
 }
 
-.btn {
-    display: inline-block;
-    padding: 13px 23px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-family: Arial, sans-serif;
-    font-weight: bold;
+.hero p{
+font-size:19px;
+color:#eee;
+max-width:700px;
+margin-bottom:30px;
 }
 
-.btn-gold {
-    background: var(--gold);
-    color: #080808;
+.hero-button{
+display:inline-block;
+background:#d5a74b;
+color:#111;
+padding:13px 24px;
+border-radius:4px;
+font-family:Arial,sans-serif;
+font-size:14px;
+font-weight:bold;
 }
 
-.btn-dark {
-    border: 1px solid #777;
-    color: white;
+/* ADS */
+
+.ad{
+background:#f8f7f3;
+padding:25px 0;
+text-align:center;
 }
 
-/* ========================================================
-   CONTAINER
-======================================================== */
-
-.container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 60px 20px;
+.ad-label{
+font-family:Arial,sans-serif;
+font-size:10px;
+color:#999;
+letter-spacing:1px;
+margin-bottom:7px;
 }
 
-.section-title {
-    text-align: center;
-    margin-bottom: 35px;
+/* INTRO */
+
+.intro{
+max-width:850px;
+text-align:center;
+padding:75px 0 55px;
 }
 
-.section-title h2 {
-    font-size: 32px;
-    color: #111;
-    margin-bottom: 8px;
+.intro h2{
+font-size:40px;
+line-height:1.2;
+margin-bottom:18px;
 }
 
-.section-title p {
-    max-width: 750px;
-    margin: auto;
-    color: var(--muted);
+.intro p{
+font-size:17px;
+color:#606060;
 }
 
-/* ========================================================
-   INTRO
-======================================================== */
+/* SECTIONS */
 
-.intro {
-    background: white;
-    padding: 35px;
-    border-radius: 20px;
-    box-shadow: var(--shadow);
-    margin-bottom: 50px;
+.section-title{
+display:flex;
+align-items:end;
+justify-content:space-between;
+border-bottom:2px solid #171717;
+padding-bottom:12px;
+margin-bottom:30px;
 }
 
-.intro h2 {
-    color: #111;
-    border-left: 5px solid var(--gold);
-    padding-left: 15px;
+.section-title h2{
+font-size:30px;
 }
 
-.intro p {
-    font-size: 18px;
+.section-title span{
+font-family:Arial,sans-serif;
+font-size:11px;
+color:#777;
+text-transform:uppercase;
+letter-spacing:1px;
 }
 
-/* ========================================================
-   CATEGORY CARDS
-======================================================== */
+/* FEATURED */
 
-.cards {
-    display: grid;
-    grid-template-columns:
-        repeat(3, minmax(0, 1fr));
-    gap: 22px;
+.featured{
+display:grid;
+grid-template-columns:1.3fr .7fr;
+gap:28px;
+margin-bottom:80px;
 }
 
-.card {
-    background: white;
-    padding: 28px;
-    border-radius: 18px;
-    border: 1px solid var(--border);
-    box-shadow: 0 7px 22px rgba(0,0,0,.07);
-    transition: transform .25s ease,
-                box-shadow .25s ease;
+.featured-main{
+background:#fff;
+border:1px solid #e3dfd7;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow);
+.featured-main img{
+height:390px;
+width:100%;
+object-fit:cover;
 }
 
-.card-icon {
-    font-size: 32px;
-    color: var(--gold);
-    margin-bottom: 10px;
+.featured-content{
+padding:30px;
 }
 
-.card h3 {
-    color: #111;
-    margin-top: 0;
+.tag{
+font-family:Arial,sans-serif;
+font-size:11px;
+font-weight:bold;
+letter-spacing:1px;
+text-transform:uppercase;
+color:#a07827;
 }
 
-.card a {
-    color: #765700;
-    font-weight: bold;
+.featured-content h3{
+font-size:34px;
+line-height:1.2;
+margin:10px 0 15px;
 }
 
-/* ========================================================
-   FEATURED STORY
-======================================================== */
-
-.featured {
-    background: #111;
-    color: white;
-    border-radius: 22px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.featured-content p{
+color:#666;
+font-size:16px;
+margin-bottom:18px;
 }
 
-.featured-image {
-    min-height: 400px;
+.read{
+font-family:Arial,sans-serif;
+font-size:13px;
+font-weight:bold;
+border-bottom:1px solid #111;
+padding-bottom:3px;
 }
 
-.featured-image img {
-    width: 100%;
-    height: 100%;
-    min-height: 400px;
-    object-fit: cover;
-    display: block;
+.side{
+display:grid;
+gap:18px;
 }
 
-.featured-content {
-    padding: 45px;
+.side-story{
+background:#fff;
+border:1px solid #e3dfd7;
+padding:23px;
 }
 
-.featured-content .label {
-    color: var(--gold-light);
-    font-family: Arial, sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 12px;
-    font-weight: bold;
+.side-story h3{
+font-size:21px;
+line-height:1.3;
+margin:8px 0;
 }
 
-.featured-content h2 {
-    color: white;
-    font-size: 34px;
-    border-left: 5px solid var(--gold);
-    padding-left: 15px;
+.side-story p{
+font-size:14px;
+color:#707070;
 }
 
-.featured-content p {
-    color: #dddddd;
+/* STORY MISSION */
+
+.mission{
+background:#171717;
+color:#fff;
+padding:70px 0;
+margin-bottom:80px;
 }
 
-.read-more {
-    display: inline-block;
-    background: var(--gold);
-    color: #080808;
-    padding: 12px 22px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-family: Arial, sans-serif;
-    font-weight: bold;
+.mission .section-title{
+border-color:#444;
 }
 
-/* ========================================================
-   ARTICLE LINKS
-======================================================== */
-
-.story-list {
-    display: grid;
-    grid-template-columns:
-        repeat(2, minmax(0, 1fr));
-    gap: 20px;
+.mission .section-title h2{
+color:#fff;
 }
 
-.story-link {
-    display: block;
-    background: white;
-    padding: 25px;
-    border-radius: 16px;
-    border-left: 4px solid var(--gold);
-    text-decoration: none;
-    color: var(--text);
-    box-shadow: 0 5px 18px rgba(0,0,0,.07);
+.mission-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:22px;
 }
 
-.story-link:hover {
-    transform: translateY(-3px);
+.mission-card{
+border:1px solid #3c3c3c;
+padding:27px;
 }
 
-.story-link h3 {
-    margin: 0 0 8px;
-    color: #111;
+.mission-card h3{
+font-size:21px;
+margin:10px 0;
 }
 
-.story-link span {
-    color: #765700;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    font-weight: bold;
+.mission-card p{
+color:#aaa;
+font-size:14px;
 }
 
-/* ========================================================
-   EDITORIAL APPROACH
-======================================================== */
+/* LONG HOMEPAGE CONTENT */
 
-.approach {
-    background:
-        linear-gradient(
-            135deg,
-            #fff4c9,
-            #fffdf6
-        );
-
-    border: 1px solid #e7d28d;
-    padding: 40px;
-    border-radius: 20px;
+.story-content{
+max-width:900px;
+margin:0 auto 80px;
 }
 
-.approach h2 {
-    margin-top: 0;
-    color: #4c3908;
+.story-content h2{
+font-size:32px;
+line-height:1.25;
+margin:40px 0 15px;
 }
 
-.approach ul {
-    padding-left: 25px;
+.story-content h3{
+font-size:23px;
+margin:30px 0 10px;
 }
 
-.approach li {
-    margin-bottom: 12px;
+.story-content p{
+font-size:17px;
+color:#4e4e4e;
+margin-bottom:18px;
 }
 
-/* ========================================================
-   AUTHOR
-======================================================== */
-
-.author {
-    background: white;
-    border-radius: 20px;
-    box-shadow: var(--shadow);
-    padding: 40px;
-
-    display: grid;
-    grid-template-columns: 190px 1fr;
-    gap: 35px;
-    align-items: center;
+.story-content strong{
+color:#222;
 }
 
-.author img {
-    width: 170px;
-    height: 170px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid var(--gold);
+/* LATEST */
+
+.latest{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+margin-bottom:80px;
 }
 
-.author h2 {
-    margin-top: 0;
+.story-card{
+background:#fff;
+border:1px solid #e3dfd7;
 }
 
-/* ========================================================
-   SOCIAL
-======================================================== */
-
-.social {
-    background: var(--black);
-    color: white;
-    text-align: center;
-    padding: 55px 20px;
-    border-top: 4px solid var(--gold);
+.story-card img{
+width:100%;
+height:220px;
+object-fit:cover;
 }
 
-.social h2 {
-    color: var(--gold-light);
+.story-body{
+padding:23px;
 }
 
-.social p {
-    max-width: 650px;
-    margin: auto auto 25px;
-    color: #ddd;
+.story-body h3{
+font-size:22px;
+line-height:1.3;
+margin:8px 0 10px;
 }
 
-.social-links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 12px;
+.story-body p{
+font-size:14px;
+color:#6b6b6b;
+margin-bottom:17px;
 }
 
-.social-links a {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* ABOUT */
 
-    background: white;
-    color: #111;
-
-    text-decoration: none;
-    font-size: 18px;
+.about{
+background:#ece8df;
+padding:70px 0;
+margin-bottom:80px;
 }
 
-.social-links a:hover {
-    background: var(--gold);
+.about-grid{
+display:grid;
+grid-template-columns:.4fr .6fr;
+gap:55px;
+align-items:center;
 }
 
-/* ========================================================
-   FOOTER
-======================================================== */
-
-footer {
-    background: #050505;
-    color: #bbb;
-    text-align: center;
-    padding: 35px 20px;
-    font-family: Arial, sans-serif;
+.author-photo{
+width:250px;
+height:250px;
+object-fit:cover;
+border-radius:50%;
+border:7px solid white;
+margin:auto;
 }
 
-footer a {
-    color: var(--gold-light);
+.about h2{
+font-size:38px;
+line-height:1.2;
+margin:9px 0 18px;
 }
 
-/* ========================================================
-   MOBILE
-======================================================== */
+.about p{
+font-size:16px;
+color:#5c5c5c;
+margin-bottom:16px;
+}
 
-@media (max-width: 800px) {
+/* QUOTE */
 
-    .nav-container {
-        flex-direction: column;
-    }
+.quote{
+max-width:820px;
+text-align:center;
+margin-bottom:80px;
+}
 
-    .nav-links {
-        justify-content: center;
-    }
+.quote-mark{
+font-size:75px;
+line-height:.5;
+color:#d5a74b;
+}
 
-    .cards,
-    .story-list,
-    .featured,
-    .author {
-        grid-template-columns: 1fr;
-    }
+.quote p{
+font-size:29px;
+font-style:italic;
+line-height:1.4;
+margin-top:15px;
+}
 
-    .featured-image,
-    .featured-image img {
-        min-height: 280px;
-    }
+/* FOOTER */
 
-    .featured-content {
-        padding: 30px 22px;
-    }
+footer{
+background:#111;
+color:#fff;
+padding:60px 0 25px;
+}
 
-    .author {
-        text-align: center;
-    }
+.footer-grid{
+display:grid;
+grid-template-columns:1.5fr 1fr 1fr;
+gap:45px;
+margin-bottom:45px;
+}
 
-    .author img {
-        margin: auto;
-    }
+footer h3{
+font-size:21px;
+margin-bottom:14px;
+}
 
-    .hero {
-        padding: 60px 18px 70px;
-    }
+footer p,
+footer a{
+font-family:Arial,sans-serif;
+font-size:13px;
+color:#aaa;
+}
 
-    .container {
-        padding: 45px 15px;
-    }
+footer ul{
+list-style:none;
+}
 
-    .intro,
-    .approach {
-        padding: 25px 20px;
-    }
+footer li{
+margin-bottom:8px;
+}
+
+footer a:hover{
+color:#d5a74b;
+}
+
+.copyright{
+border-top:1px solid #333;
+padding-top:22px;
+text-align:center;
+font-family:Arial,sans-serif;
+font-size:12px;
+color:#777;
+}
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+nav{
+display:none;
+}
+
+.hero{
+min-height:500px;
+}
+
+.hero h1{
+font-size:48px;
+}
+
+.featured,
+.about-grid{
+grid-template-columns:1fr;
+}
+
+.mission-grid{
+grid-template-columns:1fr;
+}
+
+.latest{
+grid-template-columns:1fr;
+}
+
+.footer-grid{
+grid-template-columns:1fr;
+}
+
+.featured-main img{
+height:280px;
+}
+
+}
+
+@media(max-width:520px){
+
+.container{
+width:90%;
+}
+
+.logo{
+font-size:23px;
+}
+
+.hero h1{
+font-size:41px;
+letter-spacing:-1px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+.intro{
+padding-top:55px;
+}
+
+.intro h2{
+font-size:30px;
+}
+
+.section-title h2{
+font-size:25px;
+}
+
+.featured-content h3{
+font-size:27px;
+}
+
+.about h2{
+font-size:30px;
+}
+
+.quote p{
+font-size:22px;
+}
 
 }
 
 </style>
-
-
-<style id="top-author-social-style">
-
-#top-author-social-bar {
-    background: #ffffff;
-    color: #111111;
-    border-bottom: 1px solid #ded6c5;
-    font-family: Arial, sans-serif;
-}
-
-#top-author-social-bar .top-inner {
-    max-width: 1150px;
-    margin: auto;
-    padding: 9px 20px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 15px;
-}
-
-#top-author-social-bar .author-name {
-    display: flex;
-    align-items: center;
-    gap: 9px;
-    color: #111111;
-    font-weight: bold;
-    font-size: 14px;
-}
-
-#top-author-social-bar .author-name i {
-    color: #b18a16;
-    font-size: 17px;
-}
-
-#top-author-social-bar .follow-text {
-    color: #555555;
-    font-size: 12px;
-    margin-right: 5px;
-}
-
-#top-author-social-bar .top-social {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-}
-
-#top-author-social-bar .top-social a {
-    width: 31px;
-    height: 31px;
-    border-radius: 50%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: #111111;
-    color: #ffffff;
-
-    text-decoration: none;
-    font-size: 13px;
-
-    transition: .2s ease;
-}
-
-#top-author-social-bar .top-social a:hover {
-    background: #d4af37;
-    color: #111111;
-    transform: translateY(-2px);
-}
-
-@media (max-width: 650px) {
-
-    #top-author-social-bar .top-inner {
-        padding: 8px 12px;
-    }
-
-    #top-author-social-bar .author-name {
-        font-size: 12px;
-    }
-
-    #top-author-social-bar .follow-text {
-        display: none;
-    }
-
-    #top-author-social-bar .top-social a {
-        width: 29px;
-        height: 29px;
-    }
-}
-
-</style>
-
-
-<style id="small-top-author-photo">
-
-#small-top-author-photo {
-    position: fixed;
-    top: 12px;
-    left: 12px;
-    z-index: 99999;
-
-    width: 58px;
-    height: 58px;
-
-    border-radius: 50%;
-
-    object-fit: cover;
-
-    border: 3px solid #d4af37;
-
-    background: #ffffff;
-
-    box-shadow:
-        0 5px 18px rgba(0,0,0,.25);
-
-    transition: transform .2s ease,
-                box-shadow .2s ease;
-}
-
-#small-top-author-photo:hover {
-    transform: scale(1.08);
-
-    box-shadow:
-        0 7px 22px rgba(0,0,0,.35);
-}
-
-@media (max-width: 600px) {
-
-    #small-top-author-photo {
-        width: 48px;
-        height: 48px;
-
-        top: 8px;
-        left: 8px;
-    }
-
-}
-
-</style>
-
-
-<style id="small-top-author-photo-css">
-#small-top-author-photo {
-    position: fixed;
-    top: 12px;
-    left: 12px;
-    width: 58px;
-    height: 58px;
-    z-index: 999999;
-
-    object-fit: cover;
-    border-radius: 50%;
-
-    background: #ffffff;
-    border: 3px solid #d4af37;
-
-    box-shadow: 0 5px 18px rgba(0,0,0,.30);
-
-    display: block;
-}
-
-@media (max-width: 600px) {
-    #small-top-author-photo {
-        width: 48px;
-        height: 48px;
-        top: 8px;
-        left: 8px;
-    }
-}
-</style>
-
 </head>
 
 <body>
 
-<a
-    id="small-top-author-link"
-    href="about.html"
-    aria-label="About Kinglee Mutwiri"
-    style="position:fixed;top:12px;left:12px;z-index:1000000;display:block;">
+<!-- HEADER -->
 
-    <img
-        id="small-top-author-photo"
-        src="images/author-v2.png"
-        alt="Kinglee Mutwiri"
-        width="58"
-        height="58">
-</a>
+<header>
 
-
-<div id="top-author-social-bar">
-
-<div class="top-inner">
-
-<div class="author-name">
-<i class="fa-solid fa-pen-nib"></i>
-<span>By Kinglee Mutwiri</span>
-</div>
-
-<div class="top-social">
-
-<span class="follow-text">Follow for new stories</span>
-
-<a
-href="https://www.facebook.com/profile.php?id=61568056696688"
-target="_blank"
-rel="noopener noreferrer"
-aria-label="Follow Kinglee Mutwiri on Facebook">
-<i class="fa-brands fa-facebook-f"></i>
-</a>
-
-<a
-href="https://www.instagram.com/mutwiri.eliphas/"
-target="_blank"
-rel="noopener noreferrer"
-aria-label="Follow Kinglee Mutwiri on Instagram">
-<i class="fa-brands fa-instagram"></i>
-</a>
-
-<a
-href="https://x.com/KingleeMut40701"
-target="_blank"
-rel="noopener noreferrer"
-aria-label="Follow Kinglee Mutwiri on X">
-<i class="fa-brands fa-x-twitter"></i>
-</a>
-
-<a
-href="https://wa.me/254736280522"
-target="_blank"
-rel="noopener noreferrer"
-aria-label="Contact Kinglee Mutwiri on WhatsApp">
-<i class="fa-brands fa-whatsapp"></i>
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- ========================================================
-     HEADER
-======================================================== -->
-
-<header class="site-header">
-
-<div class="nav-container">
+<div class="container nav">
 
 <a href="index.html" class="logo">
-Stories, Lives <span>&</span> Lessons
+America<span> AI</span>
 </a>
 
-<nav class="nav-links">
-
+<nav>
 <a href="index.html">Home</a>
-
-<a href="#celebrity">Celebrity Stories</a>
-
-<a href="#life">Life Stories</a>
-
-<a href="#lessons">Lessons</a>
-
-<a href="about.html">About</a>
-
+<a href="#featured">Stories</a>
+<a href="#latest">Latest</a>
+<a href="#about">About</a>
 <a href="contact.html">Contact</a>
-
 </nav>
+
+<a
+class="facebook"
+href="https://www.facebook.com/profile.php?id=61568056696688"
+target="_blank"
+rel="noopener">
+Facebook
+</a>
 
 </div>
 
 </header>
 
 
-<!-- ========================================================
-     HERO
-======================================================== -->
+<!-- HERO -->
 
 <section class="hero">
 
-<div class="hero-inner">
+<div class="container hero-content">
 
 <div class="eyebrow">
-Stories • People • Music • Lessons
+A Home For Stories
 </div>
 
 <h1>
-Stories, Lives <span>&</span> Lessons
+Every life has a story worth hearing.
 </h1>
 
 <p>
-Stories, Lives & Lessons is a place for original storytelling,
-biographies, human experiences, music stories and practical reflections
-about the lessons that can be found in ordinary and extraordinary lives.
+America AI is a storytelling space created for readers who enjoy
+discovering remarkable people, meaningful experiences, unexpected
+turning points and the lessons hidden inside ordinary and extraordinary
+lives.
 </p>
 
-<p>
-We look beyond a name or a headline. We explore the journey behind the
-person, the choices behind the outcome and the experiences that can teach
-us something about our own lives.
-</p>
-
-<div class="hero-buttons">
-
-<a class="btn btn-gold" href="#featured">
-Explore Featured Story
+<a href="#featured" class="hero-button">
+Discover Our Stories
 </a>
-
-<a class="btn btn-dark" href="#stories">
-Explore Stories
-</a>
-
-</div>
 
 </div>
 
 </section>
 
 
-<!-- ========================================================
-     MAIN
-======================================================== -->
+<!-- ADSENSE HOMEPAGE TOP -->
 
-<main>
-<!-- ELIPHAS BIOGRAPHY STORIES -->
-<section class="eliphas-stories">
-<style>
-.eliphas-stories{
-    width:92%;
-    max-width:1100px;
-    margin:45px auto;
-    padding:35px 20px;
-    border-radius:24px;
-    background:#ffffff;
-    box-shadow:0 10px 35px rgba(0,0,0,.10);
-    text-align:center;
-}
-
-.eliphas-stories h2{
-    margin:0 0 10px;
-    color:#123d25;
-    font-family:Georgia,serif;
-    font-size:34px;
-}
-
-.eliphas-stories p{
-    color:#68716b;
-    margin-bottom:28px;
-}
-
-.eliphas-story-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:16px;
-}
-
-.eliphas-story{
-    display:block;
-    padding:20px;
-    border-radius:17px;
-    text-decoration:none;
-    color:#ffffff;
-    background:linear-gradient(135deg,#087a3d,#063d20);
-    font-size:18px;
-    font-weight:800;
-    transition:.3s ease;
-}
-
-.eliphas-story:hover{
-    transform:translateY(-5px);
-    box-shadow:0 12px 28px rgba(0,0,0,.15);
-}
-
-.eliphas-story span{
-    display:block;
-    margin-top:5px;
-    color:#f2d15b;
-    font-size:12px;
-    font-weight:500;
-}
-
-@media(max-width:600px){
-    .eliphas-story-grid{
-        grid-template-columns:1fr;
-    }
-}
-</style>
-
-<h2>Explore Our Biographies</h2>
-<p>Read inspiring life stories, careers, achievements and lessons from famous personalities.</p>
-
-<div class="eliphas-story-grid">
-
-<a class="eliphas-story" href="lil-wayne.html">
-    Lil Wayne
-    <span>Read Biography →</span>
-</a>
-
-<a class="eliphas-story" href="pop-smoke.html">
-    Pop Smoke
-    <span>Read Biography →</span>
-</a>
-
-<a class="eliphas-story" href="bob-marley.html">
-    Bob Marley
-    <span>Read Biography →</span>
-</a>
-
-
-<a class="eliphas-story" href="cristiano-ronaldo.html">
-    <div class="story-icon">⚽</div>
-    <h3>Cristiano Ronaldo</h3>
-    <p>
-        Discover Cristiano Ronaldo's journey from Madeira to football
-        greatness, his childhood, career, achievements, challenges,
-        mindset, life lessons and how to apply them in everyday life.
-    </p>
-    <span>Read Ronaldo's Story →</span>
-</a>
-
-<a class="eliphas-story" href="denzel-washington.html">
-    Denzel Washington
-    <span>Read Biography →</span>
-</a>
-
-</div>
-</section>
-<!-- END ELIPHAS BIOGRAPHY STORIES -->
-
+<section class="ad">
 
 <div class="container">
 
-<!-- INTRO -->
-
-<section class="intro">
-
-<h2>Welcome to Stories, Lives & Lessons</h2>
-
-<p>
-Every person has a story. Some stories become famous because millions of
-people hear them. Others remain private, known only to families, friends
-and communities. Yet both can contain experiences worth understanding.
-Stories, Lives & Lessons was created around that idea.
-</p>
-
-<p>
-This website explores the journeys of people, the experiences that shape
-them, the successes that inspire them and the difficulties that test them.
-The purpose is not simply to repeat facts about well-known people. It is
-to put their journeys into context and ask what readers can learn from
-them.
-</p>
-
-<p>
-Our stories may cover musicians, entertainers, public figures, ordinary
-people, personal experiences, work, money, relationships, resilience,
-decision-making and other subjects connected to everyday life.
-</p>
-
-<p>
-A good story should leave a reader with something more than information.
-It can provide perspective, encourage reflection or simply help someone
-understand another person's journey from a different point of view.
-</p>
-
-</section>
-
-
-<!-- ========================================================
-     WHAT WE CREATE
-======================================================== -->
-
-<section id="stories">
-
-<div class="section-title">
-
-<h2>What We Create</h2>
-
-<p>
-Different kinds of stories, connected by one goal: making information
-interesting, understandable and useful.
-</p>
-
+<div class="ad-label">
+Advertisement
 </div>
 
-<div class="cards">
-
-<div class="card">
-
-<div class="card-icon">
-<i class="fa-solid fa-microphone"></i>
-</div>
-
-<h3>Celebrity Stories</h3>
-
-<p>
-Explore the lives and careers of musicians, entertainers and other
-well-known personalities. We look at their beginnings, important
-turning points, achievements, difficulties and lasting influence.
-</p>
-
-<a href="#celebrity">
-Explore celebrity stories →
-</a>
-
-</div>
-
-
-<div class="card">
-
-<div class="card-icon">
-<i class="fa-solid fa-book-open"></i>
-</div>
-
-<h3>Life Stories</h3>
-
-<p>
-Original human-centered stories about experiences, challenges, choices,
-setbacks and moments that can change the direction of a person's life.
-</p>
-
-<a href="#life">
-Explore life stories →
-</a>
-
-</div>
-
-
-<div class="card">
-
-<div class="card-icon">
-<i class="fa-solid fa-lightbulb"></i>
-</div>
-
-<h3>Everyday Lessons</h3>
-
-<p>
-Practical reflections on money, work, personal growth, relationships,
-decisions, resilience and the small lessons that can influence everyday
-life.
-</p>
-
-<a href="#lessons">
-Explore lessons →
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ========================================================
-     FEATURED STORY
-======================================================== -->
-
-<section id="featured" style="margin-top:60px;">
-
-<div class="section-title">
-
-<h2>Featured Story</h2>
-
-<p>
-A detailed look at one of the most influential entertainers in modern
-music history.
-</p>
-
-</div>
-
-<div class="featured">
-
-<div class="featured-image">
-
-<img
-src="images/michael-jackson-home.jpeg"
-alt="Michael Jackson during his music career"
-loading="lazy">
-
-</div>
-
-<div class="featured-content">
-
-<div class="label">
-Featured Biography
-</div>
-
-<h2>Michael Jackson: The Life Behind the Legend</h2>
-
-<p>
-Michael Jackson's journey began as a young performer and eventually
-developed into a career that transformed popular music, dance and
-entertainment.
-</p>
-
-<p>
-Our biography explores his childhood, family, rise to fame, music,
-performances, relationships, challenges, final years and the legacy he
-left behind.
-</p>
-
-<p>
-It also looks beyond fame by asking what his journey can teach us about
-discipline, creativity, pressure, ambition and the complicated nature of
-being a public figure.
-</p>
-
-<a class="read-more" href="michael-jackson.html">
-Read the Full Story
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ========================================================
-     CELEBRITY STORIES
-======================================================== -->
-
-<section id="celebrity" style="margin-top:70px;">
-
-<div class="section-title">
-
-<h2>Celebrity Stories</h2>
-
-<p>
-Discover the people behind some of the most recognizable names in music
-and entertainment.
-</p>
-
-</div>
-
-<div class="story-list">
-
-<a class="story-link" href="michael-jackson.html">
-
-<h3>Michael Jackson</h3>
-
-<p>
-From childhood performances to global fame, explore the life, music,
-challenges and legacy of Michael Jackson.
-</p>
-
-<span>Read biography →</span>
-
-</a>
-
-
-<a class="story-link" href="Tupac%20Shakur.html">
-
-<h3>Tupac Shakur</h3>
-
-<p>
-Explore Tupac's life, artistic expression, struggles, influence and the
-ideas that continue to surround his legacy.
-</p>
-
-<span>Read biography →</span>
-
-</a>
-
-
-<a class="story-link" href="lucky-dube.html">
-
-<h3>Lucky Dube</h3>
-
-<p>
-Discover the life and music of the South African reggae artist whose
-songs carried messages about society, love, struggle and hope.
-</p>
-
-<span>Read biography →</span>
-
-</a>
-
-
-<a class="story-link" href="rihanna.html">
-
-<h3>Rihanna</h3>
-
-<p>
-Explore Rihanna's journey from her early life and music career to global
-success, entrepreneurship and cultural influence.
-</p>
-
-<span>Read biography →</span>
-
-</a>
-
-</div>
-
-</section>
-
-
-<!-- ========================================================
-     LIFE STORIES
-======================================================== -->
-
-<section id="life" style="margin-top:70px;">
-
-<div class="section-title">
-
-<h2>Life Stories</h2>
-
-<p>
-Stories about human experiences, decisions, challenges and the moments
-that can change a person's direction.
-</p>
-
-</div>
-
-<div class="cards">
-
-<div class="card">
-
-<div class="card-icon">
-<i class="fa-solid fa-road"></i>
-</div>
-
-<h3>The Journey Behind the Story</h3>
-
-<p>
-A person's final outcome rarely tells the entire story. Understanding
-the journey can reveal the preparation, mistakes, sacrifices and choices
-that came before success or failure.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<div class="card-icon">
-<i class="fa-solid fa-people-group"></i>
-</div>
-
-<h3>People and Experiences</h3>
-
-<p>
-Our lives are shaped by the people we meet. Family, friends, teachers,
-colleagues and communities can influence the decisions we make and the
-person we become.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<div class="card-icon">
-<i class="fa-solid fa-arrows-to-circle"></i>
-</div>
-
-<h3>Turning Points</h3>
-
-<p>
-Some moments appear small when they happen but become important later.
-We explore how decisions, opportunities and unexpected challenges can
-create turning points.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ========================================================
-     EVERYDAY LESSONS
-======================================================== -->
-
-<section id="lessons" style="margin-top:70px;">
-
-<div class="section-title">
-
-<h2>Everyday Lessons</h2>
-
-<p>
-Useful reflections that connect stories to decisions people face in
-ordinary life.
-</p>
-
-</div>
-
-<div class="cards">
-
-<div class="card">
-
-<div class="card-icon">
-<i class="fa-solid fa-coins"></i>
-</div>
-
-<h3>Money and Decisions</h3>
-
-<p>
-Income, saving, spending and financial decisions can shape opportunities.
-Understanding everyday money choices can help people plan more carefully.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<div class="card-icon">
-<i class="fa-solid fa-briefcase"></i>
-</div>
-
-<h3>Work and Growth</h3>
-
-<p>
-Careers are rarely perfectly straight. Experience, mistakes, persistence
-and learning can all influence professional growth.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<div class="card-icon">
-<i class="fa-solid fa-heart"></i>
-</div>
-
-<h3>Relationships and Character</h3>
-
-<p>
-Communication, trust, boundaries, patience and respect influence the
-relationships people build throughout their lives.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ========================================================
-     EDITORIAL APPROACH
-======================================================== -->
-
-<section style="margin-top:70px;">
-
-<div class="approach">
-
-<h2>How We Approach Our Stories</h2>
-
-<p>
-Stories, Lives & Lessons is built around original writing and thoughtful
-presentation. A biography should not simply be a collection of dates,
-names and achievements. A useful story gives those facts context.
-</p>
-
-<p>
-When researching a person or subject, we aim to distinguish established
-information from interpretation. Where appropriate, readers should be
-encouraged to consult reliable sources and explore the subject further.
-</p>
-
-<ul>
-
-<li>
-We focus on original explanations rather than copying material from
-other websites.
-</li>
-
-<li>
-We aim to provide context so readers can understand why an event or
-achievement mattered.
-</li>
-
-<li>
-We connect stories with practical reflections and lessons where those
-lessons are reasonable and clearly presented.
-</li>
-
-<li>
-We avoid presenting speculation as established fact.
-</li>
-
-<li>
-We aim to make long-form stories readable through clear headings,
-sections and useful navigation.
-</li>
-
-<li>
-We recognize that public figures are people with complicated lives,
-rather than simply names attached to achievements.
-</li>
-
-</ul>
-
-<p>
-The goal is simple: when a reader finishes an article, they should have
-learned something, understood a journey better or found a useful idea to
-think about.
-</p>
-
-</div>
-
-</section>
-
-
-<!-- ========================================================
-     ABOUT THE AUTHOR
-======================================================== -->
-
-<section style="margin-top:70px;">
-
-<div class="section-title">
-
-<h2>About the Author</h2>
-
-</div>
-
-<div class="author">
-
-<img
-src="images/author-v2.png"
-alt="Kinglee Mutwiri, founder and author"
-loading="lazy">
-
-<div>
-
-<h2>Kinglee Mutwiri</h2>
-
-<p>
-Kinglee Mutwiri is the founder and author behind Stories, Lives &
-Lessons. The website was created to explore stories about people,
-experiences, music, challenges and the lessons that can be found within
-them.
-</p>
-
-<p>
-The aim is to make stories accessible while giving readers more than a
-simple summary. Each subject is approached as an opportunity to
-understand a journey and consider what it may teach us.
-</p>
-
-<a class="read-more"
-href="about.html">
-Learn More About the Author
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ========================================================
-     EXPLORE
-======================================================== -->
-
-<section style="margin-top:70px;">
-
-<div class="section-title">
-
-<h2>Explore the Website</h2>
-
-<p>
-Use these pages to learn more about the publication and find more stories.
-</p>
-
-</div>
-
-<div class="story-list">
-
-<a class="story-link" href="about.html">
-
-<h3>About Stories, Lives & Lessons</h3>
-
-<p>
-Learn about the purpose, editorial approach and vision behind the website.
-</p>
-
-<span>Visit About →</span>
-
-</a>
-
-
-<a class="story-link" href="contact.html">
-
-<h3>Contact</h3>
-
-<p>
-Have a question, suggestion or feedback? Find our contact information.
-</p>
-
-<span>Contact us →</span>
-
-</a>
-
-
-<a class="story-link" href="privacy-policy.html">
-
-<h3>Privacy Policy</h3>
-
-<p>
-Read information about privacy, cookies, advertising and how website
-information may be handled.
-</p>
-
-<span>Read Privacy Policy →</span>
-
-</a>
-
-
-<a class="story-link" href="disclaimer.html">
-
-<h3>Disclaimer</h3>
-
-<p>
-Read the website's general disclaimer and information about the nature
-of its published content.
-</p>
-
-<span>Read Disclaimer →</span>
-
-</a>
-
-</div>
-
-</section>
-
-</div>
-
-</main>
-
-
-<!-- ========================================================
-     SOCIAL
-======================================================== -->
-
-<section class="social">
-
-<h2>Follow Stories, Lives & Lessons</h2>
-
-<p>
-Follow our social pages for new stories, biographies, useful articles
-and updates when new content is published.
-</p>
-
-<div class="social-links">
-
-<a
-href="https://www.facebook.com/profile.php?id=61568056696688"
-target="_blank"
-rel="noopener noreferrer"
-aria-label="Facebook">
-
-<i class="fa-brands fa-facebook-f"></i>
-
-</a>
-
-
-<a
-href="https://www.instagram.com/mutwiri.eliphas/"
-target="_blank"
-rel="noopener noreferrer"
-aria-label="Instagram">
-
-<i class="fa-brands fa-instagram"></i>
-
-</a>
-
-
-<a
-href="https://x.com/KingleeMut40701"
-target="_blank"
-rel="noopener noreferrer"
-aria-label="X">
-
-<i class="fa-brands fa-x-twitter"></i>
-
-</a>
-
-
-<a
-href="https://wa.me/254736280522"
-target="_blank"
-rel="noopener noreferrer"
-aria-label="WhatsApp">
-
-<i class="fa-brands fa-whatsapp"></i>
-
-</a>
-
-</div>
-
-</section>
-
-
-<!-- ========================================================
-     FOOTER
-======================================================== -->
-
-<footer>
-
-<p>
-<strong>Stories, Lives & Lessons</strong>
-</p>
-
-<p>
-Original stories, biographies, experiences and practical reflections.
-</p>
-
-<p>
-
-<a href="index.html">Home</a> ·
-
-<a href="about.html">About</a> ·
-
-<a href="contact.html">Contact</a> ·
-
-<a href="privacy-policy.html">Privacy</a> ·
-
-<a href="terms.html">Terms</a> ·
-
-<a href="disclaimer.html">Disclaimer</a>
-
-</p>
-
-<p>
-© 2026 Stories, Lives & Lessons. All rights reserved.
-</p>
-
-</footer>
-
-
-<!-- ========================================================
-     HOMEPAGE TOP AD
-======================================================== -->
-
-<div style="max-width:1100px;margin:30px auto;padding:0 20px;">
+<!-- America-ai - Homepage Top -->
 
 <ins class="adsbygoogle"
 style="display:block"
@@ -1749,9 +688,699 @@ data-full-width-responsive="true"></ins>
 
 </div>
 
+</section>
 
 
+<!-- INTRO -->
 
+<section class="container intro">
+
+<div class="eyebrow">
+Our Story
+</div>
+
+<h2>
+Stories are more than words on a page.
+</h2>
+
+<p>
+A good story can introduce us to a person we have never met, take us
+to a place we have never visited, make us understand an experience we
+have never lived through, or make us look at our own lives differently.
+That is what America AI is built around. We believe stories deserve
+attention because behind every event there are people, decisions,
+emotions, challenges and moments that are often more interesting than
+the headline itself.
+</p>
+
+</section>
+
+
+<!-- FEATURED -->
+
+<section id="featured" class="container">
+
+<div class="section-title">
+
+<h2>Featured Stories</h2>
+
+<span>Stories Worth Reading</span>
+
+</div>
+
+
+<div class="featured">
+
+<article class="featured-main">
+
+<img
+src="images/featured.jpg"
+alt="Featured story"
+onerror="this.style.display='none';">
+
+<div class="featured-content">
+
+<div class="tag">
+Featured Story
+</div>
+
+<h3>
+The People Behind the Stories We Remember
+</h3>
+
+<p>
+Some stories remain in our minds because they are connected to people
+who faced unusual circumstances, made difficult decisions or changed
+the direction of their lives. Their experiences remind us that a
+person's journey is rarely as simple as it appears from the outside.
+</p>
+
+<p>
+When we look beyond a name, a photograph or a headline, we often find
+a much richer story. There may be years of preparation, moments of
+failure, unexpected opportunities and choices that nobody else saw.
+Exploring those details helps us understand not only the person in
+the story, but also the human experiences that many of us share.
+</p>
+
+<a href="#" class="read">
+Read the featured story →
+</a>
+
+</div>
+
+</article>
+
+
+<div class="side">
+
+<article class="side-story">
+
+<div class="tag">
+Human Stories
+</div>
+
+<h3>
+The moments that quietly change our lives.
+</h3>
+
+<p>
+Not every important moment arrives with a celebration. Sometimes a
+short conversation, a difficult decision or an unexpected encounter
+can influence a person's future for years.
+</p>
+
+<a href="#" class="read">
+Read story →
+</a>
+
+</article>
+
+
+<article class="side-story">
+
+<div class="tag">
+Life
+</div>
+
+<h3>
+What difficult chapters can teach us.
+</h3>
+
+<p>
+Hard seasons can reveal strengths that people did not know they had.
+Stories about difficult experiences can help us understand resilience,
+patience and the importance of continuing forward.
+</p>
+
+<a href="#" class="read">
+Read story →
+</a>
+
+</article>
+
+
+<article class="side-story">
+
+<div class="tag">
+People
+</div>
+
+<h3>
+Every successful journey has a beginning.
+</h3>
+
+<p>
+Before people become widely known, they usually experience ordinary
+days filled with learning, uncertainty, mistakes and decisions.
+Those early chapters can be some of the most interesting parts of
+their stories.
+</p>
+
+<a href="#" class="read">
+Read story →
+</a>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- MISSION -->
+
+<section class="mission">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>What You Will Find Here</h2>
+
+<span>Our Approach</span>
+
+</div>
+
+
+<div class="mission-grid">
+
+<div class="mission-card">
+
+<div class="tag">
+01
+</div>
+
+<h3>Stories About People</h3>
+
+<p>
+We explore the journeys of interesting and influential people,
+looking beyond simple introductions to understand the experiences,
+choices and turning points that helped shape their lives.
+</p>
+
+</div>
+
+
+<div class="mission-card">
+
+<div class="tag">
+02
+</div>
+
+<h3>Stories With Meaning</h3>
+
+<p>
+A memorable story can leave a question in your mind. We aim to share
+stories that encourage readers to think about decisions, relationships,
+ambition, failure, courage and the experiences that make us human.
+</p>
+
+</div>
+
+
+<div class="mission-card">
+
+<div class="tag">
+03
+</div>
+
+<h3>Lessons From Life</h3>
+
+<p>
+Stories can teach without feeling like a classroom. We look for the
+ideas and lessons within people's experiences and explain why those
+lessons can matter in everyday life.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- LONG ORIGINAL CONTENT -->
+
+<section class="container story-content">
+
+<div class="eyebrow">
+Why Stories Matter
+</div>
+
+<h2>
+We live in a world full of information, but stories help us understand it.
+</h2>
+
+<p>
+Every day we encounter thousands of pieces of information. We see
+headlines, photographs, short videos, opinions and conversations.
+Much of it disappears from our minds almost immediately. A story is
+different. When information is connected to a person, a place, a
+challenge or a meaningful moment, it becomes easier to remember and
+understand.
+</p>
+
+<p>
+That is one of the reasons storytelling has remained important for
+generations. Long before people had newspapers, websites or social
+media, communities used stories to preserve experiences and pass
+knowledge from one person to another. Stories helped people remember
+important events, understand difficult situations and imagine lives
+different from their own.
+</p>
+
+<h2>
+The human side of every story
+</h2>
+
+<p>
+At America AI, we are interested in the human side of a story. A famous
+person may be known around the world, but fame does not tell us
+everything about a life. Behind a public image there can be years of
+work, private disappointments, difficult choices and moments when the
+future was uncertain.
+</p>
+
+<p>
+The same is true for ordinary people. Someone does not need to become
+famous for their experience to be meaningful. A parent raising a family,
+a worker starting again after losing a job, a young person pursuing a
+dream, or someone rebuilding their life after a difficult period can
+all have experiences that contain valuable lessons.
+</p>
+
+<p>
+When we tell these stories carefully, the goal is not simply to make
+the reader know what happened. The goal is to help the reader understand
+why it mattered and what can be learned from it.
+</p>
+
+<h2>
+Stories can change perspective
+</h2>
+
+<p>
+One of the most powerful things about reading is the opportunity to
+temporarily see life through another person's experience. A reader may
+disagree with someone's decisions while still learning why that person
+made them. A story can make us curious about experiences that are far
+removed from our own.
+</p>
+
+<p>
+That change in perspective is valuable. It can encourage patience,
+curiosity and a deeper understanding of other people. It can also make
+us examine our own assumptions. Sometimes the most important lesson in
+a story is not an obvious answer but a better question.
+</p>
+
+<h2>
+Learning from success and failure
+</h2>
+
+<p>
+Success stories are naturally attractive. People want to know how
+someone achieved something difficult, built a career, overcame an
+obstacle or turned an opportunity into something larger. However, a
+useful story should not make success look effortless.
+</p>
+
+<p>
+Behind many achievements are failed attempts, wrong decisions,
+rejection, uncertainty and long periods when progress was difficult to
+see. Those parts of the journey are important because they show the
+difference between an inspiring headline and the reality of building
+something over time.
+</p>
+
+<p>
+Failure can also be an important part of a story. It can reveal what a
+person learned, what they changed and how they responded when the
+original plan did not work. That does not mean every failure produces
+a happy ending. Rather, it reminds us that difficult experiences can
+become part of a larger journey.
+</p>
+
+<h2>
+Why we focus on meaningful storytelling
+</h2>
+
+<p>
+There are countless websites competing for attention. We do not want
+America AI to be another place where readers simply move from one
+headline to another without remembering anything. Our aim is to create
+a space where stories have enough context to be interesting and enough
+meaning to be worth discussing.
+</p>
+
+<p>
+That means paying attention to the details that make a story human.
+Where did the journey begin? What challenges appeared along the way?
+What decisions changed the direction of events? What did the person
+learn? What can a reader understand from the experience?
+</p>
+
+<p>
+These questions help turn a basic biography or event into a richer
+story. They also help readers connect the information to their own
+experiences.
+</p>
+
+<h2>
+A growing collection of stories
+</h2>
+
+<p>
+America AI is designed to grow as a collection of stories that readers
+can return to. Some stories may introduce remarkable people. Others
+may explore an unexpected event, a difficult decision, an inspiring
+journey or an idea that affects everyday life.
+</p>
+
+<p>
+The subjects may be different, but the purpose remains the same:
+to present interesting stories in a way that gives the reader something
+to think about after the final paragraph.
+</p>
+
+<p>
+We also believe that a website becomes more valuable when readers can
+explore different perspectives. A person who arrives looking for a
+story about a famous individual may discover a story about perseverance.
+Someone interested in success may find a lesson about failure. Another
+reader may simply discover an experience that reminds them of something
+in their own life.
+</p>
+
+<h2>
+Read slowly. Think deeply. Take something with you.
+</h2>
+
+<p>
+The internet encourages speed. We scroll quickly, read a headline and
+move on. Storytelling offers a different experience. It gives us a
+reason to slow down for a few minutes and follow a journey from its
+beginning to its conclusion.
+</p>
+
+<p>
+That is the kind of reading experience we want to encourage here.
+Whether a story makes you laugh, surprises you, challenges an opinion
+or simply gives you a new perspective, we hope it leaves something
+behind.
+</p>
+
+<p>
+<strong>A story does not have to change the whole world to matter.</strong>
+Sometimes it only needs to change the way one person understands a
+moment, a decision or another human being.
+</p>
+
+</section>
+
+
+<!-- LATEST STORIES -->
+
+<section id="latest" class="container">
+
+<div class="section-title">
+
+<h2>Latest Stories</h2>
+
+<span>Explore More</span>
+
+</div>
+
+
+<div class="latest">
+
+<article class="story-card">
+
+<img
+src="images/story1.jpg"
+alt="A human story"
+onerror="this.style.display='none';">
+
+<div class="story-body">
+
+<div class="tag">
+Human Stories
+</div>
+
+<h3>
+The Unexpected Moments That Can Change a Life
+</h3>
+
+<p>
+Some of the most important turning points begin as ordinary moments.
+A conversation, meeting or decision can sometimes create consequences
+that last much longer than expected.
+</p>
+
+<a href="#" class="read">
+Read story →
+</a>
+
+</div>
+
+</article>
+
+
+<article class="story-card">
+
+<img
+src="images/story2.jpg"
+alt="An inspiring journey"
+onerror="this.style.display='none';">
+
+<div class="story-body">
+
+<div class="tag">
+Inspiration
+</div>
+
+<h3>
+What We Can Learn From People Who Kept Moving Forward
+</h3>
+
+<p>
+Persistence is rarely dramatic. Often it is simply the decision to
+continue after disappointment, uncertainty or an unsuccessful attempt.
+</p>
+
+<a href="#" class="read">
+Read story →
+</a>
+
+</div>
+
+</article>
+
+
+<article class="story-card">
+
+<img
+src="images/story3.jpg"
+alt="A life lesson"
+onerror="this.style.display='none';">
+
+<div class="story-body">
+
+<div class="tag">
+Life Lessons
+</div>
+
+<h3>
+The Lessons Hidden Inside Ordinary Experiences
+</h3>
+
+<p>
+Not every valuable lesson comes from an extraordinary event. Everyday
+experiences can reveal ideas about relationships, choices, patience
+and personal growth.
+</p>
+
+<a href="#" class="read">
+Read story →
+</a>
+
+</div>
+
+</article>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about" class="about">
+
+<div class="container about-grid">
+
+<div>
+
+<img
+src="images/author.jpg"
+alt="Eliphas Mutwiri"
+class="author-photo"
+onerror="this.style.display='none';">
+
+</div>
+
+
+<div>
+
+<div class="tag">
+About The Creator
+</div>
+
+<h2>
+Meet the person behind America AI.
+</h2>
+
+<p>
+America AI was created by Eliphas Mutwiri, a writer and storyteller
+interested in the experiences that make people and their journeys
+interesting.
+</p>
+
+<p>
+The idea behind this website is simple: every story contains more
+than the information we see on the surface. A person's journey can
+contain decisions, challenges, opportunities, mistakes, achievements
+and lessons that are worth exploring.
+</p>
+
+<p>
+Through America AI, Eliphas aims to create a growing collection of
+stories that are enjoyable to read while giving readers something
+meaningful to consider.
+</p>
+
+<a href="about.html" class="read">
+Read more about the creator →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- QUOTE -->
+
+<section class="container quote">
+
+<div class="quote-mark">
+“
+</div>
+
+<p>
+A good story does not simply tell us what happened. It gives us a
+reason to care about what happened.
+</p>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container footer-grid">
+
+<div>
+
+<h3>America AI</h3>
+
+<p>
+A storytelling website exploring people, experiences, remarkable
+journeys and meaningful lessons from life.
+</p>
+
+</div>
+
+
+<div>
+
+<h3>Explore</h3>
+
+<ul>
+
+<li>
+<a href="index.html">Home</a>
+</li>
+
+<li>
+<a href="#featured">Featured Stories</a>
+</li>
+
+<li>
+<a href="#latest">Latest Stories</a>
+</li>
+
+<li>
+<a href="#about">About</a>
+</li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<h3>Information</h3>
+
+<ul>
+
+<li>
+<a href="contact.html">Contact</a>
+</li>
+
+<li>
+<a href="privacy-policy.html">Privacy Policy</a>
+</li>
+
+<li>
+<a href="terms.html">Terms of Use</a>
+</li>
+
+<li>
+<a
+href="https://www.facebook.com/profile.php?id=61568056696688"
+target="_blank"
+rel="noopener">
+Facebook
+</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+<div class="container">
+
+<div class="copyright">
+
+© 2026 America AI. All rights reserved.
+
+</div>
+
+</div>
+
+</footer>
 
 </body>
 </html>
