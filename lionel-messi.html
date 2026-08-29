@@ -819,6 +819,29 @@ footer{
 
 </style>
 
+
+<style>
+.hero img,
+img[src*="lionel-messi"] {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: center center;
+    display: block;
+}
+
+@media (max-width: 700px) {
+    .hero img,
+    img[src*="lionel-messi"] {
+        width: 100%;
+        height: auto;
+        max-height: none;
+        object-fit: contain;
+    }
+}
+</style>
+
 </head>
 
 
