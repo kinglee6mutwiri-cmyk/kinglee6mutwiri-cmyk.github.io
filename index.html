@@ -7,22 +7,14 @@
 
 <title>Kinglee Mutwiri | Stories That Matter</title>
 
-<meta name="description" content="Kinglee Mutwiri is a storytelling website exploring remarkable people, human experiences, personal journeys, interesting events and meaningful life lessons.">
+<meta name="description" content="Kinglee Mutwiri is a storytelling website sharing original stories about people, life, human experiences, remarkable journeys and meaningful lessons.">
 
 <meta name="author" content="Kinglee Mutwiri">
 <meta name="robots" content="index, follow">
 
 <link rel="canonical" href="https://kinglee6mutwiri-cmyk.github.io/">
 
-<meta property="og:title" content="Kinglee Mutwiri | Stories That Matter">
-<meta property="og:description" content="Stories about people, life, human experiences and meaningful lessons.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://kinglee6mutwiri-cmyk.github.io/">
-<meta property="og:image" content="https://kinglee6mutwiri-cmyk.github.io/images/IMG-20260809-WA0003.jpg">
-
-
-<!-- GOOGLE ANALYTICS -->
-
+<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-X3HE9CKP90"></script>
 
 <script>
@@ -37,7 +29,7 @@ gtag('config', 'G-X3HE9CKP90');
 </script>
 
 
-<!-- GOOGLE ADSENSE -->
+<!-- Google AdSense -->
 
 <script async
 src="https://pagead2.googlesyndication.com/pagead/js?client=ca-pub-5799841502846177"
@@ -47,9 +39,9 @@ crossorigin="anonymous">
 
 <style>
 
-/* =========================
-RESET
-========================= */
+/* ==============================
+GLOBAL
+============================== */
 
 *{
 margin:0;
@@ -62,9 +54,9 @@ scroll-behavior:smooth;
 }
 
 body{
+background:#faf9f6;
+color:#202020;
 font-family:Georgia,"Times New Roman",serif;
-background:#f8f7f3;
-color:#181818;
 line-height:1.75;
 }
 
@@ -75,519 +67,418 @@ display:block;
 
 a{
 text-decoration:none;
-color:inherit;
 }
 
 .container{
-width:92%;
-max-width:1180px;
+width:90%;
+max-width:1120px;
 margin:auto;
 }
 
 
-/* =========================
-TOP BAR
-========================= */
-
-.topbar{
-background:#d5a447;
-color:#111;
-font-family:Arial,sans-serif;
-font-size:12px;
-text-align:center;
-padding:7px 10px;
-}
-
-
-/* =========================
+/* ==============================
 HEADER
-========================= */
+============================== */
 
 header{
-background:#111;
-color:#fff;
-position:sticky;
-top:0;
-z-index:1000;
-box-shadow:0 4px 18px rgba(0,0,0,.2);
+background:#ffffff;
+border-bottom:1px solid #e5e2dc;
 }
 
-.nav{
-min-height:76px;
+.header-inner{
+height:78px;
 display:flex;
 align-items:center;
 justify-content:space-between;
-gap:25px;
 }
 
 .logo{
 font-size:25px;
 font-weight:bold;
-white-space:nowrap;
+color:#171717;
 }
 
 .logo span{
-color:#d5a447;
+color:#a87b20;
 }
 
 nav{
 display:flex;
-align-items:center;
-gap:25px;
-font-family:Arial,sans-serif;
+gap:28px;
 }
 
 nav a{
+font-family:Arial,sans-serif;
 font-size:14px;
-color:#eee;
+font-weight:600;
+color:#333;
 }
 
 nav a:hover{
-color:#d5a447;
+color:#a87b20;
 }
 
 .facebook{
 background:#1877f2;
-color:#fff;
-padding:9px 15px;
-border-radius:5px;
-font-family:Arial,sans-serif;
-font-size:13px;
-font-weight:bold;
+color:white!important;
+padding:8px 14px;
+border-radius:4px;
 }
 
 
-/* =========================
+/* ==============================
 HERO
-========================= */
+============================== */
 
 .hero{
-background:
-linear-gradient(
-90deg,
-rgba(0,0,0,.88),
-rgba(0,0,0,.55)
-),
-url("images/IMG-20260809-WA0003.jpg") center/cover;
-
-min-height:620px;
-display:flex;
-align-items:center;
+background:#171717;
 color:white;
 }
 
-.hero-content{
-max-width:850px;
-padding:95px 0;
+.hero-inner{
+min-height:560px;
+display:flex;
+align-items:center;
 }
 
-.kicker{
+.hero-content{
+max-width:800px;
+padding:80px 0;
+}
+
+.label{
 font-family:Arial,sans-serif;
-font-size:12px;
+font-size:11px;
 font-weight:bold;
 letter-spacing:2px;
 text-transform:uppercase;
-color:#d5a447;
-margin-bottom:20px;
+color:#c99b42;
+margin-bottom:18px;
 }
 
 .hero h1{
-font-size:clamp(45px,7vw,78px);
-line-height:1.02;
+font-size:clamp(44px,7vw,72px);
+line-height:1.04;
 letter-spacing:-2px;
-margin-bottom:25px;
+margin-bottom:24px;
 }
 
 .hero p{
-max-width:740px;
-font-size:19px;
-color:#ededed;
-margin-bottom:32px;
+font-size:18px;
+color:#d8d8d8;
+max-width:700px;
+margin-bottom:30px;
 }
 
-.button{
+.primary-btn{
 display:inline-block;
-background:#d5a447;
+background:#c99b42;
 color:#111;
-padding:13px 24px;
-border-radius:4px;
+padding:12px 22px;
 font-family:Arial,sans-serif;
 font-size:13px;
 font-weight:bold;
+border-radius:3px;
 }
 
-.button:hover{
-background:#fff;
+.primary-btn:hover{
+background:white;
 }
 
 
-/* =========================
-AD AREA
-========================= */
+/* ==============================
+ADS
+============================== */
 
-.ad-area{
-padding:25px 0;
+.ad{
+padding:28px 0;
 text-align:center;
 }
 
-.ad-label{
+.ad-text{
 font-family:Arial,sans-serif;
 font-size:9px;
-letter-spacing:1.5px;
-color:#999;
-margin-bottom:7px;
-text-transform:uppercase;
+color:#aaa;
+letter-spacing:1px;
+margin-bottom:8px;
 }
 
 
-/* =========================
+/* ==============================
 INTRO
-========================= */
+============================== */
 
 .intro{
-max-width:900px;
-padding:85px 0 65px;
+padding:85px 0 75px;
+max-width:850px;
 text-align:center;
 }
 
 .intro h2{
-font-size:42px;
-line-height:1.18;
+font-size:39px;
+line-height:1.2;
 margin-bottom:20px;
 }
 
 .intro p{
 font-size:17px;
-color:#5c5c5c;
+color:#626262;
 }
 
 
-/* =========================
-EDITORIAL HEADER
-========================= */
+/* ==============================
+DIVIDER
+============================== */
 
-.section-header{
+.divider{
+height:1px;
+background:#dedbd5;
+margin-bottom:65px;
+}
+
+
+/* ==============================
+STORY SECTION
+============================== */
+
+.story-section{
+padding-bottom:85px;
+}
+
+.section-heading{
 display:flex;
-align-items:end;
 justify-content:space-between;
-gap:20px;
-border-bottom:2px solid #181818;
+align-items:end;
+border-bottom:2px solid #202020;
 padding-bottom:12px;
-margin-bottom:30px;
+margin-bottom:35px;
 }
 
-.section-header h2{
+.section-heading h2{
 font-size:31px;
-line-height:1.2;
 }
 
-.section-header small{
+.section-heading span{
 font-family:Arial,sans-serif;
 font-size:10px;
 letter-spacing:1px;
 text-transform:uppercase;
-color:#777;
+color:#888;
 }
 
 
-/* =========================
-FEATURE
-========================= */
+/* ==============================
+STORY FEATURE
+============================== */
 
-.feature{
-display:grid;
-grid-template-columns:1.35fr .65fr;
-gap:28px;
-margin-bottom:85px;
+.story-feature{
+background:white;
+border:1px solid #e3e0da;
+padding:38px;
 }
 
-.feature-main{
-background:#fff;
-border:1px solid #dedbd3;
+.story-feature .label{
+margin-bottom:10px;
 }
 
-.feature-main img{
-width:100%;
-height:410px;
-object-fit:cover;
-}
-
-.feature-text{
-padding:31px;
-}
-
-.category{
-font-family:Arial,sans-serif;
-font-size:10px;
-font-weight:bold;
-letter-spacing:1.5px;
-text-transform:uppercase;
-color:#9b772b;
-}
-
-.feature-text h3{
+.story-feature h3{
 font-size:34px;
-line-height:1.2;
-margin:10px 0 15px;
+line-height:1.25;
+margin-bottom:17px;
+max-width:850px;
 }
 
-.feature-text p{
-font-size:16px;
-color:#666;
-margin-bottom:16px;
+.story-feature p{
+font-size:17px;
+color:#555;
+max-width:900px;
+margin-bottom:18px;
 }
 
-.read-more{
+.story-link{
 font-family:Arial,sans-serif;
 font-size:13px;
 font-weight:bold;
-border-bottom:1px solid #111;
-padding-bottom:3px;
-}
-
-.side{
-display:grid;
-gap:18px;
-}
-
-.side-card{
-background:#fff;
-border:1px solid #dedbd3;
-padding:24px;
-}
-
-.side-card h3{
-font-size:21px;
-line-height:1.3;
-margin:9px 0;
-}
-
-.side-card p{
-font-size:14px;
-color:#6c6c6c;
+color:#222;
+border-bottom:1px solid #222;
 }
 
 
-/* =========================
-MISSION
-========================= */
+/* ==============================
+MAIN CONTENT
+============================== */
 
-.mission{
-background:#161616;
-color:#fff;
-padding:75px 0;
-margin-bottom:85px;
-}
-
-.mission .section-header{
-border-color:#3d3d3d;
-}
-
-.mission-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:22px;
-}
-
-.mission-card{
-border:1px solid #3b3b3b;
-padding:30px;
-}
-
-.mission-number{
-color:#d5a447;
-font-family:Arial,sans-serif;
-font-weight:bold;
-font-size:12px;
-}
-
-.mission-card h3{
-font-size:23px;
-margin:9px 0 12px;
-}
-
-.mission-card p{
-font-size:14px;
-color:#aaa;
-}
-
-
-/* =========================
-MAIN STORY TEXT
-========================= */
-
-.story-introduction{
+.content{
 max-width:900px;
 padding-bottom:85px;
 }
 
-.story-introduction h2{
-font-size:34px;
+.content h2{
+font-size:33px;
 line-height:1.25;
-margin:42px 0 15px;
+margin:45px 0 15px;
 }
 
-.story-introduction p{
+.content p{
 font-size:17px;
-color:#4e4e4e;
+color:#4f4f4f;
 margin-bottom:19px;
 }
 
 
-/* =========================
-ADS BETWEEN CONTENT
-========================= */
+/* ==============================
+AD BETWEEN CONTENT
+============================== */
 
-.content-ad{
+.middle-ad{
 max-width:900px;
-margin:0 auto 70px;
+margin:0 auto 75px;
 text-align:center;
 }
 
 
-/* =========================
-STORY COLLECTION
-========================= */
+/* ==============================
+AUTHOR
+============================== */
 
-.collection{
-margin-bottom:85px;
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:25px;
-}
-
-.card{
-background:#fff;
-border:1px solid #dedbd3;
-overflow:hidden;
-}
-
-.card img{
-width:100%;
-height:220px;
-object-fit:cover;
-}
-
-.card-content{
-padding:24px;
-}
-
-.card h3{
-font-size:21px;
-line-height:1.3;
-margin:8px 0 12px;
-}
-
-.card p{
-font-size:14px;
-color:#666;
-margin-bottom:18px;
-}
-
-
-/* =========================
-ABOUT
-========================= */
-
-.about{
-background:#e9e5dc;
+.author{
+background:#eeeae2;
 padding:80px 0;
-margin-bottom:85px;
 }
 
-.about-grid{
+.author-inner{
 display:grid;
-grid-template-columns:.4fr .6fr;
-gap:60px;
+grid-template-columns:300px 1fr;
+gap:65px;
 align-items:center;
 }
 
-.author-image{
-width:280px;
-height:280px;
+.author-photo{
+width:270px;
+height:270px;
 object-fit:cover;
 border-radius:50%;
 border:8px solid white;
-margin:auto;
-box-shadow:0 10px 35px rgba(0,0,0,.12);
+box-shadow:0 10px 30px rgba(0,0,0,.12);
 }
 
-.about h2{
-font-size:39px;
+.author h2{
+font-size:38px;
 line-height:1.2;
 margin:10px 0 18px;
 }
 
-.about p{
+.author p{
 font-size:16px;
 color:#5b5b5b;
 margin-bottom:16px;
 }
 
 
-/* =========================
-PHILOSOPHY
-========================= */
+/* ==============================
+VALUES
+============================== */
 
-.philosophy{
-max-width:850px;
+.values{
+padding:85px 0;
+}
+
+.values-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:22px;
+}
+
+.value{
+background:white;
+border:1px solid #e2dfd8;
+padding:30px;
+}
+
+.value-number{
+font-family:Arial,sans-serif;
+font-size:12px;
+font-weight:bold;
+color:#a87b20;
+}
+
+.value h3{
+font-size:22px;
+margin:8px 0 12px;
+}
+
+.value p{
+font-size:14px;
+color:#666;
+}
+
+
+/* ==============================
+QUOTE
+============================== */
+
+.quote{
+background:#171717;
+color:white;
 text-align:center;
-padding-bottom:90px;
+padding:85px 20px;
+}
+
+.quote-inner{
+max-width:780px;
+margin:auto;
 }
 
 .quote-mark{
-font-size:80px;
-line-height:.4;
-color:#d5a447;
+font-size:70px;
+color:#c99b42;
+line-height:.5;
 }
 
-.philosophy p{
+.quote p{
 font-size:28px;
 font-style:italic;
 line-height:1.45;
 }
 
 
-/* =========================
+/* ==============================
 FOOTER
-========================= */
+============================== */
 
 footer{
 background:#101010;
-color:#fff;
-padding:70px 0 25px;
+color:white;
+padding:65px 0 25px;
 }
 
 .footer-grid{
 display:grid;
-grid-template-columns:1.6fr 1fr 1fr 1fr;
+grid-template-columns:2fr 1fr 1fr 1fr;
 gap:45px;
-margin-bottom:50px;
+margin-bottom:45px;
 }
 
 .footer-brand h2{
-font-size:27px;
-margin-bottom:15px;
+font-size:26px;
+margin-bottom:14px;
 }
 
-.footer-brand h2 span{
-color:#d5a447;
+.footer-brand span{
+color:#c99b42;
 }
 
 .footer-brand p{
-max-width:340px;
 font-family:Arial,sans-serif;
-font-size:14px;
+font-size:13px;
 color:#999;
+max-width:350px;
 }
 
 footer h3{
 font-family:Arial,sans-serif;
 font-size:15px;
-margin-bottom:17px;
+margin-bottom:15px;
 }
 
 .footer-links{
@@ -605,61 +496,49 @@ color:#999;
 }
 
 .footer-links a:hover{
-color:#d5a447;
+color:#c99b42;
 }
 
 .footer-facebook{
 display:inline-block;
 background:#1877f2;
 color:white!important;
-padding:9px 15px;
-border-radius:5px;
+padding:8px 13px;
+border-radius:4px;
 }
 
 .footer-bottom{
 border-top:1px solid #303030;
-padding-top:22px;
+padding-top:20px;
 display:flex;
 justify-content:space-between;
 gap:20px;
 font-family:Arial,sans-serif;
-font-size:12px;
+font-size:11px;
 color:#777;
 }
 
-.footer-bottom-links{
-display:flex;
-gap:18px;
-}
 
-.footer-bottom-links a:hover{
-color:#d5a447;
-}
+/* ==============================
+MOBILE
+============================== */
 
-
-/* =========================
-RESPONSIVE
-========================= */
-
-@media(max-width:900px){
+@media(max-width:850px){
 
 nav{
 display:none;
 }
 
-.feature{
+.author-inner{
 grid-template-columns:1fr;
+text-align:center;
 }
 
-.mission-grid{
-grid-template-columns:1fr;
+.author-photo{
+margin:auto;
 }
 
-.cards{
-grid-template-columns:1fr;
-}
-
-.about-grid{
+.values-grid{
 grid-template-columns:1fr;
 }
 
@@ -673,15 +552,23 @@ grid-template-columns:1fr 1fr;
 @media(max-width:560px){
 
 .container{
-width:90%;
+width:88%;
+}
+
+.header-inner{
+height:68px;
 }
 
 .logo{
 font-size:21px;
 }
 
-.hero{
-min-height:560px;
+.hero-inner{
+min-height:520px;
+}
+
+.hero-content{
+padding:70px 0;
 }
 
 .hero h1{
@@ -694,26 +581,34 @@ font-size:16px;
 }
 
 .intro{
-padding-top:60px;
+padding:60px 0;
 }
 
 .intro h2{
-font-size:31px;
+font-size:30px;
 }
 
-.section-header h2{
+.section-heading h2{
 font-size:25px;
 }
 
-.feature-text h3{
+.story-feature{
+padding:25px;
+}
+
+.story-feature h3{
 font-size:27px;
 }
 
-.about h2{
-font-size:31px;
+.content h2{
+font-size:28px;
 }
 
-.philosophy p{
+.author h2{
+font-size:30px;
+}
+
+.quote p{
 font-size:22px;
 }
 
@@ -735,18 +630,11 @@ flex-direction:column;
 <body>
 
 
-<!-- TOP MESSAGE -->
-
-<div class="topbar">
-Stories about people, experiences, journeys and the lessons life leaves behind.
-</div>
-
-
 <!-- HEADER -->
 
 <header>
 
-<div class="container nav">
+<div class="container header-inner">
 
 <a href="index.html" class="logo">
 Kinglee <span>Mutwiri</span>
@@ -759,8 +647,6 @@ Kinglee <span>Mutwiri</span>
 <a href="about.html">About</a>
 <a href="contact.html">Contact</a>
 
-</nav>
-
 <a
 href="https://www.facebook.com/profile.php?id=61568056696688"
 target="_blank"
@@ -768,6 +654,8 @@ rel="noopener"
 class="facebook">
 Facebook
 </a>
+
+</nav>
 
 </div>
 
@@ -778,38 +666,42 @@ Facebook
 
 <section class="hero">
 
-<div class="container hero-content">
+<div class="container hero-inner">
 
-<div class="kicker">
-Kinglee Mutwiri • Storytelling
+<div class="hero-content">
+
+<div class="label">
+Kinglee Mutwiri
 </div>
 
 <h1>
-Stories that make us pause, think and see life differently.
+Stories that make us stop and think.
 </h1>
 
 <p>
-Welcome to Kinglee Mutwiri — a growing collection of original
-storytelling about remarkable people, human experiences, personal
-journeys, interesting events and the lessons hidden within them.
+A place for original stories about people, human experiences,
+remarkable journeys, interesting events and the lessons hidden
+within everyday life.
 </p>
 
-<a href="stories.html" class="button">
-Explore the Stories
+<a href="stories.html" class="primary-btn">
+Explore Stories
 </a>
+
+</div>
 
 </div>
 
 </section>
 
 
-<!-- TOP ADSENSE -->
+<!-- ADSENSE -->
 
-<section class="ad-area">
+<section class="ad">
 
 <div class="container">
 
-<div class="ad-label">
+<div class="ad-text">
 Advertisement
 </div>
 
@@ -830,416 +722,262 @@ data-full-width-responsive="true">
 </section>
 
 
-<!-- INTRODUCTION -->
+<!-- INTRO -->
 
 <section class="container intro">
 
-<div class="kicker">
-The idea behind this website
+<div class="label">
+Welcome
 </div>
 
 <h2>
-Behind every name is a story.
+Every person has a story.
 </h2>
 
 <p>
-We often encounter people through headlines, photographs, short
-videos and social media posts. We see what happened, but we do not
-always get the opportunity to understand the journey behind it.
-Kinglee Mutwiri exists to explore those deeper stories — the
-experiences, choices, challenges and turning points that make human
-lives interesting.
+We often know people through headlines, photographs, achievements
+and short moments shared online. But behind every public moment is
+a much longer human journey. There are choices, struggles, hopes,
+mistakes, opportunities and experiences that rarely fit into a
+headline. Kinglee Mutwiri is a place to explore those deeper stories
+and discover what they can teach us about people and life.
 </p>
 
 </section>
 
 
-<!-- FEATURED -->
+<div class="container">
+<div class="divider"></div>
+</div>
 
-<section class="container">
 
-<div class="section-header">
+<!-- FEATURED STORY -->
+
+<section class="container story-section">
+
+<div class="section-heading">
 
 <h2>
-Featured Story
+Featured
 </h2>
 
-<small>
-Start here
-</small>
+<span>
+Storytelling
+</span>
 
 </div>
 
 
-<div class="feature">
+<article class="story-feature">
 
-
-<article class="feature-main">
-
-<img
-src="images/IMG-20260809-WA0003.jpg"
-alt="Kinglee Mutwiri">
-
-<div class="feature-text">
-
-<div class="category">
+<div class="label">
 People & Journeys
 </div>
 
 <h3>
-The stories behind the people we think we already know
+The human journey behind every remarkable story
 </h3>
 
 <p>
-Famous names are often reduced to their achievements. Yet every
-journey contains chapters that happened before recognition arrived.
-There are decisions, mistakes, opportunities, relationships and
-difficult moments that help explain how a person's story developed.
+A remarkable achievement is rarely the beginning of a person's story.
+Long before recognition arrives, there are usually years of learning,
+uncertainty, difficult choices and moments when the future is not
+clear. Looking at those chapters helps us understand that people are
+more than the achievements for which they become known.
 </p>
 
 <p>
-Looking beyond the obvious can reveal a more meaningful and human
-picture.
+Stories become more meaningful when we take time to understand the
+experiences behind the visible result. That is the kind of storytelling
+this website aims to explore.
 </p>
 
-<a href="stories.html" class="read-more">
-Discover the story collection →
-</a>
-
-</div>
-
-</article>
-
-
-<div class="side">
-
-
-<article class="side-card">
-
-<div class="category">
-Human Stories
-</div>
-
-<h3>
-The moments that quietly change a person's direction
-</h3>
-
-<p>
-Some of life's most important turning points begin as ordinary
-moments.
-</p>
-
-<a href="stories.html" class="read-more">
-Explore →
+<a href="stories.html" class="story-link">
+Read more stories →
 </a>
 
 </article>
-
-
-<article class="side-card">
-
-<div class="category">
-Life
-</div>
-
-<h3>
-What difficult chapters can teach us
-</h3>
-
-<p>
-Challenges can reveal patience, resilience and strengths we did not
-know we had.
-</p>
-
-<a href="stories.html" class="read-more">
-Explore →
-</a>
-
-</article>
-
-
-<article class="side-card">
-
-<div class="category">
-Lessons
-</div>
-
-<h3>
-Why the journey can matter more than the destination
-</h3>
-
-<p>
-The process behind an achievement can contain lessons that the final
-result cannot show.
-</p>
-
-<a href="stories.html" class="read-more">
-Explore →
-</a>
-
-</article>
-
-</div>
-
-</div>
 
 </section>
 
 
-<!-- PURPOSE -->
+<!-- ORIGINAL CONTENT -->
 
-<section class="mission">
+<section class="container content">
 
-<div class="container">
-
-<div class="section-header">
-
-<h2>
-What We Explore
-</h2>
-
-<small>
-Our focus
-</small>
-
-</div>
-
-
-<div class="mission-grid">
-
-
-<div class="mission-card">
-
-<div class="mission-number">
-01
-</div>
-
-<h3>
-People
-</h3>
-
-<p>
-Stories about remarkable people, their journeys, decisions,
-experiences and the circumstances that helped shape their lives.
-</p>
-
-</div>
-
-
-<div class="mission-card">
-
-<div class="mission-number">
-02
-</div>
-
-<h3>
-Human Experiences
-</h3>
-
-<p>
-Stories can help us understand experiences involving change,
-uncertainty, ambition, relationships, setbacks and new beginnings.
-</p>
-
-</div>
-
-
-<div class="mission-card">
-
-<div class="mission-number">
-03
-</div>
-
-<h3>
-Life Lessons
-</h3>
-
-<p>
-We look for ideas inside stories that can encourage reflection and
-help readers consider familiar situations from another perspective.
-</p>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ORIGINAL HOMEPAGE CONTENT -->
-
-<section class="container story-introduction">
-
-<div class="kicker">
-The power of a meaningful story
+<div class="label">
+Why storytelling matters
 </div>
 
 
 <h2>
-Why stories continue to matter
+Stories help us understand people
 </h2>
 
 <p>
-Stories have always been part of human life. Long before people had
-websites, newspapers, television or social media, they shared
-experiences through spoken stories. Communities used stories to
-remember important events, preserve knowledge and explain lessons
-learned through experience.
+Human beings have always used stories to communicate. Before modern
+technology made information available instantly, people relied on
+stories to preserve memories, explain experiences and pass knowledge
+from one generation to another. Stories helped communities remember
+important events and understand the consequences of decisions.
 </p>
 
 <p>
-Technology has changed how quickly information moves, but it has not
-removed the human need for stories. In fact, the enormous amount of
-information available today makes meaningful storytelling even more
-important. A headline may tell us that something happened, but a story
-can help us understand the people and circumstances behind it.
+Today, information moves faster than ever. We can learn about an event
+almost immediately after it happens. Yet speed does not always create
+understanding. A short headline can tell us what happened, while a
+well-developed story can help us understand the circumstances, people
+and decisions behind what happened.
 </p>
 
 
 <h2>
-There is usually more to a person than the public sees
+There is more to every journey than the final result
 </h2>
 
 <p>
-When someone becomes successful, attention naturally moves toward the
-achievement. We see the award, the business, the performance, the
-invention or the public recognition. What can disappear from view are
-the years that came before that moment.
+When we see someone succeeding, our attention naturally moves toward
+the result. We see the award, the business, the performance, the
+achievement or the public recognition. It is easy to forget the
+chapters that came before.
 </p>
 
 <p>
-Those earlier years may contain uncertainty, mistakes, preparation,
-rejection and decisions that were made without knowing what the final
-result would be. Understanding those chapters gives us a better
-picture of the person and makes the achievement more meaningful.
+Those chapters may include years of preparation, uncertainty,
+rejection, mistakes and difficult decisions. They may also include
+people who offered encouragement, opportunities that appeared at the
+right moment and experiences that changed the person's direction.
+</p>
+
+<p>
+Understanding those details makes a journey more human. It also
+reminds us that progress does not always happen in a straight line.
 </p>
 
 
 <h2>
-Not every important story belongs to a famous person
+Ordinary people have meaningful stories too
 </h2>
 
 <p>
-A meaningful story does not need a celebrity at its centre. Ordinary
-people experience extraordinary moments every day. A new opportunity,
-a difficult conversation, a family decision, a personal setback or a
-choice to begin again can completely change someone's direction.
+A good story does not need to involve a famous person. Every day,
+ordinary people make decisions that can change their lives. Someone
+may decide to learn a new skill, move to a different place, begin a
+business, repair a relationship or start again after a difficult
+period.
 </p>
 
 <p>
-These experiences may never appear in a newspaper or become popular
-online, but they can still contain lessons that other people can
-recognize. Human experiences often connect us because many of the
-questions we face are shared: How should we respond to disappointment?
-When should we take a risk? How do we continue when the future is
-uncertain?
+These moments may never become public news, but they still matter.
+They contain questions about courage, patience, responsibility,
+ambition and hope that many people can recognize in their own lives.
 </p>
 
 
 <h2>
-Success is rarely as simple as it looks
+What difficult experiences can teach us
 </h2>
 
 <p>
-Success is often presented as though it happened in one dramatic
-moment. In reality, progress usually develops gradually. People
-practice, learn, change direction and make mistakes before they reach
-a result that others notice.
+Life does not always follow the plans people make. A person can work
+hard and still experience disappointment. An opportunity can disappear.
+A decision can produce an unexpected result. These moments can be
+painful, but they can also become important chapters in a person's
+development.
 </p>
 
 <p>
-A useful story therefore looks beyond the final achievement. It asks
-what happened before the breakthrough and what the person learned
-along the way. These details can make a story more realistic and give
-readers ideas they can apply to their own circumstances.
+The value of a story is not pretending that every difficult experience
+has a perfect ending. Real life is more complicated. Instead, useful
+storytelling can examine how people respond, what they discover and
+how an experience changes their understanding of themselves or the
+world around them.
 </p>
 
 
 <h2>
-Failure can become an important chapter
+Success is usually built quietly
 </h2>
 
 <p>
-Failure is another part of human experience that deserves honest
-attention. Not every plan works. Not every opportunity becomes a
-success. Sometimes a person must accept that an approach is not
-working and decide what to do next.
+Many successful outcomes look sudden from the outside. The public may
+notice the moment of achievement without seeing the preparation that
+made it possible. Behind many accomplishments are repeated attempts,
+practice, learning and small improvements that accumulated over time.
 </p>
 
 <p>
-A setback can lead to reflection, new skills or a different direction.
-It does not automatically produce a happy ending, but the way people
-respond to difficult circumstances can reveal resilience and
-adaptability.
+That is why stories about journeys can be more useful than stories
+about results alone. They show the process and remind readers that
+progress can be gradual.
 </p>
 
 
 <h2>
-Stories allow us to see through another person's eyes
+Stories can change the way we see familiar things
 </h2>
 
 <p>
-One of the most valuable things about reading is the opportunity to
-encounter a perspective different from our own. Someone may have
-grown up in a different environment, faced challenges we have never
-experienced or made decisions under circumstances we cannot fully
-imagine.
+Reading about another person's experience gives us an opportunity to
+look at life from a different perspective. Someone may have grown up
+in a different environment or faced circumstances we have never
+experienced.
 </p>
 
 <p>
-We do not have to agree with every decision we read about. A story can
-still be valuable because it encourages us to ask questions and think
-more carefully about our own assumptions.
+We may not agree with every decision they made. That is not always the
+point. A story can still encourage us to ask better questions and
+understand why people sometimes make choices that look different from
+our own.
 </p>
 
 
 <h2>
-What you can expect from Kinglee Mutwiri
+The purpose of Kinglee Mutwiri
 </h2>
 
 <p>
-This website is being developed as a home for original storytelling.
-The subjects may vary because people and life are diverse. Some
-stories will focus on remarkable individuals and their journeys.
-Others may explore human experiences, interesting events or ideas
-that can encourage readers to reflect on everyday life.
+Kinglee Mutwiri is being built around a simple idea: stories should
+give readers something worth remembering. The website focuses on
+people, human experiences, personal journeys, interesting events and
+meaningful lessons.
 </p>
 
 <p>
-The intention is not to publish empty pages simply to increase the
-number of articles. Every story should have a purpose. It should give
-the reader enough context to understand the subject and, where
-appropriate, something meaningful to think about afterward.
+The goal is not simply to create pages filled with words. Each story
+should have a clear subject and a reason for the reader to continue.
+Good storytelling should be understandable, engaging and useful
+without unnecessary information.
+</p>
+
+<p>
+As the collection grows, the subjects will change. Some stories may
+introduce remarkable people. Others may examine an experience or an
+event from a human perspective. What connects them is curiosity about
+the stories behind the obvious.
 </p>
 
 
 <h2>
-A growing collection for curious readers
+A growing home for curious readers
 </h2>
 
 <p>
-If you enjoy learning about people, exploring different experiences
-and discovering the ideas hidden inside real-life journeys, this
-website is designed to give you a place to explore. You can begin with
-the stories section, learn more about the creator or return as new
-stories are published.
+If you enjoy discovering people's journeys, learning about human
+experiences or thinking about the lessons contained in everyday life,
+this website is designed for you.
 </p>
 
 <p>
-The collection will grow over time because there will always be new
-people to discover, new experiences to understand and new questions
-to explore. The best stories do not simply give us information. They
-leave us curious.
+You can explore the Stories page, learn more about the creator through
+the About page or contact the website directly if you have a question,
+suggestion or story-related inquiry.
 </p>
 
 <p>
-<strong>
-Sometimes the story we almost overlook becomes the story we remember
-the longest.
-</strong>
+The collection will continue to grow with the belief that there is
+always another person to understand, another experience to explore and
+another story waiting to be told.
 </p>
 
 </section>
@@ -1247,9 +985,9 @@ the longest.
 
 <!-- IN ARTICLE ADSENSE -->
 
-<div class="content-ad">
+<section class="middle-ad">
 
-<div class="ad-label">
+<div class="ad-text">
 Advertisement
 </div>
 
@@ -1265,164 +1003,131 @@ data-ad-slot="1217574823">
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-</div>
+</section>
 
 
-<!-- STORY COLLECTION -->
+<!-- VALUES -->
 
-<section class="container collection">
+<section class="values">
 
-<div class="section-header">
+<div class="container">
+
+<div class="section-heading">
 
 <h2>
-Explore Our Stories
+What We Explore
 </h2>
 
-<small>
-Browse the collection
-</small>
+<span>
+Our focus
+</span>
 
 </div>
 
 
-<div class="cards">
+<div class="values-grid">
 
 
-<article class="card">
+<div class="value">
 
-<img
-src="images/IMG-20260809-WA0003.jpg"
-alt="Stories about people">
+<div class="value-number">
+01
+</div>
 
-<div class="card-content">
-
-<div class="category">
+<h3>
 People
-</div>
-
-<h3>
-The journeys behind the people we remember
 </h3>
 
 <p>
-Explore stories that look beyond the public image and examine the
-experiences that shaped remarkable journeys.
+The lives, journeys, choices and experiences of remarkable and
+interesting people.
 </p>
-
-<a href="stories.html" class="read-more">
-View stories →
-</a>
 
 </div>
 
-</article>
 
+<div class="value">
 
-<article class="card">
-
-<img
-src="images/IMG-20260809-WA0003.jpg"
-alt="Human experiences">
-
-<div class="card-content">
-
-<div class="category">
-Experiences
+<div class="value-number">
+02
 </div>
 
 <h3>
-The moments that can change our direction
+Life
 </h3>
 
 <p>
-Discover stories about decisions, challenges, opportunities and
-experiences that influence people's lives.
+Human experiences, turning points, challenges, opportunities and
+moments that shape our lives.
 </p>
-
-<a href="stories.html" class="read-more">
-View stories →
-</a>
 
 </div>
 
-</article>
 
+<div class="value">
 
-<article class="card">
-
-<img
-src="images/IMG-20260809-WA0003.jpg"
-alt="Life lessons">
-
-<div class="card-content">
-
-<div class="category">
-Life Lessons
+<div class="value-number">
+03
 </div>
 
 <h3>
-What other people's experiences can teach us
+Lessons
 </h3>
 
 <p>
-Stories can help us reflect on familiar situations and consider ideas
-from perspectives different from our own.
+Ideas and perspectives that encourage readers to reflect on their own
+experiences.
 </p>
-
-<a href="stories.html" class="read-more">
-View stories →
-</a>
 
 </div>
 
-</article>
 
+</div>
 
 </div>
 
 </section>
 
 
-<!-- ABOUT -->
+<!-- AUTHOR -->
 
-<section class="about">
+<section class="author">
 
-<div class="container about-grid">
-
+<div class="container author-inner">
 
 <div>
 
 <img
 src="images/IMG-20260809-WA0003.jpg"
 alt="Kinglee Mutwiri"
-class="author-image">
+class="author-photo">
 
 </div>
 
 
 <div>
 
-<div class="category">
+<div class="label">
 About the creator
 </div>
 
 <h2>
-A simple idea: tell stories worth remembering.
+Meet Kinglee Mutwiri
 </h2>
 
 <p>
-Kinglee Mutwiri is a storytelling website focused on people, human
-experiences, personal journeys and the lessons that can be discovered
-inside them.
+Kinglee Mutwiri is the creator behind this storytelling website,
+which explores people, experiences and the ideas that can be found
+inside meaningful stories.
 </p>
 
 <p>
-The aim is to create a growing collection of original stories that
-are interesting to read, easy to understand and meaningful enough to
-make readers stop and think.
+The vision is to build a collection of original stories that readers
+can enjoy while discovering different perspectives on people and
+life.
 </p>
 
-<a href="about.html" class="read-more">
+<a href="about.html" class="story-link">
 Learn more about Kinglee Mutwiri →
 </a>
 
@@ -1433,9 +1138,11 @@ Learn more about Kinglee Mutwiri →
 </section>
 
 
-<!-- PHILOSOPHY -->
+<!-- QUOTE -->
 
-<section class="container philosophy">
+<section class="quote">
+
+<div class="quote-inner">
 
 <div class="quote-mark">
 “
@@ -1445,6 +1152,8 @@ Learn more about Kinglee Mutwiri →
 A good story does more than tell us what happened. It gives us a
 reason to understand, remember and think about what happened.
 </p>
+
+</div>
 
 </section>
 
@@ -1463,8 +1172,8 @@ Kinglee <span>Mutwiri</span>
 </h2>
 
 <p>
-A storytelling website exploring people, human experiences, personal
-journeys, interesting events and meaningful life lessons.
+Original storytelling about people, human experiences, journeys,
+interesting events and meaningful lessons.
 </p>
 
 </div>
@@ -1473,7 +1182,7 @@ journeys, interesting events and meaningful life lessons.
 <div>
 
 <h3>
-Explore
+Website
 </h3>
 
 <ul class="footer-links">
@@ -1502,7 +1211,7 @@ Explore
 <div>
 
 <h3>
-Legal
+Information
 </h3>
 
 <ul class="footer-links">
@@ -1527,7 +1236,7 @@ Legal
 <div>
 
 <h3>
-Follow
+Social
 </h3>
 
 <ul class="footer-links">
@@ -1560,14 +1269,10 @@ Facebook
 © 2026 Kinglee Mutwiri. All rights reserved.
 </div>
 
-<div class="footer-bottom-links">
-
+<div>
 <a href="privacy-policy.html">Privacy</a>
-
+&nbsp;&nbsp;|&nbsp;&nbsp;
 <a href="terms.html">Terms</a>
-
-<a href="contact.html">Contact</a>
-
 </div>
 
 </div>
