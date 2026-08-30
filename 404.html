@@ -1,1281 +1,607 @@
- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>America AI</title>
 
-  <!-- 1. GOOGLE ANALYTICS 4 - FOR ANALYSIS -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X3HE9CKP90"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-X3HE9CKP90');
-  </script>
+<meta charset="UTF-8">
 
-  <!-- 2. GOOGLE ADSENSE - FOR ADS -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5799841502846177"
-     crossorigin="anonymous"></script>
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<title>Page Not Found | Kinglee Mutwiri</title>
 
-  <style>
-    :root{
-      --navy:#0f2343;
-      --blue:#1d5cff;
-      --sky:#53a6ff;
-      --green:#14985d;
-      --gold:#de9f22;
-      --orange:#f06c2e;
-      --red:#cc3c32;
-      --cream:#fff9f0;
-      --paper:#ffffff;
-      --soft:#f5f9ff;
-      --ink:#13233d;
-      --muted:#5f6f84;
-      --line:#dce6f2;
-      --shadow:0 28px 70px rgba(15,35,67,.14);
-      --shadow-soft:0 12px 30px rgba(19,35,61,.08);
-      --radius:28px;
-      --max:1280px;
-    }
+<meta name="description"
+content="The page you are looking for could not be found. Return to Kinglee Mutwiri's website to explore stories, biographies and life lessons.">
 
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family:'Manrope', sans-serif;
-      color:var(--ink);
-      line-height:1.82;
-      background:
-        radial-gradient(circle at top left, rgba(29,92,255,.10), transparent 24%),
-        radial-gradient(circle at top right, rgba(240,108,46,.08), transparent 20%),
-        linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);
-      overflow-x:hidden;
-    }
+<meta name="author"
+content="Kinglee Mutwiri">
 
-    a{text-decoration:none;color:inherit}
-    img{display:block;max-width:100%}
-    ::selection{background:var(--navy);color:#fff}
+<meta name="robots"
+content="noindex, follow">
 
-    .container{
-      width:min(var(--max), calc(100% - 2rem));
-      margin-inline:auto;
-    }
+<style>
 
-    .top-stripe{
-      height:8px;
-      background:linear-gradient(90deg, var(--red) 0 20%, var(--orange) 20% 40%, var(--gold) 40% 60%, var(--green) 60% 80%, var(--blue) 80% 100%);
-    }
+:root{
+    --black:#080808;
+    --black2:#181818;
+    --gold:#d4af37;
+    --gold-light:#f5df91;
+    --green:#075c35;
+    --green-dark:#04351f;
+    --cream:#fffaf0;
+    --white:#ffffff;
+    --text:#292929;
+    --muted:#666666;
+    --border:#eadfc8;
+}
 
-    .site-header{
-      position:relative;
-      min-height:100vh;
-      overflow:hidden;
-      color:#fff;
-      background:
-        linear-gradient(135deg, rgba(15,35,67,.82), rgba(29,92,255,.42)),
-        radial-gradient(circle at 18% 18%, rgba(255,255,255,.14), transparent 20%),
-        radial-gradient(circle at 82% 20%, rgba(83,166,255,.18), transparent 20%),
-        radial-gradient(circle at 72% 78%, rgba(20,152,93,.16), transparent 24%),
-        linear-gradient(135deg, #10213d 0%, #1a4db1 45%, #176c74 100%);
-      border-bottom:1px solid rgba(255,255,255,.14);
-    }
+*{
+    box-sizing:border-box;
+}
 
-    .site-header::before,
-    .site-header::after{
-      content:"";
-      position:absolute;
-      border-radius:50%;
-      filter:blur(10px);
-      pointer-events:none;
-    }
+html{
+    scroll-behavior:smooth;
+}
 
-    .site-header::before{
-      width:460px;height:460px;left:-130px;top:-160px;
-      background:radial-gradient(circle, rgba(255,255,255,.14), transparent 70%);
-    }
+body{
+    margin:0;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
 
-    .site-header::after{
-      width:360px;height:360px;right:-90px;bottom:-110px;
-      background:radial-gradient(circle, rgba(20,152,93,.24), transparent 70%);
-    }
+    background:
+        linear-gradient(
+            180deg,
+            var(--cream),
+            #fffdf7
+        );
 
-    .nav{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:1rem;
-      padding:1rem 0;
-      position:sticky;
-      top:0;
-      z-index:60;
-      backdrop-filter:blur(14px);
-      background:linear-gradient(180deg, rgba(15,35,67,.48), rgba(15,35,67,.10));
-      border-bottom:1px solid rgba(255,255,255,.08);
-    }
+    color:var(--text);
 
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:.9rem;
-      font-family:'Sora', sans-serif;
-      font-weight:800;
-      letter-spacing:.02em;
-    }
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
-    .brand-mark{
-      width:56px;height:56px;border-radius:18px;
-      display:grid;place-items:center;
-      background:linear-gradient(135deg, var(--orange), var(--gold), var(--green), var(--blue));
-      border:1px solid rgba(255,255,255,.22);
-      box-shadow:0 12px 30px rgba(0,0,0,.16);
+    line-height:1.8;
+}
+
+/* ============================= */
+/* NAVIGATION */
+/* ============================= */
+
+.site-header{
+    background:
+        linear-gradient(
+            135deg,
+            var(--black),
+            var(--black2)
+        );
+
+    border-bottom:
+        4px solid var(--gold);
+
+    box-shadow:
+        0 4px 18px rgba(0,0,0,.20);
+}
+
+.nav-container{
+    max-width:1150px;
+    margin:auto;
+
+    padding:
+        15px 20px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    gap:20px;
+}
+
+.logo{
+    color:white;
+    text-decoration:none;
+
+    font-size:25px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:var(--gold);
+}
+
+.nav-links{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+
+    gap:6px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+
+    padding:
+        8px 11px;
+
+    border-radius:7px;
+
+    font-family:Arial,sans-serif;
+    font-size:14px;
+    font-weight:bold;
+
+    transition:
+        background .2s ease,
+        color .2s ease;
+}
+
+.nav-links a:hover{
+    background:var(--gold);
+    color:var(--black);
+}
+
+/* ============================= */
+/* MAIN ERROR AREA */
+/* ============================= */
+
+main{
+    width:100%;
+    max-width:900px;
+
+    margin:auto;
+
+    padding:
+        65px 20px;
+
+    text-align:center;
+}
+
+.error-number{
+    margin:0;
+
+    font-family:Arial,sans-serif;
+
+    font-size:
+        clamp(100px,22vw,190px);
+
+    font-weight:900;
+
+    line-height:1;
+
+    color:var(--green);
+
+    text-shadow:
+        5px 5px 0 var(--gold-light);
+}
+
+h1{
+    margin:
+        25px 0 15px;
+
+    color:var(--black);
+
+    font-size:
+        clamp(30px,5vw,46px);
+
+    line-height:1.2;
+}
+
+main p{
+    max-width:700px;
+
+    margin:
+        15px auto;
+
+    color:var(--muted);
+
+    font-size:18px;
+}
+
+/* ============================= */
+/* BUTTONS */
+/* ============================= */
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+
+    gap:14px;
+
+    margin-top:32px;
+}
+
+.button{
+    display:inline-block;
+
+    padding:
+        13px 25px;
+
+    border-radius:9px;
+
+    text-decoration:none;
+
+    font-family:Arial,sans-serif;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    transition:
+        transform .2s ease,
+        background .2s ease;
+}
+
+.home-button{
+    background:var(--green);
+    color:white;
+
+    border:
+        2px solid var(--green);
+}
+
+.home-button:hover{
+    background:var(--green-dark);
+
+    transform:
+        translateY(-2px);
+}
+
+.back-button{
+    background:white;
+    color:var(--green);
+
+    border:
+        2px solid var(--green);
+}
+
+.back-button:hover{
+    background:#eef8f1;
+
+    transform:
+        translateY(-2px);
+}
+
+/* ============================= */
+/* EXPLORATION BOX */
+/* ============================= */
+
+.explore{
+    margin-top:55px;
+
+    padding:
+        30px 22px;
+
+    background:white;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:18px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.08);
+}
+
+.explore h2{
+    margin-top:0;
+
+    color:var(--green);
+
+    font-size:28px;
+}
+
+.explore p{
+    font-size:17px;
+}
+
+.explore-links{
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:15px;
+
+    margin-top:20px;
+}
+
+.explore-links a{
+    color:var(--green);
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    padding:
+        8px 10px;
+}
+
+.explore-links a:hover{
+    color:#9b7a12;
+
+    text-decoration:underline;
+}
+
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+
+footer{
+    margin-top:auto;
+
+    background:
+        linear-gradient(
+            135deg,
+            #050505,
+            #151515
+        );
+
+    color:#cccccc;
+
+    text-align:center;
+
+    padding:
+        38px 20px;
+
+    border-top:
+        4px solid var(--gold);
+}
+
+footer strong{
+    color:var(--gold-light);
+
+    font-size:21px;
+}
+
+footer p{
+    margin:
+        7px 0;
+
+    font-family:Arial,sans-serif;
+
+    font-size:14px;
+}
+
+/* ============================= */
+/* MOBILE */
+/* ============================= */
+
+@media(max-width:700px){
+
+    .nav-container{
+        flex-direction:column;
+
+        padding:
+            14px 10px;
     }
 
     .nav-links{
-      display:flex;
-      flex-wrap:wrap;
-      align-items:center;
-      gap:1rem 1.1rem;
+        width:100%;
     }
 
     .nav-links a{
-      color:rgba(255,255,255,.95);
-      font-weight:700;
-      font-size:.95rem;
-      position:relative;
+        font-size:13px;
+
+        padding:
+            7px 8px;
     }
 
-    .nav-links a::after{
-      content:"";
-      position:absolute;
-      left:0;bottom:-4px;
-      width:0;height:2px;background:#fff;
-      transition:width .3s ease;
+    main{
+        padding:
+            45px 15px;
     }
 
-    .nav-links a:hover::after{width:100%}
-
-    .hero{
-      min-height:calc(100vh - 88px);
-      display:grid;
-      align-items:end;
-      padding:3rem 0 5rem;
-      position:relative;
-      z-index:2;
-    }
-
-    .hero-grid{
-      display:grid;
-      grid-template-columns:1.02fr .98fr;
-      gap:2rem;
-      align-items:end;
-    }
-
-    .eyebrow{
-      display:inline-block;
-      padding:.55rem .95rem;
-      border-radius:999px;
-      font-weight:800;
-      text-transform:uppercase;
-      letter-spacing:.16em;
-      font-size:.74rem;
-      margin-bottom:1rem;
-      color:#fff9d7;
-      border:1px solid rgba(255,255,255,.2);
-      background:linear-gradient(90deg, rgba(240,108,46,.32), rgba(222,159,34,.30), rgba(29,92,255,.26));
-      backdrop-filter:blur(10px);
-    }
-
-    h1,h2,h3,h4{
-      font-family:'Sora', sans-serif;
-      line-height:1.04;
-      letter-spacing:-.03em;
-      margin:0 0 1rem;
-    }
-
-    .error-code{
-      font-size:clamp(5rem, 13vw, 10rem);
-      line-height:.9;
-      font-weight:800;
-      letter-spacing:-.06em;
-      margin:0 0 .8rem;
-      color:#fff;
-      text-shadow:0 16px 40px rgba(0,0,0,.22);
-      font-family:'Sora', sans-serif;
+    .error-number{
+        font-size:115px;
     }
 
     h1{
-      font-size:clamp(2.6rem, 5vw, 5.2rem);
-      max-width:9ch;
-      text-shadow:0 10px 30px rgba(0,0,0,.22);
+        font-size:31px;
     }
 
-    .lead{
-      margin:0;
-      max-width:68ch;
-      color:rgba(255,255,255,.94);
-      font-size:clamp(1.03rem, 1.8vw, 1.16rem);
-      text-shadow:0 6px 18px rgba(0,0,0,.24);
+    main p{
+        font-size:17px;
     }
 
-    .hero-actions{
-      display:flex;
-      flex-wrap:wrap;
-      gap:1rem;
-      margin-top:1.8rem;
-    }
-
-    .btn{
-      min-height:54px;
-      padding:0 1.2rem;
-      border-radius:999px;
-      border:none;
-      cursor:pointer;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:.7rem;
-      font-weight:800;
-      transition:transform .28s ease, box-shadow .28s ease, background .28s ease;
-    }
-
-    .btn-primary{
-      background:#fff;
-      color:var(--navy);
-      box-shadow:0 12px 30px rgba(0,0,0,.18);
-    }
-
-    .btn-primary:hover{
-      transform:translateY(-3px);
-      box-shadow:0 18px 38px rgba(0,0,0,.22);
-    }
-
-    .btn-secondary{
-      background:rgba(255,255,255,.12);
-      color:#fff;
-      border:1px solid rgba(255,255,255,.24);
-      backdrop-filter:blur(10px);
-    }
-
-    .btn-secondary:hover{
-      transform:translateY(-3px);
-      background:rgba(255,255,255,.18);
-    }
-
-    .hero-panel{
-      border-radius:30px;
-      overflow:hidden;
-      border:1px solid rgba(255,255,255,.16);
-      box-shadow:0 18px 40px rgba(0,0,0,.18);
-      background:linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.06));
-      backdrop-filter:blur(10px);
-      padding:1rem;
-    }
-
-    .search-wrap{
-      border-radius:24px;
-      overflow:hidden;
-      background:rgba(255,255,255,.10);
-      border:1px solid rgba(255,255,255,.16);
-      padding:1.1rem;
-      margin-bottom:1rem;
-    }
-
-    .search-title{
-      font-family:'Sora', sans-serif;
-      font-size:1.28rem;
-      margin-bottom:.4rem;
-      color:#fff;
-    }
-
-    .search-text{
-      margin:0 0 1rem;
-      color:rgba(255,255,255,.88);
-    }
-
-    .search-box{
-      display:flex;
-      gap:.8rem;
-      flex-wrap:wrap;
-    }
-
-    .search-box input{
-      flex:1 1 240px;
-      min-height:56px;
-      border-radius:16px;
-      border:1px solid rgba(255,255,255,.18);
-      background:rgba(255,255,255,.96);
-      color:var(--ink);
-      padding:0 1rem;
-      outline:none;
-      font:inherit;
-    }
-
-    .search-box button{
-      min-height:56px;
-      padding:0 1.1rem;
-      border:none;
-      border-radius:16px;
-      background:linear-gradient(135deg, var(--gold), #ffcb63);
-      color:#5c3a00;
-      font:inherit;
-      font-weight:800;
-      cursor:pointer;
-      transition:transform .28s ease, box-shadow .28s ease;
-      box-shadow:0 10px 24px rgba(222,159,34,.22);
-    }
-
-    .search-box button:hover{
-      transform:translateY(-2px);
-      box-shadow:0 14px 30px rgba(222,159,34,.28);
-    }
-
-    .quick-links{
-      display:flex;
-      flex-wrap:wrap;
-      gap:.8rem;
-      margin-top:.95rem;
-    }
-
-    .quick-links a{
-      display:inline-flex;
-      padding:.7rem .95rem;
-      border-radius:999px;
-      background:rgba(255,255,255,.12);
-      border:1px solid rgba(255,255,255,.18);
-      color:#fff;
-      font-weight:700;
-      font-size:.92rem;
-      transition:transform .28s ease, background .28s ease;
-    }
-
-    .quick-links a:hover{
-      transform:translateY(-2px);
-      background:rgba(255,255,255,.18);
-    }
-
-    .smart-image{
-      position:relative;
-      overflow:hidden;
-      border-radius:22px;
-      min-height:360px;
-      background:
-        radial-gradient(circle at top left, rgba(222,159,34,.24), transparent 22%),
-        radial-gradient(circle at bottom right, rgba(29,92,255,.18), transparent 24%),
-        linear-gradient(135deg, #1c325d 0%, #244e9f 50%, #2d8a58 100%);
-    }
-
-    .smart-image img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      position:relative;
-      z-index:2;
-    }
-
-    .fallback-art{
-      position:absolute;
-      inset:0;
-      z-index:1;
-      background:
-        radial-gradient(circle at 50% 18%, rgba(255,255,255,.85), rgba(255,255,255,.14) 16%, transparent 28%),
-        radial-gradient(circle at 18% 74%, rgba(240,108,46,.14), transparent 20%),
-        radial-gradient(circle at 82% 74%, rgba(20,152,93,.14), transparent 22%),
-        linear-gradient(135deg, rgba(15,35,67,.36), rgba(15,35,67,.08));
-    }
-
-    .fallback-badge{
-      position:absolute;
-      left:14px;
-      bottom:14px;
-      z-index:3;
-      display:inline-flex;
-      align-items:center;
-      gap:.5rem;
-      padding:.55rem .8rem;
-      border-radius:999px;
-      color:#fff;
-      background:rgba(15,35,67,.50);
-      border:1px solid rgba(255,255,255,.14);
-      backdrop-filter:blur(10px);
-      font-size:.78rem;
-      font-weight:800;
-      letter-spacing:.05em;
-      text-transform:uppercase;
-    }
-
-    .fallback-badge::before{
-      content:"";
-      width:10px;height:10px;border-radius:50%;
-      background:linear-gradient(135deg, var(--orange), var(--gold), var(--green), var(--blue));
-      box-shadow:0 0 0 3px rgba(255,255,255,.12);
-    }
-
-    .smart-image.is-loaded .fallback-badge span::after{content:"Image loaded"}
-    .smart-image:not(.is-loaded) .fallback-badge span::after{content:"Fallback visual"}
-
-    main section{padding:5rem 0}
-
-    .section-head{
-      display:grid;
-      grid-template-columns:.9fr 1.1fr;
-      gap:2rem;
-      align-items:end;
-      margin-bottom:2rem;
-    }
-
-    .kicker{
-      display:block;
-      margin-bottom:.75rem;
-      text-transform:uppercase;
-      letter-spacing:.14em;
-      font-weight:800;
-      font-size:.78rem;
-    }
-
-    .kicker.blue{color:var(--blue)}
-    .kicker.green{color:var(--green)}
-    .kicker.gold{color:var(--gold)}
-    .kicker.red{color:var(--red)}
-
-    .section-head h2{
-      font-size:clamp(2rem, 4vw, 4rem);
-      max-width:12ch;
-    }
-
-    .section-head p{
-      margin:0;
-      color:var(--muted);
-      font-size:1.04rem;
-      max-width:68ch;
-    }
-
-    .content-layout{
-      display:grid;
-      grid-template-columns:1.05fr .95fr;
-      gap:2rem;
-      align-items:start;
-    }
-
-    .paper{
-      background:linear-gradient(180deg, #ffffff, #fcfdff);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow-soft);
-      padding:1.6rem;
-      position:relative;
-      overflow:hidden;
-    }
-
-    .paper::before{
-      content:"";
-      position:absolute;
-      width:240px;height:240px;border-radius:50%;
-      right:-70px;top:-70px;
-      background:radial-gradient(circle, rgba(29,92,255,.08), transparent 70%);
-      pointer-events:none;
-    }
-
-    .paper::after{
-      content:"";
-      position:absolute;
-      left:0;top:0;right:0;height:7px;
-      background:linear-gradient(90deg, var(--orange), var(--gold), var(--green), var(--blue));
-    }
-
-    .content-flow{
-      columns:2 320px;
-      column-gap:2rem;
-    }
-
-    .content-flow p{
-      margin:0 0 1.15rem;
-      color:var(--muted);
-      break-inside:avoid;
-    }
-
-    .sidebar{
-      display:grid;
-      gap:1rem;
-    }
-
-    .mini{
-      border-radius:22px;
-      padding:1.15rem 1.2rem;
-      box-shadow:var(--shadow-soft);
-      border:1px solid var(--line);
-      position:relative;
-      overflow:hidden;
-      background:#fff;
-    }
-
-    .mini::before{
-      content:"";
-      position:absolute;
-      left:0;top:0;bottom:0;width:7px;
-    }
-
-    .mini.blue{background:linear-gradient(180deg, #f7fbff, #edf5ff)}
-    .mini.green{background:linear-gradient(180deg, #f7fff8, #edfff1)}
-    .mini.gold{background:linear-gradient(180deg, #fffdf7, #fff7df)}
-    .mini.red{background:linear-gradient(180deg, #fff8f8, #fff0f0)}
-
-    .mini.blue::before{background:var(--blue)}
-    .mini.green::before{background:var(--green)}
-    .mini.gold::before{background:var(--gold)}
-    .mini.red::before{background:var(--red)}
-
-    .mini strong{
-      display:block;
-      font-family:'Sora', sans-serif;
-      font-size:1.16rem;
-      margin-bottom:.3rem;
-    }
-
-    .mini.blue strong{color:var(--blue)}
-    .mini.green strong{color:var(--green)}
-    .mini.gold strong{color:#9d6a00}
-    .mini.red strong{color:var(--red)}
-    .mini span{color:var(--muted)}
-
-    .showcase{
-      background:linear-gradient(180deg, #f8fbff 0%, #fff 100%);
-      border-top:1px solid var(--line);
-      border-bottom:1px solid var(--line);
-      position:relative;
-    }
-
-    .showcase::before{
-      content:"";
-      position:absolute;
-      left:0;right:0;top:0;height:8px;
-      background:linear-gradient(90deg, var(--orange), var(--gold), var(--green), var(--blue));
-    }
-
-    .cards{
-      display:grid;
-      grid-template-columns:repeat(12,1fr);
-      gap:1rem;
-    }
-
-    .card{
-      grid-column:span 4;
-      border:1px solid var(--line);
-      border-radius:24px;
-      overflow:hidden;
-      background:#fff;
-      box-shadow:var(--shadow-soft);
-      transition:transform .3s ease, box-shadow .3s ease;
-      position:relative;
-    }
-
-    .card::before{
-      content:"";
-      position:absolute;
-      left:0;right:0;top:0;height:6px;
-      background:linear-gradient(90deg, var(--orange), var(--gold), var(--green), var(--blue));
-      z-index:2;
-    }
-
-    .card:hover{
-      transform:translateY(-8px);
-      box-shadow:var(--shadow);
-    }
-
-    .card-photo{
-      height:220px;
-      overflow:hidden;
-      border-bottom:1px solid var(--line);
-      position:relative;
-      background:#ecf4ff;
-    }
-
-    .card-photo .smart-image{
-      min-height:220px;
-      border-radius:0;
-      border:none;
-    }
-
-    .card-body{padding:1.2rem}
-
-    .tag{
-      display:inline-flex;
-      margin-bottom:.8rem;
-      padding:.35rem .72rem;
-      border-radius:999px;
-      font-size:.78rem;
-      font-weight:800;
-      text-transform:uppercase;
-      letter-spacing:.08em;
-      color:#fff;
-    }
-
-    .tag.blue{background:var(--blue)}
-    .tag.green{background:var(--green)}
-    .tag.gold{background:var(--gold)}
-    .tag.red{background:var(--red)}
-
-    .card h3{
-      font-size:1.18rem;
-      margin-bottom:.5rem;
-    }
-
-    .card p{
-      margin:0;
-      color:var(--muted);
-    }
-
-    .cta-box{
-      border:1px solid var(--line);
-      background:linear-gradient(180deg, #ffffff, #fbfdff);
-      border-radius:30px;
-      padding:1.5rem;
-      box-shadow:var(--shadow);
-      display:grid;
-      grid-template-columns:1fr .95fr;
-      gap:1.4rem;
-      position:relative;
-      overflow:hidden;
-    }
-
-    .cta-box::before{
-      content:"";
-      position:absolute;
-      inset:0 0 auto 0;height:8px;
-      background:linear-gradient(90deg, var(--orange), var(--gold), var(--green), var(--blue));
-    }
-
-    .contact-items{
-      display:grid;
-      gap:1rem;
-      align-content:start;
-    }
-
-    .contact-item{
-      display:flex;
-      align-items:center;
-      gap:1rem;
-      padding:1rem 1.1rem;
-      border-radius:20px;
-      background:#fff;
-      border:1px solid var(--line);
-      box-shadow:var(--shadow-soft);
-      transition:transform .28s ease, box-shadow .28s ease;
-    }
-
-    .contact-item:hover{
-      transform:translateY(-4px);
-      box-shadow:var(--shadow);
-    }
-
-    .contact-icon{
-      width:56px;height:56px;border-radius:18px;
-      display:grid;place-items:center;
-      background:linear-gradient(135deg, var(--orange), var(--gold), var(--green), var(--blue));
-      color:#fff;
-      flex:0 0 auto;
-    }
-
-    .note{
-      padding:1rem 1.15rem;
-      border-radius:18px;
-      border:1px solid var(--line);
-      background:linear-gradient(135deg, rgba(240,108,46,.08), rgba(222,159,34,.08), rgba(20,152,93,.08), rgba(29,92,255,.08));
-      color:var(--muted);
-      box-shadow:var(--shadow-soft);
-      margin-top:1rem;
-    }
-
-    footer{
-      padding:2rem 0 3rem;
-      color:var(--muted);
-      border-top:1px solid var(--line);
-      background:#fff;
-    }
-
-    .footer-row{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:1rem;
-      flex-wrap:wrap;
-    }
-
-    .reveal{
-      opacity:0;
-      transform:translateY(22px);
-      transition:opacity .78s ease, transform .78s ease;
-    }
-
-    .reveal.visible{
-      opacity:1;
-      transform:translateY(0);
-    }
-
-    .stagger > *{
-      opacity:0;
-      transform:translateY(18px);
-      animation:rise .85s ease forwards;
-    }
-
-    .stagger > *:nth-child(1){animation-delay:.08s}
-    .stagger > *:nth-child(2){animation-delay:.18s}
-    .stagger > *:nth-child(3){animation-delay:.28s}
-    .stagger > *:nth-child(4){animation-delay:.38s}
-    .stagger > *:nth-child(5){animation-delay:.48s}
-    .stagger > *:nth-child(6){animation-delay:.58s}
-
-    @keyframes rise{
-      to{opacity:1;transform:translateY(0)}
-    }
-
-    @media (max-width: 1020px){
-      .hero-grid,
-      .section-head,
-      .content-layout,
-      .cta-box{
-        grid-template-columns:1fr;
-      }
-      .card{grid-column:span 6}
-      .smart-image{min-height:320px}
-    }
-
-    @media (max-width: 720px){
-      .nav{
+    .buttons{
         flex-direction:column;
-        align-items:flex-start;
-      }
-      .cards{
-        grid-template-columns:1fr;
-      }
-      .card{grid-column:span 1}
-      .content-flow{columns:1}
-      h1{max-width:100%}
-      main section{padding:4rem 0}
-      .search-box{flex-direction:column}
-      .search-box button{width:100%}
+
+        max-width:320px;
+
+        margin:
+            30px auto 0;
     }
-  </style>
+
+    .button{
+        width:100%;
+    }
+
+    .explore{
+        padding:
+            25px 15px;
+    }
+
+}
+
+</style>
+
 </head>
+
 <body>
-  <div class="top-stripe"></div>
 
-  <header class="site-header" id="top">
-    <div class="container">
-      <nav class="nav">
-        <a class="brand" href="index.html" aria-label="America AI home">
-          <span class="brand-mark" aria-hidden="true">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
-              <path d="M12 3l7 4v10l-7 4-7-4V7l7-4z" stroke="white" stroke-width="1.8" stroke-linejoin="round"/>
-              <path d="M8.5 9.2h7M8.5 12h7M8.5 14.8h4.8" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
-            </svg>
-          </span>
-          <span>AMERICA AI</span>
-        </a>
+<!-- ============================= -->
+<!-- NAVIGATION -->
+<!-- ============================= -->
 
-        <div class="nav-links">
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
-          <a href="#popular">Popular Pages</a>
-          <a href="#help">Help</a>
-        </div>
-      </nav>
+<header class="site-header">
 
-      <section class="hero">
-        <div class="hero-grid">
-          <div class="stagger">
-            <span class="eyebrow">404 - Page Not Found</span>
-            <div class="error-code">404</div>
-            <h1>The page you wanted could not be found.</h1>
-            <p class="lead">
-              Sorry, the page you tried to open is not available right now. It may have been moved, renamed, deleted,
-              or the link may have been typed incorrectly. The good news is that you are still inside America AI,
-              and we can help you get back to the right place quickly.
-            </p>
+<div class="nav-container">
 
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="index.html">Back to Home</a>
-              <a class="btn btn-secondary" href="about.html">About America AI</a>
-            </div>
-          </div>
+<a
+class="logo"
+href="https://kinglee6mutwiri.co.ke/">
 
-          <aside class="hero-panel reveal">
-            <div class="search-wrap">
-              <div class="search-title">Search the site</div>
-              <p class="search-text">
-                If you remember a keyword, page title, or topic, try searching below and use the quick links to continue browsing.
-              </p>
-              <div class="search-box">
-                <input type="text" id="siteSearch" placeholder="Search AI, jobs, contact, about, health..." aria-label="Search site topics">
-                <button type="button" id="searchBtn">Search</button>
-              </div>
+Kinglee <span>Mutwiri</span>
 
-              <div class="quick-links" id="searchResults">
-                <a href="index.html" data-keywords="home homepage america ai main landing page">Home</a>
-                <a href="about.html" data-keywords="about mission who we are educational website">About</a>
-                <a href="contact.html" data-keywords="contact email support help">Contact</a>
-                <a href="job-seekers-usa.html" data-keywords="jobs careers job seekers usa work online career advice">Jobs & Careers</a>
-                <a href="ai-ethics-kenya.html" data-keywords="ai ethics kenya artificial intelligence policy future">AI Ethics</a>
-                <a href="privacy-policy.html" data-keywords="privacy cookies data policy">Privacy Policy</a>
-                <a href="terms.html" data-keywords="terms conditions rules website">Terms</a>
-              </div>
-            </div>
+</a>
 
-            <div class="smart-image" data-role="image" aria-label="Decorative America AI visual">
-              <div class="fallback-art"></div>
-              <img src="404-visual.jpg" alt="Decorative technology visual for America AI 404 page" loading="lazy">
-              <div class="fallback-badge"><span></span></div>
-            </div>
-          </aside>
-        </div>
-      </section>
-    </div>
-  </header>
+<nav
+class="nav-links"
+aria-label="Main navigation">
 
-  <main>
-    <section id="help">
-      <div class="container">
-        <div class="section-head reveal">
-          <div>
-            <span class="kicker blue">Friendly message</span>
-            <h2>A clear explanation, not a dead end.</h2>
-          </div>
-          <p>
-            A good 404 page should reduce confusion, protect trust, and guide visitors back into the website with clarity.
-            That is exactly what this page is designed to do.
-          </p>
-        </div>
+<a
+href="https://kinglee6mutwiri.co.ke/">
+Home
+</a>
 
-        <div class="content-layout">
-          <article class="paper reveal">
-            <div class="content-flow">
-              <p>
-                Reaching a 404 page can feel frustrating when someone expects to land on a specific article, guide, or information page.
-                A person may click a link from a bookmark, another website, a search engine, a social post, or a shared message and then suddenly arrive somewhere that does not exist.
-                That kind of interruption can be confusing, especially if the website offers no explanation. A weak 404 page leaves the visitor with uncertainty.
-                A strong 404 page does the opposite. It acknowledges the problem clearly, explains what may have happened, and offers a better path forward.
-              </p>
-              <p>
-                This page starts with a direct title, a visible 404 number, and a friendly explanation. The message is deliberately calm and practical.
-                Instead of using a cold or robotic error sentence, it speaks like a real website that understands what the visitor is experiencing.
-                This matters because design is not only about color, layout, and buttons. Design is also about emotional tone.
-                People respond better when a website feels helpful instead of dismissive.
-              </p>
-              <p>
-                One of the most common reasons a visitor reaches a missing page is that the URL has changed.
-                Over time, websites grow. Articles are reorganized. Category structures are improved. Old files may be replaced by newer versions.
-                In other cases, a page may have been removed because it became outdated, duplicated, or no longer useful.
-                Sometimes the page still exists elsewhere, but the old path is no longer valid. At other times, the visitor may simply have typed the address incorrectly.
-                All of those cases are normal across the web, which is why a thoughtful 404 page is part of good site architecture.
-              </p>
-              <p>
-                America AI is an educational and content-focused website, so a 404 page here has a specific job.
-                It must not only tell people that something is missing. It must reconnect them to the kinds of content the site actually provides:
-                articles, guidance, educational reading, practical information, and useful resources.
-                That is why this page includes a button back to the homepage, a search box for quick filtering, and links to popular destinations such as About, Contact, Jobs & Careers, AI Ethics, Privacy Policy, and Terms.
-              </p>
-              <p>
-                A good 404 page also protects trust. When visitors see that even an error page has been carefully designed,
-                they understand that the website itself is being handled with intention. The page says, without saying it directly, that the website owner thought about the user journey enough to design for moments when something goes wrong.
-                This kind of detail can make a site feel more complete, more responsible, and more professional.
-              </p>
-              <p>
-                The color system on this page is intentionally bright and varied. Rather than relying on a single flat shade or a generic gradient,
-                it uses a multi-color top stripe and layered visual tones to give the page a custom identity.
-                The typography is bold, clean, and structured to guide the eye from the error code to the explanation, then to the actions, then to helpful links below.
-                The layout is not just stacked boxes. It uses asymmetry and spacing to create an experience that feels more crafted and editorial.
-              </p>
-              <p>
-                There is also a practical advantage to this approach. Visitors who arrive on a missing URL are already at risk of leaving the site.
-                A visually polished page with direct next steps can reduce bounce rate and keep the browsing session alive.
-                If the visitor immediately sees where to go next, they are more likely to continue exploring rather than close the tab.
-              </p>
-              <p>
-                Search is included because it gives control back to the visitor. Sometimes people do not need a full search engine;
-                they only need a simple filter to reveal the right destination from a short list of important links.
-                That is why the search field on this page is lightweight and immediate. It helps people match keywords to useful pages without making the experience feel heavy or slow.
-              </p>
-              <p>
-                Branding also matters on a 404 page. If the logo, colors, navigation, and footer suddenly disappear, the visitor may feel as if they have left the website.
-                By keeping America AI branding visible, the page reassures people that they are still within the correct site environment.
-                That consistency turns a frustrating interruption into a recoverable step in the browsing experience.
-              </p>
-              <p>
-                In short, this page is not here just to announce an absence. It is here to restore direction.
-                It says that the requested content could not be found, but it also says that the visitor is not stuck.
-                There are clear actions available, useful destinations nearby, and a visible path back into the website.
-                That is the difference between a weak 404 page and a good one.
-              </p>
-              <p>
-                Beyond immediate usability, pages like this also contribute to the overall perception of quality.
-                A website that only looks polished when everything goes right often feels unfinished. A website that still feels composed when something breaks gives a stronger impression.
-                It feels curated, intentional, and maintained. For readers, that creates subtle confidence.
-              </p>
-              <p>
-                America AI is built around educational content and practical information, so the 404 experience should reflect the same values:
-                clarity, usefulness, trust, and guidance. Even in a moment of interruption, the page can still be informative, structured, and welcoming.
-                That is why this design leans into readability and thoughtful action rather than treating the page as an empty error notice.
-              </p>
-              <p>
-                If you arrived here by accident, the best next step is usually the homepage or one of the major content pages.
-                If you came from an older article link, the search field may help you locate a newer version or a related topic.
-                If you are unsure what to read next, the popular links below can act as a starting point and help you re-enter the site naturally.
-              </p>
-              <p>
-                Finally, this page is also a reminder that a website should never waste the reader’s attention.
-                Even when something fails to load, the design can still serve a purpose. It can explain, redirect, reassure, and continue the relationship between the site and the visitor.
-                That is what this 404 page is meant to do.
-              </p>
-            </div>
-          </article>
+<a
+href="about.html">
+About
+</a>
 
-          <aside class="sidebar reveal">
-            <div class="mini blue">
-              <strong>What happened?</strong>
-              <span>The page may have been moved, renamed, deleted, or the link may be incorrect.</span>
-            </div>
-            <div class="mini green">
-              <strong>What should you do?</strong>
-              <span>Use the search box, go back home, or open one of the popular links below.</span>
-            </div>
-            <div class="mini gold">
-              <strong>Why this page helps</strong>
-              <span>It turns a missing page into a clear route back into the site instead of a dead end.</span>
-            </div>
-            <div class="mini red">
-              <strong>Still inside America AI</strong>
-              <span>The branding, navigation, and footer stay visible to keep the experience consistent.</span>
-            </div>
-          </aside>
-        </div>
-      </div>
-    </section>
+<a
+href="contact.html">
+Contact
+</a>
 
-    <section class="showcase" id="popular">
-      <div class="container">
-        <div class="section-head reveal">
-          <div>
-            <span class="kicker green">Popular pages</span>
-            <h2>Helpful places to continue from here.</h2>
-          </div>
-          <p>
-            These are some of the most useful destinations for visitors who want to continue browsing America AI after landing on a missing page.
-          </p>
-        </div>
+<a
+href="privacy-policy.html">
+Privacy
+</a>
 
-        <div class="cards">
-          <article class="card reveal">
-            <div class="card-photo">
-              <div class="smart-image" data-role="image">
-                <div class="fallback-art"></div>
-                <img src="about-hero.jpg" alt="About page visual" loading="lazy">
-                <div class="fallback-badge"><span></span></div>
-              </div>
-            </div>
-            <div class="card-body">
-              <span class="tag blue">About</span>
-              <h3>Learn what America AI is about</h3>
-              <p>Visit the About page to understand the website’s mission, content areas, and educational purpose.</p>
-            </div>
-          </article>
+<a
+href="disclaimer.html">
+Disclaimer
+</a>
 
-          <article class="card reveal">
-            <div class="card-photo">
-              <div class="smart-image" data-role="image">
-                <div class="fallback-art"></div>
-                <img src="jobs-visual.jpg" alt="Jobs and careers visual" loading="lazy">
-                <div class="fallback-badge"><span></span></div>
-              </div>
-            </div>
-            <div class="card-body">
-              <span class="tag gold">Jobs & Careers</span>
-              <h3>Return to career and work guidance</h3>
-              <p>Explore job-related reading, career advice, online opportunity topics, and practical direction.</p>
-            </div>
-          </article>
+</nav>
 
-          <article class="card reveal">
-            <div class="card-photo">
-              <div class="smart-image" data-role="image">
-                <div class="fallback-art"></div>
-                <img src="contact-visual.jpg" alt="Contact page visual" loading="lazy">
-                <div class="fallback-badge"><span></span></div>
-              </div>
-            </div>
-            <div class="card-body">
-              <span class="tag green">Contact</span>
-              <h3>Reach out for support or questions</h3>
-              <p>If you expected a page to exist, the contact page is a good next step for clarification.</p>
-            </div>
-          </article>
-        </div>
+</div>
 
-        <div class="note reveal">
-          <strong style="color:var(--navy);font-family:'Sora',sans-serif;">Optional file note:</strong>
-          If you want the visuals on this 404 page to display real local images, save matching files such as
-          <strong>404-visual.jpg</strong>, <strong>about-hero.jpg</strong>, <strong>jobs-visual.jpg</strong>, and <strong>contact-visual.jpg</strong>
-          in the same folder as this HTML file. If they are missing, the fallback design will still keep the page looking polished.
-        </div>
-      </div>
-    </section>
+</header>
 
-    <section id="support">
-      <div class="container">
-        <div class="section-head reveal">
-          <div>
-            <span class="kicker gold">More guidance</span>
-            <h2>Why a carefully written 404 page matters.</h2>
-          </div>
-          <p>
-            Error pages are often ignored, but they play an important role in user experience, navigation, clarity, and confidence.
-          </p>
-        </div>
 
-        <div class="content-layout">
-          <article class="paper reveal">
-            <div class="content-flow">
-              <p>
-                Many websites treat a 404 page as an afterthought. They display a plain message, sometimes only a short sentence and a link.
-                That may technically solve the problem, but it does not make the experience feel intentional.
-                A stronger page does more. It guides attention, preserves tone, and helps the visitor stay connected to the broader site experience.
-              </p>
-              <p>
-                On content-rich websites, that matters even more. A person who arrives looking for an article or guide has a purpose.
-                If the site responds to that purpose with silence or a bare error, the visit may end immediately.
-                But if the page offers a clear explanation, strong visual cues, alternative routes, and familiar branding,
-                the missing page becomes just a small interruption rather than the end of the session.
-              </p>
-              <p>
-                This is especially useful on educational websites. Educational content depends on trust and continuity.
-                Readers want to feel that a site is maintained, organized, and careful about how information is presented.
-                A thoughtful 404 page reinforces that feeling, even when the original destination is unavailable.
-              </p>
-              <p>
-                Another reason this matters is accessibility of intent. Not every visitor thinks in the same way.
-                Some want a direct home button. Some want a search field. Some prefer to jump into one of the major site sections.
-                By offering more than one recovery path, the page respects different browsing styles.
-              </p>
-              <p>
-                There is also a subtle branding effect. A 404 page that is visually distinct, yet clearly part of the same website,
-                helps unify the brand. It says that America AI pays attention to detail and keeps consistency even in edge cases.
-                That kind of consistency supports memorability and makes the site feel more complete.
-              </p>
-              <p>
-                The footer, logo, navigation, and popular links together create a sense that this page belongs to the same ecosystem as the rest of the site.
-                That is important because visitors should never feel lost inside the website itself, even if one specific page is missing.
-              </p>
-              <p>
-                In practical terms, the home page button is usually the most important action. It gives people a stable reset point.
-                The search box acts as a second line of recovery. The popular links act as a third.
-                When these three elements work together, a 404 page becomes much more effective.
-              </p>
-              <p>
-                This design also avoids a generic “AI” look. Instead of relying on overused neon cards and repetitive containers,
-                it uses a stronger editorial structure, layered color, bold typography, and clearer spatial rhythm.
-                That makes the page feel less like a template and more like a deliberately designed part of the site.
-              </p>
-              <p>
-                Ultimately, a 404 page succeeds when it does three things well: it informs, it reassures, and it redirects.
-                It informs the visitor that the requested page is unavailable. It reassures them that nothing is seriously wrong.
-                And it redirects them toward useful alternatives without making them do unnecessary work.
-              </p>
-              <p>
-                That is the standard this page tries to meet. It is clear, visually branded, structurally helpful, and supportive of continued exploration.
-                For a site like America AI, that is exactly what an error page should be.
-              </p>
-            </div>
-          </article>
+<!-- ============================= -->
+<!-- 404 CONTENT -->
+<!-- ============================= -->
 
-          <aside class="sidebar reveal">
-            <div class="mini blue">
-              <strong>Inform</strong>
-              <span>Tell visitors what happened in a clear and friendly way.</span>
-            </div>
-            <div class="mini green">
-              <strong>Reassure</strong>
-              <span>Keep the tone calm and helpful so the user does not feel lost.</span>
-            </div>
-            <div class="mini gold">
-              <strong>Redirect</strong>
-              <span>Provide buttons, search, and useful links to continue browsing.</span>
-            </div>
-          </aside>
-        </div>
-      </div>
-    </section>
+<main>
 
-    <section class="showcase" id="cta">
-      <div class="container">
-        <div class="section-head reveal">
-          <div>
-            <span class="kicker red">Next step</span>
-            <h2>You can continue exploring from here.</h2>
-          </div>
-          <p>
-            Thank you for staying on the page. The requested URL may be missing, but the rest of America AI is still available and ready to explore.
-          </p>
-        </div>
+<div
+class="error-number"
+aria-hidden="true">
 
-        <div class="cta-box reveal">
-          <div>
-            <h3 style="font-size:clamp(2rem,4vw,3.3rem);max-width:10ch;">Go back, search, or open a key page.</h3>
-            <p style="color:var(--muted);max-width:62ch;margin-top:0;">
-              Use one of the buttons below to continue. If you want the fastest recovery, return to the homepage.
-              If you know what you were trying to find, use the search field above. If you want a strong starting point,
-              visit About, Contact, or one of the major content pages.
-            </p>
-            <div class="hero-actions" style="margin-top:1.2rem;">
-              <a class="btn btn-primary" href="index.html">Back to Home</a>
-              <a class="btn btn-secondary" href="contact.html">Open Contact Page</a>
-            </div>
+404
 
-            <div class="note">
-              <strong style="color:var(--green);">Closing note:</strong>
-              Thank you for visiting America AI. Even when a page cannot be found, we want the browsing experience to remain helpful, calm, and well-designed.
-            </div>
-          </div>
+</div>
 
-          <div class="contact-items">
-            <a class="contact-item" href="index.html" aria-label="Back to homepage">
-              <div class="contact-icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
-                  <path d="M4 18h16M6 18V8l6-4 6 4v10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M10 18v-5h4v5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </div>
-              <div>
-                <strong>Homepage</strong>
-                <span>Return to the main America AI page</span>
-              </div>
-            </a>
+<h1>
+We Couldn't Find That Page
+</h1>
 
-            <a class="contact-item" href="about.html" aria-label="Go to about page">
-              <div class="contact-icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
-                  <path d="M12 8.2h.01M10.8 11.2h1.2v4.6h1.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                  <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/>
-                </svg>
-              </div>
-              <div>
-                <strong>About Page</strong>
-                <span>Learn what America AI is and what it offers</span>
-              </div>
-            </a>
+<p>
 
-            <a class="contact-item" href="contact.html" aria-label="Go to contact page">
-              <div class="contact-icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
-                  <path d="M4 6.5h16a1.5 1.5 0 0 1 1.5 1.5v8A1.5 1.5 0 0 1 20 17.5H4A1.5 1.5 0 0 1 2.5 16V8A1.5 1.5 0 0 1 4 6.5z" stroke="currentColor" stroke-width="1.8"/>
-                  <path d="M3 8l9 6 9-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </div>
-              <div>
-                <strong>Contact Page</strong>
-                <span>Reach out if you need help or expected a missing page</span>
-              </div>
-            </a>
+The page you are trying to visit is not available at this
+address. It may have been moved, renamed, removed, or the
+web address may contain a typing mistake.
 
-            <div class="contact-item" aria-label="Site branding note">
-              <div class="contact-icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
-                  <path d="M7 3.5h7l4 4V20a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-15a1.5 1.5 0 0 1 1-1.5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
-                  <path d="M14 3.5V8h4" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
-                  <path d="M9 12h6M9 16h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-                </svg>
-              </div>
-              <div>
-                <strong>Branding included</strong>
-                <span>Logo, colors, navigation, buttons, quick links, and footer remain visible here</span>
-              </div>
-            </div>
-          </div>
-        </div>
+</p>
 
-        <div class="note reveal">
-          <strong style="color:var(--red);">About word count:</strong>
-          A literal 5000+ word error page would make the user experience heavier than necessary, but this version is intentionally long-form, detailed, and content-rich so it feels custom-written, polished, and substantial.
-        </div>
-      </div>
-    </section>
-  </main>
+<p>
 
-  <footer>
-    <div class="container footer-row">
-      <div>© 2026 America AI. Friendly 404 page with branding, search, popular links, and guided navigation.</div>
-      <div><a href="contact.html">Contact</a> · <a href="about.html">About</a> · <a href="index.html">Home</a></div>
-    </div>
-  </footer>
+There is no need to worry. You can return to the homepage
+and continue exploring Stories, Lives &amp; Lessons, including
+biographies, remarkable journeys, achievements, challenges
+and practical lessons from the lives of interesting people.
 
-  <script>
-    const observer = new IntersectionObserver((entries)=>{
-      entries.forEach(entry=>{
-        if(entry.isIntersecting){
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, {threshold:0.15});
+</p>
 
-    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 
-    document.querySelectorAll('.smart-image').forEach(wrapper => {
-      const img = wrapper.querySelector('img');
-      if (!img) return;
+<div class="buttons">
 
-      function markLoaded(){
-        wrapper.classList.add('is-loaded');
-        img.style.opacity = '1';
-      }
+<a
+class="button home-button"
+href="https://kinglee6mutwiri.co.ke/">
 
-      function markFailed(){
-        wrapper.classList.remove('is-loaded');
-        img.style.opacity = '0';
-      }
+Return to Homepage
 
-      if (img.complete && img.naturalWidth > 0) {
-        markLoaded();
-      } else if (img.complete && img.naturalWidth === 0) {
-        markFailed();
-      }
+</a>
 
-      img.addEventListener('load', () => {
-        if (img.naturalWidth > 0) markLoaded();
-        else markFailed();
-      });
+<a
+class="button back-button"
+href="javascript:history.back()">
 
-      img.addEventListener('error', markFailed);
-    });
+Go Back
 
-    const searchInput = document.getElementById('siteSearch');
-    const searchBtn = document.getElementById('searchBtn');
-    const links = Array.from(document.querySelectorAll('#searchResults a'));
+</a>
 
-    function runSearch(){
-      const q = searchInput.value.trim().toLowerCase();
-      links.forEach(link=>{
-        const text = link.textContent.toLowerCase();
-        const keywords = (link.dataset.keywords || '').toLowerCase();
-        const match = q === '' || text.includes(q) || keywords.includes(q);
-        link.style.display = match ? 'inline-flex' : 'none';
-      });
-    }
+</div>
 
-    searchBtn.addEventListener('click', runSearch);
-    searchInput.addEventListener('input', runSearch);
-    searchInput.addEventListener('keydown', (e)=>{
-      if(e.key === 'Enter'){
-        e.preventDefault();
-        runSearch();
-      }
-    });
-  </script>
-<script src="header-loader.js"></script>
+
+<!-- ============================= -->
+<!-- STORY LINKS -->
+<!-- ============================= -->
+
+<section class="explore">
+
+<h2>
+Continue Exploring
+</h2>
+
+<p>
+
+Instead of leaving the website, you can continue reading
+some of the stories currently available.
+
+</p>
+
+<div class="explore-links">
+
+<a href="lionel-messi.html">
+Lionel Messi
+</a>
+
+<a href="cristiano-ronaldo.html">
+Cristiano Ronaldo
+</a>
+
+<a href="wangari-maathai.html">
+Wangari Maathai
+</a>
+
+<a href="denzel-washington.html">
+Denzel Washington
+</a>
+
+</div>
+
+</section>
+
+</main>
+
+
+<!-- ============================= -->
+<!-- FOOTER -->
+<!-- ============================= -->
+
+<footer>
+
+<strong>
+Kinglee Mutwiri
+</strong>
+
+<p>
+Stories, Lives &amp; Lessons
+</p>
+
+<p>
+© 2026 Kinglee Mutwiri. All rights reserved.
+</p>
+
+</footer>
+
 </body>
 </html>
- 
