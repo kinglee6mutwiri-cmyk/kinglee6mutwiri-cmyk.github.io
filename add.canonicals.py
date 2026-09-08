@@ -1,0 +1,1 @@
+print("✅ Canonical checker ready")
