@@ -1,46 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://kinglee6mutwiri.co.ke/</loc><priority>1.0</priority></url>
-  <url><loc>https://kinglee6mutwiri.co.ke/about.html</loc><priority>0.8</priority></url>
-  <url><loc>https://kinglee6mutwiri.co.ke/contact.html</loc><priority>0.8</priority></url>
-  <url><loc>https://kinglee6mutwiri.co.ke/privacy-policy.html</loc><priority>0.8</priority></url>
-  <url><loc>https://kinglee6mutwiri.co.ke/terms.html</loc><priority>0.5</priority></url>
-  <url><loc>https://kinglee6mutwiri.co.ke/disclaimer.html</loc><priority>0.5</priority></url>
-  <url><loc>https://kinglee6mutwiri.co.ke/bob-marley.html</loc><priority>0.7</priority></url>
-  <url><loc>https://kinglee6mutwiri.co.ke/cristiano-ronaldo.html</loc><priority>0.7</priority></url>
-  <url><loc>https://kinglee6mutwiri.co.ke/denzel-washington.html</loc><priority>0.7</priority></url>
-  <url><loc>https://kinglee6mutwiri.co.ke/lil-wayne.html</loc><priority>0.7</priority></url>
-  <url><loc>https://kinglee6mutwiri.co.ke/lucky-dube.html</loc><priority>0.7</priority></url>
-  <url><loc>https://kinglee6mutwiri.co.ke/martin-luther-king-jr.html</loc><priority>0.7</priority></url>
-  <url><loc>https://kinglee6mutwiri.co.ke/michael-jackson.html</loc><priority>0.7</priority></url>
-  <url><loc>https://kinglee6mutwiri.co.ke/muhammad-ali.html</loc><priority>0.7</priority></url>
-  <url><loc>https://kinglee6mutwiri.co.ke/nelson-mandela.html</loc><priority>0.7</priority></url>
-  <url><loc>https://kinglee6mutwiri.co.ke/pop-smoke.html</loc><priority>0.7</priority></url>
-  <url><loc>https://kinglee6mutwiri.co.ke/rihanna.html</loc><priority>0.7</priority></url>
-    <url>
-        <loc>https://kinglee6mutwiri.co.ke/lionel-messi.html</loc>
-    </url>
-    <url>
-        <loc>https://kinglee6mutwiri.co.ke/wangari-maathai.html</loc>
-    </url>
+  <url>
+    <loc>https://kinglee6mutwiri.co.ke/</loc>
+  </url>
+  <url>
+    <loc>https://kinglee6mutwiri.co.ke/about.html</loc>
+  </url>
+  <url>
+    <loc>https://kinglee6mutwiri.co.ke/contact.html</loc>
+  </url>
+  <url>
+    <loc>https://kinglee6mutwiri.co.ke/privacy-policy.html</loc>
+  </url>
+  <url>
+    <loc>https://kinglee6mutwiri.co.ke/terms.html</loc>
+  </url>
+  <url>
+    <loc>https://kinglee6mutwiri.co.ke/disclaimer.html</loc>
+  </url>
+  <url>
+    <loc>https://kinglee6mutwiri.co.ke/biographies.html</loc>
+  </url>
+  <url>
+    <loc>https://kinglee6mutwiri.co.ke/celebrity-stories.html</loc>
+  </url>
+  <url>
+    <loc>https://kinglee6mutwiri.co.ke/life-stories.html</loc>
+  </url>
+  <url>
+    <loc>https://kinglee6mutwiri.co.ke/money.html</loc>
+  </url>
+  <url>
+    <loc>https://kinglee6mutwiri.co.ke/stories.html</loc>
+  </url>
+  <url>
+    <loc>https://kinglee6mutwiri.co.ke/lessons.html</loc>
+  </url>
+  <url>
+    <loc>https://kinglee6mutwiri.co.ke/bob-marley.html</loc>
+  </url>
+  <url>
+    <loc>https://kinglee6mutwiri.co.ke/cristiano-ronaldo.html</loc>
+  </url>
+  <url>
+    <loc>https://kinglee6mutwiri.co.ke/denzel-washington.html</loc>
+  </url>
+  <url>
+    <loc>https://kinglee6mutwiri.co.ke/lil-wayne.html</loc>
+  </url>
+  <url>
+    <loc>https://kinglee6mutwiri.co.ke/lucky-dube.html</loc>
+  </url>
+  <url>
+    <loc>https://kinglee6mutwiri.co.ke/martin-luther-king-jr.html</loc>
+  </url>
+  <url>
+    <loc>https://kinglee6mutwiri.co.ke/michael-jackson.html</loc>
+  </url>
+  <url>
+    <loc>https://kinglee6mutwiri.co.ke/muhammad-ali.html</loc>
+  </url>
+  <url>
+    <loc>https://kinglee6mutwiri.co.ke/nelson-mandela.html</loc>
+  </url>
   <url>
     <loc>https://kinglee6mutwiri.co.ke/oprah-winfrey.html</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kinglee6mutwiri.co.ke/pop-smoke.html</loc>
+  </url>
+  <url>
+    <loc>https://kinglee6mutwiri.co.ke/rihanna.html</loc>
+  </url>
+  <url>
+    <loc>https://kinglee6mutwiri.co.ke/lionel-messi.html</loc>
+  </url>
+  <url>
+    <loc>https://kinglee6mutwiri.co.ke/wangari-maathai.html</loc>
+  </url>
+  <url>
+    <loc>https://kinglee6mutwiri.co.ke/2pac.html</loc>
   </url>
   <url>
     <loc>https://kinglee6mutwiri.co.ke/salary-disappeared-story.html</loc>
-    <lastmod>2026-08-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://kinglee6mutwiri.co.ke/secret-account-47000.html</loc>
   </url>
-
   <url>
-    <loc>https://kinglee6mutwiri.co.ke/2pac.html</loc>
+    <loc>https://kinglee6mutwiri.co.ke/the-man-who-earned-more-money-but-became-poorer.html</loc>
   </url>
 </urlset>
-
