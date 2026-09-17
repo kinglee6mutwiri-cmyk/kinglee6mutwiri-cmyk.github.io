@@ -3,24 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Bob Marley: From Jamaica's Streets to a Global Musical Legacy | Kinglee6 Mutwiri</title>
-
-<meta name="description" content="I explore Bob Marley's journey from Jamaica to the world, his music, beliefs, struggles, important decisions and the lessons his life still offers.">
-
+<meta name="description" content="Explore Bob Marley's life, music, struggles, beliefs, important decisions and lasting legacy, with practical lessons from his journey.">
 <meta name="robots" content="index, follow">
-
 <link rel="canonical" href="https://kinglee6mutwiri.co.ke/bob-marley.html">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5799841502846177" crossorigin="anonymous"></script>
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-<!-- Google Analytics 4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-X3HE9CKP90"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -29,26 +18,19 @@ gtag('js', new Date());
 gtag('config', 'G-X3HE9CKP90');
 </script>
 
-<!-- Google AdSense -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5799841502846177"
-     crossorigin="anonymous"></script>
-
 <style>
-
 :root{
-  --night:#101b18;
-  --green:#1e4938;
-  --green-light:#376b52;
-  --gold:#d3a64c;
-  --gold-light:#ead39b;
-  --sand:#f1e8d7;
-  --cream:#faf7f0;
-  --white:#ffffff;
-  --ink:#222621;
-  --muted:#696d65;
-  --line:#d9d3c6;
-  --red:#a64938;
-  --shadow:0 14px 40px rgba(16,27,24,.10);
+  --dark:#10231c;
+  --dark2:#17372b;
+  --green:#2f684b;
+  --cream:#f8f4eb;
+  --paper:#fffdf8;
+  --gold:#c49a43;
+  --brown:#79563c;
+  --text:#252824;
+  --muted:#687068;
+  --border:#ddd7ca;
+  --shadow:0 8px 25px rgba(16,35,28,.09);
 }
 
 *{
@@ -56,164 +38,150 @@ gtag('config', 'G-X3HE9CKP90');
 }
 
 html{
+  width:100%;
+  overflow-x:hidden;
   scroll-behavior:smooth;
 }
 
 body{
   margin:0;
+  width:100%;
+  max-width:100%;
+  overflow-x:hidden;
   background:var(--cream);
-  color:var(--ink);
-  font-family:"DM Sans",Arial,sans-serif;
-  line-height:1.82;
-}
-
-a{
-  color:inherit;
+  color:var(--text);
+  font-family:Georgia,"Times New Roman",serif;
 }
 
 img{
   max-width:100%;
+  height:auto;
   display:block;
 }
 
-/* TOP STRIP */
-
-.top-strip{
-  background:var(--gold);
-  color:var(--night);
-  padding:7px 0;
-  font-size:.75rem;
-  font-weight:700;
-  letter-spacing:.08em;
-  text-transform:uppercase;
+a{
+  color:var(--green);
+  text-decoration:none;
 }
 
-.container{
-  width:min(1120px,92%);
-  margin:auto;
+a:hover{
+  text-decoration:underline;
 }
 
-/* HEADER */
+.topbar{
+  background:var(--dark);
+  color:#eee8d9;
+  text-align:center;
+  padding:8px 15px;
+  font-family:Arial,sans-serif;
+  font-size:12px;
+  letter-spacing:.4px;
+}
 
-header{
-  background:var(--night);
-  color:white;
+.site-header{
+  background:var(--paper);
+  border-bottom:1px solid var(--border);
 }
 
 .header-inner{
-  min-height:86px;
+  width:100%;
+  max-width:1120px;
+  margin:auto;
+  padding:22px 24px;
   display:flex;
-  align-items:center;
   justify-content:space-between;
-  gap:30px;
+  align-items:center;
+  gap:25px;
 }
 
-.logo{
-  text-decoration:none;
-  display:block;
+.brand{
+  min-width:0;
 }
 
-.logo-name{
-  font-family:"Libre Baskerville",Georgia,serif;
-  font-size:1.35rem;
-  font-weight:700;
+.brand-name{
+  margin:0;
+  color:var(--dark);
+  font-family:Arial,sans-serif;
+  font-size:23px;
+  font-weight:800;
+  letter-spacing:-.6px;
 }
 
-.logo-tag{
-  color:#bfc9c1;
-  font-size:.72rem;
-  margin-top:4px;
-  display:block;
+.brand-tag{
+  margin:5px 0 0;
+  color:var(--muted);
+  font-family:Arial,sans-serif;
+  font-size:12px;
 }
 
 nav{
   display:flex;
   flex-wrap:wrap;
   justify-content:flex-end;
-  gap:5px;
+  gap:7px;
+  min-width:0;
 }
 
 nav a{
-  color:#eef2ed;
-  text-decoration:none;
-  padding:8px 10px;
-  font-size:.84rem;
-  border-bottom:2px solid transparent;
+  color:var(--dark);
+  font-family:Arial,sans-serif;
+  font-size:13px;
+  font-weight:700;
+  padding:8px 9px;
+  border-radius:5px;
 }
 
 nav a:hover{
-  border-bottom-color:var(--gold);
+  background:#eee9dd;
+  text-decoration:none;
 }
 
-/* HERO - DIFFERENT EDITORIAL DESIGN */
-
-.marley-hero{
-  background:var(--green);
-  color:white;
-  position:relative;
-  overflow:hidden;
+.hero{
+  background:var(--dark);
+  color:#fff;
 }
 
-.marley-hero::before{
-  content:"MUSIC";
-  position:absolute;
-  right:-30px;
-  bottom:-80px;
-  font-size:13rem;
-  font-weight:700;
-  letter-spacing:-.08em;
-  color:rgba(255,255,255,.035);
-}
-
-.hero-grid{
-  min-height:570px;
+.hero-inner{
+  width:100%;
+  max-width:1120px;
+  margin:auto;
+  padding:0 24px;
   display:grid;
   grid-template-columns:1.05fr .95fr;
-  align-items:stretch;
+  gap:0;
 }
 
 .hero-copy{
-  padding:80px 45px 80px 0;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
+  padding:72px 55px 68px 0;
 }
 
-.category{
-  color:var(--gold-light);
+.eyebrow{
+  color:var(--gold);
+  font-family:Arial,sans-serif;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:2px;
   text-transform:uppercase;
-  letter-spacing:.18em;
-  font-size:.72rem;
-  font-weight:700;
-  margin-bottom:18px;
+  margin-bottom:20px;
 }
 
-.hero-copy h1{
-  font-family:"Libre Baskerville",Georgia,serif;
-  font-size:clamp(2.4rem,5vw,4.4rem);
-  line-height:1.12;
-  margin:0 0 24px;
-  max-width:700px;
+h1{
+  margin:0;
+  font-size:52px;
+  line-height:1.08;
+  letter-spacing:-1.7px;
 }
 
 .hero-copy p{
-  color:#e2e9e3;
-  font-size:1.08rem;
-  max-width:690px;
-}
-
-.hero-note{
-  margin-top:22px;
-  border-left:3px solid var(--gold);
-  padding-left:17px;
-  color:#d6dfd8;
-  font-size:.9rem;
+  color:#dcd9cf;
+  font-size:18px;
+  line-height:1.75;
+  margin:25px 0 0;
+  max-width:650px;
 }
 
 .hero-photo{
-  min-height:570px;
-  position:relative;
-  background:#263d32;
+  min-height:470px;
   overflow:hidden;
 }
 
@@ -221,2259 +189,1086 @@ nav a:hover{
   width:100%;
   height:100%;
   object-fit:cover;
-  object-position:center;
-  filter:saturate(.88);
 }
 
-.hero-photo::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(90deg,rgba(30,73,56,.25),transparent 40%);
-  pointer-events:none;
-}
-
-/* ARTICLE */
-
-.article-area{
-  padding:60px 0 90px;
-}
-
-.article{
-  max-width:870px;
-  margin:auto;
-}
-
-.opening{
-  font-family:"Libre Baskerville",Georgia,serif;
-  font-size:1.22rem;
-  line-height:1.85;
-  color:#353a34;
-  margin-bottom:48px;
-  padding-bottom:32px;
-  border-bottom:1px solid var(--line);
-}
-
-.kicker{
-  color:var(--red);
-  font-size:.72rem;
-  letter-spacing:.16em;
-  text-transform:uppercase;
-  font-weight:700;
-  margin-top:55px;
-  margin-bottom:9px;
-}
-
-h2{
-  font-family:"Libre Baskerville",Georgia,serif;
-  color:var(--green);
-  font-size:clamp(1.75rem,3.5vw,2.55rem);
-  line-height:1.28;
-  margin:0 0 20px;
-}
-
-h3{
-  color:var(--green);
-  font-size:1.25rem;
-  line-height:1.35;
-  margin:32px 0 10px;
-}
-
-p{
-  margin:0 0 21px;
-}
-
-strong{
-  color:var(--green);
-}
-
-/* PULL QUOTE */
-
-.pull-quote{
-  margin:42px 0;
-  padding:30px 34px;
-  background:var(--night);
-  color:#f7f2e7;
-  border-left:6px solid var(--gold);
-}
-
-.pull-quote p{
-  font-family:"Libre Baskerville",Georgia,serif;
-  font-size:1.25rem;
-  line-height:1.65;
-  margin:0;
-}
-
-.pull-quote small{
-  display:block;
-  margin-top:14px;
-  color:#bdc7bf;
-  font-family:"DM Sans",Arial,sans-serif;
-  font-size:.78rem;
-}
-
-/* INFO ROW */
-
-.info-row{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  margin:38px 0;
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-}
-
-.info-box{
-  padding:22px 20px;
-  border-right:1px solid var(--line);
-}
-
-.info-box:last-child{
-  border-right:0;
-}
-
-.info-box span{
-  display:block;
-  color:var(--muted);
-  text-transform:uppercase;
-  font-size:.68rem;
-  letter-spacing:.12em;
-  font-weight:700;
-  margin-bottom:4px;
-}
-
-.info-box strong{
-  font-size:.98rem;
-}
-
-/* IMAGE */
-
-.story-image{
-  margin:42px 0;
-  background:white;
-  border:1px solid var(--line);
-}
-
-.story-image img{
+.page{
   width:100%;
-  height:auto;
-  object-fit:cover;
+  max-width:920px;
+  margin:auto;
+  padding:45px 24px 70px;
 }
 
-.story-image figcaption{
-  padding:11px 15px;
-  color:var(--muted);
-  font-size:.78rem;
+.intro{
+  font-size:21px;
+  line-height:1.8;
+  margin:0 0 30px;
 }
 
-/* AD */
+.meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:0 0 35px;
+  font-family:Arial,sans-serif;
+  font-size:12px;
+}
 
-.ad-box{
-  margin:48px 0;
+.meta span{
+  background:#ebe5d8;
+  padding:8px 11px;
+  border-radius:4px;
+}
+
+.ad-wrap{
+  width:100%;
+  max-width:100%;
+  overflow:hidden;
+  margin:35px 0;
   padding:12px 0;
   text-align:center;
 }
 
-/* TIMELINE */
-
-.life-map{
-  margin:40px 0;
-  position:relative;
+.section{
+  margin:55px 0;
 }
 
-.life-map::before{
+.section-label{
+  color:var(--green);
+  font-family:Arial,sans-serif;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:10px;
+}
+
+h2{
+  color:var(--dark);
+  font-size:34px;
+  line-height:1.2;
+  margin:0 0 22px;
+  letter-spacing:-.7px;
+}
+
+h3{
+  color:var(--dark2);
+  font-size:22px;
+  line-height:1.3;
+  margin:34px 0 13px;
+}
+
+p{
+  font-size:17px;
+  line-height:1.85;
+  margin:0 0 20px;
+}
+
+.story-image{
+  width:100%;
+  margin:35px 0;
+}
+
+.story-image img{
+  width:100%;
+  max-height:520px;
+  object-fit:cover;
+}
+
+.caption{
+  color:var(--muted);
+  font-family:Arial,sans-serif;
+  font-size:11px;
+  line-height:1.5;
+  margin-top:8px;
+}
+
+.fact-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin:30px 0;
+}
+
+.fact{
+  background:var(--paper);
+  border:1px solid var(--border);
+  padding:20px;
+}
+
+.fact strong{
+  display:block;
+  color:var(--green);
+  font-family:Arial,sans-serif;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  margin-bottom:7px;
+}
+
+.fact span{
+  font-size:16px;
+  line-height:1.5;
+}
+
+.note{
+  background:#eee7d8;
+  border-left:5px solid var(--gold);
+  padding:24px 25px;
+  margin:35px 0;
+}
+
+.note-title{
+  font-family:Arial,sans-serif;
+  color:var(--dark);
+  font-weight:800;
+  font-size:12px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  margin-bottom:9px;
+}
+
+.note p{
+  margin:0;
+  font-size:16px;
+}
+
+.quote{
+  margin:40px 0;
+  padding:35px 28px;
+  background:var(--dark2);
+  color:#fff;
+  text-align:center;
+}
+
+.quote p{
+  font-size:25px;
+  line-height:1.55;
+  margin:0;
+}
+
+.timeline{
+  border-left:3px solid var(--gold);
+  margin:30px 0 35px 8px;
+  padding-left:25px;
+}
+
+.timeline-item{
+  position:relative;
+  margin:0 0 30px;
+}
+
+.timeline-item::before{
   content:"";
   position:absolute;
-  left:25px;
-  top:0;
-  bottom:0;
-  width:2px;
+  width:11px;
+  height:11px;
   background:var(--gold);
-}
-
-.map-item{
-  position:relative;
-  padding:0 0 34px 62px;
-}
-
-.map-dot{
-  position:absolute;
-  left:17px;
-  top:4px;
-  width:17px;
-  height:17px;
   border-radius:50%;
-  background:var(--gold);
-  border:4px solid var(--cream);
-  box-shadow:0 0 0 1px var(--gold);
+  left:-32px;
+  top:7px;
 }
 
-.map-year{
-  color:var(--red);
-  font-size:.76rem;
+.year{
+  color:var(--green);
+  font-family:Arial,sans-serif;
   font-weight:800;
-  letter-spacing:.12em;
-  text-transform:uppercase;
+  font-size:13px;
+  letter-spacing:1px;
+  margin-bottom:6px;
 }
 
-.map-item h3{
-  margin:5px 0 7px;
-}
-
-/* PERSONAL OBSERVATION */
-
-/my-note{
-  display:block;
-}
-
-.eliphas-note{
-  margin:45px 0;
-  padding:30px;
-  background:var(--sand);
-  position:relative;
-}
-
-.eliphas-note::before{
-  content:"MY NOTE";
-  position:absolute;
-  top:0;
-  left:0;
-  background:var(--gold);
-  color:var(--night);
-  padding:5px 12px;
-  font-size:.65rem;
-  font-weight:800;
-  letter-spacing:.12em;
-}
-
-.eliphas-note p:first-of-type{
-  margin-top:25px;
-}
-
-/* LESSONS */
-
-.lesson-list{
-  margin-top:30px;
-}
-
-.lesson{
-  display:grid;
-  grid-template-columns:70px 1fr;
-  gap:22px;
-  padding:28px 0;
-  border-top:1px solid var(--line);
-}
-
-.lesson-number{
-  font-family:"Libre Baskerville",Georgia,serif;
-  color:var(--gold);
-  font-size:1.7rem;
-  font-weight:700;
-}
-
-.lesson h3{
+.timeline-item h3{
   margin:0 0 8px;
 }
 
-/* RELATED */
+.timeline-item p{
+  margin:0;
+}
+
+.lesson{
+  border-top:1px solid var(--border);
+  padding:25px 0;
+}
+
+.lesson-number{
+  color:var(--gold);
+  font-family:Arial,sans-serif;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:1px;
+}
+
+.lesson h3{
+  margin:7px 0 10px;
+}
 
 .related{
-  margin-top:65px;
-  padding-top:40px;
-  border-top:2px solid var(--green);
+  background:var(--paper);
+  border:1px solid var(--border);
+  padding:28px;
+  margin-top:45px;
+}
+
+.related h2{
+  font-size:25px;
 }
 
 .related-grid{
   display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:14px;
-  margin-top:25px;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
 }
 
 .related a{
-  text-decoration:none;
-  padding:20px;
-  background:white;
-  border:1px solid var(--line);
-}
-
-.related a:hover{
-  border-color:var(--gold);
-}
-
-.related strong{
   display:block;
-  margin-bottom:5px;
+  border:1px solid var(--border);
+  padding:14px;
+  font-family:Arial,sans-serif;
+  font-size:13px;
+  font-weight:700;
+  line-height:1.45;
 }
-
-.related span{
-  color:var(--muted);
-  font-size:.88rem;
-}
-
-/* AUTHOR */
 
 .author{
-  margin-top:60px;
-  padding:35px;
-  background:var(--green);
-  color:white;
+  margin-top:55px;
+  background:var(--dark);
+  color:#fff;
+  padding:30px;
+  display:flex;
+  gap:25px;
+  align-items:center;
+}
+
+.author img{
+  width:105px;
+  height:105px;
+  object-fit:cover;
+  border-radius:50%;
+  flex:none;
 }
 
 .author h2{
-  color:white;
-  margin-bottom:14px;
+  color:#fff;
+  font-size:24px;
+  margin-bottom:8px;
 }
 
 .author p{
-  color:#e1e9e2;
+  color:#d8d6ce;
+  font-size:15px;
+  line-height:1.65;
+  margin:0;
 }
-
-.author-name{
-  color:var(--gold-light);
-  font-weight:700;
-}
-
-/* FOOTER */
 
 footer{
-  background:var(--night);
-  color:#dce4dd;
+  background:#0c1914;
+  color:#d5d2c9;
 }
 
-.footer-main{
-  padding:55px 0 35px;
+.footer-inner{
+  width:100%;
+  max-width:1120px;
+  margin:auto;
+  padding:45px 24px 25px;
+}
+
+.footer-grid{
   display:grid;
-  grid-template-columns:1.5fr 1fr 1fr;
-  gap:45px;
+  grid-template-columns:1.4fr 1fr 1fr;
+  gap:35px;
 }
 
-.footer-main h3{
-  color:white;
-  margin-top:0;
+footer h3{
+  color:#fff;
+  font-family:Arial,sans-serif;
+  font-size:15px;
+  margin:0 0 14px;
 }
 
-.footer-main p{
-  color:#bfc9c1;
+footer p{
+  font-size:14px;
+  line-height:1.7;
 }
 
-.footer-links{
-  display:flex;
-  flex-direction:column;
-  gap:7px;
-}
-
-.footer-links a{
-  text-decoration:none;
-  color:#d5ded7;
-  font-size:.88rem;
-}
-
-.footer-links a:hover{
-  color:var(--gold-light);
-}
-
-.socials{
-  display:flex;
-  gap:9px;
-  margin-top:18px;
-}
-
-.socials a{
-  width:38px;
-  height:38px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border:1px solid rgba(255,255,255,.2);
-  border-radius:50%;
-  text-decoration:none;
+footer a{
+  display:block;
+  color:#d5d2c9;
+  font-family:Arial,sans-serif;
+  font-size:13px;
+  margin:0 0 9px;
 }
 
 .footer-bottom{
-  border-top:1px solid rgba(255,255,255,.1);
-  padding:20px 0;
-  color:#9fa9a1;
-  font-size:.78rem;
+  border-top:1px solid #294036;
+  margin-top:30px;
+  padding-top:18px;
+  color:#9d9c94;
+  font-family:Arial,sans-serif;
+  font-size:11px;
+  line-height:1.6;
 }
 
-/* FAQ AFTER FOOTER */
-
-.faq-section{
-  background:#e9dfce;
-  padding:58px 0 75px;
+.faq{
+  background:var(--cream);
+  padding:60px 24px 70px;
 }
 
 .faq-inner{
-  max-width:900px;
+  width:100%;
+  max-width:920px;
   margin:auto;
 }
 
-.faq-title{
-  font-family:"Libre Baskerville",Georgia,serif;
-  color:var(--green);
-  font-size:2rem;
-  margin:0 0 25px;
+.faq h2{
+  font-size:31px;
 }
 
 .faq-item{
-  background:#fffdf8;
-  border:1px solid #d6cebf;
+  background:var(--paper);
+  border:1px solid var(--border);
   margin:12px 0;
-  padding:22px 25px;
+  padding:20px 22px;
 }
 
 .faq-item h3{
+  font-family:Arial,sans-serif;
+  font-size:16px;
   margin:0 0 9px;
-  font-size:1.08rem;
 }
 
 .faq-item p{
+  font-size:15px;
+  line-height:1.7;
   margin:0;
-  color:#4e534d;
 }
 
-/* MOBILE */
-
-@media(max-width:820px){
-
+@media(max-width:760px){
   .header-inner{
-    padding:17px 0;
-    flex-direction:column;
-    align-items:flex-start;
-  }
-
-  nav{
-    justify-content:flex-start;
-  }
-
-  .hero-grid{
-    grid-template-columns:1fr;
-  }
-
-  .hero-copy{
-    padding:65px 0 45px;
-  }
-
-  .hero-photo{
-    min-height:400px;
-  }
-
-  .info-row{
-    grid-template-columns:1fr;
-  }
-
-  .info-box{
-    border-right:0;
-    border-bottom:1px solid var(--line);
-  }
-
-  .info-box:last-child{
-    border-bottom:0;
-  }
-
-  .lesson{
-    grid-template-columns:50px 1fr;
-  }
-
-  .related-grid,
-  .footer-main{
-    grid-template-columns:1fr;
-  }
-
-}
-
-
-@media(max-width:520px){
-
-  html,
-  body{
-    width:100%;
-    max-width:100%;
-    overflow-x:hidden;
-  }
-
-  .container{
-    width:100%;
-    max-width:100%;
-    padding-left:16px;
-    padding-right:16px;
-  }
-
-  .top-strip{
-    width:100%;
-    font-size:.58rem;
-    line-height:1.4;
-    padding:7px 12px;
-    text-align:center;
-    white-space:normal;
-  }
-
-  .header-inner{
-    width:100%;
-    min-height:auto;
+    display:block;
     padding:18px 16px;
-    gap:15px;
-  }
-
-  .logo{
-    max-width:100%;
-  }
-
-  .logo-name{
-    font-size:1.15rem;
-  }
-
-  .logo-tag{
-    font-size:.65rem;
   }
 
   nav{
-    width:100%;
-    display:flex;
-    flex-wrap:wrap;
+    margin-top:15px;
     justify-content:flex-start;
-    gap:3px;
   }
 
   nav a{
-    font-size:.73rem;
-    line-height:1.3;
-    padding:6px;
+    padding:7px 6px;
+    font-size:12px;
   }
 
-  .hero-grid{
-    width:100%;
-    max-width:100%;
+  .hero-inner{
+    display:block;
+    padding:0;
   }
 
   .hero-copy{
-    width:100%;
-    padding:45px 16px 35px;
+    padding:45px 18px 38px;
   }
 
-  .hero-copy h1{
-    font-size:2rem;
-    line-height:1.2;
-    overflow-wrap:break-word;
-    word-break:normal;
+  h1{
+    font-size:37px;
+    line-height:1.13;
+    letter-spacing:-1px;
   }
 
   .hero-copy p{
-    font-size:.98rem;
+    font-size:16px;
     line-height:1.7;
   }
 
-  .hero-note{
-    font-size:.82rem;
-    line-height:1.65;
-  }
-
   .hero-photo{
-    width:100%;
-    min-height:280px;
-    max-height:360px;
+    min-height:300px;
+    height:300px;
   }
 
-  .hero-photo img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
+  .page{
+    padding:35px 16px 55px;
   }
 
-  .article-area{
-    width:100%;
-    max-width:100%;
-    padding:35px 0 55px;
-    overflow:hidden;
-  }
-
-  .article{
-    width:100%;
-    max-width:100%;
-    padding:0 16px;
-    overflow-wrap:break-word;
-    word-wrap:break-word;
-  }
-
-  .opening{
-    width:100%;
-    font-size:1.02rem;
+  .intro{
+    font-size:19px;
     line-height:1.75;
-    overflow-wrap:break-word;
-  }
-
-  p{
-    font-size:.98rem;
-    line-height:1.78;
-    overflow-wrap:break-word;
-    word-break:normal;
   }
 
   h2{
-    font-size:1.65rem;
-    line-height:1.3;
-    overflow-wrap:break-word;
+    font-size:29px;
   }
 
   h3{
-    font-size:1.12rem;
-    line-height:1.4;
-    overflow-wrap:break-word;
-  }
-
-  .kicker{
-    font-size:.65rem;
-    line-height:1.5;
-  }
-
-  .info-row{
-    width:100%;
-    max-width:100%;
-  }
-
-  .info-box{
-    width:100%;
-    padding:17px 12px;
-  }
-
-  .pull-quote{
-    width:100%;
-    max-width:100%;
-    margin:32px 0;
-    padding:22px 18px;
-    overflow-wrap:break-word;
-  }
-
-  .pull-quote p{
-    font-size:1rem;
-    line-height:1.7;
-  }
-
-  .story-image{
-    width:100%;
-    max-width:100%;
-    margin:30px 0;
-    overflow:hidden;
-  }
-
-  .story-image img{
-    width:100%;
-    height:auto;
-    max-width:100%;
-  }
-
-  .ad-box{
-    width:100%;
-    max-width:100%;
-    overflow:hidden;
-    margin:35px 0;
-  }
-
-  .life-map{
-    width:100%;
-    max-width:100%;
-  }
-
-  .life-map::before{
-    left:17px;
-  }
-
-  .map-item{
-    width:100%;
-    padding-left:45px;
-    padding-right:0;
-    overflow-wrap:break-word;
-  }
-
-  .map-dot{
-    left:9px;
-  }
-
-  .lesson-list{
-    width:100%;
-  }
-
-  .lesson{
-    width:100%;
-    display:block;
-    padding:24px 0;
-    overflow-wrap:break-word;
-  }
-
-  .lesson-number{
-    margin-bottom:7px;
-  }
-
-  .related{
-    width:100%;
-  }
-
-  .related-grid{
-    width:100%;
-    display:block;
-  }
-
-  .related a{
-    display:block;
-    width:100%;
-    margin-bottom:12px;
-    padding:17px;
-    overflow-wrap:break-word;
-  }
-
-  .author{
-    width:100%;
-    margin-top:45px;
-    padding:24px 18px;
-    overflow-wrap:break-word;
-  }
-
-  .footer-main{
-    width:100%;
-    padding:40px 16px 28px;
-  }
-
-  .footer-main p{
-    font-size:.9rem;
-  }
-
-  .footer-bottom{
-    width:100%;
-    padding:18px 16px;
-    line-height:1.6;
-  }
-
-  .faq-section{
-    width:100%;
-    overflow:hidden;
-  }
-
-  .faq-inner{
-    width:100%;
-    padding:0 16px;
-  }
-
-  .faq-title{
-    font-size:1.65rem;
-    line-height:1.35;
-  }
-
-  .faq-item{
-    width:100%;
-    padding:18px 16px;
-    overflow-wrap:break-word;
-  }
-
-  .faq-item h3{
-    font-size:1rem;
-  }
-
-  .faq-item p{
-    font-size:.94rem;
-    line-height:1.7;
-  }
-
-}
-
-
-</style>
-
-<style id="mobile-final-fix">
-*,
-*::before,
-*::after{
-  box-sizing:border-box;
-  max-width:100%;
-}
-
-html{
-  width:100%;
-  max-width:100%;
-  overflow-x:hidden !important;
-}
-
-body{
-  width:100%;
-  max-width:100%;
-  min-width:0 !important;
-  margin:0;
-  padding:0;
-  overflow-x:hidden !important;
-}
-
-img,
-video,
-iframe,
-svg{
-  max-width:100% !important;
-}
-
-table{
-  width:100% !important;
-  max-width:100% !important;
-  display:block;
-  overflow-x:auto;
-}
-
-pre,
-code{
-  max-width:100% !important;
-  white-space:pre-wrap !important;
-  overflow-wrap:anywhere !important;
-}
-
-a,
-p,
-h1,
-h2,
-h3,
-h4,
-li,
-span,
-div{
-  max-width:100%;
-  overflow-wrap:anywhere;
-}
-
-@media screen and (max-width:600px){
-
-  html,
-  body{
-    width:100vw !important;
-    max-width:100vw !important;
-    min-width:0 !important;
-    overflow-x:hidden !important;
-  }
-
-  header,
-  main,
-  section,
-  article,
-  footer,
-  nav,
-  .container,
-  .header-inner,
-  .hero-grid,
-  .hero-copy,
-  .hero-photo,
-  .article-area,
-  .article,
-  .info-row,
-  .info-box,
-  .pull-quote,
-  .story-image,
-  .life-map,
-  .lesson-list,
-  .related,
-  .related-grid,
-  .author,
-  .footer-main,
-  .footer-bottom,
-  .faq-section,
-  .faq-inner{
-    width:100% !important;
-    max-width:100% !important;
-    min-width:0 !important;
-  }
-
-  .container,
-  .article{
-    padding-left:16px !important;
-    padding-right:16px !important;
-  }
-
-  .header-inner{
-    display:block !important;
-  }
-
-  nav{
-    display:flex !important;
-    flex-wrap:wrap !important;
-    gap:4px !important;
-  }
-
-  nav a{
-    max-width:100% !important;
-    white-space:normal !important;
-  }
-
-  .hero-grid{
-    display:block !important;
-  }
-
-  .hero-copy{
-    padding:35px 16px !important;
-  }
-
-  .hero-copy h1{
-    width:100% !important;
-    max-width:100% !important;
-    font-size:1.8rem !important;
-    line-height:1.25 !important;
-    white-space:normal !important;
-    overflow-wrap:anywhere !important;
-  }
-
-  .hero-copy p{
-    width:100% !important;
-    max-width:100% !important;
-    font-size:1rem !important;
-    line-height:1.7 !important;
-    white-space:normal !important;
-  }
-
-  .hero-photo{
-    height:300px !important;
-    min-height:0 !important;
-    max-height:300px !important;
-  }
-
-  .hero-photo img{
-    width:100% !important;
-    max-width:100% !important;
-    height:100% !important;
-    object-fit:cover !important;
-  }
-
-  .article-area{
-    overflow:hidden !important;
-  }
-
-  .article{
-    overflow:hidden !important;
+    font-size:20px;
   }
 
   p{
-    width:100% !important;
-    max-width:100% !important;
-    font-size:1rem !important;
-    line-height:1.8 !important;
-    white-space:normal !important;
-    overflow-wrap:anywhere !important;
-    word-break:normal !important;
+    font-size:16px;
+    line-height:1.8;
   }
 
-  h2,
-  h3,
-  h4{
-    width:100% !important;
-    max-width:100% !important;
-    white-space:normal !important;
-    overflow-wrap:anywhere !important;
+  .fact-grid{
+    grid-template-columns:1fr;
   }
 
-  .info-row{
-    display:block !important;
+  .quote{
+    padding:27px 18px;
   }
 
-  .info-box{
-    margin-bottom:12px !important;
-  }
-
-  .pull-quote{
-    margin:30px 0 !important;
-    padding:22px 16px !important;
-  }
-
-  .story-image{
-    margin:28px 0 !important;
-    overflow:hidden !important;
-  }
-
-  .story-image img{
-    width:100% !important;
-    height:auto !important;
-    display:block !important;
-  }
-
-  .ad-box{
-    width:100% !important;
-    max-width:100% !important;
-    overflow:hidden !important;
-  }
-
-  .life-map{
-    overflow:hidden !important;
-  }
-
-  .map-item{
-    width:100% !important;
-    max-width:100% !important;
-    padding-left:42px !important;
-    padding-right:0 !important;
-  }
-
-  .lesson{
-    width:100% !important;
-    max-width:100% !important;
-    display:block !important;
+  .quote p{
+    font-size:21px;
   }
 
   .related-grid{
-    display:block !important;
-  }
-
-  .related a{
-    display:block !important;
-    width:100% !important;
-    max-width:100% !important;
-    white-space:normal !important;
+    grid-template-columns:1fr;
   }
 
   .author{
-    overflow-wrap:anywhere !important;
+    display:block;
+    padding:25px 20px;
   }
 
-  .footer-main{
-    overflow:hidden !important;
+  .author img{
+    margin-bottom:18px;
   }
 
-  .faq-section{
-    overflow:hidden !important;
+  .footer-grid{
+    grid-template-columns:1fr;
+    gap:25px;
+  }
+
+  .footer-inner{
+    padding:38px 16px 22px;
+  }
+
+  .faq{
+    padding:45px 16px 55px;
   }
 
   .faq-item{
-    width:100% !important;
-    max-width:100% !important;
-    overflow-wrap:anywhere !important;
+    padding:18px 16px;
+  }
+}
+
+@media(max-width:420px){
+  .brand-name{
+    font-size:19px;
+  }
+
+  .brand-tag{
+    font-size:11px;
+  }
+
+  nav{
+    gap:2px;
+  }
+
+  nav a{
+    font-size:11px;
+    padding:6px 5px;
+  }
+
+  .hero-copy{
+    padding:38px 16px 32px;
+  }
+
+  h1{
+    font-size:31px;
+  }
+
+  .hero-copy p{
+    font-size:15px;
+  }
+
+  .hero-photo{
+    height:260px;
+    min-height:260px;
+  }
+
+  .page{
+    padding-left:15px;
+    padding-right:15px;
+  }
+
+  .intro{
+    font-size:18px;
+  }
+
+  h2{
+    font-size:26px;
+  }
+
+  p{
+    font-size:15.8px;
+  }
+
+  .quote p{
+    font-size:19px;
+  }
+
+  .timeline{
+    padding-left:20px;
+  }
+
+  .timeline-item::before{
+    left:-27px;
   }
 }
 </style>
-
 </head>
 
 <body>
 
-<div class="top-strip">
-  Kinglee6 Mutwiri · Stories, People and Ideas Worth Thinking About
-</div>
+<div class="topbar">KINGLEE6 MUTWIRI — STORIES, PEOPLE AND IDEAS WORTH THINKING ABOUT</div>
 
-<header>
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <p class="brand-name">Kinglee6 Mutwiri</p>
+      <p class="brand-tag">Stories, People and Ideas Worth Thinking About</p>
+    </div>
 
-<div class="container header-inner">
-
-<a class="logo" href="https://kinglee6mutwiri.co.ke/">
-  <span class="logo-name">Kinglee6 Mutwiri</span>
-  <span class="logo-tag">People · Stories · Ideas · Lessons</span>
-</a>
-
-<nav aria-label="Main navigation">
-  <a href="https://kinglee6mutwiri.co.ke/">Home</a>
-  <a href="https://kinglee6mutwiri.co.ke/biographies.html">Biographies</a>
-  <a href="https://kinglee6mutwiri.co.ke/life-stories.html">Life Stories</a>
-  <a href="https://kinglee6mutwiri.co.ke/lessons.html">Lessons</a>
-  <a href="https://kinglee6mutwiri.co.ke/mindset-and-life.html">Mindset &amp; Life</a>
-  <a href="https://kinglee6mutwiri.co.ke/money.html">Money</a>
-</nav>
-
-</div>
-
+    <nav aria-label="Main navigation">
+      <a href="https://kinglee6mutwiri.co.ke/">Home</a>
+      <a href="https://kinglee6mutwiri.co.ke/biographies.html">Biographies</a>
+      <a href="https://kinglee6mutwiri.co.ke/life-stories.html">Life Stories</a>
+      <a href="https://kinglee6mutwiri.co.ke/lessons.html">Lessons</a>
+      <a href="https://kinglee6mutwiri.co.ke/mindset-and-life.html">Mindset &amp; Life</a>
+      <a href="https://kinglee6mutwiri.co.ke/money.html">Money</a>
+    </nav>
+  </div>
 </header>
 
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <div class="eyebrow">Biography / Music / Legacy</div>
+      <h1>Bob Marley: From Jamaica's Streets to a Global Musical Legacy</h1>
+      <p>A closer look at the man behind the music, the difficult decisions he made, the world he came from, and why his story continues to mean something long after his final performance.</p>
+    </div>
 
-<section class="marley-hero">
-
-<div class="container hero-grid">
-
-<div class="hero-copy">
-
-<div class="category">Biography · Music · Jamaica</div>
-
-<h1>Bob Marley: From Jamaica's Streets to a Global Musical Legacy</h1>
-
-<p>
-When I look at Bob Marley's story, I do not see only a famous musician.
-I see a young Jamaican who found something he could express through music,
-developed that ability over many years and eventually carried a very local
-sound to listeners around the world.
-</p>
-
-<div class="hero-note">
-This is the part of Marley's journey I find most interesting: how music,
-identity, belief and difficult circumstances became connected to the person
-the world eventually knew.
-</div>
-
-</div>
-
-<div class="hero-photo">
-
-<img src="images/bob-marley.jpg"
-     alt="Bob Marley"
-     loading="eager">
-
-</div>
-
-</div>
-
+    <div class="hero-photo">
+      <img src="images/bob-marley.jpg" alt="Bob Marley">
+    </div>
+  </div>
 </section>
 
-
-<main class="article-area">
-
-<article class="article">
-
-<div class="opening">
-
-Bob Marley is one of those names that can become so familiar that people
-stop asking about the person behind the name. His face has become a symbol,
-his music has travelled through generations and reggae has become strongly
-associated with Jamaica around the world. But before all of that, there was
-a boy from Jamaica, a changing country, a developing music scene and a young
-man trying to find his place in it.
-
-I wanted to look at his story from that angle. Not simply as a list of
-albums and achievements, but as a journey of development. What shaped him?
-What decisions changed his direction? What difficulties did he face? And
-what can an ordinary person today actually take from the story?
-
-</div>
-
-
-<div class="info-row">
-
-<div class="info-box">
-<span>Born</span>
-<strong>6 February 1945</strong>
-</div>
-
-<div class="info-box">
-<span>Birthplace</span>
-<strong>Nine Mile, Jamaica</strong>
-</div>
-
-<div class="info-box">
-<span>Died</span>
-<strong>11 May 1981</strong>
-</div>
-
-</div>
-
-
-<div class="kicker">01 · The beginning</div>
-
-<h2>Growing Up in Jamaica Before the Fame</h2>
-
-<p>
-Robert Nesta Marley was born on 6 February 1945 in Nine Mile, Saint Ann
-Parish, Jamaica. His mother was Cedella Booker, a Jamaican woman, while
-his father was Norval Marley. His family background was complicated, and
-his childhood did not come with the kind of stability that would later be
-associated with his international fame.
-</p>
-
-<p>
-As a young person, Marley eventually spent important years in Kingston.
-Moving from a rural environment into the capital exposed him to a very
-different social and cultural setting.
-</p>
-
-<p>
-Kingston was becoming an important centre of Jamaican popular culture.
-Music was everywhere. People listened to records, musicians performed in
-small venues and new sounds were developing from a mixture of Jamaican
-traditions and outside influences.
-</p>
-
-<p>
-This environment mattered because Marley did not discover music in a
-vacuum. He was surrounded by people who were experimenting with sound.
-Jamaica itself was changing, and its music was changing with it.
-</p>
-
-<p>
-That is something I think is easy to miss when looking back at successful
-people. We often imagine that the person simply possessed a special gift
-from childhood and everything followed naturally. In reality, talent still
-needs an environment in which it can be developed.
-</p>
-
-<p>
-For Marley, Kingston became part of that environment.
-</p>
-
-
-<div class="eliphas-note">
-
-<p>
-What I take from this early period is simple: sometimes your environment
-can introduce you to an ability you did not yet understand. Pay attention
-to the things that repeatedly attract your attention. They may point
-towards something worth developing.
-</p>
-
-</div>
-
-
-<div class="kicker">02 · The first serious step</div>
-
-<h2>The Wailers and the People Around Him</h2>
-
-<p>
-Bob Marley's musical journey became closely connected with Peter Tosh and
-Bunny Wailer. The three became important members of The Wailers, a group
-that would eventually become one of the most recognised names in Jamaican
-music.
-</p>
-
-<p>
-The early years were not glamorous. Young musicians had to find recording
-opportunities, perform for audiences and learn how the music business
-worked. There was no guarantee that a recording would become a major
-success.
-</p>
-
-<p>
-One important early recording was “Simmer Down,” which was produced through
-Clement “Coxsone” Dodd's Studio One operation. The song helped establish
-The Wailers among Jamaican listeners.
-</p>
-
-<p>
-The importance of those early recordings was bigger than one successful
-song. They gave Marley experience. He was learning how to write, record,
-perform and communicate with an audience.
-</p>
-
-<p>
-Peter Tosh and Bunny Wailer were also not simply supporting characters.
-They were talented musicians with their own identities, and the early
-history of The Wailers is best understood as a story of collaboration,
-creativity and eventually different individual directions.
-</p>
-
-<p>
-This part of Marley's career reminds me that development normally happens
-before recognition. People see the finished performer, but the performer
-has already spent years learning what works and what does not.
-</p>
-
-
-<div class="ad-box">
-
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-5799841502846177"
-     data-ad-slot="6388196362"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-</div>
-
-
-<div class="kicker">03 · Finding a sound</div>
-
-<h2>From Ska and Rocksteady Towards Reggae</h2>
-
-<p>
-Jamaican music was evolving rapidly during the years when Marley was
-developing as an artist. Ska had become popular, followed by rocksteady,
-and reggae would later become the sound most closely associated with
-Marley.
-</p>
-
-<p>
-These styles were connected rather than completely separate. Musicians
-experimented with rhythm, bass, guitar, drums and vocal arrangements.
-Producers played an enormous role in shaping the sound.
-</p>
-
-<p>
-Marley worked within this changing musical environment. His development
-was therefore not simply about becoming a better singer. He was part of a
-larger creative movement.
-</p>
-
-<p>
-His work with producer Lee “Scratch” Perry during the early 1970s was one
-of the important stages in the development of the Wailers' sound. Musicians
-such as Aston “Family Man” Barrett and Carlton Barrett also became central
-to the musical foundation around the group.
-</p>
-
-<p>
-Later, international recording opportunities gave The Wailers access to a
-much wider audience. Albums such as <em>Catch a Fire</em> and <em>Burnin'</em>
-helped introduce their music outside Jamaica.
-</p>
-
-<p>
-For me, this is where the story becomes especially interesting. Marley did
-not abandon the musical culture that shaped him in order to become
-international. Instead, that culture became part of what made his work
-distinctive.
-</p>
-
-
-<div class="pull-quote">
-
-<p>
-The thing that made Bob Marley internationally recognisable was not that
-he stopped being Jamaican. His Jamaican musical identity became part of
-the reason people around the world wanted to listen.</p>
-
-<small>My observation from studying his development</small>
-
-</div>
-
-
-<div class="kicker">04 · Belief and identity</div>
-
-<h2>Rastafari Was Part of the Story, Not Just an Image</h2>
-
-<p>
-Rastafari became an important part of Bob Marley's identity. To understand
-his music properly, it is necessary to understand that his spiritual and
-cultural beliefs influenced the subjects he addressed.
-</p>
-
-<p>
-Rastafari developed in Jamaica during the twentieth century and included
-religious, cultural and social ideas concerning African identity,
-spirituality and resistance to oppression.
-</p>
-
-<p>
-Marley's association with Rastafari became internationally visible, and
-his music helped introduce aspects of the movement to people who had never
-encountered it before.
-</p>
-
-<p>
-His beliefs influenced how he thought about freedom, dignity, injustice,
-human relationships and spiritual life.
-</p>
-
-<p>
-I think this matters because it explains why his music could carry a
-stronger sense of purpose than ordinary entertainment. He was not simply
-trying to create songs that sounded good. Many of his songs were connected
-to ideas he considered important.
-</p>
-
-<p>
-At the same time, listeners did not have to share all of his beliefs to
-connect with the emotional and social themes in his work.
-</p>
-
-
-<div class="kicker">05 · Becoming international</div>
-
-<h2>When the Jamaican Story Reached the Wider World</h2>
-
-<p>
-During the 1970s, Bob Marley and The Wailers moved into a much larger
-international space. Their recordings were reaching listeners far beyond
-Jamaica.
-</p>
-
-<p>
-Albums including <em>Natty Dread</em>, <em>Rastaman Vibration</em>,
-<em>Exodus</em>, <em>Kaya</em>, <em>Survival</em> and <em>Uprising</em>
-helped establish Marley as an international artist.
-</p>
-
-<p>
-But international success brought a new challenge. Once an artist becomes
-famous outside their home country, people begin to interpret their work
-through their own cultures.
-</p>
-
-<p>
-A Jamaican listener could understand one reference one way, while a
-listener in Europe, Africa or elsewhere might hear something completely
-different.
-</p>
-
-<p>
-Marley's music managed to travel despite those differences. Rhythm helped,
-but so did the simplicity and emotional directness of many of the ideas.
-Love, conflict, freedom, suffering, faith and hope are subjects that can
-cross borders.
-</p>
-
-<p>
-That is one of the strongest lessons I see in his international growth:
-you do not necessarily need to remove your identity to reach a wider
-audience. Sometimes you need to communicate your identity clearly enough
-for other people to understand it.
-</p>
-
-
-<div class="kicker">06 · A dangerous period</div>
-
-<h2>The 1976 Attack</h2>
-
-<p>
-Marley's rise happened during a difficult period in Jamaica. Political
-tensions were serious, and the country was experiencing conflict between
-supporters of rival political groups.
-</p>
-
-<p>
-On 3 December 1976, Marley was attacked at his home in Kingston shortly
-before the planned Smile Jamaica concert.
-</p>
-
-<p>
-Marley was wounded. Rita Marley was also injured, while manager Don Taylor
-was seriously wounded.
-</p>
-
-<p>
-The attack was an extremely serious event. It would have been understandable
-for Marley to stay away from the concert afterwards.
-</p>
-
-<p>
-Instead, he appeared and performed.
-</p>
-
-<p>
-That decision became one of the most remembered moments of his public life.
-It was not simply about standing on a stage. The circumstances surrounding
-the performance gave the appearance a much greater meaning.
-</p>
-
-<p>
-I would not reduce this complicated period to a simple story about one
-person being fearless. The political environment was complex, and the
-attack itself occurred within a wider period of tension. What can be said
-clearly is that Marley chose to perform despite having been attacked.
-</p>
-
-
-<div class="eliphas-note">
-
-<p>
-This is one of the moments where I think about the difference between
-courage and the absence of fear. Courage does not necessarily mean a person
-has no reason to be afraid. Sometimes it means deciding what matters
-enough to continue despite the difficulty.
-</p>
-
-</div>
-
-
-<div class="kicker">07 · Peace in a divided country</div>
-
-<h2>The One Love Peace Concert</h2>
-
-<p>
-On 22 April 1978, Bob Marley performed at the One Love Peace Concert in
-Kingston.
-</p>
-
-<p>
-Jamaica was experiencing political division, and the concert became one of
-the most significant public moments associated with Marley's influence.
-</p>
-
-<p>
-During the performance, Marley brought political leaders Michael Manley
-and Edward Seaga together on stage.
-</p>
-
-<p>
-Marley was not a government official. His influence came from culture.
-Millions of people could hear his music even though they were never going
-to sit in a political meeting with him.
-</p>
-
-<p>
-That difference is important. Cultural influence and political authority
-are not the same thing. Marley could not pass legislation, but he could
-use his platform to create a symbolic moment around peace.
-</p>
-
-<p>
-The concert became part of his wider legacy because it showed how an artist
-could become involved in questions affecting society without becoming a
-politician.
-</p>
-
-
-<div class="kicker">08 · Looking towards Africa</div>
-
-<h2>Africa and the Meaning It Had for Marley</h2>
-
-<p>
-Africa occupied an important place in Marley's worldview. His Rastafari
-beliefs and his understanding of African identity influenced his work.
-</p>
-
-<p>
-In 1978, Marley visited Kenya and Ethiopia. These visits were significant
-within his broader relationship with Africa.
-</p>
-
-<p>
-His music increasingly addressed liberation and African identity. The song
-“Zimbabwe” became particularly associated with the country's struggle and
-later independence.
-</p>
-
-<p>
-The Wailers performed in Zimbabwe during independence celebrations in
-1980, shortly after the country gained independence.
-</p>
-
-<p>
-For Marley, Africa represented more than geography. It was connected to
-history, identity and the idea of freedom.
-</p>
-
-<p>
-This part of his story also demonstrates how a person's understanding of
-home can expand. Marley was Jamaican, but his sense of cultural identity
-was not limited to the island where he was born.
-</p>
-
-
-<div class="kicker">09 · The final chapter</div>
-
-<h2>Illness, Football and the End of His Life</h2>
-
-<p>
-Bob Marley loved football, and the sport was an important part of his
-personal life.
-</p>
-
-<p>
-In 1977, a melanoma was discovered beneath a toenail after an injury.
-The cancer later spread through his body.
-</p>
-
-<p>
-The years that followed were difficult. Marley continued working and
-performing while his health deteriorated.
-</p>
-
-<p>
-His final concert took place in Pittsburgh on 23 September 1980.
-</p>
-
-<p>
-He died in Miami on 11 May 1981 at the age of 36.
-</p>
-
-<p>
-The age is striking to me every time I revisit the story. Thirty-six is
-young. By that point Marley had already become internationally recognised,
-but he still had many years of life that he never got to experience.
-</p>
-
-<p>
-His death also reminds us that achievement and vulnerability can exist at
-the same time. A person can be successful in public and still face deeply
-personal struggles away from the stage.
-</p>
-
-
-<div class="kicker">10 · Looking at the whole journey</div>
-
-<h2>Bob Marley's Life in Eight Important Stages</h2>
-
-<div class="life-map">
-
-<div class="map-item">
-<div class="map-dot"></div>
-<div class="map-year">1945</div>
-<h3>Born in Jamaica</h3>
-<p>
-Robert Nesta Marley was born in Nine Mile, Saint Ann Parish, Jamaica.
-</p>
-</div>
-
-<div class="map-item">
-<div class="map-dot"></div>
-<div class="map-year">Early career</div>
-<h3>Learning Through The Wailers</h3>
-<p>
-Marley developed as a musician alongside Peter Tosh, Bunny Wailer and
-other musicians who shaped the group's sound.
-</p>
-</div>
-
-<div class="map-item">
-<div class="map-dot"></div>
-<div class="map-year">1964</div>
-<h3>“Simmer Down”</h3>
-<p>
-The Wailers achieved an important early Jamaican success with the recording
-produced through Studio One.
-</p>
-</div>
-
-<div class="map-item">
-<div class="map-dot"></div>
-<div class="map-year">1970s</div>
-<h3>International Recognition</h3>
-<p>
-The Wailers' music reached audiences outside Jamaica and Marley developed
-into a global performer.
-</p>
-</div>
-
-<div class="map-item">
-<div class="map-dot"></div>
-<div class="map-year">1976</div>
-<h3>The Kingston Attack</h3>
-<p>
-Marley was attacked shortly before the Smile Jamaica concert but still
-appeared at the event.
-</p>
-</div>
-
-<div class="map-item">
-<div class="map-dot"></div>
-<div class="map-year">1978</div>
-<h3>One Love Peace Concert</h3>
-<p>
-Marley performed at the concert and brought Michael Manley and Edward
-Seaga together on stage.
-</p>
-</div>
-
-<div class="map-item">
-<div class="map-dot"></div>
-<div class="map-year">1980</div>
-<h3>Final Performance</h3>
-<p>
-His final concert was held in Pittsburgh on 23 September 1980.
-</p>
-</div>
-
-<div class="map-item">
-<div class="map-dot"></div>
-<div class="map-year">1981</div>
-<h3>Death</h3>
-<p>
-Bob Marley died in Miami on 11 May 1981, aged 36.
-</p>
-</div>
-
-</div>
-
-
-<div class="ad-box">
-
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-5799841502846177"
-     data-ad-slot="1217574823"></ins>
-
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-</div>
-
-
-<div class="kicker">11 · What I take from it</div>
-
-<h2>Eight Practical Lessons I See in Bob Marley's Journey</h2>
-
-<div class="lesson-list">
-
-<div class="lesson">
-<div class="lesson-number">01</div>
-<div>
-<h3>Develop something that belongs to you</h3>
-<p>
-Marley became recognisable because he developed a musical identity rather
-than constantly trying to become somebody else. For me, that is useful
-beyond music. Whether you are building a website, business, career or
-creative skill, give yourself time to develop something people can
-associate with you.
-</p>
-</div>
-</div>
-
-<div class="lesson">
-<div class="lesson-number">02</div>
-<div>
-<h3>Do not despise the early stage</h3>
-<p>
-The young Marley was not the international figure people remember today.
-He had to learn. Early recordings, performances and collaborations were
-part of the process. I think this is important because many people become
-frustrated when their first attempts do not receive immediate recognition.
-The beginning is supposed to be a learning period.
-</p>
-</div>
-</div>
-
-<div class="lesson">
-<div class="lesson-number">03</div>
-<div>
-<h3>Know where you come from</h3>
-<p>
-Marley carried Jamaican culture into international spaces instead of
-pretending it did not exist. Your background can give your work character.
-You can learn from the world without completely removing the things that
-make your perspective different.
-</p>
-</div>
-</div>
-
-<div class="lesson">
-<div class="lesson-number">04</div>
-<div>
-<h3>Give your talent a purpose</h3>
-<p>
-Marley's music often carried ideas about subjects he considered important.
-That makes me think about the difference between being talented and knowing
-what you want your talent to do. Skill can attract attention, but purpose
-can give the skill direction.
-</p>
-</div>
-</div>
-
-<div class="lesson">
-<div class="lesson-number">05</div>
-<div>
-<h3>Build with other people</h3>
-<p>
-The history of The Wailers shows that major creative work does not happen
-in complete isolation. Marley worked with musicians, producers and other
-people who contributed to the sound. The lesson is practical: recognise
-good people and learn how to work with them.
-</p>
-</div>
-</div>
-
-<div class="lesson">
-<div class="lesson-number">06</div>
-<div>
-<h3>Difficulty does not always arrive before success</h3>
-<p>
-Marley's political difficulties and illness happened during years of
-international recognition. Success does not create a permanent shield
-against personal problems. Remembering this can help us avoid judging
-other people's lives only from what we see publicly.
-</p>
-</div>
-</div>
-
-<div class="lesson">
-<div class="lesson-number">07</div>
-<div>
-<h3>Use your platform responsibly</h3>
-<p>
-Marley had a platform that reached far beyond Jamaica. His involvement in
-peace-related public moments showed that he understood the attention around
-him could be used for subjects larger than himself. Anyone with an audience
-can think about what they are adding to that audience.
-</p>
-</div>
-</div>
-
-<div class="lesson">
-<div class="lesson-number">08</div>
-<div>
-<h3>Build something that can outlive the moment</h3>
-<p>
-Marley died in 1981, but his work continued reaching people. I do not take
-that to mean everyone needs worldwide fame. I take it as a reminder that
-good work can have a longer life than the circumstances in which it was
-created.
-</p>
-</div>
-</div>
-
-</div>
-
-
-<div class="kicker">12 · Beyond the famous image</div>
-
-<h2>There Was More to Bob Marley Than the Symbol</h2>
-
-<p>
-One problem with famous people is that their public image can become
-simpler than their actual lives.
-</p>
-
-<p>
-Bob Marley is often represented through photographs, colours, dreadlocks,
-guitars and familiar cultural symbols. Those things are connected to him,
-but they do not tell the whole story.
-</p>
-
-<p>
-Behind the image was a person who spent years developing his craft, working
-with other musicians, dealing with political circumstances and making
-decisions about how he wanted to use his public position.
-</p>
-
-<p>
-He was also a product of Jamaica's history. His music developed during a
-period when the country was establishing its identity while dealing with
-economic and political challenges.
-</p>
-
-<p>
-Understanding that background gives more meaning to the music. Instead of
-hearing only a rhythm, you begin to hear the environment from which that
-rhythm came.
-</p>
-
-
-<div class="kicker">13 · What success actually shows</div>
-
-<h2>Why His Journey Still Has Something to Teach Us</h2>
-
-<p>
-I think the most useful part of Bob Marley's story is not simply that he
-became famous. Many people become famous and later disappear from public
-attention.
-</p>
-
-<p>
-What stands out is that his work became connected to an identity and a
-message strong enough to continue travelling.
-</p>
-
-<p>
-He did not begin as an international icon. He developed within a local
-music scene. He worked with other people. He experienced setbacks. He
-continued creating.
-</p>
-
-<p>
-Eventually the world became interested in what had grown out of that
-process.
-</p>
-
-<p>
-That is useful for anyone who is currently building something small.
-Sometimes you look at a finished website, a successful business or an
-established artist and forget that it once existed as an unfinished idea.
-</p>
-
-<p>
-Marley's career gives a clear example of the long period between beginning
-and becoming recognised.
-</p>
-
-<p>
-That period matters.
-</p>
-
-
-<div class="eliphas-note">
-
-<p>
-If I had to reduce the practical side of Marley's story to one thought, it
-would be this: work on your craft long enough for your own identity to
-become visible through it. Do not spend the whole journey trying to look
-like somebody who has already arrived.
-</p>
-
-</div>
-
-
-<div class="kicker">14 · Legacy</div>
-
-<h2>The Music Continued After the Man Was Gone</h2>
-
-<p>
-Bob Marley died in 1981, but his cultural influence continued growing.
-Reggae reached audiences around the world, Jamaican music gained even more
-international recognition and Marley became one of the most recognisable
-figures associated with the genre.
-</p>
-
-<p>
-He was inducted into the Rock and Roll Hall of Fame in 1994, more than a
-decade after his death.
-</p>
-
-<p>
-His legacy is also visible in the musicians who followed. Artists across
-different countries have drawn inspiration from reggae, Rastafari-related
-themes, Jamaican rhythms and Marley's approach to socially conscious
-music.
-</p>
-
-<p>
-But legacy is not only about awards or the number of people who remember
-your name.
-</p>
-
-<p>
-A legacy can also mean leaving behind an example of how to approach your
-work.
-</p>
-
-<p>
-In Marley's case, that example includes cultural confidence, persistence,
-collaboration, creativity and the willingness to use music to communicate
-ideas.
-</p>
-
-
-<div class="kicker">15 · My conclusion</div>
-
-<h2>What Bob Marley's Journey Means to Me</h2>
-
-<p>
-When I finish looking through Bob Marley's life, the thing I remember most
-is not one particular photograph or one particular performance.
-</p>
-
-<p>
-I remember the journey.
-</p>
-
-<p>
-A young Jamaican grew up during a period of cultural change. He found
-music. He worked with other young musicians. He developed his sound. His
-beliefs influenced his work. His music moved beyond Jamaica. His public
-influence grew. He experienced danger. He continued performing. He became
-seriously ill. And he died much earlier than anyone would have wanted.
-</p>
-
-<p>
-Yet the work remained.
-</p>
-
-<p>
-That is why I think his story belongs beyond a simple celebrity biography.
-It is a story about what happens when a person's abilities, identity and
-sense of purpose begin moving in the same direction.
-</p>
-
-<p>
-Bob Marley did not live a long life. But the amount of cultural ground his
-work covered during those years was extraordinary.
-</p>
-
-<p>
-For me, the lesson is not that everyone should chase fame. Fame is not the
-only measurement of a meaningful life.
-</p>
-
-<p>
-The more useful lesson is to find something you can genuinely develop,
-understand where your voice comes from, work with people who can help you
-grow and create something that has value beyond the immediate moment.
-</p>
-
-<p>
-That is the part of Bob Marley's story I would carry forward.
-</p>
-
-<p>
-The man died in 1981. The conversation created by his work did not.
-</p>
-
-
-<div class="related">
-
-<div class="kicker">Keep reading</div>
-
-<h2>More From Kinglee6 Mutwiri</h2>
-
-<div class="related-grid">
-
-<a href="https://kinglee6mutwiri.co.ke/lionel-messi.html">
-<strong>Lionel Messi</strong>
-<span>A different sporting journey, from a young player in Argentina to one of football's most recognised figures.</span>
-</a>
-
-<a href="https://kinglee6mutwiri.co.ke/wangari-maathai.html">
-<strong>Wangari Maathai</strong>
-<span>Explore the life and work of a Kenyan woman whose environmental work gained international attention.</span>
-</a>
-
-<a href="https://kinglee6mutwiri.co.ke/lucky-dube.html">
-<strong>Lucky Dube</strong>
-<span>Read another story about an African musician whose work connected music with wider social themes.</span>
-</a>
-
-<a href="https://kinglee6mutwiri.co.ke/salary-disappeared-story.html">
-<strong>The Salary Disappeared Story</strong>
-<span>A different kind of life story looking at money, decisions and everyday financial pressure.</span>
-</a>
-
-<a href="https://kinglee6mutwiri.co.ke/mindset-and-life.html">
-<strong>Mindset &amp; Life</strong>
-<span>Practical ideas about habits, decisions, discipline, courage and personal growth.</span>
-</a>
-
-<a href="https://kinglee6mutwiri.co.ke/">
-<strong>Kinglee6 Mutwiri Home</strong>
-<span>Return to the homepage and explore more stories, people and ideas worth thinking about.</span>
-</a>
-
-</div>
-
-</div>
-
-
-<div class="author">
-
-<h2>About the Author</h2>
-
-<p>
-I am Eliphas Mutwiri, the writer behind Kinglee6 Mutwiri. I created this
-website to explore people, life experiences, ideas and decisions that can
-give readers something useful to think about.
-</p>
-
-<p>
-When I write biographies, I do not want to stop at dates and achievements.
-I want to understand the journey behind them: where the person started,
-what shaped them, what difficult moments appeared, what decisions mattered
-and what lessons can reasonably be taken from the story.
-</p>
-
-<p class="author-name">Eliphas Mutwiri</p>
-
-</div>
-
-</article>
+<main class="page">
+
+  <p class="intro">
+    Bob Marley is often remembered through photographs, songs and the familiar image of a musician with long dreadlocks and a guitar. But behind that image was a complicated human story. He grew up in Jamaica, experienced hardship, built a career slowly, developed a distinctive musical voice and eventually became one of the most recognisable musicians in the world. His journey was not a straight line from poverty to fame. It was a mixture of talent, relationships, setbacks, conviction, opportunity and decisions made at difficult moments.
+  </p>
+
+  <div class="meta">
+    <span>Born: 6 February 1945</span>
+    <span>Born in: Nine Mile, Jamaica</span>
+    <span>Died: 11 May 1981</span>
+    <span>Age: 36</span>
+  </div>
+
+  <div class="ad-wrap">
+    <ins class="adsbygoogle"
+      style="display:block"
+      data-ad-client="ca-pub-5799841502846177"
+      data-ad-slot="6388196362"
+      data-ad-format="auto"
+      data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <section class="section">
+    <div class="section-label">Before the fame</div>
+    <h2>The boy from Nine Mile</h2>
+
+    <p>
+      Robert Nesta Marley was born on 6 February 1945 in Nine Mile, Saint Ann Parish, Jamaica. His mother, Cedella Booker, was Jamaican, while his father, Norval Marley, was a British-Jamaican man who served in the British Army. Bob's family background was different from the simple image that later surrounded him, and his childhood was shaped by the realities of class, family circumstances and life in Jamaica during the middle of the twentieth century.
+    </p>
+
+    <p>
+      As he grew older, Marley spent important years in Kingston, particularly in the Trench Town area. Kingston introduced him to a different environment from rural Saint Ann. It was crowded, energetic and full of young people trying to find their way. Music was everywhere. Sound systems, singers, musicians and small recording studios were becoming important parts of Jamaican culture.
+    </p>
+
+    <p>
+      This environment mattered because Marley did not discover music in isolation. He learned from the people around him. He listened, experimented and developed friendships with other young musicians. Among the most important were Neville Livingston, later known as Bunny Wailer, and Peter Tosh. Their friendship eventually became one of the foundations of the Wailers.
+    </p>
+
+    <div class="fact-grid">
+      <div class="fact">
+        <strong>Birth</strong>
+        <span>6 February 1945, Nine Mile, Jamaica</span>
+      </div>
+      <div class="fact">
+        <strong>Mother</strong>
+        <span>Cedella Booker</span>
+      </div>
+      <div class="fact">
+        <strong>Early group</strong>
+        <span>The Wailers</span>
+      </div>
+    </div>
+
+    <p>
+      What I find interesting about this stage of his life is that there was no guarantee of international success. Marley first had to become useful in a small musical world before the wider world knew his name. That is an important distinction. Great careers often look obvious when viewed backwards, but they rarely feel obvious while they are being built.
+    </p>
+  </section>
+
+  <section class="section">
+    <div class="section-label">Finding a voice</div>
+    <h2>From local recordings to the Wailers</h2>
+
+    <p>
+      Marley began recording while still young. Early Jamaican recording culture was developing rapidly, and producers such as Clement “Coxsone” Dodd were helping shape the island's emerging sound. The Wailers' early recording “Simmer Down” became an important success and showed that the young musicians could connect with Jamaican listeners.
+    </p>
+
+    <p>
+      The group's early years were not simple. The music business involved producers, recording sessions, changing line-ups and financial pressures. The Wailers also had to develop their sound while Jamaican music itself was changing. Ska was giving way to rocksteady, and later reggae emerged with a slower, heavier rhythm.
+    </p>
+
+    <p>
+      Marley worked with different musicians and producers as he developed. His association with producer Lee “Scratch” Perry in the early 1970s was particularly important to the musical development of the Wailers. Musicians including bassist Aston “Family Man” Barrett and drummer Carlton Barrett also became central to the sound that eventually reached international audiences.
+    </p>
+
+    <p>
+      The group eventually attracted attention beyond Jamaica. The Wailers signed with Island Records and began working with Chris Blackwell. The album <em>Catch a Fire</em>, released in 1973, helped introduce their music to a much wider audience. It was an important change in scale: the music was no longer being made only for a Jamaican audience.
+    </p>
+
+    <div class="story-image">
+      <img src="images/bob-marley.jpg" alt="Bob Marley during his musical career">
+      <div class="caption">Bob Marley's public image eventually became inseparable from the music he created and performed.</div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-label">A changing career</div>
+    <h2>When the music became bigger than the group</h2>
+
+    <p>
+      The Wailers' international rise brought both opportunities and changes. Peter Tosh and Bunny Wailer eventually left the group, while Marley increasingly became the central public figure associated with the Wailers. The name Bob Marley and the Wailers became internationally recognised.
+    </p>
+
+    <p>
+      Albums such as <em>Burnin'</em>, <em>Natty Dread</em> and <em>Rastaman Vibration</em> helped establish his reputation. His music dealt with themes that went beyond romance and entertainment. He sang about social inequality, freedom, identity, conflict, spirituality and the experiences of people who felt overlooked.
+    </p>
+
+    <p>
+      That combination helped explain why his audience became so broad. A listener could approach Marley because of the rhythm, the voice or the musicianship and then discover ideas about society and personal responsibility underneath the music.
+    </p>
+
+    <p>
+      His music was also strongly influenced by Rastafari. For Marley, faith was not simply a decorative part of his public image. It influenced the way he understood history, identity and human relationships. Understanding that influence helps explain why so much of his work carried a serious spiritual and social dimension.
+    </p>
+
+    <div class="quote">
+      <p>Music gave Marley a way to speak about the world he saw around him, while still creating something people could feel and remember.</p>
+    </div>
+
+    <p>
+      By the middle and late 1970s, the scale of his career had changed dramatically. <em>Exodus</em>, <em>Kaya</em>, <em>Survival</em> and <em>Uprising</em> became important parts of his catalogue. His songs were being heard far beyond Jamaica, and the Wailers were performing for international audiences.
+    </p>
+  </section>
+
+  <div class="ad-wrap">
+    <ins class="adsbygoogle"
+      style="display:block;text-align:center;"
+      data-ad-layout="in-article"
+      data-ad-format="fluid"
+      data-ad-client="ca-pub-5799841502846177"
+      data-ad-slot="1217574823"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <section class="section">
+    <div class="section-label">Pressure outside the stage</div>
+    <h2>The attack that did not stop the performance</h2>
+
+    <p>
+      One of the most serious moments in Marley's life came in December 1976. Jamaica was experiencing intense political tension, and Marley was preparing to perform at the Smile Jamaica concert in Kingston. On 3 December, gunmen attacked his home.
+    </p>
+
+    <p>
+      Marley was wounded, Rita Marley was also injured, and manager Don Taylor was seriously wounded. The attack could easily have ended the planned performance. Instead, Marley appeared on stage at the Smile Jamaica concert on 5 December.
+    </p>
+
+    <p>
+      His decision to perform became one of the most remembered moments of his career. It is important, however, not to reduce the event to a simple story of fearlessness. The circumstances were dangerous, political and deeply personal. Performing after an attack was a significant decision made under pressure.
+    </p>
+
+    <div class="note">
+      <div class="note-title">My note</div>
+      <p>
+        The part of this story that stays with me is the decision to continue with something he had already committed to doing. It does not mean every person should ignore danger. It means that courage sometimes involves deciding what matters to you after circumstances have tried to change your direction.
+      </p>
+    </div>
+
+    <p>
+      Marley later spent time outside Jamaica, including periods in London, where his career continued to develop. The distance also gave him an international platform from which he could continue making music connected to Jamaica while reaching audiences around the world.
+    </p>
+  </section>
+
+  <section class="section">
+    <div class="section-label">Music and public life</div>
+    <h2>When a musician became part of a larger conversation</h2>
+
+    <p>
+      Marley was not a politician, but music placed him in the middle of important political and social conversations. Jamaica's political divisions were particularly intense during the 1970s. His public position was complicated by the fact that he was a hugely influential cultural figure whose concerts could attract people from different sides of society.
+    </p>
+
+    <p>
+      On 22 April 1978, Marley performed at the One Love Peace Concert in Kingston. During the event, he brought Jamaica's political leaders Michael Manley and Edward Seaga together on stage. The moment became one of the defining images associated with his public life.
+    </p>
+
+    <p>
+      The significance of the concert was larger than the performance itself. Marley was using his cultural position in a country experiencing political division. The event demonstrated how music could create a public space in which people who disagreed politically could appear together.
+    </p>
+
+    <p>
+      Marley also travelled to Africa. In 1978 he visited Kenya and Ethiopia. Africa held a major place in his worldview and the Rastafari tradition, and these visits added personal experience to ideas that had already influenced his music.
+    </p>
+
+    <p>
+      His interest in Africa became especially visible through “Zimbabwe”, a song connected with the struggle and eventual independence of Zimbabwe. The Wailers performed at Zimbabwe's independence celebrations in April 1980. By that point, Marley's music had become connected with events much larger than the Jamaican music scene where his career had begun.
+    </p>
+  </section>
+
+  <section class="section">
+    <div class="section-label">The final chapter</div>
+    <h2>Illness, touring and an early death</h2>
+
+    <p>
+      Marley's final years were marked by a serious health problem. In 1977, doctors discovered melanoma after a dark mark on one of his toes was examined following a football injury. The cancer later spread to other parts of his body.
+    </p>
+
+    <p>
+      Marley continued to work despite the illness. His final studio albums included <em>Survival</em> and <em>Uprising</em>, and he continued touring. The scale of his work during this period makes his final years especially striking because his physical health was deteriorating while his professional influence was expanding.
+    </p>
+
+    <p>
+      His final concert took place in Pittsburgh on 23 September 1980. He was only 35 at the time. He subsequently sought treatment, including in the United States, but the disease continued to progress.
+    </p>
+
+    <p>
+      Bob Marley died in Miami, Florida, on 11 May 1981. He was 36 years old.
+    </p>
+
+    <p>
+      His death came at an age when many artists are still developing their careers. That makes his catalogue feel unusual: there was enough work to establish an enormous legacy, but his life was still far from finished. There were undoubtedly more songs, performances and personal experiences that would never happen.
+    </p>
+
+    <div class="note">
+      <div class="note-title">A difficult reminder</div>
+      <p>
+        Marley's final years show that achievement and vulnerability can exist at the same time. A person can be successful, admired and productive while facing circumstances that cannot simply be solved through determination.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-label">A life in perspective</div>
+    <h2>Important moments in Bob Marley's journey</h2>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="year">1945</div>
+        <h3>Birth in Nine Mile</h3>
+        <p>Robert Nesta Marley is born in Saint Ann Parish, Jamaica, to Cedella Booker and Norval Marley.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="year">Early 1960s</div>
+        <h3>Music begins to take shape</h3>
+        <p>Marley develops as a singer and recording artist while working with other young musicians in Jamaica.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="year">1960s</div>
+        <h3>The Wailers grow</h3>
+        <p>Marley, Peter Tosh and Bunny Wailer become central figures in the developing group and Jamaican recording scene.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="year">1973</div>
+        <h3>Catch a Fire</h3>
+        <p>The Wailers release an album that helps carry their music into the international market.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="year">1976</div>
+        <h3>Smile Jamaica</h3>
+        <p>After being wounded in an attack at his home, Marley performs at the planned Kingston concert.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="year">1978</div>
+        <h3>One Love Peace Concert</h3>
+        <p>Marley performs in Kingston and brings political leaders Michael Manley and Edward Seaga together on stage.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="year">1980</div>
+        <h3>Final performance</h3>
+        <p>Marley's final concert takes place in Pittsburgh on 23 September.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="year">1981</div>
+        <h3>Death</h3>
+        <p>Bob Marley dies in Miami on 11 May at the age of 36.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="year">1994</div>
+        <h3>Rock and Roll Hall of Fame</h3>
+        <p>Marley is inducted into the Rock and Roll Hall of Fame after his death.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-label">What his story teaches me</div>
+    <h2>Lessons beyond the music</h2>
+
+    <div class="lesson">
+      <div class="lesson-number">LESSON 01</div>
+      <h3>Start with what is around you</h3>
+      <p>
+        Marley did not begin with the resources or worldwide audience he would later have. He started in Jamaica, surrounded by local musicians and a growing recording culture. That reminds me that a beginning does not have to look impressive. What matters is learning to use the environment available to you.
+      </p>
+    </div>
+
+    <div class="lesson">
+      <div class="lesson-number">LESSON 02</div>
+      <h3>Develop a recognisable voice</h3>
+      <p>
+        Marley listened to other musicians, worked with different people and absorbed different influences. Yet he eventually developed an identity people could recognise. Learning from others does not require becoming a copy of them.
+      </p>
+    </div>
+
+    <div class="lesson">
+      <div class="lesson-number">LESSON 03</div>
+      <h3>Relationships can shape a career</h3>
+      <p>
+        Peter Tosh, Bunny Wailer, producers, musicians and members of the Wailers were all part of Marley's development. His story shows that individual talent matters, but people around a person can influence what that talent becomes.
+      </p>
+    </div>
+
+    <div class="lesson">
+      <div class="lesson-number">LESSON 04</div>
+      <h3>Do not confuse fame with the beginning of the journey</h3>
+      <p>
+        International recognition came after years of local work. When people only study the famous period, they miss the years of learning that made the later success possible. Progress often happens before anyone is watching.
+      </p>
+    </div>
+
+    <div class="lesson">
+      <div class="lesson-number">LESSON 05</div>
+      <h3>Decisions become more meaningful under pressure</h3>
+      <p>
+        The decision to perform after the 1976 attack is one example of a difficult choice made under extraordinary circumstances. Not every difficult situation should be met by pushing forward, but important decisions often reveal what a person considers worth protecting.
+      </p>
+    </div>
+
+    <div class="lesson">
+      <div class="lesson-number">LESSON 06</div>
+      <h3>Use influence carefully</h3>
+      <p>
+        Marley eventually had an audience much larger than the one he started with. His involvement in the One Love Peace Concert shows how cultural influence can create opportunities for conversations beyond entertainment.
+      </p>
+    </div>
+
+    <div class="lesson">
+      <div class="lesson-number">LESSON 07</div>
+      <h3>Success does not remove human limits</h3>
+      <p>
+        Marley's illness is a reminder that achievement cannot protect anyone from every difficulty. His career continued while his health declined. That contrast makes his story more human, not less remarkable.
+      </p>
+    </div>
+
+    <div class="lesson">
+      <div class="lesson-number">LESSON 08</div>
+      <h3>Leave something that can outlive you</h3>
+      <p>
+        Marley died at 36, but his recordings continued travelling across generations and borders. A person's useful contribution does not necessarily end when their working life ends. Ideas, art, teaching and examples can continue moving through other people.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-label">The legacy</div>
+    <h2>Why Bob Marley's name remains familiar</h2>
+
+    <p>
+      Bob Marley's legacy is larger than a list of popular songs. His music helped bring Jamaican reggae to a worldwide audience, while his public identity became connected with Jamaica itself. His image, recordings and ideas have continued appearing in documentaries, books, performances and conversations about music and culture.
+    </p>
+
+    <p>
+      His influence also demonstrates the power of cultural exchange. A musician from a small island could create work rooted in a particular place and still reach listeners who lived thousands of kilometres away. The Jamaican origins remained important even as the audience became global.
+    </p>
+
+    <p>
+      Marley was inducted into the Rock and Roll Hall of Fame in 1994. That recognition came more than a decade after his death and reflected how strongly his work had continued to influence popular music.
+    </p>
+
+    <p>
+      I think the most useful way to remember him is not simply as a perfect symbol. Real people are more complicated than symbols. Marley had a family, friendships, professional disagreements, spiritual convictions, political surroundings, health problems and difficult decisions. Looking at those parts together gives a fuller picture than simply repeating famous facts about a celebrity.
+    </p>
+
+    <p>
+      His story also shows the relationship between place and creativity. Jamaica was not just the location where Marley happened to be born. Its musical traditions, social conditions and cultural movements shaped the sound and ideas that he eventually carried around the world.
+    </p>
+
+    <p>
+      That is why his journey remains interesting to me. It connects a small beginning with a huge cultural impact without pretending that the road between the two was easy.
+    </p>
+  </section>
+
+  <section class="section">
+    <div class="section-label">Final reflection</div>
+    <h2>More than a photograph on a wall</h2>
+
+    <p>
+      When I look at Bob Marley's life as a whole, I see a story about development. The famous musician came later. Before that there was a child in Jamaica, a young singer learning his craft, a member of a group, a recording artist working with different people and a performer gradually discovering what his music could communicate.
+    </p>
+
+    <p>
+      There were also moments when the direction of his life could have changed. The Wailers changed. Jamaica's political environment changed. His international career expanded. An attack tested him. Illness eventually changed what was physically possible for him.
+    </p>
+
+    <p>
+      Yet the work continued to travel. That may be one of the strongest parts of his legacy. The person was temporary, but the creative work became part of the lives of people who had never met him.
+    </p>
+
+    <p>
+      Bob Marley therefore deserves to be remembered not only because he was famous, but because his career shows what can happen when a person develops a distinctive voice from a particular place and then communicates it to the wider world.
+    </p>
+
+    <p>
+      His life was short. His cultural reach was not.
+    </p>
+  </section>
+
+  <div class="related">
+    <h2>Continue reading</h2>
+
+    <div class="related-grid">
+      <a href="https://kinglee6mutwiri.co.ke/lionel-messi.html">Lionel Messi: The journey from Rosario to football greatness</a>
+      <a href="https://kinglee6mutwiri.co.ke/lucky-dube.html">Lucky Dube: Music, struggle and a lasting African legacy</a>
+      <a href="https://kinglee6mutwiri.co.ke/wangari-maathai.html">Wangari Maathai: A life of courage, environment and service</a>
+      <a href="https://kinglee6mutwiri.co.ke/mindset-and-life.html">Mindset &amp; Life: Ideas for personal change</a>
+      <a href="https://kinglee6mutwiri.co.ke/salary-disappeared-story.html">The salary disappeared: a story about money and decisions</a>
+      <a href="https://kinglee6mutwiri.co.ke/biographies.html">Explore more biographies</a>
+    </div>
+  </div>
+
+  <div class="author">
+    <img src="images/author-v2.jpg" alt="Kinglee6 Mutwiri">
+    <div>
+      <h2>Written by Kinglee6 Mutwiri</h2>
+      <p>
+        I write about people, life experiences, ideas, money, biographies and the decisions that shape ordinary and extraordinary lives. My aim is to look beyond the headline and find the human story underneath it.
+      </p>
+    </div>
+  </div>
 
 </main>
 
-
 <footer>
+  <div class="footer-inner">
 
-<div class="container footer-main">
+    <div class="footer-grid">
 
-<div>
+      <div>
+        <h3>Kinglee6 Mutwiri</h3>
+        <p>
+          Stories, people and ideas worth thinking about. Explore biographies, life stories, lessons, money and personal growth.
+        </p>
+      </div>
 
-<h3>Kinglee6 Mutwiri</h3>
+      <div>
+        <h3>Explore</h3>
+        <a href="https://kinglee6mutwiri.co.ke/">Home</a>
+        <a href="https://kinglee6mutwiri.co.ke/biographies.html">Biographies</a>
+        <a href="https://kinglee6mutwiri.co.ke/celebrity-stories.html">Celebrity Stories</a>
+        <a href="https://kinglee6mutwiri.co.ke/life-stories.html">Life Stories</a>
+        <a href="https://kinglee6mutwiri.co.ke/lessons.html">Lessons</a>
+        <a href="https://kinglee6mutwiri.co.ke/money.html">Money</a>
+        <a href="https://kinglee6mutwiri.co.ke/mindset-and-life.html">Mindset &amp; Life</a>
+      </div>
 
-<p>
-Stories, People and Ideas Worth Thinking About. Explore biographies,
-life stories, lessons, money, mindset and experiences.
-</p>
+      <div>
+        <h3>Information</h3>
+        <a href="https://kinglee6mutwiri.co.ke/about.html">About</a>
+        <a href="https://kinglee6mutwiri.co.ke/contact.html">Contact</a>
+        <a href="https://kinglee6mutwiri.co.ke/disclaimer.html">Disclaimer</a>
+        <a href="https://kinglee6mutwiri.co.ke/privacy-policy.html">Privacy Policy</a>
+        <a href="https://kinglee6mutwiri.co.ke/terms.html">Terms</a>
+      </div>
 
-<div class="socials">
+    </div>
 
-<a href="https://www.facebook.com/profile.php?id=61568056696688"
-   target="_blank"
-   rel="noopener"
-   aria-label="Facebook">
-<i class="fab fa-facebook-f"></i>
-</a>
+    <div class="footer-bottom">
+      © 2026 Kinglee6 Mutwiri. All rights reserved. Published on Kinglee6 Mutwiri.
+    </div>
 
-<a href="https://www.instagram.com/mutwiri.eliphas"
-   target="_blank"
-   rel="noopener"
-   aria-label="Instagram">
-<i class="fab fa-instagram"></i>
-</a>
-
-<a href="https://x.com/KingleeMut40701"
-   target="_blank"
-   rel="noopener"
-   aria-label="X">
-<i class="fab fa-x-twitter"></i>
-</a>
-
-<a href="https://wa.me/254736280522"
-   target="_blank"
-   rel="noopener"
-   aria-label="WhatsApp">
-<i class="fab fa-whatsapp"></i>
-</a>
-
-</div>
-
-</div>
-
-
-<div>
-
-<h3>Explore</h3>
-
-<div class="footer-links">
-
-<a href="https://kinglee6mutwiri.co.ke/">Home</a>
-<a href="https://kinglee6mutwiri.co.ke/biographies.html">Biographies</a>
-<a href="https://kinglee6mutwiri.co.ke/celebrity-stories.html">Celebrity Stories</a>
-<a href="https://kinglee6mutwiri.co.ke/life-stories.html">Life Stories</a>
-<a href="https://kinglee6mutwiri.co.ke/lessons.html">Lessons</a>
-<a href="https://kinglee6mutwiri.co.ke/money.html">Money</a>
-<a href="https://kinglee6mutwiri.co.ke/mindset-and-life.html">Mindset &amp; Life</a>
-
-</div>
-
-</div>
-
-
-<div>
-
-<h3>Website</h3>
-
-<div class="footer-links">
-
-<a href="https://kinglee6mutwiri.co.ke/about.html">About</a>
-<a href="https://kinglee6mutwiri.co.ke/contact.html">Contact</a>
-<a href="https://kinglee6mutwiri.co.ke/privacy-policy.html">Privacy Policy</a>
-<a href="https://kinglee6mutwiri.co.ke/terms.html">Terms</a>
-<a href="https://kinglee6mutwiri.co.ke/disclaimer.html">Disclaimer</a>
-
-</div>
-
-</div>
-
-</div>
-
-
-<div class="container footer-bottom">
-
-© 2026 Kinglee6 Mutwiri. All rights reserved.
-
-</div>
-
+  </div>
 </footer>
 
+<section class="faq">
+  <div class="faq-inner">
+    <div class="section-label">Frequently asked questions</div>
+    <h2>Questions about Bob Marley</h2>
 
-<!-- FAQ INTENTIONALLY COMES AFTER THE FOOTER -->
+    <div class="faq-item">
+      <h3>When was Bob Marley born?</h3>
+      <p>Bob Marley was born on 6 February 1945 in Nine Mile, Saint Ann Parish, Jamaica.</p>
+    </div>
 
-<section class="faq-section">
+    <div class="faq-item">
+      <h3>What was Bob Marley's real name?</h3>
+      <p>His full name was Robert Nesta Marley.</p>
+    </div>
 
-<div class="container faq-inner">
+    <div class="faq-item">
+      <h3>Who were Peter Tosh and Bunny Wailer?</h3>
+      <p>Peter Tosh and Bunny Wailer were important early members of the Wailers alongside Bob Marley. Their collaboration was central to the group's early development.</p>
+    </div>
 
-<div class="kicker">Questions readers may have</div>
+    <div class="faq-item">
+      <h3>What type of music was Bob Marley known for?</h3>
+      <p>He became one of the world's most recognised reggae musicians. His work also reflected influences from ska, rocksteady and other Jamaican musical traditions.</p>
+    </div>
 
-<h2 class="faq-title">Frequently Asked Questions About Bob Marley</h2>
+    <div class="faq-item">
+      <h3>How did Rastafari influence Bob Marley?</h3>
+      <p>Rastafari strongly influenced Marley's spiritual outlook, identity and many of the themes expressed through his music and public life.</p>
+    </div>
 
+    <div class="faq-item">
+      <h3>What happened to Bob Marley in 1976?</h3>
+      <p>On 3 December 1976, gunmen attacked his home in Kingston. Marley was wounded, Rita Marley was injured and manager Don Taylor was seriously wounded. Marley nevertheless performed at the Smile Jamaica concert two days later.</p>
+    </div>
 
-<div class="faq-item">
+    <div class="faq-item">
+      <h3>When did Bob Marley die?</h3>
+      <p>Bob Marley died in Miami, Florida, on 11 May 1981. He was 36 years old.</p>
+    </div>
 
-<h3>Who was Bob Marley?</h3>
+    <div class="faq-item">
+      <h3>What was Bob Marley's final concert?</h3>
+      <p>His final concert took place in Pittsburgh on 23 September 1980.</p>
+    </div>
 
-<p>
-Bob Marley was a Jamaican singer, songwriter and musician who became one
-of the most internationally recognised figures associated with reggae
-music. His work connected Jamaican musical traditions with themes including
-spirituality, peace, freedom, identity and social conditions.
-</p>
+    <div class="faq-item">
+      <h3>Why is Bob Marley still influential?</h3>
+      <p>His music helped carry Jamaican reggae to a worldwide audience, while his work addressed themes of identity, freedom, spirituality, social conditions and human relationships.</p>
+    </div>
 
-</div>
+    <div class="faq-item">
+      <h3>What can people learn from Bob Marley's life?</h3>
+      <p>His story offers lessons about developing a personal voice, starting from available opportunities, working with others, handling pressure, using influence responsibly and creating work that can outlive its creator.</p>
+    </div>
 
-
-<div class="faq-item">
-
-<h3>When and where was Bob Marley born?</h3>
-
-<p>
-Bob Marley was born Robert Nesta Marley on 6 February 1945 in Nine Mile,
-Saint Ann Parish, Jamaica.
-</p>
-
-</div>
-
-
-<div class="faq-item">
-
-<h3>What group was Bob Marley part of?</h3>
-
-<p>
-Bob Marley was a central member of The Wailers. Peter Tosh and Bunny Wailer
-were also important members during the group's formative years.
-</p>
-
-</div>
-
-
-<div class="faq-item">
-
-<h3>What made Bob Marley's music different?</h3>
-
-<p>
-His music combined Jamaican reggae traditions with distinctive vocals,
-strong rhythm sections and themes connected to spirituality, relationships,
-social conditions, freedom and identity. His work also benefited from the
-musicians and producers who worked with him.
-</p>
-
-</div>
-
-
-<div class="faq-item">
-
-<h3>What happened to Bob Marley in 1976?</h3>
-
-<p>
-On 3 December 1976, Marley was attacked at his Kingston home shortly before
-the Smile Jamaica concert. Marley was wounded, Rita Marley was injured and
-manager Don Taylor was seriously wounded. Marley nevertheless performed at
-the concert.
-</p>
-
-</div>
-
-
-<div class="faq-item">
-
-<h3>What was the One Love Peace Concert?</h3>
-
-<p>
-The One Love Peace Concert took place in Kingston on 22 April 1978 during a
-period of political tension in Jamaica. Marley performed and brought
-political leaders Michael Manley and Edward Seaga together on stage in a
-widely remembered moment associated with peace.
-</p>
-
-</div>
-
-
-<div class="faq-item">
-
-<h3>Why was Africa important to Bob Marley?</h3>
-
-<p>
-Africa had an important place in Marley's worldview and was connected to
-his Rastafari beliefs and understanding of African identity. He visited
-Kenya and Ethiopia in 1978, while his music increasingly addressed African
-liberation and identity.
-</p>
-
-</div>
-
-
-<div class="faq-item">
-
-<h3>When did Bob Marley die?</h3>
-
-<p>
-Bob Marley died in Miami on 11 May 1981 at the age of 36. A melanoma that
-had been discovered several years earlier had spread through his body.
-</p>
-
-</div>
-
-
-<div class="faq-item">
-
-<h3>What can we learn from Bob Marley's life?</h3>
-
-<p>
-His journey can encourage us to develop our own abilities, understand our
-identity, work with other people, use our influence responsibly and remain
-committed to meaningful work even when recognition does not come quickly.
-</p>
-
-</div>
-
-
-</div>
-
+  </div>
 </section>
-
 
 </body>
 </html>
-
