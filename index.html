@@ -1,1971 +1,1123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Kinglee6 Mutwiri | Stories, People and Ideas Worth Thinking About</title>
-
-<meta name="description" content="Kinglee6 Mutwiri is the personal website of Eliphas Mutwiri Peter from Kenya, featuring original stories, biographies, life experiences, money ideas, personal growth and practical lessons.">
-<meta name="author" content="Eliphas Mutwiri Peter">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://kinglee6mutwiri.co.ke/">
-
-<!-- GOOGLE ANALYTICS 4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X3HE9CKP90"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-X3HE9CKP90');
-</script>
-
-<!-- GOOGLE ADSENSE -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5799841502846177"
-     crossorigin="anonymous"></script>
-
-<style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:#f5f7fb;
-  color:#202536;
-  line-height:1.75;
-}
-
-a{
-  text-decoration:none;
-  color:inherit;
-}
-
-img{
-  max-width:100%;
-}
-
-.container{
-  width:min(1160px,92%);
-  margin:auto;
-}
-
-/* NAVIGATION */
-
-.navbar{
-  position:sticky;
-  top:0;
-  z-index:999;
-  background:#101827;
-  box-shadow:0 4px 18px rgba(0,0,0,.18);
-}
-
-.nav-inner{
-  min-height:70px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:20px;
-}
-
-.logo{
-  color:#fff;
-  font-size:22px;
-  font-weight:800;
-  white-space:nowrap;
-}
-
-.logo span{
-  color:#f6c344;
-}
-
-.nav-links{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:flex-end;
-  gap:4px;
-}
-
-.nav-links a{
-  color:#dbe3ee;
-  font-size:14px;
-  padding:8px 10px;
-  border-radius:8px;
-  transition:.2s;
-}
-
-.nav-links a:hover{
-  color:#f6c344;
-  background:#253147;
-}
-
-/* HERO */
-
-.hero{
-  min-height:650px;
-  display:flex;
-  align-items:center;
-  position:relative;
-  overflow:hidden;
-  color:#fff;
-  background:
-    radial-gradient(circle at 85% 20%,rgba(246,195,68,.28),transparent 25%),
-    radial-gradient(circle at 15% 90%,rgba(20,184,166,.25),transparent 28%),
-    linear-gradient(125deg,#111827,#1d4ed8 55%,#6d28d9);
-}
-
-.hero-content{
-  position:relative;
-  z-index:2;
-  display:grid;
-  grid-template-columns:1.35fr .65fr;
-  align-items:center;
-  gap:55px;
-}
-
-.eyebrow{
-  display:inline-block;
-  padding:7px 14px;
-  border-radius:30px;
-  color:#ffe58a;
-  border:1px solid rgba(246,195,68,.55);
-  background:rgba(246,195,68,.13);
-  font-size:13px;
-  font-weight:800;
-  text-transform:uppercase;
-  letter-spacing:1px;
-  margin-bottom:18px;
-}
-
-.hero h1{
-  font-size:clamp(40px,6vw,68px);
-  line-height:1.06;
-  margin-bottom:20px;
-}
-
-.hero h1 span{
-  color:#f6c344;
-}
-
-.hero p{
-  max-width:760px;
-  font-size:18px;
-  color:#e4e9f2;
-  margin-bottom:27px;
-}
-
-.hero-buttons{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-}
-
-.btn{
-  display:inline-block;
-  padding:12px 21px;
-  border-radius:10px;
-  font-weight:800;
-  transition:.2s;
-}
-
-.btn-primary{
-  color:#171717;
-  background:#f6c344;
-}
-
-.btn-primary:hover{
-  transform:translateY(-2px);
-  background:#ffdc70;
-}
-
-.btn-secondary{
-  color:#fff;
-  border:1px solid rgba(255,255,255,.4);
-  background:rgba(255,255,255,.08);
-}
-
-.btn-secondary:hover{
-  background:rgba(255,255,255,.16);
-}
-
-.author-photo-wrap{
-  display:flex;
-  justify-content:center;
-}
-
-.author-photo{
-  width:285px;
-  height:285px;
-  object-fit:cover;
-  border-radius:50%;
-  border:7px solid rgba(255,255,255,.9);
-  background:#d9dee8;
-  box-shadow:0 20px 55px rgba(0,0,0,.35);
-}
-
-/* ADS */
-
-.ad-box{
-  width:min(100%,970px);
-  margin:28px auto;
-  text-align:center;
-  min-height:90px;
-}
-
-/* SECTIONS */
-
-section{
-  padding:72px 0;
-}
-
-.section-heading{
-  max-width:790px;
-  margin:0 auto 40px;
-  text-align:center;
-}
-
-.tag{
-  color:#7c3aed;
-  font-size:13px;
-  font-weight:800;
-  text-transform:uppercase;
-  letter-spacing:1.5px;
-}
-
-.section-heading h2{
-  color:#171c2b;
-  font-size:clamp(29px,4vw,43px);
-  line-height:1.2;
-  margin:8px 0 13px;
-}
-
-.section-heading p{
-  color:#687082;
-}
-
-/* INTRO */
-
-.intro{
-  background:#fff;
-}
-
-.intro-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:25px;
-}
-
-.info-card{
-  padding:32px;
-  background:#fff;
-  border:1px solid #e2e7ef;
-  border-radius:18px;
-  box-shadow:0 12px 35px rgba(31,41,55,.07);
-}
-
-.info-card:first-child{
-  border-top:5px solid #1d4ed8;
-}
-
-.info-card:last-child{
-  border-top:5px solid #db2777;
-}
-
-.info-card h3{
-  font-size:25px;
-  margin-bottom:13px;
-}
-
-.info-card p{
-  color:#555f70;
-  margin-bottom:15px;
-}
-
-/* STORY CARDS */
-
-.featured{
-  background:linear-gradient(135deg,#eef2ff,#f8fafc);
-}
-
-.card-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:23px;
-}
-
-.card{
-  background:#fff;
-  border:1px solid #e2e7ef;
-  border-radius:18px;
-  overflow:hidden;
-  box-shadow:0 10px 30px rgba(31,41,55,.07);
-  transition:.25s;
-}
-
-.card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 18px 42px rgba(31,41,55,.14);
-}
-
-.card-top{
-  height:170px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:#fff;
-  font-size:42px;
-  font-weight:900;
-}
-
-.card:nth-child(1) .card-top{
-  background:linear-gradient(135deg,#1d4ed8,#2563eb);
-}
-
-.card:nth-child(2) .card-top{
-  background:linear-gradient(135deg,#7c3aed,#9333ea);
-}
-
-.card:nth-child(3) .card-top{
-  background:linear-gradient(135deg,#db2777,#e11d48);
-}
-
-.card-body{
-  padding:24px;
-}
-
-.category{
-  color:#7c3aed;
-  font-size:12px;
-  font-weight:900;
-  text-transform:uppercase;
-  letter-spacing:1px;
-}
-
-.card-body h3{
-  color:#171c2b;
-  font-size:21px;
-  line-height:1.35;
-  margin:8px 0 11px;
-}
-
-.card-body p{
-  color:#626b7c;
-  margin-bottom:17px;
-}
-
-.read-more{
-  color:#1d4ed8;
-  font-weight:800;
-}
-
-/* BIOGRAPHIES */
-
-.biographies{
-  background:#fff;
-}
-
-.bio-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:15px;
-}
-
-.bio-link{
-  padding:19px 14px;
-  text-align:center;
-  border-radius:13px;
-  background:#f8fafc;
-  border:1px solid #e2e7ef;
-  font-weight:750;
-  transition:.22s;
-}
-
-.bio-link:nth-child(4n+1){
-  border-top:4px solid #1d4ed8;
-}
-
-.bio-link:nth-child(4n+2){
-  border-top:4px solid #db2777;
-}
-
-.bio-link:nth-child(4n+3){
-  border-top:4px solid #059669;
-}
-
-.bio-link:nth-child(4n){
-  border-top:4px solid #ea580c;
-}
-
-.bio-link:hover{
-  color:#fff;
-  background:#111827;
-  transform:translateY(-3px);
-}
-
-/* TOPIC AREAS */
-
-.topics{
-  background:#111827;
-  color:#fff;
-}
-
-.topics .section-heading h2{
-  color:#fff;
-}
-
-.topics .section-heading p{
-  color:#c9d1df;
-}
-
-.topic-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:18px;
-}
-
-.topic{
-  min-height:205px;
-  padding:27px 21px;
-  border-radius:17px;
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-}
-
-.topic:nth-child(1){
-  background:#1d4ed8;
-}
-
-.topic:nth-child(2){
-  background:#7c3aed;
-}
-
-.topic:nth-child(3){
-  background:#db2777;
-}
-
-.topic:nth-child(4){
-  background:#059669;
-}
-
-.topic h3{
-  font-size:23px;
-}
-
-.topic p{
-  color:#f1f5f9;
-  font-size:14px;
-}
-
-/* LONG CONTENT */
-
-.long-content{
-  background:#fff;
-}
-
-.long-content article{
-  max-width:900px;
-  margin:auto;
-  color:#505a6b;
-  font-size:17px;
-}
-
-.long-content article p{
-  margin-bottom:21px;
-}
-
-.long-content article h3{
-  color:#1d4ed8;
-  font-size:27px;
-  margin:40px 0 15px;
-}
-
-.long-content article h4{
-  color:#7c3aed;
-  font-size:21px;
-  margin:30px 0 12px;
-}
-
-/* PRACTICAL */
-
-.practical{
-  background:#fff7ed;
-}
-
-.practical-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:25px;
-}
-
-.practical-card{
-  padding:30px;
-  background:#fff;
-  border-radius:18px;
-  border-left:6px solid #ea580c;
-  box-shadow:0 10px 30px rgba(120,53,15,.08);
-}
-
-.practical-card:nth-child(2){
-  border-left-color:#059669;
-}
-
-.practical-card h3{
-  font-size:25px;
-  margin-bottom:10px;
-}
-
-.practical-card p{
-  color:#596474;
-  margin-bottom:16px;
-}
-
-/* AUTHOR */
-
-.author-section{
-  color:#fff;
-  background:linear-gradient(135deg,#172554,#312e81);
-}
-
-.author-box{
-  display:grid;
-  grid-template-columns:260px 1fr;
-  gap:40px;
-  align-items:center;
-}
-
-.author-box img{
-  width:240px;
-  height:240px;
-  object-fit:cover;
-  border-radius:22px;
-  border:5px solid rgba(255,255,255,.8);
-  margin:auto;
-}
-
-.author-box h2{
-  font-size:36px;
-  line-height:1.2;
-  margin-bottom:15px;
-}
-
-.author-box p{
-  color:#dce4f2;
-  margin-bottom:15px;
-}
-
-/* TRUST */
-
-.trust{
-  background:#f8fafc;
-}
-
-.trust-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
-
-.trust-card{
-  background:#fff;
-  border:1px solid #e2e7ef;
-  border-radius:17px;
-  padding:27px;
-}
-
-.trust-card h3{
-  color:#1d4ed8;
-  margin-bottom:9px;
-}
-
-.trust-card p{
-  color:#626c7c;
-}
-
-/* FOOTER */
-
-footer{
-  background:#0b1120;
-  color:#cbd5e1;
-  padding:48px 0 25px;
-}
-
-.footer-grid{
-  display:grid;
-  grid-template-columns:1.5fr 1fr 1fr;
-  gap:35px;
-}
-
-footer h3{
-  color:#fff;
-  margin-bottom:12px;
-}
-
-footer p{
-  color:#aeb8c8;
-}
-
-.footer-links{
-  display:flex;
-  flex-direction:column;
-  gap:7px;
-}
-
-.footer-links a:hover{
-  color:#f6c344;
-}
-
-.facebook{
-  display:inline-block;
-  margin-top:15px;
-  padding:9px 16px;
-  border-radius:9px;
-  background:#1877f2;
-  color:#fff;
-  font-weight:800;
-}
-
-.copyright{
-  margin-top:35px;
-  padding-top:20px;
-  border-top:1px solid #263044;
-  text-align:center;
-  font-size:13px;
-  color:#8994a7;
-}
-
-/* MOBILE */
-
-@media(max-width:900px){
-
-  .hero-content,
-  .intro-grid,
-  .author-box,
-  .practical-grid{
-    grid-template-columns:1fr;
-  }
-
-  .card-grid{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .bio-grid{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .topic-grid{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .author-photo-wrap{
-    order:-1;
-  }
-
-  .nav-inner{
-    flex-direction:column;
-    padding:10px 0;
-  }
-
-  .nav-links{
-    justify-content:center;
-  }
-}
-
-@media(max-width:600px){
-
-  section{
-    padding:52px 0;
-  }
-
-  .hero{
-    min-height:690px;
-  }
-
-  .hero-content{
-    text-align:center;
-  }
-
-  .hero-buttons{
-    justify-content:center;
-  }
-
-  .author-photo{
-    width:215px;
-    height:215px;
-  }
-
-  .card-grid,
-  .bio-grid,
-  .topic-grid,
-  .trust-grid,
-  .footer-grid{
-    grid-template-columns:1fr;
-  }
-
-  .info-card,
-  .practical-card{
-    padding:23px;
-  }
-}
-
-.author-hero-bg {
-  background-image:
-    linear-gradient(rgba(0,0,0,.48), rgba(0,0,0,.62)),
-    url('images/author-kinglee.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-.author-small-photo {
-  width: 130px;
-  height: 130px;
-  object-fit: cover;
-  border-radius: 50%;
-  display: block;
-  margin: 0 auto 18px;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Kinglee Mutwiri — Stories, People and Ideas Worth Thinking About</title>
+  <meta name="description" content="Kinglee Mutwiri is a personal website by Eliphas Mutwiri Peter from Kenya, sharing real stories, biographies, money lessons, human behaviour, personal growth and ideas worth thinking about.">
+
+  <link rel="canonical" href="https://kinglee6mutwiri.co.ke/">
+
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Eliphas Mutwiri Peter">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X3HE9CKP90"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-X3HE9CKP90');
+  </script>
+
+  <!-- Google AdSense -->
+  <script async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5799841502846177"
+    crossorigin="anonymous"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f6f4ef;
+      --surface: #ffffff;
+      --dark: #171717;
+      --muted: #656565;
+      --border: #e5e0d7;
+      --accent: #8b5e34;
+      --accent-dark: #684321;
+      --soft: #eee8de;
+      --max: 1180px;
+      --shadow: 0 15px 45px rgba(25, 25, 25, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Inter, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--dark);
+      line-height: 1.8;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(92%, var(--max));
+      margin: auto;
+    }
+
+    /* NAVIGATION */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .brand {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.45rem;
+      font-weight: 800;
+      letter-spacing: -0.4px;
+      white-space: nowrap;
+    }
+
+    .brand span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 20px;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #303030;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 650px;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(15,15,15,0.88) 0%,
+          rgba(15,15,15,0.66) 48%,
+          rgba(15,15,15,0.28) 100%
+        ),
+        url("images/author-v2.jpg") center center / cover no-repeat;
+    }
+
+    .hero-content {
+      width: min(92%, var(--max));
+      margin: 0 auto;
+      padding: 90px 0 75px;
+      color: white;
+    }
+
+    .hero-label {
+      display: inline-block;
+      margin-bottom: 18px;
+      padding: 7px 14px;
+      border: 1px solid rgba(255,255,255,0.4);
+      border-radius: 50px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      max-width: 850px;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(2.7rem, 7vw, 5.8rem);
+      line-height: 1.03;
+      letter-spacing: -2px;
+      margin-bottom: 25px;
+    }
+
+    .hero p {
+      max-width: 760px;
+      font-size: 1.15rem;
+      color: rgba(255,255,255,0.91);
+    }
+
+    .hero-author {
+      margin-top: 28px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .hero-author img {
+      width: 72px;
+      height: 72px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid rgba(255,255,255,0.85);
+    }
+
+    .hero-author strong {
+      display: block;
+      font-size: 1rem;
+    }
+
+    .hero-author small {
+      color: rgba(255,255,255,0.78);
+    }
+
+    /* GENERAL */
+    section {
+      padding: 85px 0;
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 42px;
+    }
+
+    .section-heading span {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .section-heading h2 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.15;
+      margin-bottom: 15px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+    }
+
+    .intro {
+      background: var(--surface);
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .intro-photo {
+      position: relative;
+    }
+
+    .intro-photo img {
+      width: 100%;
+      max-width: 430px;
+      height: 500px;
+      object-fit: cover;
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .intro-copy h2 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      line-height: 1.2;
+      margin-bottom: 22px;
+    }
+
+    .intro-copy p {
+      margin-bottom: 18px;
+      color: #414141;
+    }
+
+    .signature {
+      margin-top: 25px;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.25rem;
+      color: var(--accent-dark);
+    }
+
+    /* FEATURED */
+    .featured {
+      background: var(--bg);
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    .story-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 30px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .story-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .story-card .number {
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+
+    .story-card h3 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.65rem;
+      line-height: 1.25;
+      margin-bottom: 13px;
+    }
+
+    .story-card p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .read-link {
+      color: var(--accent-dark);
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    /* AD */
+    .ad-wrap {
+      width: min(92%, 970px);
+      margin: 35px auto;
+      min-height: 90px;
+      text-align: center;
+    }
+
+    /* CATEGORIES */
+    .categories {
+      background: #1d1d1b;
+      color: white;
+    }
+
+    .categories .section-heading p {
+      color: #c7c7c7;
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .category {
+      padding: 30px;
+      min-height: 230px;
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 15px;
+      background: rgba(255,255,255,0.045);
+    }
+
+    .category h3 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.55rem;
+      margin-bottom: 12px;
+    }
+
+    .category p {
+      color: #c8c8c8;
+      margin-bottom: 18px;
+    }
+
+    .category a {
+      color: #e4c49e;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    /* PEOPLE */
+    .people-section {
+      background: var(--surface);
+    }
+
+    .people-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    .people-card {
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 30px;
+      background: #fff;
+    }
+
+    .people-card h3 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.75rem;
+      margin-bottom: 12px;
+    }
+
+    .people-card p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    /* DEEP READING */
+    .deep-reading {
+      background: var(--soft);
+    }
+
+    .deep-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 50px;
+      align-items: start;
+    }
+
+    .deep-copy h2 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(2.1rem, 4vw, 3.3rem);
+      line-height: 1.15;
+      margin-bottom: 25px;
+    }
+
+    .deep-copy p {
+      color: #454545;
+      margin-bottom: 20px;
+    }
+
+    .lesson-box {
+      background: var(--surface);
+      padding: 32px;
+      border-radius: 16px;
+      border-left: 5px solid var(--accent);
+      box-shadow: var(--shadow);
+    }
+
+    .lesson-box h3 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+
+    .lesson-box p {
+      color: var(--muted);
+    }
+
+    /* CLOSING */
+    .closing {
+      background: var(--surface);
+      text-align: center;
+    }
+
+    .closing-inner {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .closing h2 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      line-height: 1.12;
+      margin-bottom: 20px;
+    }
+
+    .closing p {
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin-bottom: 28px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 23px;
+      border-radius: 7px;
+      background: var(--dark);
+      color: white;
+      font-weight: 700;
+      margin: 5px;
+    }
+
+    .button:hover {
+      background: var(--accent);
+    }
+
+    /* FOOTER */
+    footer {
+      background: #111;
+      color: #eee;
+      padding: 65px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 45px;
+      padding-bottom: 45px;
+      border-bottom: 1px solid #303030;
+    }
+
+    footer h3 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.4rem;
+      margin-bottom: 14px;
+    }
+
+    footer p {
+      color: #aaa;
+      max-width: 470px;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 9px;
+    }
+
+    .footer-links a {
+      color: #bbb;
+      font-size: 0.9rem;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .copyright {
+      padding-top: 25px;
+      color: #888;
+      font-size: 0.82rem;
+      text-align: center;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .nav {
+        padding: 14px 0;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        justify-content: flex-start;
+        gap: 12px 17px;
+      }
+
+      .hero {
+        min-height: 620px;
+      }
+
+      .intro-grid,
+      .deep-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .intro-photo img {
+        max-width: 100%;
+        height: 430px;
+      }
+
+      .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 620px) {
+      section {
+        padding: 62px 0;
+      }
+
+      .hero {
+        min-height: 600px;
+        background-position: 62% center;
+      }
+
+      .hero-content {
+        padding: 65px 0 55px;
+      }
+
+      .hero h1 {
+        font-size: 2.8rem;
+        letter-spacing: -1px;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .story-grid,
+      .people-grid,
+      .category-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .intro-photo img {
+        height: 390px;
+      }
+
+      .brand {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header class="navbar">
-<div class="container nav-inner">
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="https://kinglee6mutwiri.co.ke/">Kinglee <span>Mutwiri</span></a>
 
-<a href="index.html" class="logo">
-Kinglee6 <span>Mutwiri</span>
-</a>
-
-<nav class="nav-links" aria-label="Main navigation">
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="biographies.html">Biographies</a>
-<a href="stories.html">Stories</a>
-<a href="money.html">Money</a>
-<a href="lessons.html">Lessons</a>
-<a href="contact.html">Contact</a>
-</nav>
-
-</div>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="https://kinglee6mutwiri.co.ke/">Home</a></li>
+        <li><a href="https://kinglee6mutwiri.co.ke/biographies.html">Biographies</a></li>
+        <li><a href="https://kinglee6mutwiri.co.ke/stories.html">Stories</a></li>
+        <li><a href="https://kinglee6mutwiri.co.ke/money.html">Money</a></li>
+        <li><a href="https://kinglee6mutwiri.co.ke/lessons.html">Lessons</a></li>
+        <li><a href="https://kinglee6mutwiri.co.ke/mindset-and-life.html">Mindset &amp; Life</a></li>
+        <li><a href="https://kinglee6mutwiri.co.ke/about.html">About</a></li>
+        <li><a href="https://kinglee6mutwiri.co.ke/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
 <main>
 
-<section class="hero author-hero-bg">
-<div class="container hero-content">
-
-<div>
-
-<div class="eyebrow">Stories • People • Ideas</div>
-
-<h1>
-I am <span>Eliphas Mutwiri Peter</span> from Kenya.
-</h1>
-
-<p>
-Welcome to Kinglee6 Mutwiri. I created this website as a personal space for
-stories, biographies, life experiences, money ideas and practical lessons.
-I am interested in the people behind the headlines and the everyday choices
-that shape our lives.
-</p>
-
-<div class="hero-buttons">
-<a href="stories.html" class="btn btn-primary">Read Stories</a>
-<a href="about.html" class="btn btn-secondary">About Me</a>
-</div>
-
-</div>
-
-<div class="author-photo-wrap">
-<img
-class="author-photo"
-src="images/author-kinglee.jpg" class="author-small-photo"
-alt="Eliphas Mutwiri Peter from Kenya"
-onerror="this.style.display='none';"
->
-</div>
-
-</div>
-</section>
-
-
-<!-- HOMEPAGE TOP ADSENSE AD -->
-
-<div class="container ad-box">
-
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-5799841502846177"
-     data-ad-slot="6388196362"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-</div>
-
-
-<section class="intro">
-
-<div class="container">
-
-<div class="section-heading">
-
-<div class="tag">Welcome</div>
-
-<h2>A personal website built around stories and useful ideas</h2>
-
-<p>
-I want this to be a place where readers can slow down, read carefully and
-find something worth taking into their own lives.
-</p>
-
-</div>
-
-<div class="intro-grid">
-
-<article class="info-card">
-
-<h3>Who I am</h3>
-
-<p>
-My name is Eliphas Mutwiri Peter, and I am from Kenya. Kinglee6 Mutwiri is
-my personal website and a project that gives me room to write, learn and
-share ideas that I find interesting.
-</p>
-
-<p>
-I am not presenting myself as someone who has all the answers. I am still
-learning, observing and improving. That is part of what makes this website
-personal to me. Every article is an opportunity to understand a subject
-better and explain it in a way that another person can follow.
-</p>
-
-<p>
-I became interested in creating a website because writing gives me a way to
-put thoughts into a form that other people can read. A conversation may last
-only a few minutes, but a well-written article can remain available for
-someone who discovers it months or years later.
-</p>
-
-</article>
-
-
-<article class="info-card">
-
-<h3>What you will find here</h3>
-
-<p>
-The website brings together several areas. There are biographies about
-well-known personalities, stories about important moments, life experiences,
-money topics and lessons that can be applied to ordinary situations.
-</p>
-
-<p>
-These subjects are different, but they have something in common. People
-make choices every day, and those choices can create consequences that are
-sometimes visible only much later.
-</p>
-
-<p>
-My goal is to explore those connections through readable articles rather
-than simply filling pages with information. I want a reader to finish an
-article with a clearer understanding of the subject and, when appropriate,
-a question worth considering.
-</p>
-
-</article>
-
-</div>
-
-</div>
-</section>
-
-
-<section class="featured">
-
-<div class="container">
-
-<div class="section-heading">
-
-<div class="tag">Featured Stories</div>
-
-<h2>Stories connected to real decisions</h2>
-
-<p>
-Some of the most useful lessons are hidden inside situations that appear
-ordinary at first.
-</p>
-
-</div>
-
-<div class="card-grid">
-
-<article class="card">
-
-<div class="card-top">01</div>
-
-<div class="card-body">
-
-<div class="category">Money</div>
-
-<h3>
-The Man Who Earned More Money But Became Poorer
-</h3>
-
-<p>
-More income can create more opportunities, but it can also change spending
-habits. This story examines the difference between earning more and becoming
-financially stronger.
-</p>
-
-<a href="the-man-who-earned-more-money-but-became-poorer.html"
-class="read-more">
-Read the story →
-</a>
-
-</div>
-</article>
-
-
-<article class="card">
-
-<div class="card-top">02</div>
-
-<div class="card-body">
-
-<div class="category">Life Story</div>
-
-<h3>
-The Secret Account
-</h3>
-
-<p>
-A story about money, trust, decisions and the consequences that can appear
-when an important financial matter is kept hidden.
-</p>
-
-<a href="secret-account-47000.html" class="read-more">
-Read the story →
-</a>
-
-</div>
-</article>
-
-
-<article class="card">
-
-<div class="card-top">03</div>
-
-<div class="card-body">
-
-<div class="category">Personal Finance</div>
-
-<h3>
-When a Salary Disappears Too Quickly
-</h3>
-
-<p>
-Income is only one part of financial stability. This story looks at the
-choices that can determine what remains after a salary arrives.
-</p>
-
-<a href="salary-disappeared-story.html" class="read-more">
-Read the story →
-</a>
-
-</div>
-</article>
-
-</div>
-</div>
-</section>
-
-
-<!-- IN ARTICLE ADSENSE -->
-
-<div class="container ad-box">
-
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-5799841502846177"
-     data-ad-slot="1217574823"></ins>
-
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-</div>
-
-
-<section class="biographies">
-
-<div class="container">
-
-<div class="section-heading">
-
-<div class="tag">People</div>
-
-<h2>Explore the lives behind famous names</h2>
-
-<p>
-Different people leave different lessons behind. Their journeys can reveal
-ideas about ambition, discipline, creativity, leadership and resilience.
-</p>
-
-</div>
-
-<div class="bio-grid">
-
-<a class="bio-link" href="bob-marley.html">Bob Marley</a>
-<a class="bio-link" href="cristiano-ronaldo.html">Cristiano Ronaldo</a>
-<a class="bio-link" href="denzel-washington.html">Denzel Washington</a>
-<a class="bio-link" href="lil-wayne.html">Lil Wayne</a>
-
-<a class="bio-link" href="lucky-dube.html">Lucky Dube</a>
-<a class="bio-link" href="martin-luther-king-jr.html">Martin Luther King Jr.</a>
-<a class="bio-link" href="michael-jackson.html">Michael Jackson</a>
-<a class="bio-link" href="muhammad-ali.html">Muhammad Ali</a>
-
-<a class="bio-link" href="nelson-mandela.html">Nelson Mandela</a>
-<a class="bio-link" href="oprah-winfrey.html">Oprah Winfrey</a>
-<a class="bio-link" href="pop-smoke.html">Pop Smoke</a>
-<a class="bio-link" href="rihanna.html">Rihanna</a>
-
-<a class="bio-link" href="lionel-messi.html">Lionel Messi</a>
-<a class="bio-link" href="wangari-maathai.html">Wangari Maathai</a>
-<a class="bio-link" href="2pac.html">2Pac</a>
-<a class="bio-link" href="biographies.html">All Biographies →</a>
-
-</div>
-
-</div>
-</section>
-
-
-<section class="topics">
-
-<div class="container">
-
-<div class="section-heading">
-
-<div class="tag">Explore the Website</div>
-
-<h2>Find the section that interests you</h2>
-
-<p>
-The website is divided into clear areas so readers can move from one subject
-to another without losing their way.
-</p>
-
-</div>
-
-<div class="topic-grid">
-
-<a href="celebrity-stories.html" class="topic">
-<h3>Celebrity Stories</h3>
-<p>
-Stories about careers, turning points, achievements and difficult moments
-in the public lives of well-known people.
-</p>
-<strong>Explore →</strong>
-</a>
-
-<a href="life-stories.html" class="topic">
-<h3>Life Stories</h3>
-<p>
-Human experiences that raise questions about choices, relationships,
-responsibility and personal direction.
-</p>
-<strong>Explore →</strong>
-</a>
-
-<a href="money.html" class="topic">
-<h3>Money</h3>
-<p>
-Articles about income, spending, saving, financial habits and the decisions
-that influence personal finances.
-</p>
-<strong>Explore →</strong>
-</a>
-
-<a href="lessons.html" class="topic">
-<h3>Lessons</h3>
-<p>
-Ideas drawn from stories and experiences that readers can think about in
-their own circumstances.
-</p>
-<strong>Explore →</strong>
-</a>
-
-</div>
-</div>
-</section>
-
-
-<section class="long-content">
-
-<div class="container">
-
-<div class="section-heading">
-
-<div class="tag">My Perspective</div>
-
-<h2>Why stories matter to me</h2>
-
-<p>
-A story can do more than entertain. It can make a person see a familiar
-problem from a different angle.
-</p>
-
-</div>
-
-
-<article>
-
-<p>
-I have come to appreciate how much can be learned simply by paying
-attention to people's experiences. Every person carries a story, even when
-that story is not published in a newspaper or discussed on television.
-Someone can spend years working toward a goal while nobody outside their
-family understands how difficult the journey has been. Another person can
-make one decision that changes everything that follows. Those moments are
-interesting because they remind us that life is rarely as simple as the
-final result makes it appear.
-</p>
-
-<p>
-When we look at successful people, it is tempting to focus on the visible
-part of their lives. We see the award, the business, the championship, the
-performance or the public recognition. The less visible part can be much
-more instructive. It may include long periods of practice, uncertainty,
-rejection, financial pressure, criticism or personal sacrifice.
-</p>
-
-<p>
-That does not mean every successful person followed the same path. They did
-not. Some had opportunities that others never received. Some had support
-from family or mentors. Some were discovered at an early age, while others
-had to wait for many years. Circumstances matter, and pretending otherwise
-can produce an unrealistic picture of success.
-</p>
-
-<p>
-What interests me is the combination of circumstances and choices. We
-cannot control every event that enters our lives, but we often have some
-control over how we respond. A difficult beginning does not guarantee a
-difficult ending. At the same time, a comfortable beginning does not
-guarantee a comfortable future.
-</p>
-
-<h3>The value of looking beyond the headline</h3>
-
-<p>
-A headline gives us a quick summary, but a person's life cannot usually be
-understood from one sentence. The same is true for a money problem or a
-personal setback. If we judge a situation immediately, we may miss the
-details that explain why it happened.
-</p>
-
-<p>
-That is why I prefer articles that give enough context for the reader to
-understand the subject. Context does not mean adding unnecessary information.
-It means explaining the parts that help a reader make sense of what happened.
-A useful article should have a reason for each major section.
-</p>
-
-<p>
-For biographies, that may mean explaining a person's early environment,
-education, career development, major achievements and important challenges.
-For money stories, it may mean looking at income, expenses, priorities and
-the habits surrounding financial decisions. For life stories, it may mean
-explaining how one event affected another.
-</p>
-
-<p>
-The more clearly those connections are presented, the easier it becomes for
-a reader to form an independent opinion. I do not want every page to tell
-the reader exactly what to think. Sometimes a good article should provide
-enough information for the reader to reach their own conclusion.
-</p>
-
-<h3>Why ordinary experiences deserve attention</h3>
-
-<p>
-There is a tendency to believe that only extraordinary lives make good
-stories. I do not agree. Ordinary life contains many decisions that are
-important to the people making them. Getting a first job, managing a small
-income, starting a business, choosing a course, supporting a family or
-recovering from a disappointing experience can all teach something.
-</p>
-
-<p>
-A person does not need to become famous before their experience becomes
-valuable. Sometimes the most useful lesson is found in an experience that
-millions of people recognize. The person who learns to control unnecessary
-spending may not receive an award for it, but that change can have a real
-effect on their future.
-</p>
-
-<p>
-The same applies to time. A person who spends a little time each day
-learning a useful skill may not notice an immediate transformation. Over
-months and years, however, the accumulated effort can create an advantage.
-The reverse can also happen. Small habits that appear harmless can become
-expensive when repeated for a long time.
-</p>
-
-<p>
-This is one reason I like practical lessons. They bring large ideas back to
-daily life. Instead of discussing success as something distant, we can ask
-what a person can do today. Instead of discussing wealth only through large
-numbers, we can examine habits that affect ordinary income.
-</p>
-
-<h3>Learning from mistakes without romanticizing them</h3>
-
-<p>
-Mistakes are another important part of storytelling. People sometimes tell
-success stories as though every setback was secretly a gift. Real life is
-not always that neat. Some mistakes are painful. Some create financial
-problems. Some damage trust. Some close opportunities that may never return.
-</p>
-
-<p>
-There is still value in examining them honestly. A mistake can provide
-information about what should be changed. It can reveal a weakness in
-planning, preparation, communication or judgment. The useful lesson is not
-that mistakes are good. The useful lesson is that we should not waste the
-information they provide.
-</p>
-
-<p>
-This distinction matters because positive thinking without reflection can
-become shallow. Telling somebody to keep going is easy. Understanding why
-the previous attempt failed is harder and often more useful. A person may
-need encouragement, but they may also need a different strategy.
-</p>
-
-<p>
-That is the kind of balance I want to maintain in my writing. I want stories
-to be hopeful when hope is justified, but I do not want to hide the difficult
-parts simply to make an article sound inspirational.
-</p>
-
-<h3>What biographies can teach us</h3>
-
-<p>
-Biographies are particularly useful because they allow us to study a life
-over time. A single photograph shows one moment. A biography can show
-development. It can reveal how childhood, education, work, relationships,
-opportunities and difficult periods contributed to the person someone later
-became.
-</p>
-
-<p>
-Famous musicians provide one example. It is easy to focus on songs, concerts
-and awards, but their stories can also involve years of practice, changing
-musical environments, competition and personal pressure. Looking at those
-elements gives the reader a fuller picture.
-</p>
-
-<p>
-Athletes offer another example. Great performances are visible, but training
-is often repetitive and private. Improvement can require doing the same basic
-things many times while accepting that progress may be slow.
-</p>
-
-<p>
-Leaders and activists provide another perspective. Historical change rarely
-comes without disagreement or resistance. Studying their lives can show how
-beliefs are tested when circumstances become difficult.
-</p>
-
-<p>
-The purpose of including these biographies on Kinglee6 Mutwiri is not to
-pretend that famous people are perfect examples for every situation. They
-are human beings with particular strengths, weaknesses and circumstances.
-The value comes from studying the journey and deciding what, if anything,
-can reasonably be applied to our own lives.
-</p>
-
-<h3>Money is a story about behaviour</h3>
-
-<p>
-Money deserves its own section because financial decisions affect many other
-parts of life. Housing, food, transport, education, business, family
-responsibilities and personal goals can all involve money. Yet financial
-problems are not always solved simply by increasing income.
-</p>
-
-<p>
-When income rises, spending can rise with it. A person may feel that a new
-salary justifies a more expensive lifestyle. Over time, the difference
-between income and expenses may remain small even though the amount being
-earned has increased.
-</p>
-
-<p>
-This is why understanding personal spending matters. Before changing a
-financial situation, it helps to know where the money is actually going.
-Without that information, it is easy to blame one large expense while
-ignoring several smaller habits that occur repeatedly.
-</p>
-
-<p>
-Saving also needs realistic thinking. Different people have different
-responsibilities. Someone supporting several family members cannot always
-follow the same plan as someone living alone. A person with unstable income
-faces different challenges from someone with a predictable monthly salary.
-</p>
-
-<p>
-The useful starting point is therefore awareness. Once someone understands
-their own financial pattern, they can decide which areas deserve attention.
-A small adjustment that can be maintained is often more useful than an
-extreme plan that quickly becomes impossible.
-</p>
-
-<p>
-The money stories on this website are intended to encourage that kind of
-thinking. They are not a substitute for professional financial advice, and
-they are not promises of quick wealth. They are discussions about habits,
-choices and situations that ordinary people can recognize.
-</p>
-
-<h3>The difference between looking successful and being stable</h3>
-
-<p>
-Modern culture can make financial appearance confusing. A person may own
-expensive items and still have little financial security. Another person may
-live modestly while quietly building savings, reducing unnecessary debt or
-investing in skills.
-</p>
-
-<p>
-There is nothing wrong with enjoying the rewards of hard work. The important
-question is whether a purchase supports the person's broader priorities.
-Financial stability is not always visible from the outside.
-</p>
-
-<p>
-This is particularly important for young adults. There can be pressure to
-prove progress quickly. Social media can make it appear as though everyone
-else is moving faster. A person may therefore spend money simply to create
-an impression.
-</p>
-
-<p>
-A healthier approach is to define progress personally. Someone's goal may
-be to build an emergency fund. Another person's goal may be to complete
-training, start a small business or support their family. There is no single
-appearance that proves somebody is doing well.
-</p>
-
-<h3>Personal growth is usually gradual</h3>
-
-<p>
-Personal growth is another subject that interests me because it is often
-described too dramatically. People expect a single moment to transform
-their lives. Sometimes that happens, but more often change is gradual.
-</p>
-
-<p>
-A person may decide to become more disciplined and then discover that
-discipline has to be practiced repeatedly. They may start saving and realize
-that consistency matters more than one large deposit. They may decide to
-learn a skill and discover that progress includes periods when improvement
-is difficult to notice.
-</p>
-
-<p>
-This is why patience matters. A long-term goal can become discouraging when
-we expect immediate evidence that it is working. Measuring smaller steps can
-make the process easier to understand.
-</p>
-
-<p>
-Personal growth also requires honesty. It is difficult to improve a habit
-that we refuse to acknowledge. Recognizing a weakness does not mean a person
-is worthless. It simply provides information about where effort may be
-needed.
-</p>
-
-<p>
-The lessons section of this website explores these ideas through stories and
-practical observations. The purpose is not to lecture readers. I would
-rather present an idea clearly and allow each person to consider how it
-relates to their circumstances.
-</p>
-
-<h3>Why consistency matters</h3>
-
-<p>
-Consistency is not as exciting as a dramatic breakthrough, but it can be
-powerful. Many skills improve through repeated practice. Many financial
-goals depend on repeated decisions. Many relationships become stronger
-through repeated acts of reliability.
-</p>
-
-<p>
-The challenge is that consistent effort is often invisible. There may be no
-immediate reward. Someone studying every evening may not feel different
-after one week. Someone exercising regularly may not see a major physical
-change immediately. Someone building a business may spend months learning
-before the results become obvious.
-</p>
-
-<p>
-That does not mean every plan will succeed. Consistency has to be combined
-with learning. If an approach is not working, repeating it forever is not
-discipline. Sometimes the correct response is to adjust the method while
-maintaining the larger goal.
-</p>
-
-<p>
-This is a useful distinction between persistence and stubbornness. Persistence
-means continuing to work toward something while remaining willing to learn.
-Stubbornness can mean repeating the same mistake simply because we do not
-want to change direction.
-</p>
-
-<h3>Why I want the website to remain readable</h3>
-
-<p>
-A website can contain a lot of information and still be difficult to use.
-Large blocks of text, confusing navigation and poor organization can make
-a good article frustrating. That is why presentation matters to me.
-</p>
-
-<p>
-I want visitors to know where they are. The navigation should make the main
-sections easy to find. Articles should have clear headings. Important pages
-should be connected rather than hidden away.
-</p>
-
-<p>
-The colorful design is intended to make the website welcoming while keeping
-the writing readable. Different sections have different visual identities,
-but the basic structure remains consistent so visitors do not feel lost
-when they move from one page to another.
-</p>
-
-<p>
-Good design should support content, not compete with it. A bright color can
-draw attention to a useful button or section heading, but it should not make
-a paragraph difficult to read. Images should help establish context rather
-than simply occupy space.
-</p>
-
-<h3>Building something that can improve over time</h3>
-
-<p>
-Kinglee6 Mutwiri is a growing project. I expect the website to change as I
-learn more about writing, research, design and the needs of readers. Some
-articles may eventually be improved when new information becomes available.
-Other pages may remain useful because the questions they discuss do not
-quickly disappear.
-</p>
-
-<p>
-I would rather build gradually than fill the website with pages that have
-little value. A larger number of articles does not automatically create a
-better website. What matters is whether those articles give visitors a
-reason to stay, learn and return.
-</p>
-
-<p>
-That is also why I care about originality. Readers already have access to
-many websites publishing similar subjects. Simply copying information from
-another page would not give this website a useful identity. My aim is to
-bring my own organization, explanations and perspective to the subjects I
-write about.
-</p>
-
-<p>
-Research remains important, especially when discussing real people and
-historical events. Facts should be treated carefully. Where a subject
-requires reliable sources, those sources should be considered before making
-claims.
-</p>
-
-<p>
-At the same time, original writing does not mean inventing facts. It means
-explaining a subject in your own words and adding genuine value through
-organization, context and thoughtful discussion.
-</p>
-
-<h3>What I hope a reader takes away</h3>
-
-<p>
-I do not expect every visitor to agree with every idea on this website.
-Different people have different experiences, responsibilities and priorities.
-That is normal.
-</p>
-
-<p>
-What I hope for is more modest. I want a reader to finish a useful page and
-have something to think about. Maybe a biography will make them appreciate
-the work behind an achievement. Maybe a money story will make them look at
-their spending differently. Maybe a life story will remind them to be more
-patient with another person.
-</p>
-
-<p>
-Sometimes the best result from an article is a question. Why do I spend money
-this way? Why am I delaying something important? What can I learn from this
-person's journey? Is there a habit I should change? What part of this story
-reminds me of my own situation?
-</p>
-
-<p>
-Questions can be valuable because they encourage independent thinking. A
-website does not have to provide a perfect answer to every issue. It can
-provide information that helps a person ask better questions.
-</p>
-
-<h3>My approach to celebrity stories</h3>
-
-<p>
-Celebrity stories attract attention because famous people are already part
-of public conversation. However, I want the articles on this website to go
-beyond gossip. A person's career can be examined through work, opportunity,
-pressure, decisions and change.
-</p>
-
-<p>
-Fame can create opportunities, but it can also create expectations. Public
-figures often have parts of their lives discussed by millions of people.
-Understanding that environment can make their successes and difficulties
-more meaningful.
-</p>
-
-<p>
-The celebrity stories section therefore provides another way of looking at
-well-known people. The focus is on the story rather than sensational claims.
-Where information is uncertain or disputed, responsible writing should not
-present speculation as established fact.
-</p>
-
-<h3>My approach to life stories</h3>
-
-<p>
-Life stories can be quieter than celebrity stories, but they can be equally
-powerful. They can show how a decision affects a family, how a financial
-problem develops, how a person changes after disappointment or how an
-ordinary opportunity becomes important.
-</p>
-
-<p>
-The value of such stories comes from recognition. A reader may see part of
-their own situation in another person's experience. That recognition can
-make an abstract lesson easier to understand.
-</p>
-
-<p>
-I want these stories to remain respectful. Real life involves real people,
-and good storytelling should not turn somebody's difficulty into a cheap
-form of entertainment. A useful story should have a purpose.
-</p>
-
-<h3>My approach to money stories</h3>
-
-<p>
-Money affects decisions, but money is also connected to emotions. People can
-feel pressure when they earn less than friends. They can feel proud when
-their income increases. They can become anxious during emergencies. They
-can make purchases because they want to feel successful.
-</p>
-
-<p>
-Understanding those emotional factors can make financial discussions more
-realistic. A budget is useful, but knowing why a person repeatedly breaks
-their budget may be even more important.
-</p>
-
-<p>
-Financial improvement is rarely one dramatic action. It is often a collection
-of decisions. Tracking expenses, reducing waste, planning for known
-obligations, building savings and learning about financial products can all
-play a role depending on a person's circumstances.
-</p>
-
-<p>
-The website therefore treats money as a subject that deserves thought rather
-than quick promises. There is no magic formula that guarantees wealth.
-Different people start from different positions, and responsible financial
-choices depend on individual circumstances.
-</p>
-
-<h3>Why I value practical lessons</h3>
-
-<p>
-A lesson becomes more useful when a reader can understand how it might apply
-outside the article. That does not mean every lesson must become a strict
-rule. Sometimes the lesson is simply a question to consider.
-</p>
-
-<p>
-For example, a story about somebody who increased their income but remained
-financially stressed can lead to a question about lifestyle inflation. A
-story about an athlete can lead to a discussion about practice. A biography
-of a leader can raise questions about courage and responsibility.
-</p>
-
-<p>
-The connection is what interests me. I want the reader to see that a story
-can travel beyond its original subject. A musician's discipline can become
-an idea about work. An entrepreneur's failure can become an idea about
-planning. A historical struggle can become an idea about persistence.
-</p>
-
-<h3>The future of Kinglee6 Mutwiri</h3>
-
-<p>
-I want this website to continue growing in a way that remains useful to
-readers. There are many subjects I would like to explore, but growth should
-not come at the expense of quality.
-</p>
-
-<p>
-As the number of pages increases, organization becomes more important.
-Visitors should be able to move from one article to another naturally.
-Related topics should connect with one another. Important information should
-remain easy to find.
-</p>
-
-<p>
-I also want to keep improving my writing. Every article teaches something
-about structure, clarity and explanation. Sometimes the improvement is
-learning what to remove. Good writing is not only about adding information.
-It is also about knowing when a sentence does not help the reader.
-</p>
-
-<p>
-That is an important principle for this homepage. I do not want visitors to
-read thousands of words simply because a page needs to be long. The length
-should come from meaningful ideas. Each section should contribute something
-different.
-</p>
-
-<p>
-If a reader spends time here, I want that time to feel worthwhile. The site
-should be easy to navigate, the articles should have clear purposes, and the
-writing should respect the reader's attention.
-</p>
-
-<h3>A message to visitors</h3>
-
-<p>
-If this is your first visit, start wherever your curiosity takes you. You
-can explore biographies if you enjoy learning about famous people. You can
-visit the stories section if you prefer human experiences. The money section
-may be useful if you are interested in financial habits, while the lessons
-section brings together ideas that can be considered in everyday situations.
-</p>
-
-<p>
-You do not have to read everything at once. A website is not a race. Choose
-one subject, take your time and decide what you find useful.
-</p>
-
-<p>
-If you return later, you may find new stories and different perspectives.
-That is part of the reason I enjoy building this website. It gives me a
-place to continue learning and a place where those lessons can be shared.
-</p>
-
-<p>
-I am Eliphas Mutwiri Peter from Kenya, and Kinglee6 Mutwiri is my attempt to
-create something useful from that interest in people, stories and ideas.
-The website is still growing, and so am I. I hope the pages here give you
-something interesting to read, something useful to learn or simply something
-worth thinking about.
-</p>
-
-</article>
-
-</div>
-</section>
-
-
-<section class="practical">
-
-<div class="container">
-
-<div class="section-heading">
-
-<div class="tag">Practical Reading</div>
-
-<h2>Three stories with everyday connections</h2>
-
-<p>
-These pages connect the larger themes of the website with situations that
-many people can understand.
-</p>
-
-</div>
-
-<div class="practical-grid">
-
-<article class="practical-card">
-
-<h3>A salary is a starting point, not the whole financial plan</h3>
-
-<p>
-Income gives a person resources, but what happens after the money arrives
-can determine whether those resources create stability. Planning, priorities
-and spending habits all deserve attention.
-</p>
-
-<a href="salary-disappeared-story.html" class="read-more">
-Read the salary story →
-</a>
-
-</article>
-
-
-<article class="practical-card">
-
-<h3>Success should be measured beyond appearances</h3>
-
-<p>
-A stronger financial position is not always obvious from possessions.
-Building useful skills, managing expenses and preparing for future needs can
-be just as important as visible signs of success.
-</p>
-
-<a href="money.html" class="read-more">
-Explore money topics →
-</a>
-
-</article>
-
-</div>
-
-</div>
-</section>
-
-
-<section class="featured">
-
-<div class="container">
-
-<div class="section-heading">
-
-<div class="tag">More Reading</div>
-
-<h2>Continue exploring</h2>
-
-<p>
-Move between stories, biographies and practical topics using the sections
-below.
-</p>
-
-</div>
-
-<div class="card-grid">
-
-<article class="card">
-<div class="card-top">S</div>
-<div class="card-body">
-<div class="category">Stories</div>
-<h3>Stories</h3>
-<p>
-Explore original stories built around people, experiences, decisions and
-questions that connect with everyday life.
-</p>
-<a href="stories.html" class="read-more">Open Stories →</a>
-</div>
-</article>
-
-
-
-
-
-</div>
-
-</div>
-</section>
-
-
-<section class="author-section">
-
-<div class="container author-box">
-
-<img
-src="images/author-kinglee.jpg" class="author-small-photo"
-alt="Eliphas Mutwiri Peter, founder and writer of Kinglee6 Mutwiri"
-onerror="this.style.display='none';"
->
-
-<div>
-
-<h2>About the person behind Kinglee6 Mutwiri</h2>
-
-<p>
-My name is Eliphas Mutwiri Peter from Kenya. I am the person behind
-Kinglee6 Mutwiri and the writer developing this website.
-</p>
-
-<p>
-I created the site because I wanted a place where stories could be connected
-to practical ideas. I enjoy looking at what people have experienced and
-asking what somebody else might learn from that experience.
-</p>
-
-<p>
-The website is part of my own learning process. I am interested in improving
-my writing, understanding different subjects and creating pages that are
-useful to people who discover them.
-</p>
-
-<p>
-I believe a website becomes meaningful when visitors can find something
-genuinely useful rather than simply finding a large amount of text.
-</p>
-
-<a href="about.html" class="btn btn-primary">Read More About Me</a>
-
-</div>
-
-</div>
-</section>
-
-
-<section class="trust">
-
-<div class="container">
-
-<div class="section-heading">
-
-<div class="tag">What Matters Here</div>
-
-<h2>A few principles behind the website</h2>
-
-<p>
-These principles guide the way I want Kinglee6 Mutwiri to develop.
-</p>
-
-</div>
-
-<div class="trust-grid">
-
-<article class="trust-card">
-<h3>Original Writing</h3>
-<p>
-The aim is to create useful explanations and stories rather than simply
-reproduce material from other websites.
-</p>
-</article>
-
-<article class="trust-card">
-<h3>Useful Information</h3>
-<p>
-Articles should have a clear purpose and give readers something meaningful
-to understand, consider or explore.
-</p>
-</article>
-
-<article class="trust-card">
-<h3>Respect for Readers</h3>
-<p>
-Clear navigation, readable design and responsible presentation are important
-parts of the experience.
-</p>
-</article>
-
-</div>
-
-</div>
-</section>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <span class="hero-label">Stories • People • Ideas</span>
+
+      <h1>Real Stories. Real People. Lessons Worth Carrying.</h1>
+
+      <p>
+        I created Kinglee Mutwiri as a place where stories are not just told
+        and forgotten. I want to look at the people, choices, struggles,
+        achievements and ideas behind them — and find something useful for
+        the person reading.
+      </p>
+
+      <div class="hero-author">
+        <img src="images/author-v2.jpg" alt="Eliphas Mutwiri Peter">
+        <div>
+          <strong>Eliphas Mutwiri Peter</strong>
+          <small>Writer from Kenya</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRODUCTION -->
+  <section class="intro">
+    <div class="container intro-grid">
+
+      <div class="intro-photo">
+        <img src="images/author-v2.jpg"
+             alt="Eliphas Mutwiri Peter, creator of Kinglee Mutwiri"
+             loading="lazy">
+      </div>
+
+      <div class="intro-copy">
+        <h2>I am Eliphas Mutwiri Peter, and this is what I am building.</h2>
+
+        <p>
+          I am Eliphas Mutwiri Peter from Kenya. Kinglee Mutwiri is my website,
+          but I do not see it simply as a place where I upload articles. I see
+          it as a growing collection of stories, people and ideas that deserve
+          a little more attention.
+        </p>
+
+        <p>
+          I have always found something interesting in the story behind a
+          person or an outcome. Someone succeeds, but what happened before the
+          success? Someone loses money, but which decisions brought them there?
+          Someone becomes respected, but what did they have to overcome before
+          people knew their name?
+        </p>
+
+        <p>
+          Those are the questions that shape the way I write here. I want to
+          go beyond a name, a headline or a famous achievement. I want the
+          reader to understand the background, the important moments, the
+          difficult decisions, the mistakes, the development and the lessons
+          that can still matter today.
+        </p>
+
+        <p>
+          Some stories on this website are about famous people. Others are
+          about ordinary situations that many of us can recognise. I also write
+          about money, relationships, human behaviour, personal growth,
+          discipline and the choices that quietly shape our lives.
+        </p>
+
+        <p>
+          I am not trying to make every story sound perfect. Real life is not
+          perfect. People make good decisions and bad decisions. They change,
+          fail, learn, start again and sometimes discover that what they
+          thought they wanted was not what they actually needed.
+        </p>
+
+        <p>
+          That is the kind of honesty I want this website to keep.
+        </p>
+
+        <div class="signature">— Eliphas Mutwiri Peter</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TOP AD -->
+  <div class="ad-wrap" aria-label="Advertisement">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5799841502846177"
+         data-ad-slot="6388196362"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
+  <!-- FEATURED STORIES -->
+  <section class="featured">
+    <div class="container">
+
+      <div class="section-heading">
+        <span>Start here</span>
+        <h2>Stories that make you stop and think</h2>
+        <p>
+          I want the first stories you discover here to give you an idea of
+          what Kinglee Mutwiri is about: people, choices, consequences and
+          lessons that can stay with you after you finish reading.
+        </p>
+      </div>
+
+      <div class="story-grid">
+
+        <article class="story-card">
+          <div class="number">01 — MONEY &amp; CONSEQUENCES</div>
+          <h3>The Man Who Earned More Money But Became Poorer</h3>
+          <p>
+            Earning more does not automatically mean building a better life.
+            This story looks at the difference between income, decisions,
+            spending and genuine financial progress.
+          </p>
+          <a class="read-link"
+             href="https://kinglee6mutwiri.co.ke/the-man-who-earned-more-money-but-became-poorer.html">
+            Read the story →
+          </a>
+        </article>
+
+        <article class="story-card">
+          <div class="number">02 — LIFE &amp; SECRETS</div>
+          <h3>The Secret Account</h3>
+          <p>
+            A story about decisions that can remain hidden for a long time,
+            and how one choice can create consequences that are much bigger
+            than expected.
+          </p>
+          <a class="read-link"
+             href="https://kinglee6mutwiri.co.ke/secret-account-47000.html">
+            Read the story →
+          </a>
+        </article>
+
+        <article class="story-card">
+          <div class="number">03 — HUMAN BEHAVIOUR</div>
+          <h3>Relationships &amp; Human Behaviour</h3>
+          <p>
+            Relationships are shaped by communication, expectations, habits,
+            trust and the way people respond to one another. Understanding
+            those patterns can change how we handle people.
+          </p>
+          <a class="read-link"
+             href="https://kinglee6mutwiri.co.ke/relationships-human-behaviour.html">
+            Explore the topic →
+          </a>
+        </article>
+
+        <article class="story-card">
+          <div class="number">04 — MONEY &amp; THINKING</div>
+          <h3>The Psychology of Money</h3>
+          <p>
+            Money is not only about mathematics. The way we think, behave,
+            compare ourselves with others and make decisions can have a major
+            effect on our financial lives.
+          </p>
+          <a class="read-link"
+             href="https://kinglee6mutwiri.co.ke/psychology-of-money.html">
+            Read more →
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MONEY IN-ARTICLE AD -->
+  <div class="ad-wrap" aria-label="Advertisement">
+    <ins class="adsbygoogle"
+         style="display:block; text-align:center;"
+         data-ad-layout="in-article"
+         data-ad-format="fluid"
+         data-ad-client="ca-pub-5799841502846177"
+         data-ad-slot="1217574823"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
+  <!-- CATEGORIES -->
+  <section class="categories">
+    <div class="container">
+
+      <div class="section-heading">
+        <span>Explore the website</span>
+        <h2>Different subjects, one purpose</h2>
+        <p>
+          The subjects may be different, but I want each section to give you
+          something worth taking away.
+        </p>
+      </div>
+
+      <div class="category-grid">
+
+        <div class="category">
+          <h3>Biographies</h3>
+          <p>
+            Go beyond famous names and look at backgrounds, important moments,
+            struggles, decisions, achievements and the journeys behind them.
+          </p>
+          <a href="https://kinglee6mutwiri.co.ke/biographies.html">Explore biographies →</a>
+        </div>
+
+        <div class="category">
+          <h3>Stories</h3>
+          <p>
+            Stories about situations, people and choices that reveal something
+            useful about everyday life.
+          </p>
+          <a href="https://kinglee6mutwiri.co.ke/stories.html">Explore stories →</a>
+        </div>
+
+        <div class="category">
+          <h3>Money</h3>
+          <p>
+            Ideas about earning, spending, saving, behaviour and the decisions
+            that influence financial progress.
+          </p>
+          <a href="https://kinglee6mutwiri.co.ke/money.html">Explore money →</a>
+        </div>
+
+        <div class="category">
+          <h3>Lessons</h3>
+          <p>
+            Practical observations drawn from real situations, mistakes,
+            achievements and the experiences of other people.
+          </p>
+          <a href="https://kinglee6mutwiri.co.ke/lessons.html">Explore lessons →</a>
+        </div>
+
+        <div class="category">
+          <h3>Mindset &amp; Life</h3>
+          <p>
+            Thoughts about discipline, habits, courage, decisions, purpose and
+            the small actions that influence where life goes.
+          </p>
+          <a href="https://kinglee6mutwiri.co.ke/mindset-and-life.html">Explore mindset &amp; life →</a>
+        </div>
+
+        <div class="category">
+          <h3>Life Stories</h3>
+          <p>
+            Personal situations and human experiences that can help us look at
+            ordinary life from another perspective.
+          </p>
+          <a href="https://kinglee6mutwiri.co.ke/life-stories.html">Explore life stories →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PEOPLE -->
+  <section class="people-section">
+    <div class="container">
+
+      <div class="section-heading">
+        <span>People &amp; journeys</span>
+        <h2>What can another person's journey teach us?</h2>
+        <p>
+          Famous people are often remembered for the final achievement. I am
+          more interested in the road that led there.
+        </p>
+      </div>
+
+      <div class="people-grid">
+
+        <article class="people-card">
+          <h3>Lucky Dube</h3>
+          <p>
+            Lucky Dube's story gives us an opportunity to look beyond music and
+            examine the journey, the work, the development and the legacy of a
+            South African artist whose career reached people far beyond his
+            home country.
+          </p>
+          <a class="read-link"
+             href="https://kinglee6mutwiri.co.ke/lucky-dube.html">
+            Read the biography →
+          </a>
+        </article>
+
+        <article class="people-card">
+          <h3>Lionel Messi</h3>
+          <p>
+            Messi's journey offers a useful look at development, persistence,
+            football, difficult beginnings, major achievements and the long
+            process behind becoming one of the most recognised players in the
+            sport.
+          </p>
+          <a class="read-link"
+             href="https://kinglee6mutwiri.co.ke/lionel-messi.html">
+            Read the biography →
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DEEP READING -->
+  <section class="deep-reading">
+    <div class="container deep-grid">
+
+      <div class="deep-copy">
+        <h2>I want this website to be useful after the reading ends.</h2>
+
+        <p>
+          There is a difference between reading something and learning
+          something from it. A person can finish a long article and remember
+          almost nothing the next morning. I want to work against that.
+        </p>
+
+        <p>
+          When I write about money, I want the reader to think about their own
+          financial decisions. When I write about relationships, I want them
+          to notice how communication and behaviour affect the people around
+          them. When I write biographies, I want the person behind the
+          achievement to become visible.
+        </p>
+
+        <p>
+          When I write about personal growth, I want to keep the advice
+          practical. Growth is not always a dramatic transformation. Sometimes
+          it is deciding to become more disciplined, correcting one bad habit,
+          learning a skill, managing money more carefully, or finally taking
+          responsibility for a decision.
+        </p>
+
+        <p>
+          That is why I also write about the ordinary parts of life. They may
+          not become headlines, but they are often where the biggest changes
+          begin.
+        </p>
+
+        <p>
+          I believe a useful story should leave the reader with something:
+          perhaps a question, a new way of looking at a problem, a warning, a
+          practical idea or simply a reason to think again before making a
+          decision.
+        </p>
+
+        <p>
+          That is the standard I want to keep improving as Kinglee Mutwiri
+          grows.
+        </p>
+      </div>
+
+      <aside class="lesson-box">
+        <h3>A simple question I keep coming back to</h3>
+        <p>
+          What can this story teach me that I can actually use?
+        </p>
+        <br>
+        <p>
+          Sometimes the lesson is about money. Sometimes it is about patience,
+          discipline, relationships, ambition, failure or the consequences of
+          a decision.
+        </p>
+        <br>
+        <p>
+          I think that question makes a story more valuable than simply
+          knowing what happened.
+        </p>
+      </aside>
+
+    </div>
+  </section>
+
+  <!-- GROWTH -->
+  <section class="intro">
+    <div class="container">
+
+      <div class="section-heading">
+        <span>Growth &amp; direction</span>
+        <h2>Building a better life is usually a process.</h2>
+        <p>
+          I do not believe every problem has a quick answer. Some things take
+          time, repetition, mistakes and a willingness to change direction.
+        </p>
+      </div>
+
+      <div class="story-grid">
+
+        <article class="story-card">
+          <div class="number">PERSONAL DEVELOPMENT</div>
+          <h3>Mindset &amp; Life</h3>
+          <p>
+            A place for ideas about habits, discipline, courage, purpose,
+            decisions and the everyday choices that shape personal direction.
+          </p>
+          <a class="read-link"
+             href="https://kinglee6mutwiri.co.ke/mindset-and-life.html">
+            Read more →
+          </a>
+        </article>
+
+        <article class="story-card">
+          <div class="number">PERSONAL DEVELOPMENT</div>
+          <h3>Personal Growth &amp; Success</h3>
+          <p>
+            Growth is rarely one big moment. It is often the result of many
+            small decisions repeated long enough to make a difference.
+          </p>
+          <a class="read-link"
+             href="https://kinglee6mutwiri.co.ke/personal-growth-success.html">
+            Continue reading →
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <section class="closing">
+    <div class="container closing-inner">
+
+      <h2>Take your time. Read something that stays with you.</h2>
+
+      <p>
+        Kinglee Mutwiri is still growing. I am building it one page at a time,
+        with the aim of making every page useful, readable and worth returning
+        to.
+      </p>
+
+      <p>
+        If you have just arrived, start with a story that catches your
+        attention. You do not have to read everything. Find something that
+        connects with where you are in life right now.
+      </p>
+
+      <a class="button" href="https://kinglee6mutwiri.co.ke/about.html">About Me</a>
+      <a class="button" href="https://kinglee6mutwiri.co.ke/contact.html">Contact Me</a>
+
+    </div>
+  </section>
 
 </main>
 
-
 <footer>
+  <div class="container footer-grid">
 
-<div class="container">
+    <div>
+      <h3>Kinglee Mutwiri</h3>
+      <p>
+        Stories, people and ideas worth thinking about. Created by Eliphas
+        Mutwiri Peter from Kenya.
+      </p>
+    </div>
 
-<div class="footer-grid">
+    <div>
+      <h3>Explore</h3>
+      <ul class="footer-links">
+        <li><a href="https://kinglee6mutwiri.co.ke/biographies.html">Biographies</a></li>
+        <li><a href="https://kinglee6mutwiri.co.ke/stories.html">Stories</a></li>
+        <li><a href="https://kinglee6mutwiri.co.ke/money.html">Money</a></li>
+        <li><a href="https://kinglee6mutwiri.co.ke/lessons.html">Lessons</a></li>
+        <li><a href="https://kinglee6mutwiri.co.ke/mindset-and-life.html">Mindset &amp; Life</a></li>
+        <li><a href="https://kinglee6mutwiri.co.ke/life-stories.html">Life Stories</a></li>
+      </ul>
+    </div>
 
-<div>
+    <div>
+      <h3>Website</h3>
+      <ul class="footer-links">
+        <li><a href="https://kinglee6mutwiri.co.ke/about.html">About</a></li>
+        <li><a href="https://kinglee6mutwiri.co.ke/contact.html">Contact</a></li>
+        <li><a href="https://kinglee6mutwiri.co.ke/privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="https://kinglee6mutwiri.co.ke/terms.html">Terms</a></li>
+        <li><a href="https://kinglee6mutwiri.co.ke/disclaimer.html">Disclaimer</a></li>
+      </ul>
+    </div>
 
-<h3>Kinglee6 Mutwiri</h3>
+  </div>
 
-<p>
-Stories, people and ideas worth thinking about, created by Eliphas Mutwiri
-Peter from Kenya.
-</p>
-
-<a
-class="facebook"
-href="https://www.facebook.com/profile.php?id=61568056696688"
-target="_blank"
-rel="noopener noreferrer">
-Follow me on Facebook
-</a>
-
-</div>
-
-
-<div>
-
-<h3>Explore</h3>
-
-<div class="footer-links">
-<a href="biographies.html">Biographies</a>
-<a href="celebrity-stories.html">Celebrity Stories</a>
-<a href="life-stories.html">Life Stories</a>
-<a href="money.html">Money</a>
-<a href="stories.html">Stories</a>
-<a href="lessons.html">Lessons</a>
-</div>
-
-</div>
-
-
-<div>
-
-<h3>Information</h3>
-
-<div class="footer-links">
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
-<a href="privacy-policy.html">Privacy Policy</a>
-<a href="terms.html">Terms</a>
-<a href="disclaimer.html">Disclaimer</a>
-</div>
-
-</div>
-
-</div>
-
-
-<div class="copyright">
-
-<p>
-© 2026 Kinglee6 Mutwiri. All rights reserved.
-</p>
-
-<p>
-Homepage created: 9 September 2026
-</p>
-
-</div>
-
-</div>
-
+  <div class="container copyright">
+    © 2026 Kinglee Mutwiri. All rights reserved.
+  </div>
 </footer>
 
 </body>
