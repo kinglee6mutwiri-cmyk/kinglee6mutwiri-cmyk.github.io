@@ -411,18 +411,21 @@ details p{
     }
 }
 </style>
+
+
 <style>
 .lucky-dube-image {
   display: block;
   width: 100%;
   max-width: 900px;
-  height: auto;
+  height: auto !important;
   margin: 25px auto;
-  object-fit: contain;
+  object-fit: contain !important;
   object-position: center;
   border-radius: 12px;
 }
 </style>
+
 </head>
 
 <body>
@@ -469,9 +472,7 @@ This is the part of his story I wanted to understand more deeply.
 </p>
 
 <div class="hero-image">
-<img src="images/lucky-dube-legendary.jpg"
-     alt="Lucky Dube, South African reggae musician"
-     loading="eager">
+<img class="lucky-dube-image" src="images/lucky-dube-legendary.jpg" alt="Lucky Dube">
 </div>
 
 <p class="caption">Lucky Dube's story is about music, identity, pressure, change and the lasting value of meaningful work.</p>
