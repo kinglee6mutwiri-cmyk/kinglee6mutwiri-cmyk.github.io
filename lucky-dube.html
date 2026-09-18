@@ -426,6 +426,46 @@ details p{
 }
 </style>
 
+
+<style id="lucky-dube-image-fix">
+.lucky-dube-image,
+.lucky-dube-image img {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  margin: 20px auto !important;
+}
+
+.lucky-dube-image {
+  overflow: visible !important;
+}
+
+.lucky-dube-image-wrap,
+.hero-image,
+.hero-media,
+.image-container,
+.article-image {
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+}
+
+@media (max-width: 700px) {
+  .lucky-dube-image,
+  .lucky-dube-image img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+  }
+}
+</style>
+
 </head>
 
 <body>
@@ -472,7 +512,7 @@ This is the part of his story I wanted to understand more deeply.
 </p>
 
 <div class="hero-image">
-<img class="lucky-dube-image" src="images/lucky-dube-legendary.jpg" alt="Lucky Dube">
+<img class="lucky-dube-image" src="images/lucky-dube-legendary.jpg" alt="Lucky Dube, South African reggae musician">
 </div>
 
 <p class="caption">Lucky Dube's story is about music, identity, pressure, change and the lasting value of meaningful work.</p>
