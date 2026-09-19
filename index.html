@@ -610,6 +610,36 @@
   </style>
 
 <link rel="preload" as="image" href="images/author-v2.jpg" fetchpriority="high">
+
+<style id="mobile-hero-fix">
+@media (max-width: 600px) {
+  .hero {
+    min-height: 360px !important;
+    padding: 70px 18px 55px !important;
+    background-size: cover !important;
+    background-position: center center !important;
+  }
+
+  .hero h1 {
+    font-size: 30px !important;
+    line-height: 1.15 !important;
+    margin-bottom: 14px !important;
+  }
+
+  .hero p {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+  }
+
+  .hero .author-image,
+  .hero img {
+    width: 95px !important;
+    height: 95px !important;
+    object-fit: cover !important;
+  }
+}
+</style>
+
 </head>
 
 <body>
