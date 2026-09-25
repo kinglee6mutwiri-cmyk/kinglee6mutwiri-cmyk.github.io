@@ -305,6 +305,39 @@
       }
     }
   </style>
+
+<style>
+.article-content .content-photo {
+    width: 100%;
+    max-width: 760px;
+    margin: 32px auto;
+    display: block;
+    text-align: center;
+}
+
+.article-content .content-photo img {
+    width: 100%;
+    max-width: 760px;
+    height: auto;
+    max-height: 480px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+}
+
+@media (max-width: 700px) {
+    .article-content .content-photo {
+        margin: 24px auto;
+    }
+
+    .article-content .content-photo img {
+        max-height: 320px;
+        border-radius: 9px;
+    }
+}
+</style>
+
 </head>
 
 <body>
@@ -346,6 +379,13 @@
         looking beyond what a child says and paying attention to what the child may
         be trying to communicate.
       </p>
+
+<div class="content-photo">
+  <img src="images/pexels-kampus-6297599.jpg"
+       alt="Parent listening carefully to a child"
+       loading="eager">
+</div>
+
 
     </section>
 
@@ -751,6 +791,13 @@
         Parents teach through words, but children also learn by watching.
       </p>
 
+<div class="content-photo">
+  <img src="images/pexels-cottonbro-6668312.jpg"
+       alt="Parent and child sharing meaningful time together"
+       loading="lazy">
+</div>
+
+
       <p>
         A parent who teaches honesty while regularly lying sends a conflicting
         message. A parent who teaches respect while insulting other people teaches
@@ -1094,17 +1141,6 @@
     </div>
 
   </article>
-
-
-<img src="images/pexels-kampus-6297599.jpg"
-     alt="Parent listening carefully to a child"
-     loading="eager">
-
-
-<img src="images/pexels-cottonbro-6668312.jpg"
-     alt="Parent and child spending meaningful time together"
-     loading="lazy">
-
 </main>
 
 <footer>
