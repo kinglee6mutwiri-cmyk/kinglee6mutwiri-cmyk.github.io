@@ -352,6 +352,39 @@
 }
 </style>
 
+
+<style>
+#child-article-image-1,
+#child-article-image-2 {
+    display: block !important;
+    width: auto !important;
+    max-width: 520px !important;
+    height: auto !important;
+    max-height: 360px !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    margin: 30px auto !important;
+    padding: 0 !important;
+    border-radius: 10px !important;
+    box-sizing: border-box !important;
+}
+
+@media (max-width: 700px) {
+    #child-article-image-1,
+    #child-article-image-2 {
+        display: block !important;
+        width: auto !important;
+        max-width: 88% !important;
+        height: auto !important;
+        max-height: 260px !important;
+        object-fit: contain !important;
+        margin: 26px auto !important;
+    }
+}
+</style>
+
 </head>
 
 <body>
@@ -423,11 +456,9 @@
         But changes in behaviour are worth noticing.
       </p>
 
-<div class="content-photo">
-  <img src="images/pexels-kampus-6297599.jpg"
+<img id="child-article-image-1" src="images/pexels-kampus-6297599.jpg"
        alt="Parent listening carefully to a child"
        loading="lazy">
-</div>
 
 <p>
         Childhood and adolescence are periods of enormous change. A young person is
@@ -470,11 +501,9 @@
         fear, embarrassment, loneliness, pressure or disappointment.
       </p>
 
-<div class="content-photo">
-  <img src="images/pexels-cottonbro-6668312.jpg"
+<img id="child-article-image-2" src="images/pexels-cottonbro-6668312.jpg"
        alt="Parent and child spending meaningful time together"
        loading="lazy">
-</div>
 
 
       <p>
