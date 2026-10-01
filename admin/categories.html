@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Manage Categories | Kinglee6 Mutwiri</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f1ea;
+      color: #171717;
+    }
+
+    header {
+      background: #171717;
+      color: white;
+      padding: 18px 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    header p {
+      margin: 5px 0 0;
+      color: #d8d8d8;
+      font-size: 14px;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 18px 50px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 22px;
+      flex-wrap: wrap;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 25px;
+    }
+
+    .top-actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    button,
+    a.button {
+      border: 0;
+      padding: 10px 15px;
+      border-radius: 7px;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 14px;
+      display: inline-block;
+    }
+
+    .primary {
+      background: #171717;
+      color: white;
+    }
+
+    .secondary {
+      background: #ddd5ca;
+      color: #171717;
+    }
+
+    .success {
+      background: #217346;
+      color: white;
+    }
+
+    .danger {
+      background: #b42318;
+      color: white;
+    }
+
+    .panel {
+      background: white;
+      border: 1px solid #ddd6cc;
+      border-radius: 10px;
+      padding: 22px;
+      margin-bottom: 20px;
+    }
+
+    .panel h3 {
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+
+    .add-form {
+      display: flex;
+      gap: 10px;
+    }
+
+    .add-form input {
+      flex: 1;
+      border: 1px solid #cfc7bc;
+      border-radius: 7px;
+      padding: 12px;
+      font-size: 15px;
+    }
+
+    .status {
+      display: none;
+      padding: 12px;
+      margin-bottom: 18px;
+      border-radius: 7px;
+      font-size: 14px;
+    }
+
+    .category-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .category-item {
+      border: 1px solid #e1dbd3;
+      border-radius: 8px;
+      padding: 13px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .category-name {
+      font-weight: 600;
+    }
+
+    .category-actions {
+      display: flex;
+      gap: 7px;
+      flex-wrap: wrap;
+    }
+
+    .category-actions button {
+      padding: 7px 10px;
+      font-size: 12px;
+    }
+
+    .empty,
+    .loading {
+      text-align: center;
+      color: #666;
+      padding: 25px;
+    }
+
+    .count {
+      color: #777;
+      font-size: 13px;
+      margin-bottom: 15px;
+    }
+
+    @media (max-width: 600px) {
+      .add-form {
+        flex-direction: column;
+      }
+
+      .category-item {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .category-actions {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Kinglee6 Mutwiri Admin</h1>
+  <p>Manage categories</p>
+</header>
+
+<main>
+
+  <div class="topbar">
+    <h2>Categories</h2>
+
+    <div class="top-actions">
+      <a class="button secondary" href="dashboard.html">Dashboard</a>
+      <a class="button secondary" href="articles.html">Articles</a>
+    </div>
+  </div>
+
+  <div id="statusMessage" class="status"></div>
+
+  <section class="panel">
+    <h3>Add Category</h3>
+
+    <form id="addCategoryForm" class="add-form">
+      <input
+        type="text"
+        id="categoryName"
+        placeholder="Category name"
+        maxlength="100"
+        required
+      >
+
+      <button type="submit" class="success">
+        Add Category
+      </button>
+    </form>
+  </section>
+
+  <section class="panel">
+    <h3>Existing Categories</h3>
+
+    <div id="categoryCount" class="count">
+      Loading categories...
+    </div>
+
+    <div id="categoryList" class="category-list">
+      <div class="loading">
+        Loading categories...
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script>
+  const SUPABASE_URL = "https://txtathyhuuopxuiooihl.supabase.co";
+  const SUPABASE_ANON_KEY = "sb_publishable_6hbII9z4E4cmBzvknweGfA_I_tHs5Ow";
+
+  const ADMIN_UID = "eb57b285-f6f3-462c-acd7-6b0d1d77cc44";
+
+  const supabaseClient = window.supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_ANON_KEY
+  );
+
+  const categoryList = document.getElementById("categoryList");
+  const categoryCount = document.getElementById("categoryCount");
+  const statusMessage = document.getElementById("statusMessage");
+  const addCategoryForm = document.getElementById("addCategoryForm");
+
+  let categories = [];
+
+  function showStatus(message, error = false) {
+    statusMessage.textContent = message;
+    statusMessage.style.display = "block";
+
+    if (error) {
+      statusMessage.style.background = "#fce8e6";
+      statusMessage.style.color = "#a61b1b";
+    } else {
+      statusMessage.style.background = "#e9f5ec";
+      statusMessage.style.color = "#176b36";
+    }
+  }
+
+  function hideStatus() {
+    statusMessage.style.display = "none";
+  }
+
+  function escapeHTML(value) {
+    if (value === null || value === undefined) return "";
+
+    return String(value)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+  }
+
+  async function checkAdmin() {
+    const {
+      data: { user },
+      error
+    } = await supabaseClient.auth.getUser();
+
+    if (error || !user) {
+      window.location.href = "index.html";
+      return false;
+    }
+
+    if (user.id !== ADMIN_UID) {
+      await supabaseClient.auth.signOut();
+      window.location.href = "index.html";
+      return false;
+    }
+
+    return true;
+  }
+
+  async function loadCategories() {
+    categoryList.innerHTML = `
+      <div class="loading">
+        Loading categories...
+      </div>
+    `;
+
+    const {
+      data,
+      error
+    } = await supabaseClient
+      .from("categories")
+      .select("id, name")
+      .order("name");
+
+    if (error) {
+      throw error;
+    }
+
+    categories = data || [];
+
+    categoryCount.textContent =
+      `${categories.length} categor${categories.length === 1 ? "y" : "ies"}`;
+
+    renderCategories();
+  }
+
+  function renderCategories() {
+    if (!categories.length) {
+      categoryList.innerHTML = `
+        <div class="empty">
+          No categories found.
+        </div>
+      `;
+      return;
+    }
+
+    categoryList.innerHTML = categories.map(category => `
+      <div class="category-item">
+
+        <div class="category-name">
+          ${escapeHTML(category.name)}
+        </div>
+
+        <div class="category-actions">
+
+          <button
+            class="secondary"
+            onclick="renameCategory(${category.id}, '${escapeHTML(category.name).replace(/'/g, "\\'")}')"
+          >
+            Rename
+          </button>
+
+          <button
+            class="danger"
+            onclick="deleteCategory(${category.id}, '${escapeHTML(category.name).replace(/'/g, "\\'")}')"
+          >
+            Delete
+          </button>
+
+        </div>
+
+      </div>
+    `).join("");
+  }
+
+  addCategoryForm.addEventListener("submit", async function(event) {
+    event.preventDefault();
+
+    hideStatus();
+
+    const input = document.getElementById("categoryName");
+    const name = input.value.trim();
+
+    if (!name) {
+      showStatus("Please enter a category name.", true);
+      return;
+    }
+
+    const duplicate = categories.some(
+      category => category.name.toLowerCase() === name.toLowerCase()
+    );
+
+    if (duplicate) {
+      showStatus("That category already exists.", true);
+      return;
+    }
+
+    const { error } = await supabaseClient
+      .from("categories")
+      .insert({
+        name: name
+      });
+
+    if (error) {
+      showStatus(
+        "Could not add category: " + error.message,
+        true
+      );
+      return;
+    }
+
+    input.value = "";
+
+    showStatus("Category added successfully.");
+
+    await loadCategories();
+  });
+
+  async function renameCategory(id, oldName) {
+    const newName = prompt(
+      "Enter the new category name:",
+      oldName
+    );
+
+    if (newName === null) return;
+
+    const name = newName.trim();
+
+    if (!name) {
+      showStatus("Category name cannot be empty.", true);
+      return;
+    }
+
+    const duplicate = categories.some(
+      category =>
+        category.id !== id &&
+        category.name.toLowerCase() === name.toLowerCase()
+    );
+
+    if (duplicate) {
+      showStatus("That category already exists.", true);
+      return;
+    }
+
+    const { error } = await supabaseClient
+      .from("categories")
+      .update({
+        name: name
+      })
+      .eq("id", id);
+
+    if (error) {
+      showStatus(
+        "Could not rename category: " + error.message,
+        true
+      );
+      return;
+    }
+
+    showStatus("Category renamed successfully.");
+
+    await loadCategories();
+  }
+
+  async function deleteCategory(id, name) {
+    const confirmed = confirm(
+      `Delete this category?\n\n${name}\n\nA category cannot be deleted if an article is using it.`
+    );
+
+    if (!confirmed) return;
+
+    hideStatus();
+
+    const {
+      data: articlesUsingCategory,
+      error: checkError
+    } = await supabaseClient
+      .from("articles")
+      .select("id")
+      .eq("category_id", id)
+      .limit(1);
+
+    if (checkError) {
+      showStatus(
+        "Could not check category usage: " +
+        checkError.message,
+        true
+      );
+      return;
+    }
+
+    if (
+      articlesUsingCategory &&
+      articlesUsingCategory.length > 0
+    ) {
+      showStatus(
+        "This category cannot be deleted because an article is using it.",
+        true
+      );
+      return;
+    }
+
+    const { error } = await supabaseClient
+      .from("categories")
+      .delete()
+      .eq("id", id);
+
+    if (error) {
+      showStatus(
+        "Could not delete category: " + error.message,
+        true
+      );
+      return;
+    }
+
+    showStatus("Category deleted successfully.");
+
+    await loadCategories();
+  }
+
+  async function start() {
+    try {
+      const isAdmin = await checkAdmin();
+
+      if (!isAdmin) return;
+
+      await loadCategories();
+
+    } catch (error) {
+      console.error(error);
+
+      categoryList.innerHTML = `
+        <div class="empty">
+          Could not load categories.
+        </div>
+      `;
+
+      showStatus(
+        "Error loading categories: " + error.message,
+        true
+      );
+    }
+  }
+
+  start();
+</script>
+
+</body>
+</html>
+
