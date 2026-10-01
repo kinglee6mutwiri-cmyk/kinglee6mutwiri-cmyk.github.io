@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Edit Article | Kinglee6 Mutwiri</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f1ea;
+      color: #171717;
+    }
+
+    header {
+      background: #171717;
+      color: white;
+      padding: 18px 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    header p {
+      margin: 5px 0 0;
+      color: #d8d8d8;
+      font-size: 14px;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 18px 50px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 22px;
+      flex-wrap: wrap;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 25px;
+    }
+
+    .top-actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    button,
+    a.button {
+      border: 0;
+      padding: 10px 15px;
+      border-radius: 7px;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 14px;
+      display: inline-block;
+    }
+
+    .primary {
+      background: #171717;
+      color: white;
+    }
+
+    .secondary {
+      background: #ddd5ca;
+      color: #171717;
+    }
+
+    .success {
+      background: #217346;
+      color: white;
+    }
+
+    .danger {
+      background: #b42318;
+      color: white;
+    }
+
+    form {
+      background: white;
+      border: 1px solid #ddd6cc;
+      border-radius: 10px;
+      padding: 24px;
+    }
+
+    .field {
+      margin-bottom: 18px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 7px;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid #cfc7bc;
+      border-radius: 7px;
+      padding: 12px;
+      font-family: inherit;
+      font-size: 15px;
+      background: white;
+    }
+
+    textarea {
+      min-height: 350px;
+      resize: vertical;
+      line-height: 1.6;
+    }
+
+    #seoDescription {
+      min-height: 120px;
+    }
+
+    .help {
+      margin-top: 5px;
+      color: #777;
+      font-size: 12px;
+    }
+
+    .status {
+      display: none;
+      padding: 12px;
+      margin-bottom: 18px;
+      border-radius: 7px;
+      font-size: 14px;
+    }
+
+    .form-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 25px;
+      padding-top: 20px;
+      border-top: 1px solid #eee;
+    }
+
+    .loading {
+      background: white;
+      border: 1px solid #ddd6cc;
+      border-radius: 10px;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .article-status {
+      margin-bottom: 20px;
+      padding: 10px 12px;
+      border-radius: 7px;
+      background: #eee8df;
+      font-size: 14px;
+    }
+
+    @media (max-width: 650px) {
+      main {
+        margin-top: 20px;
+      }
+
+      form {
+        padding: 18px;
+      }
+
+      h2 {
+        font-size: 22px;
+      }
+
+      textarea {
+        min-height: 280px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Kinglee6 Mutwiri Admin</h1>
+  <p>Edit article</p>
+</header>
+
+<main>
+
+  <div class="topbar">
+    <h2>Edit Article</h2>
+
+    <div class="top-actions">
+      <a class="button secondary" href="articles.html">All Articles</a>
+      <a class="button secondary" href="dashboard.html">Dashboard</a>
+    </div>
+  </div>
+
+  <div id="loading" class="loading">
+    Loading article...
+  </div>
+
+  <div id="statusMessage" class="status"></div>
+
+  <form id="articleForm" style="display:none;">
+
+    <div id="articleStatus" class="article-status"></div>
+
+    <div class="field">
+      <label for="title">Article Title</label>
+      <input
+        type="text"
+        id="title"
+        required
+      >
+    </div>
+
+    <div class="field">
+      <label for="slug">Slug</label>
+      <input
+        type="text"
+        id="slug"
+        required
+      >
+      <div class="help">
+        Example: luck-and-risk
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="category">Category</label>
+      <select id="category" required>
+        <option value="">Loading categories...</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="content">Article Content</label>
+      <textarea
+        id="content"
+        required
+      ></textarea>
+      <div class="help">
+        Keep the article content original, accurate and useful to readers.
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="imageUrl">Image URL</label>
+      <input
+        type="url"
+        id="imageUrl"
+        placeholder="https://..."
+      >
+    </div>
+
+    <div class="field">
+      <label for="seoTitle">SEO Title</label>
+      <input
+        type="text"
+        id="seoTitle"
+      >
+    </div>
+
+    <div class="field">
+      <label for="seoDescription">SEO Description</label>
+      <textarea
+        id="seoDescription"
+      ></textarea>
+    </div>
+
+    <div class="field">
+      <label for="authorName">Author Name</label>
+      <input
+        type="text"
+        id="authorName"
+        value="Eliphas Mutwiri Peter"
+        required
+      >
+    </div>
+
+    <div class="form-actions">
+
+      <button
+        type="button"
+        class="secondary"
+        onclick="saveArticle(false)"
+      >
+        Save as Draft
+      </button>
+
+      <button
+        type="button"
+        class="success"
+        onclick="saveArticle(true)"
+      >
+        Publish
+      </button>
+
+      <button
+        type="button"
+        class="primary"
+        onclick="saveArticle(null)"
+      >
+        Save Changes
+      </button>
+
+    </div>
+
+  </form>
+
+</main>
+
+<script>
+  const SUPABASE_URL = "https://txtathyhuuopxuiooihl.supabase.co";
+  const SUPABASE_ANON_KEY = "sb_publishable_6hbII9z4E4cmBzvknweGfA_I_tHs5Ow";
+
+  const ADMIN_UID = "eb57b285-f6f3-462c-acd7-6b0d1d77cc44";
+
+  const supabaseClient = window.supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_ANON_KEY
+  );
+
+  const params = new URLSearchParams(window.location.search);
+  const articleId = params.get("id");
+
+  let originalPublishedStatus = false;
+
+  const loading = document.getElementById("loading");
+  const form = document.getElementById("articleForm");
+  const statusMessage = document.getElementById("statusMessage");
+  const articleStatus = document.getElementById("articleStatus");
+
+  function showStatus(message, error = false) {
+    statusMessage.textContent = message;
+    statusMessage.style.display = "block";
+
+    if (error) {
+      statusMessage.style.background = "#fce8e6";
+      statusMessage.style.color = "#a61b1b";
+    } else {
+      statusMessage.style.background = "#e9f5ec";
+      statusMessage.style.color = "#176b36";
+    }
+  }
+
+  async function checkAdmin() {
+    const {
+      data: { user },
+      error
+    } = await supabaseClient.auth.getUser();
+
+    if (error || !user) {
+      window.location.href = "index.html";
+      return false;
+    }
+
+    if (user.id !== ADMIN_UID) {
+      await supabaseClient.auth.signOut();
+      window.location.href = "index.html";
+      return false;
+    }
+
+    return true;
+  }
+
+  async function loadCategories() {
+    const {
+      data,
+      error
+    } = await supabaseClient
+      .from("categories")
+      .select("id, name")
+      .order("name");
+
+    if (error) {
+      throw error;
+    }
+
+    const categorySelect = document.getElementById("category");
+
+    categorySelect.innerHTML = '<option value="">Select category</option>';
+
+    for (const category of data || []) {
+      const option = document.createElement("option");
+
+      option.value = category.id;
+      option.textContent = category.name;
+
+      categorySelect.appendChild(option);
+    }
+  }
+
+  async function loadArticle() {
+    if (!articleId) {
+      loading.textContent = "No article ID was provided.";
+      return;
+    }
+
+    const {
+      data,
+      error
+    } = await supabaseClient
+      .from("articles")
+      .select(`
+        id,
+        title,
+        slug,
+        content,
+        category_id,
+        published,
+        image_url,
+        seo_title,
+        seo_description,
+        author_name,
+        created_at,
+        updated_at,
+        published_at
+      `)
+      .eq("id", articleId)
+      .single();
+
+    if (error) {
+      throw error;
+    }
+
+    if (!data) {
+      loading.textContent = "Article not found.";
+      return;
+    }
+
+    document.getElementById("title").value =
+      data.title || "";
+
+    document.getElementById("slug").value =
+      data.slug || "";
+
+    document.getElementById("category").value =
+      data.category_id || "";
+
+    document.getElementById("content").value =
+      data.content || "";
+
+    document.getElementById("imageUrl").value =
+      data.image_url || "";
+
+    document.getElementById("seoTitle").value =
+      data.seo_title || "";
+
+    document.getElementById("seoDescription").value =
+      data.seo_description || "";
+
+    document.getElementById("authorName").value =
+      data.author_name || "Eliphas Mutwiri Peter";
+
+    originalPublishedStatus = Boolean(data.published);
+
+    updateStatusDisplay();
+
+    loading.style.display = "none";
+    form.style.display = "block";
+  }
+
+  function updateStatusDisplay() {
+    articleStatus.textContent = originalPublishedStatus
+      ? "Current status: Published"
+      : "Current status: Draft";
+
+    articleStatus.style.background = originalPublishedStatus
+      ? "#e3f4e8"
+      : "#f3ead8";
+
+    articleStatus.style.color = originalPublishedStatus
+      ? "#176b36"
+      : "#76540b";
+  }
+
+  async function saveArticle(publishChoice) {
+    statusMessage.style.display = "none";
+
+    const title = document.getElementById("title").value.trim();
+    const slug = document.getElementById("slug").value.trim();
+    const categoryId = document.getElementById("category").value;
+    const content = document.getElementById("content").value.trim();
+    const imageUrl = document.getElementById("imageUrl").value.trim();
+    const seoTitle = document.getElementById("seoTitle").value.trim();
+    const seoDescription = document.getElementById("seoDescription").value.trim();
+    const authorName = document.getElementById("authorName").value.trim();
+
+    if (!title || !slug || !categoryId || !content || !authorName) {
+      showStatus(
+        "Please complete all required fields.",
+        true
+      );
+      return;
+    }
+
+    let published = originalPublishedStatus;
+
+    if (publishChoice === true) {
+      published = true;
+    }
+
+    if (publishChoice === false) {
+      published = false;
+    }
+
+    const updateData = {
+      title,
+      slug,
+      content,
+      category_id: Number(categoryId),
+      image_url: imageUrl || null,
+      seo_title: seoTitle || null,
+      seo_description: seoDescription || null,
+      author_name: authorName,
+      published,
+      published_at: published
+        ? (
+            originalPublishedStatus
+              ? undefined
+              : new Date().toISOString()
+          )
+        : null,
+      updated_at: new Date().toISOString()
+    };
+
+    if (updateData.published_at === undefined) {
+      delete updateData.published_at;
+    }
+
+    const { error } = await supabaseClient
+      .from("articles")
+      .update(updateData)
+      .eq("id", articleId);
+
+    if (error) {
+      showStatus(
+        "Could not save the article: " + error.message,
+        true
+      );
+      return;
+    }
+
+    originalPublishedStatus = published;
+
+    updateStatusDisplay();
+
+    if (published) {
+      showStatus("Article saved and published successfully.");
+    } else {
+      showStatus("Article saved as a draft.");
+    }
+  }
+
+  async function start() {
+    try {
+      const isAdmin = await checkAdmin();
+
+      if (!isAdmin) return;
+
+      await loadCategories();
+      await loadArticle();
+
+    } catch (error) {
+      console.error(error);
+
+      loading.textContent =
+        "Could not load the article.";
+
+      showStatus(
+        "Error: " + error.message,
+        true
+      );
+    }
+  }
+
+  start();
+</script>
+
+</body>
+</html>
+
