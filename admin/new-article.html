@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>New Article — Kinglee6 Mutwiri</title>
+    <meta name="robots" content="noindex, nofollow">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f1e8;
+            color: #171717;
+        }
+
+        header {
+            background: #171717;
+            color: white;
+            padding: 18px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .panel {
+            background: white;
+            border: 1px solid #ddd7ca;
+            border-radius: 10px;
+            padding: 25px;
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        label {
+            display: block;
+            margin: 20px 0 8px;
+            font-weight: 600;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #ccc;
+            border-radius: 7px;
+            font: inherit;
+        }
+
+        textarea {
+            min-height: 350px;
+            resize: vertical;
+            line-height: 1.6;
+        }
+
+        .small-text {
+            margin-top: 6px;
+            color: #777;
+            font-size: 13px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        button {
+            padding: 13px 18px;
+            border: 0;
+            border-radius: 7px;
+            background: #171717;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        button.secondary {
+            background: #e8e2d7;
+            color: #171717;
+        }
+
+        button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        #message {
+            margin-top: 18px;
+            line-height: 1.5;
+        }
+
+        .error {
+            color: #b00020;
+        }
+
+        .success {
+            color: #16733a;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <strong>Kinglee6 Mutwiri Admin</strong>
+    <a href="dashboard.html">← Dashboard</a>
+</header>
+
+<main>
+
+    <section class="panel">
+
+        <h1>New Article</h1>
+
+        <form id="articleForm">
+
+            <label for="title">Article Title</label>
+            <input
+                type="text"
+                id="title"
+                required
+                placeholder="Enter article title"
+            >
+
+            <label for="slug">Slug</label>
+            <input
+                type="text"
+                id="slug"
+                required
+                placeholder="example-article-title"
+            >
+            <div class="small-text">
+                Use lowercase words separated by hyphens.
+            </div>
+
+            <label for="category">Category</label>
+            <select id="category" required>
+                <option value="">Loading categories...</option>
+            </select>
+
+            <label for="content">Article Content</label>
+            <textarea
+                id="content"
+                required
+                placeholder="Write the complete article here..."
+            ></textarea>
+
+            <label for="imageUrl">Featured Image URL</label>
+            <input
+                type="url"
+                id="imageUrl"
+                placeholder="https://example.com/image.jpg"
+            >
+
+            <label for="seoTitle">SEO Title</label>
+            <input
+                type="text"
+                id="seoTitle"
+                placeholder="SEO title"
+            >
+
+            <label for="seoDescription">SEO Description</label>
+            <textarea
+                id="seoDescription"
+                style="min-height: 120px;"
+                placeholder="Write a useful search description..."
+            ></textarea>
+
+            <label for="authorName">Author</label>
+            <input
+                type="text"
+                id="authorName"
+                value="Eliphas Mutwiri Peter"
+                required
+            >
+
+            <div class="buttons">
+
+                <button
+                    type="button"
+                    class="secondary"
+                    id="draftButton"
+                >
+                    Save Draft
+                </button>
+
+                <button
+                    type="submit"
+                    id="publishButton"
+                >
+                    Publish Article
+                </button>
+
+            </div>
+
+            <div id="message"></div>
+
+        </form>
+
+    </section>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+    const SUPABASE_URL =
+        "https://txtathyhuuopxuiooihl.supabase.co";
+
+    const SUPABASE_ANON_KEY =
+        "sb_publishable_6hbII9z4E4cmBzvknweGfA_I_tHs5Ow";
+
+    const ADMIN_USER_ID =
+        "eb57b285-f6f3-462c-acd7-6b0d1d77cc44";
+
+    const supabaseClient = window.supabase.createClient(
+        SUPABASE_URL,
+        SUPABASE_ANON_KEY
+    );
+
+    const form = document.getElementById("articleForm");
+    const message = document.getElementById("message");
+    const draftButton = document.getElementById("draftButton");
+    const publishButton = document.getElementById("publishButton");
+
+    let currentUser = null;
+
+    async function checkAdmin() {
+
+        const {
+            data: { user },
+            error
+        } = await supabaseClient.auth.getUser();
+
+        if (error || !user) {
+            window.location.href = "index.html";
+            return false;
+        }
+
+        if (user.id !== ADMIN_USER_ID) {
+            await supabaseClient.auth.signOut();
+            window.location.href = "index.html";
+            return false;
+        }
+
+        currentUser = user;
+        return true;
+    }
+
+    async function loadCategories() {
+
+        const { data, error } =
+            await supabaseClient
+                .from("categories")
+                .select("id, name")
+                .order("id");
+
+        const categorySelect =
+            document.getElementById("category");
+
+        if (error) {
+            categorySelect.innerHTML =
+                '<option value="">Could not load categories</option>';
+
+            message.textContent =
+                "Category error: " + error.message;
+
+            message.className = "error";
+            return;
+        }
+
+        categorySelect.innerHTML =
+            '<option value="">Choose a category</option>';
+
+        data.forEach(function (category) {
+
+            const option = document.createElement("option");
+
+            option.value = category.id;
+            option.textContent = category.name;
+
+            categorySelect.appendChild(option);
+        });
+    }
+
+    function getArticleData(published) {
+
+        const title =
+            document.getElementById("title").value.trim();
+
+        const slug =
+            document.getElementById("slug").value.trim();
+
+        const content =
+            document.getElementById("content").value.trim();
+
+        const categoryId =
+            document.getElementById("category").value;
+
+        const imageUrl =
+            document.getElementById("imageUrl").value.trim();
+
+        const seoTitle =
+            document.getElementById("seoTitle").value.trim();
+
+        const seoDescription =
+            document.getElementById("seoDescription").value.trim();
+
+        const authorName =
+            document.getElementById("authorName").value.trim();
+
+        if (!title || !slug || !content || !categoryId) {
+            throw new Error(
+                "Please complete the title, slug, category and article content."
+            );
+        }
+
+        return {
+            title: title,
+            slug: slug,
+            content: content,
+            category_id: Number(categoryId),
+            image_url: imageUrl || null,
+            seo_title: seoTitle || null,
+            seo_description: seoDescription || null,
+            author_name: authorName,
+            published: published,
+            published_at: published ? new Date().toISOString() : null
+        };
+    }
+
+    async function saveArticle(published) {
+
+        message.textContent = "";
+        message.className = "";
+
+        draftButton.disabled = true;
+        publishButton.disabled = true;
+
+        try {
+
+            const data = getArticleData(published);
+
+            const { error } =
+                await supabaseClient
+                    .from("articles")
+                    .insert(data);
+
+            if (error) {
+                throw error;
+            }
+
+            message.textContent = published
+                ? "Article published successfully."
+                : "Draft saved successfully.";
+
+            message.className = "success";
+
+            form.reset();
+
+            document.getElementById("authorName").value =
+                "Eliphas Mutwiri Peter";
+
+            await loadCategories();
+
+        } catch (error) {
+
+            message.textContent =
+                "Could not save article: " + error.message;
+
+            message.className = "error";
+
+        } finally {
+
+            draftButton.disabled = false;
+            publishButton.disabled = false;
+        }
+    }
+
+    draftButton.addEventListener("click", function () {
+        saveArticle(false);
+    });
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        saveArticle(true);
+    });
+
+    async function start() {
+
+        const allowed = await checkAdmin();
+
+        if (!allowed) {
+            return;
+        }
+
+        await loadCategories();
+    }
+
+    start();
+</script>
+
+</body>
+</html>
+
