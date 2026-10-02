@@ -90,7 +90,7 @@ if not FILE.exists():
     errors.append("File does not exist.")
 
 # Basic HTML
-if "<!DOCTYPE html>" not in html[:200].upper():
+if "<!DOCTYPE HTML>" not in html[:200].upper():
     warnings.append("DOCTYPE is missing or not at the beginning.")
 
 if not re.search(r'<html[^>]+lang=["\']en["\']', html, re.I):
