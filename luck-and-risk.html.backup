@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Luck and Risk: Why Success Is Never Just About Talent | Kinglee6</title>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S8VF9QWKET"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-S8VF9QWKET");
+</script>
+
+    <meta name="description" content="Luck and risk influence success, failure, money and everyday decisions. Learn how uncertainty shapes outcomes and better choices.">
+
+    <meta name="author" content="Eliphas Mutwiri Peter">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://kinglee6mutwiri.co.ke/luck-and-risk.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- Google Analytics -->
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    </script>
+
+    <!-- Google AdSense -->
+    <script async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5799841502846177"
+        crossorigin="anonymous"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #0d0d0d;
+            color: #e8e8e8;
+            font-family: Inter, Arial, sans-serif;
+            line-height: 1.8;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #111;
+            padding: 14px 20px;
+            text-align: center;
+            border-bottom: 1px solid #292929;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 40px 20px 70px;
+        }
+
+        .article {
+            max-width: 780px;
+            margin: 0 auto;
+            background: #171717;
+            padding: 42px;
+            border-radius: 12px;
+            border: 1px solid #292929;
+        }
+
+        .category {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: #aaa;
+            margin-bottom: 12px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: "Playfair Display", Georgia, serif;
+            line-height: 1.3;
+            color: #fff;
+        }
+
+        h1 {
+            font-size: 46px;
+            margin: 0 0 20px;
+        }
+
+        h2 {
+            font-size: 30px;
+            margin-top: 45px;
+        }
+
+        h3 {
+            font-size: 22px;
+            margin-top: 30px;
+        }
+
+        p {
+            font-size: 17px;
+            margin: 0 0 22px;
+            color: #ddd;
+        }
+
+        .intro {
+            font-size: 20px;
+            color: #cfcfcf;
+            margin-bottom: 30px;
+        }
+
+        .author-box {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin: 30px 0;
+            padding: 18px;
+            background: #222;
+            border-radius: 10px;
+            border: 1px solid #303030;
+        }
+
+        .author-image {
+            width: 110px;
+            height: 110px;
+            object-fit: cover;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .author-box strong {
+            display: block;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+
+        .author-box span {
+            color: #ccc;
+        }
+
+        .ad {
+            margin: 35px 0;
+            text-align: center;
+        }
+
+        .highlight,
+        .lessons {
+            background: #222;
+            padding: 22px 25px;
+            margin: 30px 0;
+            border-left: 4px solid #888;
+        }
+
+        .highlight p {
+            margin-bottom: 0;
+        }
+
+        .lessons li {
+            margin-bottom: 14px;
+            color: #ddd;
+        }
+
+        .related,
+        .faq {
+            margin-top: 45px;
+            padding-top: 25px;
+            border-top: 1px solid #333;
+        }
+
+        a {
+            color: #fff;
+            font-weight: 600;
+        }
+
+        a:hover {
+            color: #ccc;
+        }
+
+        footer {
+            background: #111;
+            color: #bbb;
+            padding: 35px 20px;
+            text-align: center;
+            border-top: 1px solid #292929;
+        }
+
+        footer p {
+            color: #bbb;
+        }
+
+        footer a {
+            color: #fff;
+            margin: 0 7px;
+        }
+
+        @media (max-width: 700px) {
+            .container {
+                padding: 20px 12px 50px;
+            }
+
+            .article {
+                padding: 25px 18px;
+            }
+
+            h1 {
+                font-size: 34px;
+            }
+
+            h2 {
+                font-size: 26px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            .intro {
+                font-size: 18px;
+            }
+
+            .author-box {
+                align-items: flex-start;
+            }
+
+            .author-image {
+                width: 90px;
+                height: 90px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 4px 6px;
+            }
+        }
+    </style>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S8VF9QWKET"></script><script>  window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-S8VF9QWKET');</script>
+</head>
+
+<body>
+
+<nav>
+    <a href="https://kinglee6mutwiri.co.ke/">Home</a>
+    <a href="https://kinglee6mutwiri.co.ke/celebrity-stories.html">Stories</a>
+    <a href="https://kinglee6mutwiri.co.ke/mindset-and-life.html">Mindset & Life</a>
+    <a href="https://kinglee6mutwiri.co.ke/about.html">About</a>
+    <a href="https://kinglee6mutwiri.co.ke/contact.html">Contact</a>
+</nav>
+
+<main class="container">
+
+<article class="article">
+
+    <div class="category">Mindset & Life</div>
+
+    <h1>Luck and Risk: Why Success Is Never Just About Talent</h1>
+
+    <p class="intro">
+        We often look at successful people and assume their results came entirely from talent, intelligence and hard work. We can make the same mistake when looking at failure. But outcomes are influenced by more than effort alone. Luck, timing, opportunity, circumstances, decisions and risk can all affect where a person eventually ends up.
+    </p>
+
+    <p>
+        This does not make hard work meaningless. It simply means that the relationship between effort and outcome is more complicated than we sometimes admit.
+    </p>
+
+    <p>
+        A person can make a thoughtful decision and still experience a bad result. Another person can make an ordinary decision and receive an unusually good outcome. Understanding this difference can change how we judge ourselves, how we judge other people and how we make decisions.
+    </p>
+
+    <div class="author-box">
+        <img
+            class="author-image"
+            src="images/author-laptop.jpg"
+            alt="Eliphas Mutwiri Peter"
+            width="110"
+            height="110"
+            loading="lazy">
+
+        <div>
+            <strong>Eliphas Mutwiri Peter</strong>
+            <span>Writer from Kenya sharing stories, human behaviour, money lessons, personal growth and ideas worth thinking about.</span>
+        </div>
+    </div>
+
+    <!-- Top AdSense -->
+    <div class="ad">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5799841502846177"
+             data-ad-slot="6388196362"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+    <h2>The Mirage of Total Control</h2>
+
+    <p>
+        Human beings like simple explanations. When someone becomes wealthy, successful or respected, we often search for a clear reason. We may say that the person was exceptionally intelligent, worked harder than everyone else or made better decisions.
+    </p>
+
+    <p>
+        Those things may be true. But they may not explain the entire outcome.
+    </p>
+
+    <p>
+        Consider two people who begin businesses at roughly the same time. Both work hard. Both study their markets. Both manage their money carefully. One happens to enter a market just before demand increases dramatically. The other faces a sudden economic downturn that reduces demand for the same type of product.
+    </p>
+
+    <p>
+        Their effort may have been similar, but their outcomes can be completely different.
+    </p>
+
+    <p>
+        This is where luck and risk become important. They remind us that we operate inside systems containing many variables that we cannot completely control.
+    </p>
+
+    <h2>What Is Luck?</h2>
+
+    <p>
+        Luck can be understood as an unexpected event or circumstance that affects an outcome in a favourable direction.
+    </p>
+
+    <p>
+        Sometimes luck comes through timing. A person may enter a growing industry shortly before demand increases. Someone else may meet an important mentor at exactly the right stage of their career. A small business may receive unexpected attention after a customer shares its product with a large audience.
+    </p>
+
+    <p>
+        The person may have prepared well, but preparation alone does not guarantee that the opportunity will appear.
+    </p>
+
+    <p>
+        Luck therefore does not mean that success requires no ability. It means that ability is not always the only factor involved.
+    </p>
+
+    <h2>What Is Risk?</h2>
+
+    <p>
+        Risk is the possibility that an uncertain event will produce an unwanted outcome.
+    </p>
+
+    <p>
+        A business can have good employees, responsible management and a useful product while still facing risks it cannot completely eliminate. A job can disappear because an organisation restructures. A project can fail because market conditions change. An investment can lose value because circumstances develop differently from what was expected.
+    </p>
+
+    <p>
+        Risk is therefore not necessarily proof that someone made a foolish decision.
+    </p>
+
+    <p>
+        Good decisions can produce bad outcomes, just as poor decisions can occasionally produce good outcomes.
+    </p>
+
+    <div class="highlight">
+        <strong>A useful distinction:</strong>
+        <p>
+            A decision should be judged partly by the information and reasoning available when it was made, not only by the result that appeared later.
+        </p>
+    </div>
+
+    <h2>Why We Misunderstand Successful People</h2>
+
+    <p>
+        After a person becomes successful, it is tempting to look backwards and treat every decision they made as evidence of exceptional wisdom.
+    </p>
+
+    <p>
+        This creates a success story built in reverse. We know the ending, so earlier events appear more predictable than they actually were.
+    </p>
+
+    <p>
+        Imagine an entrepreneur who starts a company and eventually builds a valuable business. After the success, people may examine the entrepreneur's habits, routines and decisions and present them as the obvious reasons for the result.
+    </p>
+
+    <p>
+        But thousands of other people may have followed similar routines without producing the same outcome.
+    </p>
+
+    <p>
+        The successful person's abilities may have mattered greatly. At the same time, timing, access to opportunities, relationships, market conditions and unexpected events may also have contributed.
+    </p>
+
+    <p>
+        Recognising this does not diminish achievement. It simply produces a more complete explanation.
+    </p>
+
+    <h2>The Other Side: Why We Misunderstand Failure</h2>
+
+    <p>
+        The same problem appears when people fail.
+    </p>
+
+    <p>
+        When a business collapses, observers may quickly conclude that the owner was careless or lacked ability. Sometimes that conclusion is justified. Poor decisions can certainly cause failure.
+    </p>
+
+    <p>
+        But failure can also result from events that were difficult to anticipate or control.
+    </p>
+
+    <p>
+        A careful person can experience an accident. A responsible business can face an unexpected disruption. A talented employee can lose a job because of organisational restructuring.
+    </p>
+
+    <p>
+        This is why a negative outcome should not automatically become a judgment about a person's character.
+    </p>
+
+    <h2>Luck and Risk in Technology</h2>
+
+    <p>
+        Digital technology has made the effects of luck and risk easier to see.
+    </p>
+
+    <p>
+        A small website, application or business can suddenly receive thousands of visitors after being shared by a large account. That exposure may create opportunities that the creator could not have predicted.
+    </p>
+
+    <p>
+        At the same time, depending heavily on one platform creates risk. A change to an algorithm, a policy, a technical system or a distribution channel can affect a business very quickly.
+    </p>
+
+    <p>
+        This creates an important lesson for anyone building something online: growth and vulnerability can increase at the same time.
+    </p>
+
+    <p>
+        A person who depends entirely on one source of traffic, one customer or one platform may appear successful while carrying a significant hidden risk.
+    </p>
+
+    <h2>When Data Creates False Confidence</h2>
+
+    <p>
+        Modern technology gives us access to enormous amounts of information. This is useful, but information does not eliminate uncertainty.
+    </p>
+
+    <p>
+        Historical data can help us understand patterns. It cannot guarantee that the future will behave exactly like the past.
+    </p>
+
+    <p>
+        Markets change. People change. Technology changes. Regulations change. Unexpected events happen.
+    </p>
+
+    <p>
+        A model can therefore be useful without being perfect.
+    </p>
+
+    <p>
+        The practical lesson is not to ignore data. It is to combine data with humility about what the data cannot tell us.
+    </p>
+
+    <!-- In-article AdSense -->
+    <div class="ad">
+        <ins class="adsbygoogle"
+             style="display:block; text-align:center;"
+             data-ad-layout="in-article"
+             data-ad-format="fluid"
+             data-ad-client="ca-pub-5799841502846177"
+             data-ad-slot="1217574823"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+    <h2>The Importance of a Safety Buffer</h2>
+
+    <p>
+        If we cannot control every outcome, one of the most practical responses is to create room for unexpected events.
+    </p>
+
+    <p>
+        In personal finance, that can mean keeping money available for emergencies instead of committing every shilling to future plans.
+    </p>
+
+    <p>
+        In business, it can mean avoiding unnecessary dependence on a single customer, supplier or platform.
+    </p>
+
+    <p>
+        In a career, it can mean continuing to learn even when your current position appears secure.
+    </p>
+
+    <p>
+        A safety buffer may appear unnecessary when everything is going well. Its value becomes clearer when circumstances change.
+    </p>
+
+    <h2>How to Make Better Decisions Under Uncertainty</h2>
+
+    <p>
+        Nobody has complete information about the future. Waiting until certainty arrives can therefore mean waiting forever.
+    </p>
+
+    <p>
+        A more practical approach is to make decisions using the best information available while recognising what remains unknown.
+    </p>
+
+    <p>
+        Start by identifying the decision clearly. Then consider the likely benefits, possible losses and the assumptions behind your expectations.
+    </p>
+
+    <p>
+        Ask what evidence would change your mind and whether the downside is manageable.
+    </p>
+
+    <p>
+        It can also help to distinguish reversible decisions from difficult-to-reverse decisions. A small experiment may be appropriate when the consequences are limited. A decision with permanent or very expensive consequences deserves more careful preparation.
+    </p>
+
+    <div class="lessons">
+        <ol>
+            <li>
+                <strong>Separate the decision from the outcome.</strong>
+                A good decision can have a poor outcome, and a poor decision can occasionally have a good outcome.
+            </li>
+
+            <li>
+                <strong>Think about what you cannot control.</strong>
+                Identify external events that could change the result.
+            </li>
+
+            <li>
+                <strong>Do not put everything in one place.</strong>
+                Concentrating money, income, customers or opportunities in one area can increase exposure to unexpected problems.
+            </li>
+
+            <li>
+                <strong>Leave room for mistakes.</strong>
+                Plans become more resilient when they can survive an unexpected setback.
+            </li>
+
+            <li>
+                <strong>Learn from both success and failure.</strong>
+                Examine what actually happened instead of explaining everything through talent or incompetence.
+            </li>
+
+            <li>
+                <strong>Stay prepared for opportunity.</strong>
+                You cannot manufacture every lucky event, but preparation can help you recognise an opportunity when it appears.
+            </li>
+        </ol>
+    </div>
+
+    <h2>Why Good Decisions Can Still Produce Bad Results</h2>
+
+    <p>
+        One of the hardest lessons about uncertainty is that a good decision does not always produce a good result.
+    </p>
+
+    <p>
+        A person can study the available information, consider the possible consequences and make a reasonable choice, yet circumstances outside their control can still change the outcome.
+    </p>
+
+    <p>
+        The opposite can also happen. Someone can make a careless decision and experience a surprisingly positive result. That result may encourage them to repeat the same behaviour, even though the outcome was partly caused by circumstances that may not happen again.
+    </p>
+
+    <p>
+        This is why results should not be used as the only measure of decision-making quality. A decision should also be examined according to what was known when it was made.
+    </p>
+
+    <h2>Why We Notice Success More Than Hidden Risk</h2>
+
+    <p>
+        Successful outcomes are visible. The risks that were avoided, the opportunities that disappeared and the attempts that failed are often much less visible.
+    </p>
+
+    <p>
+        This can create a distorted picture of success. We may see a person who started a business and became successful without seeing the other businesses that began with similar effort but did not survive.
+    </p>
+
+    <p>
+        We may see the winning investment without seeing the investments that lost money.
+    </p>
+
+    <p>
+        The same problem appears in careers. A person may receive an important opportunity because they had useful skills, but timing, location, introductions and circumstances may also have played a role.
+    </p>
+
+    <p>
+        Recognising this does not take achievement away from successful people. It simply creates a more complete explanation.
+    </p>
+
+    <h2>The Role of Timing</h2>
+
+    <p>
+        Timing is one of the easiest forms of luck to overlook. An idea can be excellent but arrive before people are ready for it. Another idea can become valuable because circumstances change at exactly the right moment.
+    </p>
+
+    <p>
+        This applies to careers, businesses, technology and personal decisions. The same action taken at different times can produce very different results.
+    </p>
+
+    <p>
+        That is why patience and preparation matter under uncertainty. A person cannot control every opportunity, but preparation can determine what they are able to do when an opportunity appears.
+    </p>
+
+    <h2>Risk Is Not the Same as Recklessness</h2>
+
+    <p>
+        Taking a risk does not automatically mean acting without thought. In many situations, the more useful approach is to understand the possible downside before making a decision.
+    </p>
+
+    <p>
+        A person considering a new business, investment or career move can ask what they stand to gain, what they could lose and whether the possible loss is something they can realistically recover from.
+    </p>
+
+    <p>
+        This creates an important distinction between taking a calculated risk and simply ignoring risk.
+    </p>
+
+    <h2>Do Not Confuse Confidence With Certainty</h2>
+
+    <p>
+        Confidence can be useful, but excessive confidence can hide uncertainty. A person may become convinced that an outcome is guaranteed simply because previous experiences have gone well.
+    </p>
+
+    <p>
+        Past success can provide information, but it does not guarantee that the same conditions will continue.
+    </p>
+
+    <p>
+        A useful habit is to ask, “What would have to be true for this decision to work?” Once those assumptions are visible, they can be examined rather than silently treated as facts.
+    </p>
+
+    <h2>Learning From Outcomes Without Fooling Yourself</h2>
+
+    <p>
+        After a decision produces an outcome, it is natural to look backward and create a simple explanation. If something worked, we may conclude that our strategy was perfect. If it failed, we may conclude that the decision was foolish.
+    </p>
+
+    <p>
+        Both conclusions can be too simple.
+    </p>
+
+    <p>
+        Instead, review the decision using the information that was available before the outcome occurred. Ask what was reasonable to expect at the time, which assumptions were correct, which were wrong and what happened because of circumstances that could not reasonably have been predicted.
+    </p>
+
+    <p>
+        The purpose of reviewing a decision is not merely to blame yourself or celebrate yourself. It is to improve the quality of future decisions.
+    </p>
+
+    <h2>Luck Does Not Replace Hard Work</h2>
+
+    <p>
+        There is a danger in taking the idea of luck too far.
+    </p>
+
+    <p>
+        Saying that luck matters does not mean that effort is useless. Preparation, discipline, learning and persistence still affect what a person can do.
+    </p>
+
+    <p>
+        The better conclusion is that effort and uncertainty exist together.
+    </p>
+
+    <p>
+        Imagine two people waiting for an opportunity. One has spent years learning a useful skill. The other has not prepared.
+    </p>
+
+    <p>
+        If an unexpected opportunity appears, the prepared person may be able to take advantage of it while the unprepared person cannot.
+    </p>
+
+    <p>
+        The opportunity may be luck. Being ready for it is not.
+    </p>
+
+    <h2>Luck and Risk Should Make Us More Humble</h2>
+
+    <p>
+        Understanding luck and risk can change the way we look at other people's lives.
+    </p>
+
+    <p>
+        When someone succeeds, we can appreciate their effort without assuming that effort explains everything.
+    </p>
+
+    <p>
+        When someone fails, we can examine their decisions without automatically assuming that failure proves a lack of ability.
+    </p>
+
+    <p>
+        This does not mean avoiding accountability. People remain responsible for their choices. It means recognising that choices operate within circumstances that individuals do not completely control.
+    </p>
+
+    <h2>What Luck and Risk Mean for Everyday Life</h2>
+
+    <p>
+        These ideas are not limited to billionaires, investors or business owners.
+    </p>
+
+    <p>
+        They appear in ordinary life.
+    </p>
+
+    <p>
+        A student may meet a teacher who changes their direction. A job seeker may hear about an opportunity through an unexpected conversation. Someone may miss an opportunity because of circumstances outside their control.
+    </p>
+
+    <p>
+        Relationships, education, careers, money and business all contain elements of uncertainty.
+    </p>
+
+    <p>
+        We cannot remove uncertainty from life. What we can do is make decisions that leave us capable of responding when circumstances change.
+    </p>
+
+    <div class="highlight">
+        <strong>A practical way to think about uncertainty:</strong>
+        <p>
+            Prepare for what you can influence, protect yourself from outcomes you cannot afford, and remain open to opportunities you cannot predict.
+        </p>
+    </div>
+
+    <h2>Final Thoughts</h2>
+
+    <p>
+        Success is rarely the product of one thing.
+    </p>
+
+    <p>
+        Talent matters. Effort matters. Decisions matter. But timing, opportunity, circumstances, luck and risk matter too.
+    </p>
+
+    <p>
+        The lesson is not to blame luck for every failure or credit luck for every success. The lesson is to understand that outcomes contain uncertainty.
+    </p>
+
+    <p>
+        When we understand this, we can become more careful with success and more patient with failure.
+    </p>
+
+    <p>
+        We can prepare without believing that preparation guarantees a particular result. We can take calculated risks without pretending that every variable is predictable. And when an opportunity appears, we can be ready enough to recognise it.
+    </p>
+
+    <p>
+        Perhaps the most useful question is not, “Was this person lucky or talented?”
+    </p>
+
+    <p>
+        A better question is:
+        <strong>What part of this outcome came from decisions, and what part came from circumstances that nobody could completely control?</strong>
+    </p>
+
+    <div class="related">
+        <h2>Related Stories and Ideas</h2>
+
+        <p>
+            Continue exploring ideas about decision-making, relationships and personal growth:
+        </p>
+
+        <ul>
+            <li>
+                <a href="https://kinglee6mutwiri.co.ke/mindset-and-life.html">
+                    Mindset & Life
+                </a>
+            </li>
+
+            <li>
+                <a href="https://kinglee6mutwiri.co.ke/relationships-human-behaviour.html">
+                    The Echo Chamber: Love, Silence and Assumptions
+                </a>
+            </li>
+
+            <li>
+                <a href="https://kinglee6mutwiri.co.ke/your-child-may-not-say-it.html">
+                    Your Child May Not Say It: What Every Parent Needs to Understand
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="faq">
+        <h2>Frequently Asked Questions</h2>
+
+        <h3>Does luck determine success?</h3>
+
+        <p>
+            Luck can influence outcomes, but it is not the only factor. Effort, skills, decisions, opportunities, timing and circumstances can all contribute.
+        </p>
+
+        <h3>Does taking risks mean making bad decisions?</h3>
+
+        <p>
+            No. Many important decisions involve uncertainty. The useful question is whether the possible risks have been understood and whether the potential downside is manageable.
+        </p>
+
+        <h3>Can hard work overcome bad luck?</h3>
+
+        <p>
+            Hard work can improve preparation and increase the opportunities a person can use, but it cannot guarantee a particular outcome because some circumstances remain outside individual control.
+        </p>
+
+        <h3>Why can successful people still make bad decisions?</h3>
+
+        <p>
+            Success does not make a person immune to uncertainty or mistakes. A successful outcome can sometimes make earlier decisions look more certain or correct than they actually were.
+        </p>
+
+        <h3>What is the biggest lesson about luck and risk?</h3>
+
+        <p>
+            A useful lesson is to work hard, make careful decisions, understand uncertainty and leave room for outcomes that cannot be completely controlled.
+        </p>
+    </div>
+
+</article>
+
+</main>
+
+<footer>
+    <p>
+        © 2026 Eliphas Mutwiri Peter. All rights reserved.
+    </p>
+
+    <p>
+        <a href="https://kinglee6mutwiri.co.ke/about.html">About</a>
+        <a href="https://kinglee6mutwiri.co.ke/privacy.html">Privacy</a>
+        <a href="https://kinglee6mutwiri.co.ke/disclaimer.html">Disclaimer</a>
+        <a href="https://kinglee6mutwiri.co.ke/contact.html">Contact</a>
+        <a href="https://kinglee6mutwiri.co.ke/terms.html">Terms</a>
+    </p>
+</footer>
+
+</body>
+</html>
