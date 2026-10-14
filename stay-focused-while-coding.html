@@ -220,6 +220,37 @@ footer {
   .author-bio-box { flex-direction: column; text-align: center; }
 }
 </style>
+
+<style>
+.author-box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 32px 0 24px;
+  padding: 16px 0;
+  border-top: 1px solid #ddd;
+}
+.author-box img {
+  width: 96px;
+  height: 96px;
+  flex: 0 0 96px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.author-box h2 {
+  margin: 0 0 8px;
+  font-size: 1.15rem;
+}
+.author-box p {
+  margin: 0;
+  line-height: 1.6;
+}
+@media (max-width: 480px) {
+  .author-box { align-items: flex-start; gap: 12px; }
+  .author-box img { width: 72px; height: 72px; flex-basis: 72px; }
+}
+</style>
+
 </head>
 
 <body>
@@ -492,6 +523,17 @@ footer {
     <p class="author-note">Written by Eliphas Mutwiri Peter for Kinglee Mutwiri.</p>
   </article>
 </main>
+
+
+<section class="author-box" aria-label="About the author">
+  <img src="images/author.jpg"
+       alt="Eliphas Mutwiri Peter, author of Kinglee Mutwiri"
+       width="96" height="96" loading="lazy">
+  <div>
+    <h2>About the Author</h2>
+    <p><strong>Eliphas Mutwiri Peter</strong> writes for Kinglee Mutwiri about practical ideas, personal development, technology, and lessons from everyday life.</p>
+  </div>
+</section>
 
 <footer>
   <div class="footer-inner">
