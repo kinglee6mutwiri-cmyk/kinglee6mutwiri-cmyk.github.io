@@ -1,0 +1,472 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>How to Stay Focused While Coding: Behavioral Habits for Solo Developers | Kinglee Mutwiri</title>
+<meta name="description" content="Discover practical ways to stay focused while coding, reduce distractions, manage debugging frustration, and build consistent habits as a solo developer.">
+<meta name="author" content="Eliphas Mutwiri Peter">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://kinglee6mutwiri.co.ke/stay-focused-while-coding.html">
+<meta name="theme-color" content="#ffffff">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to Stay Focused While Coding: Behavioral Habits for Solo Developers">
+<meta property="og:description" content="Practical behavioral systems for protecting concentration, reducing distractions, and making steady progress while coding alone.">
+<meta property="og:url" content="https://kinglee6mutwiri.co.ke/stay-focused-while-coding.html">
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S8VF9QWKET"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-S8VF9QWKET');
+</script>
+
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js?client=ca-pub-5799841502846177" crossorigin="anonymous"></script>
+
+<style>
+:root {
+  --text: #202124;
+  --muted: #5f6368;
+  --line: #e5e7eb;
+  --link: #1457a6;
+  --surface: #f7f8fa;
+  --width: 820px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: #fff;
+  color: var(--text);
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  line-height: 1.8;
+}
+a {
+  color: var(--link);
+  text-underline-offset: 3px;
+}
+a:hover { text-decoration-thickness: 2px; }
+.site-header {
+  border-bottom: 1px solid var(--line);
+  background: #fff;
+}
+.header-inner {
+  max-width: 1100px;
+  margin: auto;
+  padding: 17px 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.brand {
+  color: var(--text);
+  font-size: 1.2rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 17px;
+}
+.site-nav a {
+  color: var(--text);
+  font-size: .9rem;
+  text-decoration: none;
+}
+main {
+  max-width: var(--width);
+  margin: auto;
+  padding: 34px 22px 55px;
+}
+.breadcrumbs {
+  color: var(--muted);
+  font-size: .88rem;
+  margin-bottom: 22px;
+}
+h1, h2, h3 { line-height: 1.3; }
+h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  letter-spacing: -.5px;
+  margin: 12px 0 22px;
+  line-height: 1.16;
+}
+h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.55rem, 3.5vw, 2rem);
+  margin-top: 40px;
+  margin-bottom: 14px;
+}
+h3 {
+  font-size: 1.18rem;
+  margin-top: 28px;
+  margin-bottom: 10px;
+}
+p { margin: 0 0 20px; }
+ul, ol {
+  padding-left: 26px;
+  margin: 0 0 24px;
+}
+li { margin-bottom: 9px; }
+.article-intro {
+  color: #41464d;
+  font-size: 1.1rem;
+}
+.article-meta {
+  color: var(--muted);
+  font-size: .9rem;
+  margin-bottom: 25px;
+}
+.ad-container {
+  margin: 30px 0;
+  padding: 8px 0;
+  overflow: hidden;
+}
+hr {
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: 35px 0;
+}
+.related-reading {
+  margin-top: 38px;
+  padding: 22px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+.related-reading h2 {
+  margin-top: 0;
+  font-size: 1.45rem;
+}
+.faq-item {
+  padding: 17px 0 4px;
+  border-bottom: 1px solid var(--line);
+}
+.faq-item h3 { margin-top: 0; }
+.faq-item:last-child { border-bottom: 0; }
+.author-note {
+  margin-top: 38px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: .94rem;
+}
+footer {
+  border-top: 1px solid var(--line);
+  background: var(--surface);
+}
+.footer-inner {
+  max-width: 1100px;
+  margin: auto;
+  padding: 24px 22px;
+}
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  margin-bottom: 12px;
+}
+.footer-links a {
+  font-size: .9rem;
+}
+.footer-inner p {
+  color: var(--muted);
+  font-size: .85rem;
+  margin: 0;
+}
+@media (max-width: 600px) {
+  body { font-size: 16px; }
+  .header-inner { align-items: flex-start; }
+  .site-nav { gap: 9px 14px; }
+  main { padding: 25px 18px 42px; }
+  .related-reading { padding: 17px; }
+}
+</style>
+</head>
+
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="https://kinglee6mutwiri.co.ke/">Kinglee Mutwiri</a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="https://kinglee6mutwiri.co.ke/about.html">About</a>
+      <a href="https://kinglee6mutwiri.co.ke/privacy-policy.html">Privacy Policy</a>
+      <a href="https://kinglee6mutwiri.co.ke/contact.html">Contact</a>
+      <a href="https://kinglee6mutwiri.co.ke/terms.html">Terms</a>
+      <a href="https://kinglee6mutwiri.co.ke/disclaimer.html">Disclaimer</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <a href="https://kinglee6mutwiri.co.ke/">Home</a> /
+    <span>How to Stay Focused While Coding</span>
+  </nav>
+
+  <article>
+    <header>
+      <h1>How to Stay Focused While Coding: Behavioral Habits for Solo Developers</h1>
+      <p class="article-meta">By Eliphas Mutwiri Peter · Kinglee Mutwiri</p>
+
+      <p class="article-intro">Let’s be completely honest with each other right from the start: the hardest part of building a software project or maintaining a website isn't writing the actual HTML, CSS, or script logic. It is managing your own brain when you are staring at a dark terminal screen for hours on end, completely by yourself, waiting for a breakthrough.</p>
+    </header>
+
+    <p>Right now, I run my entire digital footprint as a lightweight, static HTML directory. I do not use bloated content management systems or heavy cloud platforms that do all the work behind a flashy graphical interface. Instead, I handle all my files directly through my phone using Termux. When you build and maintain a digital ecosystem this way, there is no boss looking over your shoulder to keep you focused. There is no corporate project manager tracking your keystrokes or setting arbitrary deadlines to force your hand. It is just me, a cursor blinking on a black screen, a piece of code that suddenly broke for no apparent reason, and the massive, overwhelming temptation to minimize the terminal app and go doomscroll on social media.</p>
+
+    <p>For the longest time, I fell into a very common trap. I used to think that successful developers and programmers just possessed a superhuman amount of raw willpower. I assumed they woke up every morning with an iron clad discipline that shielded them from distractions. But after surviving enough brutal troubleshooting loops and burning out more times than I care to admit, I realized that relying on pure discipline is a massive lie. Willpower is a finite cognitive resource, and it runs out incredibly fast when your brain gets tired from tracking logic paths and syntax errors. To keep coding alone day after day without throwing your device across the room, you do not need a stronger mind—you need a better behavioral system.</p>
+
+    <div class="ad-container">
+      <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-5799841502846177"
+        data-ad-slot="6388196362"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+
+    <hr>
+
+    <section>
+      <h2>1. The Dopamine Trap of the Permanent Troubleshooting Loop</h2>
+
+      <p>We have all been there. You write what you think is a perfectly clean block of code, you verify your directory paths, you run your scripts, and instead of a smooth execution, you get slammed with a massive wall of text detailing a syntax error or a broken link.</p>
+
+      <p>When you spend three consecutive hours trying to fix one single broken link, a misplaced tag, or an unconfigured directory path, it hits your brain like a physical shock. Behavioral psychology teaches us that human beings are deeply addicted to predictable feedback loops. Coding gives you a massive dopamine rush when things work on the first try. It feels like magic. But when things break repeatedly, it causes deep emotional panic, severe frustration, and cognitive fatigue.</p>
+
+      <p>Your natural evolutionary survival instinct is to escape that discomfort. When the terminal says your code failed, your brain interprets that frustration as a threat and looks for the nearest exit. That exact moment of intense friction is where most solo projects go to die. People do not quit coding because they lack intellectual capacity; they quit because they run out of the emotional stamina required to handle repeated negative feedback from a silent terminal.</p>
+
+      <p>It is even worse when your development environment shares a home with your personal life. Because I manage my directory directly on my mobile device, the moment a bug frustrates me, the weapon of mass distraction is already in my hands. The notification static, the social media apps, and the instant-gratification loops are just a swipe away from my command line. If I do not build a strict guardrail against my own panic, a temporary coding roadblock will completely destroy my momentum for the entire week.</p>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>2. Why the Modern Developer's Brain Cannot Focus</h2>
+
+      <p>To fix our focus, we have to look closely at how the modern information landscape has fundamentally broken our attention spans. A few decades ago, programming required reading thick physical manuals and waiting for compiling processes that took hours. Developers had natural breathing room built into their workflows.</p>
+
+      <p>Today, we operate in a high-frequency digital noise environment. We are bombarded with real-time updates, expert opinions, new frameworks, and endless notifications every single second of the day. When you couple this external noise with the internal pressure of solo development, your mind enters a state of chronic decision fatigue.</p>
+
+      <p>Every line of code you write requires a choice:</p>
+      <ul>
+        <li>Should I structure this tag this way or that way?</li>
+        <li>Is this file path absolute or relative?</li>
+        <li>Did I optimize this image asset correctly for slow networks?</li>
+      </ul>
+
+      <p>By the time you face a difficult logic bug, your brain has already made thousands of micro-decisions. It is completely drained. When you try to force a tired brain to focus on a complex problem using raw willpower, it revolts. It demands a fast dopamine hit, which is why you suddenly find yourself checking your notifications without even realizing how your thumb opened the app. Understanding this biological limitation is the first step toward building a workspace that actually protects your sanity.</p>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>3. My Personal System Safeguards Against Burnout</h2>
+
+      <p>I have learned that intelligent system design beats raw emotional discipline every single time. Instead of just hoping I will stay focused on my files today, I set up rigid, automated boundaries for myself when my head is clear, calm, and rational. These are the strict guardrails I use to protect my development workflow from my own worst impulses.</p>
+
+      <h3>The 45-Minute Debugging Speed Bump</h3>
+
+      <p>I never allow myself to stare at a single broken terminal error or a malfunctioning page layout for more than 45 consecutive minutes. If I cannot solve the issue within that window, it means my brain is looping on the exact same incorrect assumption.</p>
+
+      <p>When the timer hits 45 minutes, I force myself to close the terminal and walk away from all screens for a mandatory 10-minute cooling-off period. I will stretch, drink water, or look out the window at the Meru landscape. It sounds counterintuitive to stop working when you are desperate for a fix, but behavioral science proves that our brains continue solving complex problems in the background via the "diffuse mode" of thinking. The elegant solution almost always clicks the moment I stop staring directly at the problem.</p>
+
+      <h3>Pruning the Technical Architecture and the Workspace</h3>
+
+      <p>I treat my working environment the exact same way I treat my website's architecture—minimalist, clean, and entirely lightweight. A bloated website with unnecessary tracking scripts, massive images, and messy code runs terribly on slow local networks. Similarly, a workspace cluttered with open tabs, background music, and active chat groups runs your brain into the ground.</p>
+
+      <p>Before I type a single command, I activate a strict do-not-disturb profile on my device. I close every single browser tab that isn't direct technical documentation for the specific task at hand. If I am writing an article, the only thing open is the text file. If I am organizing assets, only the image optimizer and the terminal are active. By keeping the interface completely minimalist, I remove the visual triggers that tempt my mind to wander.</p>
+
+      <h3>Keeping a Low-Tech Friction Log</h3>
+
+      <p>Because digital tools make it too easy to pivot away from hard work, I counter them by keeping a physical pen and paper notebook right next to me while I code. Every time a confusing bug pops up or a layout breaks, I do not just blindly tweak lines of code in a panic. I write down the error in my notebook by hand. I write down what I think caused it, what I have tried, and what the result was.</p>
+
+      <p>This simple, low-tech habit forces me to slow down. It moves my brain out of a chaotic, emotional panic reaction and puts it back into a rational, engineering mindset. It stops me from making random, angry guesses in the terminal that usually end up breaking three other working files in the directory.</p>
+    </section>
+
+    <div class="ad-container">
+      <ins class="adsbygoogle"
+        style="display:block;text-align:center"
+        data-ad-layout="in-article"
+        data-ad-format="fluid"
+        data-ad-client="ca-pub-5799841502846177"
+        data-ad-slot="1217574823"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+
+    <hr>
+
+    <section>
+      <h2>4. Deconstructing the Solo Isolation Trap</h2>
+
+      <p>When you write code for a corporate company, you have a team to bounce ideas off of. When you get stuck, you can submit a support ticket or ask a senior engineer for a quick code review. When you are a solo developer managing your own independent platform, you are completely on your own. This isolation carries a heavy psychological price tag that textbooks rarely discuss.</p>
+
+      <p>The silence of solo development can easily lead to a distorted self-perception known as imposter syndrome. When a script fails to execute properly, the lack of external feedback causes you to internalize the failure. You stop thinking, "This specific line of code has a syntax error," and you start thinking, "I am not cut out for this; I don’t actually know what I’m doing."</p>
+
+      <p>To survive this isolation, you have to change how you talk to yourself during a build. You have to treat your terminal as an objective, emotionless testing ground. An error code isn't an insult or a reflection of your intelligence; it is simply a data point telling you that a mechanical input didn't match the required system parameters. Shifting your mindset from a defensive, emotional posture to an objective, experimental framework changes everything. You stop viewing the terminal as an opponent and start viewing it as a tool that is helping you refine your craft.</p>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>5. Building for Reality, Not for Idealized Conditions</h2>
+
+      <p>My deep involvement in building and managing minimalist digital spaces has completely changed how I look at personal productivity. If there is one foundational truth that writing code teaches you, it is this: never design for idealized conditions; always build for reality.</p>
+
+      <p>When I audit my site structure, I have to assume that everything that can go wrong will go wrong eventually. I have to ensure my pages render cleanly on shattered smartphone screens with weird aspect ratios. I have to optimize every asset so it loads gracefully on sluggish local networks where connectivity drops without warning. I have to build an architecture that can handle sudden spikes in user traffic without collapsing into a 504 Gateway Error.</p>
+
+      <p>Your personal productivity framework must be designed using the exact same engineering principles. A routine that relies on you feeling perfectly inspired, highly energized, and completely stress-free every single day is a fragile piece of architecture. It will shatter the moment it meets the messy reality of daily life.</p>
+
+      <p>True resilience means building structural slack into your days. It means designing a process that can absorb the shock of an unexpected family commitment, a sudden drop in your personal energy levels, or a chaotic week where nothing seems to go right. You cannot control when a sudden bug will break a script, but you can control your baseline inputs:</p>
+
+      <ul>
+        <li>The meticulous consistency with which you document your file structures so you don't forget how your own system works.</li>
+        <li>Your absolute, unyielding refusal to bloat your life and your site with flashy, unnecessary features that add zero value to the end user.</li>
+        <li>The quiet habits that protect your attention span from being commoditized by algorithms.</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>6. The Long, Slow Journey of Foundational Systems</h2>
+
+      <p>We live in a digital culture that is profoundly obsessed with immediate, viral outcomes. We see headlines celebrating overnight success stories, massive traffic numbers, and instant wealth. But when you strip away the marketing fluff and look at the mathematical reality of growth, you find that anything built to last relies on a slow, unglamorous plateau of compounding effort.</p>
+
+      <p>When you add a new page to your site directory, nothing spectacular happens immediately. You do not instantly get hit with thousands of unique visitors or a massive wave of new followers. You look at your server logs, see a handful of hits, and wonder if your modest daily efforts are even making a dent in the grand scheme of things. This early phase of growth is deeply frustrating because human nature is hardwired to demand immediate validation.</p>
+
+      <p>It is precisely during this sluggish, quiet phase that most creators become incredibly vulnerable to flashy shortcuts, trends, and quick monetization gimmicks that ultimately ruin their platform's reputation. They look at their slow-moving baseline metrics and convince themselves they need to pivot to whatever loud trend is dominating social media feeds this week.</p>
+
+      <p>But building real authority requires a quiet, stubborn resilience. It requires the discipline to keep writing clean code and publishing valuable ideas week after week, even when it feels like nobody is paying attention. You have to trust the underlying mechanics of your system. Just like a well-coded static website quietly outpaces a heavy, unoptimized platform over time because of its reliability and speed, your consistent, focused habits will eventually build an unstoppable momentum beneath the surface.</p>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>7. A Technical Framework for Maintaining Code Quality</h2>
+
+      <p>To ensure your focus translates into an immaculate user experience that passes Google's strict quality evaluations, you must combine behavioral discipline with a highly structured technical framework. When you are working inside a terminal environment like Termux, you do not have a massive visual editor to highlight your mistakes. You must develop an eagle eye for detail and an orderly approach to file management.</p>
+
+      <h3>The Rule of Semantic Simplicity</h3>
+
+      <p>Every single piece of layout code or styling markup you write must justify its existence. Before you copy an external stylesheet or add a complex interactive script to your pages, ask yourself if the exact same goal can be achieved using native, minimalist elements.</p>
+
+      <p>Bloated code doesn't just hurt your website's performance; it hurts your focus. The more complex your file directory becomes, the more mental energy it takes to maintain it. By forcing yourself to adhere to a clean, minimalist design philosophy, you drastically reduce the number of potential failure points in your system. This makes troubleshooting a breeze and keeps your mind clear.</p>
+
+      <h3>Modular File Management</h3>
+
+      <p>Do not make the mistake of creating massive, monolithic files that contain thousands of lines of unorganized text and layout structure. Break your platform down into logical, modular components. Keep your content separate from your presentation styles, and ensure your directory tree remains neat, organized, and perfectly transparent.</p>
+
+      <p>When you use a terminal command like <code>tree</code> to inspect your directories, you should be able to instantly understand where every single asset lives without having to guess. A chaotic folder structure breeds a chaotic mind. When your files are neat, structured, and predictable, your brain can navigate the project layout effortlessly, leaving all your cognitive energy free to focus on deep, creative writing and complex problem-solving.</p>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>8. Summary Checklist for Solo Developers</h2>
+
+      <p>To make this strategy actionable for your next coding session inside Termux, use this quick behavioral checklist before you open your command line:</p>
+
+      <h3>Step 1: Pre-Flight Environment Prep</h3>
+      <ul>
+        <li>Put your primary device into an absolute focus mode to block all incoming notification static.</li>
+        <li>Clear your browser layout, leaving only the essential technical documentation open.</li>
+        <li>Open your physical notebook to a fresh page and place a pen directly next to your workspace.</li>
+      </ul>
+
+      <h3>Step 2: In-File Execution</h3>
+      <ul>
+        <li>Set an alarm or a visual reminder for your 45-minute debugging limit.</li>
+        <li>Focus on building one single feature or writing one clear section before touching other files.</li>
+        <li>Log every single stubborn terminal error code by hand in your notebook before trying to patch it.</li>
+      </ul>
+
+      <h3>Step 3: Project Post-Flight</h3>
+      <ul>
+        <li>Run a quick manual syntax check to ensure all paths and tags are completely closed and valid.</li>
+        <li>Verify your updated directory layout using a clean command view like <code>tree</code>.</li>
+        <li>Log your daily progress metrics and note down exactly where you need to start your next session.</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <section id="frequently-asked-questions">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <h3>Why does coding alone feel so much more exhausting than working in a team?</h3>
+        <p>Because solo development forces you to bear the entire cognitive load of decision-making, quality control, and project management by yourself. Without a team to share the mental weight, decision fatigue sets in much faster, making structured behavioral guardrails absolutely essential to protect your focus baseline.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How do I stop the temptation to constantly check social media while coding on my phone?</h3>
+        <p>You must treat your mobile terminal as a dedicated workstation rather than a casual media device. By enforcing strict app-blocking protocols, disabling non-essential background notifications, and keeping a physical notebook for your technical thoughts, you break the unconscious muscular habit of switching to distracting apps.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What should I do when a coding bug feels completely impossible to solve?</h3>
+        <p>You must immediately enforce a mandatory cooling-off period away from your terminal screen. Staring at an error message in a state of high frustration causes your brain to lose its rational logic focus. Walking away activates your mind's diffuse thinking mode, which naturally connects hidden insights to solve the issue.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Why is a minimalist static website better for building a long-term audience?</h3>
+        <p>Lightweight, static platforms offer unparalleled speed, security, and structural reliability, especially on slow local networks. By removing the bloated complexity of massive frameworks, you create an incredibly fast, distraction-free reading experience that keeps human users engaged and satisfies search engine performance criteria perfectly.</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Final Thoughts</h2>
+
+      <p>At the end of the day, turning digital connectivity and local hard work into a highly successful, lasting platform isn't about chasing the latest flash-in-the-pan tech trend. It is about mastering your own psychology, keeping your systems beautifully minimalist, and showing up to execute your plan day after day with quiet, unyielding consistency.</p>
+
+      <p>Your website's directory structure is already built on a rock-solid, lightweight foundation. By applying that exact same clean, intentional engineering logic to your daily attention span and your behavioral habits, you will protect your focus, bypass the burnout cycle entirely, and build a unique digital space that naturally commands attention and wins loyal followers.</p>
+
+      <p>What is one specific digital distraction you can prune out of your workflow this week to completely protect your coding focus?</p>
+    </section>
+
+    <aside class="related-reading">
+      <h2>Continue Reading on Kinglee Mutwiri</h2>
+      <ul>
+        <li><a href="https://kinglee6mutwiri.co.ke/career-and-economic-upliftment.html">Career and Economic Upliftment: Practical Ways to Build a Better Future</a></li>
+        <li><a href="https://kinglee6mutwiri.co.ke/wealth-mechanics-behavioral-strategy.html">Wealth Mechanics and Behavioral Strategy</a></li>
+        <li><a href="https://kinglee6mutwiri.co.ke/your-child-may-not-say-it.html">Your Child May Not Say It</a></li>
+        <li><a href="https://kinglee6mutwiri.co.ke/how-to-build-muscle.html">How to Build Muscle Step by Step</a></li>
+      </ul>
+    </aside>
+
+    <p class="author-note">Written by Eliphas Mutwiri Peter for Kinglee Mutwiri.</p>
+  </article>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="https://kinglee6mutwiri.co.ke/about.html">About</a>
+      <a href="https://kinglee6mutwiri.co.ke/privacy-policy.html">Privacy Policy</a>
+      <a href="https://kinglee6mutwiri.co.ke/contact.html">Contact</a>
+      <a href="https://kinglee6mutwiri.co.ke/terms.html">Terms</a>
+      <a href="https://kinglee6mutwiri.co.ke/disclaimer.html">Disclaimer</a>
+    </nav>
+    <p>&copy; 2026 Kinglee Mutwiri. Written by Eliphas Mutwiri Peter.</p>
+  </div>
+</footer>
+</body>
+</html>
+
