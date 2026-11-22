@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Website Defense Fundamentals: How I Protect My Site From Attackers | Kinglee Mutwiri</title>
+
+  <meta name="description" content="A practical first-person guide by Eliphas Mutwiri Peter covering domain security, Git repository protection, HTTPS, phishing prevention, website backups and essential website defense fundamentals.">
+
+  <meta name="author" content="Eliphas Mutwiri Peter">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0b0f17">
+
+  <link rel="canonical" href="https://kinglee6mutwiri.co.ke/website-defense-fundamentals.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Website Defense Fundamentals: How I Protect My Site From Attackers">
+  <meta property="og:description" content="Practical website security lessons covering domain protection, Git, HTTPS, phishing and backups.">
+  <meta property="og:url" content="https://kinglee6mutwiri.co.ke/website-defense-fundamentals.html">
+  <meta property="og:site_name" content="Kinglee Mutwiri">
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S8VF9QWKET"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-S8VF9QWKET');
+  </script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/client=ca-pub-5799841502846177"
+    crossorigin="anonymous"></script>
+
+  <style>
+    :root {
+      --bg: #0b0f17;
+      --surface: #131a26;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --accent: #60a5fa;
+      --accent-hover: #93c5fd;
+      --border: #1e293b;
+      --code-bg: #1e293b;
+      --callout-bg: #162032;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Georgia, serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.85;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: var(--accent-hover);
+    }
+
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 1.2rem 1.5rem;
+    }
+
+    .nav-container {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .brand {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.1rem;
+      font-size: 0.94rem;
+    }
+
+    nav a {
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    main {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4.5rem;
+    }
+
+    .eyebrow {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+    }
+
+    h1 {
+      font-size: clamp(1.95rem, 4vw, 2.7rem);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+      color: #f8fafc;
+    }
+
+    .meta {
+      font-size: 0.92rem;
+      color: var(--muted);
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      font-size: 1.55rem;
+      margin-top: 2.6rem;
+      margin-bottom: 0.85rem;
+      line-height: 1.3;
+      color: #f8fafc;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      margin-top: 1.75rem;
+      margin-bottom: 0.5rem;
+      color: #f1f5f9;
+    }
+
+    p {
+      margin-bottom: 1.3rem;
+      font-size: 1.06rem;
+    }
+
+    ul, ol {
+      margin: 0 0 1.45rem 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.65rem;
+      font-size: 1.03rem;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo,
+        Monaco, Consolas, monospace;
+      background: var(--code-bg);
+      color: #cbd5e1;
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      overflow-wrap: anywhere;
+    }
+
+    .callout {
+      background: var(--callout-bg);
+      border-left: 4px solid var(--accent);
+      padding: 1.3rem 1.45rem;
+      border-radius: 6px;
+      margin: 2rem 0;
+    }
+
+    .callout strong {
+      display: block;
+      margin-bottom: 0.35rem;
+      color: var(--accent);
+    }
+
+    .ad-container {
+      margin: 2.5rem 0;
+      min-height: 100px;
+      text-align: center;
+    }
+
+    .checklist-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.65rem;
+      margin: 2.5rem 0;
+    }
+
+    .checklist-card h3 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+
+    .related-box {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .related-box h3 {
+      margin-top: 0;
+      margin-bottom: 0.85rem;
+    }
+
+    .author-box {
+      display: flex;
+      align-items: center;
+      gap: 1.3rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .author-box img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .author-box h3 {
+      margin: 0 0 0.4rem;
+    }
+
+    .author-box p {
+      font-size: 0.96rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .faq {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .faq h2 {
+      margin-top: 0;
+    }
+
+    .faq-item {
+      margin-bottom: 1.6rem;
+    }
+
+    .faq-item h3 {
+      margin-top: 0;
+    }
+
+    footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 2.5rem 1.5rem;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .footer-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.1rem;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 1rem;
+      }
+
+      .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        gap: 0.8rem;
+      }
+
+      main {
+        padding: 2rem 1.1rem 3rem;
+      }
+
+      .author-box {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .author-box img {
+        width: 105px;
+        height: 105px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav-container">
+
+    <a href="https://kinglee6mutwiri.co.ke/" class="brand">
+      Kinglee Mutwiri
+    </a>
+
+    <nav aria-label="Primary Navigation">
+      <a href="https://kinglee6mutwiri.co.ke/about.html">About</a>
+      <a href="https://kinglee6mutwiri.co.ke/privacy-policy.html">Privacy Policy</a>
+      <a href="https://kinglee6mutwiri.co.ke/contact.html">Contact</a>
+      <a href="https://kinglee6mutwiri.co.ke/terms.html">Terms</a>
+      <a href="https://kinglee6mutwiri.co.ke/disclaimer.html">Disclaimer</a>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+<article>
+
+  <div class="eyebrow">Cybersecurity • Personal Field Notes</div>
+
+  <h1>Website Defense Fundamentals: How I Protect My Own Site From Attackers</h1>
+
+  <div class="meta">
+    By <strong>Eliphas Mutwiri Peter</strong>
+    • November 2026
+    • Practical Website Security Guide
+  </div>
+
+  <!-- TOP ADVERTISEMENT -->
+  <div class="ad-container">
+    <ins class="adsbygoogle"
+      style="display:block"
+      data-ad-client="ca-pub-5799841502846177"
+      data-ad-slot="6388196362"
+      data-ad-format="auto"
+      data-full-width-responsive="true"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
+  <p>
+    When I first put my own writing online and started building my own website from scratch, I had a pretty casual attitude about security. To be completely honest with you, I used to think website defense was something only giant corporations, banks, and massive online stores with millions of customers had to worry about. In my head, I was just one person publishing essays and guides on my own site—why on earth would any attacker care about protecting or attacking what I am building?
+  </p>
+
+  <p>
+    That assumption fell apart the moment I paid real attention to how the internet works day and night. Attackers rarely sit around picking out individual small websites one by one like darts on a board. Instead, automated bots and scanning scripts sweep across millions of domains constantly, looking for easy mistakes anyone can make: a domain registrar account left without strong protection, a secret API key accidentally committed into a public repository, an expired SSL certificate, or an outdated plugin left sitting wide open.
+  </p>
+
+  <p>
+    As I have worked on my own site, edited my pages, and shaped how I publish, I have built a simple, practical habit around how I protect my website. I do not rely on expensive enterprise firewalls or complicated security tools I barely need. I start by closing the obvious doors myself and paying attention to what controls my site. For me, understanding the actual pieces running my website comes first before I ever look at extra security layers.
+  </p>
+
+  <p>
+    If you are building on your own, writing independently, or running a site of your own, this shift in thinking matters a lot. To someone visiting my pages, my site looks like text, dark backgrounds, and images. Underneath all that, though, are accounts, domain settings, local files, terminal commands, and external services that I am personally responsible for keeping safe.
+  </p>
+
+  <p>
+    In this guide, I am sharing how I personally think about and protect my own website, along with the everyday habits I use to keep my site and my work secure.
+  </p>
+
+  <h2>1. I Treat My Domain Registrar Like a Bank Vault</h2>
+
+  <p>
+    If someone somehow messes up a page or causes trouble on hosting files, it is frustrating, sure, but I can fix or restore my files from a clean backup. If someone gets into my domain registrar account, though, the stakes are way higher. My domain is the actual address people use to reach my website. Whoever controls my registrar and DNS settings has the power to send visitors somewhere else entirely.
+  </p>
+
+  <p>
+    Think about what happens when you put real time and effort into building your own site, writing your own material, and earning readers' trust, only for someone unauthorized to take control of the domain. They could point your domain traffic straight to a fake page or scam. Because the address looks like yours, visitors who trust your site might think it is still coming from you.
+  </p>
+
+  <p>
+    That is why I treat my domain registrar like a bank vault. I do not treat it like a random social app or casual account. It protects the address and identity of my entire website.
+  </p>
+
+  <h3>Use strong multi-factor authentication</h3>
+
+  <p>
+    A password on its own is never enough when I am protecting something this important. Passwords get reused across services, guessed, stolen through phishing, or exposed if a device is ever compromised.
+  </p>
+
+  <p>
+    Multi-factor authentication adds an extra lock on the door. Whenever a service lets me use an authenticator app or a hardware security key instead of relying on SMS codes, I choose the stronger option. Text messages can be intercepted or targeted through SIM swapping, where someone tries to hijack a phone number.
+  </p>
+
+  <p>
+    Just as important, I protect the way back in. A tough password and a second factor on my registrar do not mean much if someone can easily break into my recovery email and reset things from there.
+  </p>
+
+  <h3>Keep domain transfer protection enabled</h3>
+
+  <p>
+    Most domain registrars offer a transfer lock so nobody can move your domain away to another registrar without your approval. I keep transfer protection turned on so an attacker cannot just transfer my domain out even if they get hold of login details.
+  </p>
+
+  <p>
+    I also make sure my domain contact details are accurate and up to date. If a registrar sends an important notice or needs ownership confirmation, having old or wrong contact info only creates headaches when I need to protect my domain.
+  </p>
+
+  <h3>Protect the recovery email account</h3>
+
+  <p>
+    The email account linked to my domain registrar deserves just as much care as the registrar itself. If someone gets into that mailbox, they can catch password-reset emails and alerts tied to my site.
+  </p>
+
+  <p>
+    So I keep a unique password on that email, turn on multi-factor authentication, keep recovery options solid, and check active sessions and connected devices regularly. Anything I do not recognize or no longer use gets removed right away.
+  </p>
+
+  <p>
+    To me, protecting my website never stops at the site files themselves—it covers every account that can change my setup. My
+    <a href="https://kinglee6mutwiri.co.ke/annual-digital-security-audit.html">
+      Annual Digital Security Audit
+    </a>
+    is another place where I walk through how I check the important accounts in my digital life.
+  </p>
+
+  <h2>2. I Keep My Architecture Simple and Attack Surface Small</h2>
+
+  <p>
+    One of the best choices I have made for my own website is keeping it simple instead of piling on heavy software I do not need. Every database, third-party plugin, extra script, or admin login panel adds another moving part that I have to watch over and keep safe.
+  </p>
+
+  <p>
+    In security, people call this the attack surface—basically all the places an outsider could try to find a weakness or slip through. The more complicated a setup gets, the easier it is to leave a gap open or overlook something that needs attention.
+  </p>
+
+  <p>
+    Adding a feature is not wrong when a website genuinely needs it. For me, the real question is always whether something adds real value to my site or just adds extra maintenance weight I do not want.
+  </p>
+
+  <h3>Why I value lightweight websites</h3>
+
+  <p>
+    I keep my own website lightweight and static-first—built with HTML pages, stylesheets, and images rather than relying on a heavy database just to show my writing to readers.
+  </p>
+
+  <p>
+    Keeping things light cuts out a lot of server-side complexity and makes it much easier for me to see what is in my folders, maintain my pages, and keep clean backups of my work.
+  </p>
+
+  <p>
+    At the same time, I never fool myself into thinking a simple or static site is automatically immune to trouble. A static website can still run into serious problems if a domain account is compromised, repository access is leaked, files are tampered with, an unsafe third-party script is added, or hosting settings are misconfigured.
+  </p>
+
+  <p>
+    Simplicity helps me cut down unnecessary risk, but I still have to actively protect how I build, publish, and manage my website.
+  </p>
+
+  <h3>Remove unnecessary software</h3>
+
+  <p>
+    Whenever a site uses extra plugins, themes, or add-ons—like on platforms such as WordPress—I think it makes total sense to clean out what you no longer use instead of leaving it sitting around.
+  </p>
+
+  <p>
+    Deactivating something does not always wipe out all its files or stop it from becoming outdated later on. Leftover components just sit there taking up space and creating extra things to worry about.
+  </p>
+
+  <p>
+    Before I ever delete or remove anything, though, I check what depends on it, keep a backup handy, and make sure I know what the change does first.
+  </p>
+
+  <h3>Be careful with external services</h3>
+
+  <p>
+    Tools like analytics, ads, and embedded services can be genuinely useful for a website, and I use them thoughtfully on my own site. Still, every external script you add brings in code from outside your own direct control.
+  </p>
+
+  <p>
+    Whenever I add an external script, I check where it comes from, make sure it is from the real provider, and understand what it does on my pages. I stay far away from copying random scripts from untrusted sites just because someone claims it will boost traffic or earnings.
+  </p>
+
+  <p>
+    A good website does not need dozens of extra features. It works best when every piece on it has a clear reason to be there and is looked after properly.
+  </p>
+
+  <h2>3. I Guard My Git Repository and Terminal Workflow</h2>
+
+  <p>
+    I update and push changes to my website straight from the terminal using Git. Working from the command line gives me a clear view of every change I make to my site files, while also keeping me strictly focused on one rule: never commit secrets to a public repository.
+  </p>
+
+  <p>
+    A public repository makes code visible to anyone who looks at it. That can be helpful for tracking or sharing work, but it turns into a real problem if private secrets end up inside it by accident.
+  </p>
+
+  <div class="callout">
+    <strong>A lesson every builder should remember:</strong>
+    Once you push an API key, password, or private token to a public repository, deleting it in a later edit does not automatically wipe it from commit history. Automated scanners can spot and copy exposed secrets fast.
+  </div>
+
+  <h3>Understand what should remain private</h3>
+
+  <p>
+    I keep a clear line in my head between what is meant to be public and what must stay private. HTML files, stylesheets, public images, and published site content are normal parts of a public website project.
+  </p>
+
+  <p>
+    Passwords, private API keys, tokens, private SSH keys, database credentials, and sensitive settings belong nowhere near a public repository.
+  </p>
+
+  <p>
+    Whenever I am building or deploying and need sensitive values, I keep them out of public source files and handle them safely through proper secret or environment settings instead.
+  </p>
+
+  <h3>Review files before publishing</h3>
+
+  <p>
+    One habit I rely on every time I work on my site is checking my folder before I commit anything. When I am editing files, testing changes, or cleaning up syntax in the terminal, it is easy for temporary files, old copies, or personal notes to be sitting nearby.
+  </p>
+
+  <p>
+    I use basic Git commands to check what is actually going to be committed and pushed:
+  </p>
+
+  <ul>
+    <li><code>git status</code> shows changed and untracked files in the folder.</li>
+    <li><code>git diff</code> shows changes that have not been staged yet.</li>
+    <li><code>git diff --cached</code> shows changes that are staged for the commit.</li>
+    <li><code>git log --oneline -5</code> lets me check my most recent commits at a glance.</li>
+  </ul>
+
+  <p>
+    Checking those commands takes only a moment, and it helps me publish intentionally instead of letting stray files slip into my repository.
+  </p>
+
+  <h3>Use SSH keys responsibly</h3>
+
+  <p>
+    Using SSH keys for Git lets me authenticate securely without typing passwords over and over when I push updates.
+  </p>
+
+  <p>
+    A private SSH key has to stay private on my side. I never put it in a public repository, share it with anyone, or leave it lying unprotected on a device others can access.
+  </p>
+
+  <p>
+    If I ever thought a private key was exposed, I would revoke it on the service right away and create a new one—because simply deleting the file on my end is not enough if someone already got a copy.
+  </p>
+
+  <h3>Be cautious when using Termux</h3>
+
+  <p>
+    I use Termux on my phone to work on my website files and push updates, and having a terminal right in my pocket is super convenient. Even so, working from a mobile terminal does not change the basics of staying safe.
+  </p>
+
+  <p>
+    I keep my phone locked properly, stick to trusted sources for packages, read commands before running them, and avoid running unfamiliar scripts that ask for wide access.
+  </p>
+
+  <p>
+    When I run Git commands in Termux, I also pay attention to which folder I am in and which account is active, especially when working across different projects or directories.
+  </p>
+
+  <p>
+    For me, a good workflow is one that helps me catch mistakes before they happen. Taking a few extra seconds to check what I am doing saves a lot of trouble later.
+  </p>
+
+  <!-- IN-ARTICLE ADVERTISEMENT -->
+  <div class="ad-container">
+    <ins class="adsbygoogle"
+      style="display:block; text-align:center;"
+      data-ad-layout="in-article"
+      data-ad-format="fluid"
+      data-ad-client="ca-pub-5799841502846177"
+      data-ad-slot="1217574823"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
+  <h2>4. I Enforce HTTPS Everywhere Without Exception</h2>
+
+  <p>
+    I do not see any good reason to leave a public website open over plain, unencrypted HTTP. HTTPS uses Transport Layer Security (TLS) to protect data moving between a visitor's browser and the website server.
+  </p>
+
+  <p>
+    Without HTTPS, traffic sent over an unencrypted connection can be watched or altered by someone monitoring the network—which is especially risky whenever forms, logins, or private details are involved.
+  </p>
+
+  <p>
+    On my site, I make sure HTTPS is the standard everywhere, with HTTP requests redirecting to HTTPS so visitors land on the secure version of my pages.
+  </p>
+
+  <h3>Understand what HTTPS actually protects</h3>
+
+  <p>
+    HTTPS does important things: it encrypts data in transit, helps detect tampering, and lets the browser verify the site's certificate.
+  </p>
+
+  <p>
+    Still, I never treat HTTPS as a cure-all for every security risk. It will not stop someone from falling for a phishing trick and giving away a password, it will not clean out bad scripts placed inside a site, and it does not guarantee a site operator handles data carefully.
+  </p>
+
+  <p>
+    Even malicious or fake sites can use HTTPS. The secure connection protects the channel to that domain—it does not automatically make the people behind a domain trustworthy.
+  </p>
+
+  <h3>Keep certificates valid</h3>
+
+  <p>
+    A TLS certificate has to stay valid and match the domain properly. If a certificate expires or is set up wrong, visitors see scary browser warnings that push people away from the site.
+  </p>
+
+  <p>
+    Even when certificate renewals are automated through hosting, I still check that everything is working properly rather than assuming it can never run into an issue.
+  </p>
+
+  <h3>Use consistent canonical URLs</h3>
+
+  <p>
+    Canonical URLs tell search engines which address is the main version of a page. Each article should point to its own proper canonical URL rather than dumping every page onto the homepage.
+  </p>
+
+  <p>
+    On this page, for example, the canonical link points to this exact HTTPS article URL, just as each of my other pages points to its own proper URL.
+  </p>
+
+  <p>
+    Keeping internal links consistent on HTTPS also avoids mix-ups between HTTP and HTTPS versions or different variations of an address.
+  </p>
+
+  <div class="callout">
+    <strong>My practical rule:</strong>
+    HTTPS is essential for how I protect my website, and it works best alongside locked-down accounts, careful publishing habits, and solid backups.
+  </div>
+
+  <h2>5. I Defend Against Phishing Aimed at Site Owners</h2>
+
+  <p>
+    No technical setup can protect my site if I let a convincing fake message trick me into handing over my own login. That is why staying alert as a human is a big part of how I protect my website.
+  </p>
+
+  <p>
+    Once a website is out there online, it is normal to get emails claiming a domain is about to expire, an SSL certificate has a problem, a complaint was filed, or an ad or hosting account needs urgent action.
+  </p>
+
+  <p>
+    Some emails are real, while others are built to make you panic and rush onto a fake login page.
+  </p>
+
+  <h3>Recognise the pressure tactics</h3>
+
+  <p>
+    Phishing messages love creating urgency—saying something will shut down right away, a payment failed, or action is needed immediately so you click before thinking clearly.
+  </p>
+
+  <p>
+    Urgency on its own does not prove a message is fake, but it is always my cue to slow down and check things on my own terms.
+  </p>
+
+  <p>
+    I look closely at the actual sender address instead of trusting just the display name, and I stay careful with unexpected attachments, odd payment requests, and links pointing to unfamiliar domains.
+  </p>
+
+  <h3>Visit official dashboards directly</h3>
+
+  <p>
+    When an unexpected urgent email shows up, I do not click the login link inside it. I open a new browser tab, type the official registrar, host, or service address myself, and check my account dashboard directly.
+  </p>
+
+  <p>
+    If there is a genuine problem with my domain or account, I can verify it right inside the real dashboard instead of risking my password on a fake page.
+  </p>
+
+  <h3>Never disclose authentication codes</h3>
+
+  <p>
+    Verification codes exist to prove that I am the one approving access with my own device or authentication method. Handing a code to someone who reaches out unexpectedly can let them take over an account.
+  </p>
+
+  <p>
+    I never share one-time codes, recovery codes, or login details with anyone contacting me out of nowhere claiming to be support.
+  </p>
+
+  <p>
+    If I ever suspected I had typed a password into a suspicious page, I would go straight to the real service, change the password right away, sign out of active sessions, and check my recovery info and connected apps.
+  </p>
+
+  <h3>Think beyond email</h3>
+
+  <p>
+    Phishing does not stop at email—it can show up in texts, social DMs, chat apps, or fake support replies. Whenever an unexpected message asks for access, money, or private info, I treat it with caution.
+  </p>
+
+  <p>
+    My simplest rule is to verify independently before I act, no matter how official or convincing a message looks at first glance.
+  </p>
+
+  <h2>6. I Maintain Clean Local Backups</h2>
+
+  <p>
+    Even when I try to be careful, mistakes happen. I can overwrite a file by accident while editing, make a change that breaks something, or run into a hiccup with a service I depend on.
+  </p>
+
+  <p>
+    Keeping a local copy of my website folder alongside my remote Git repository gives me a reliable way to recover my work if something goes wrong.
+  </p>
+
+  <p>
+    For someone running their own site, backups matter a lot because one small slip—like overwriting an HTML file, losing an image, or breaking a stylesheet—can affect how the site looks and works.
+  </p>
+
+  <h3>Do not rely on only one copy</h3>
+
+  <p>
+    Having my website files on one phone or computer is helpful, but I do not want that to be my only safety net. If a device is lost, broken, or compromised, a single local copy can go with it.
+  </p>
+
+  <p>
+    I prefer keeping separate copies in different places—such as a working folder, a remote repository, and another secure backup that does not depend on the exact same device.
+  </p>
+
+  <p>
+    The main thing is keeping copies independent so one device or account issue does not wipe out everything at once.
+  </p>
+
+  <h3>Back up the files needed to rebuild the website</h3>
+
+  <p>
+    A good backup for me covers more than just a couple of pages—it includes the HTML files, images, stylesheets, scripts, and assets needed to bring the site back properly.
+  </p>
+
+  <p>
+    I also find it helpful to keep notes on how my domain, publishing steps, and project files are set up so rebuilding on another device is much smoother.
+  </p>
+
+  <p>
+    At the same time, I keep passwords, private keys, and tokens separate so a backup never turns into a place where secrets get exposed.
+  </p>
+
+  <h3>Test whether restoration works</h3>
+
+  <p>
+    A backup only counts if I can actually restore from it when needed. Checking a restore every now and then—like putting a copy in a separate folder and making sure pages and images are intact—is way better than just hoping it works in an emergency.
+  </p>
+
+  <p>
+    For bigger setups that involve databases, configs, or extra dependencies, testing restoration should cover those pieces too.
+  </p>
+
+  <h3>Keep a recovery plan</h3>
+
+  <p>
+    I want to know where my backups are kept, when they were last updated, and how I would restore them before a real problem ever hits. Figuring that out ahead of time is much easier than scrambling when something is down.
+  </p>
+
+  <p>
+    To me, backups are not about expecting failure—they are just smart preparation for normal mistakes and unexpected issues.
+  </p>
+
+  <h2>7. I Review Website Files and Configuration Regularly</h2>
+
+  <p>
+    Over time, a website folder can get messy. New pages get added, old files stay behind, test scripts get tried out, and settings shift as the project grows.
+  </p>
+
+  <p>
+    That is why I do occasional checkups on my files and setup. It is not just about tidiness—it helps me know what is actually live and spot anything unnecessary that could create exposure.
+  </p>
+
+  <h3>Check for forgotten files</h3>
+
+  <p>
+    Old test pages, extra backup copies, and temporary files do not belong sitting around in a public website folder where they might expose something I did not intend to publish.
+  </p>
+
+  <p>
+    I look through what is in the folder, see what each file is for, and clean out things that are not needed—always checking first that no page or script relies on them.
+  </p>
+
+  <h3>Check access permissions</h3>
+
+  <p>
+    Permissions control what can read, change, or run files, so I do not want overly loose permissions where they are not needed.
+  </p>
+
+  <p>
+    If a host manages the server side, I follow its recommended permission practices rather than changing permissions randomly based on stray posts online.
+  </p>
+
+  <h3>Review third-party dependencies</h3>
+
+  <p>
+    Any external libraries, plugins, or services I use can fall behind over time if they are not checked. Older versions can carry known weaknesses that newer updates fix.
+  </p>
+
+  <p>
+    I look at what my site actually uses, get updates from trusted sources when needed, and avoid dropping in unknown packages just for a quick shortcut.
+  </p>
+
+  <h2>8. I Take Website Privacy and Visitor Trust Seriously</h2>
+
+  <p>
+    Protecting my website and respecting visitor privacy go together. People who visit my site, reach out, or read my writing should not have their personal info collected carelessly or be put at risk.
+  </p>
+
+  <p>
+    Asking for or holding onto personal details without a clear reason only creates extra responsibility and risk.
+  </p>
+
+  <h3>Collect only necessary information</h3>
+
+  <p>
+    I believe in keeping data collection minimal—only asking for what is actually needed for a clear purpose. On a site like mine, there is no reason to collect heavy personal details just to let readers read.
+  </p>
+
+  <p>
+    When I use analytics, ads, or external tools, I pay attention to how they handle data and make sure visitors are given clear information about it.
+  </p>
+
+  <h3>Keep privacy information understandable</h3>
+
+  <p>
+    A privacy policy should clearly explain what info is collected, how it is used, whether third-party tools are involved, and how someone can get in touch with privacy questions.
+  </p>
+
+  <p>
+    I care much more about a policy matching what my site actually does in plain language than copying stiff legal text that does not fit.
+  </p>
+
+  <p>
+    If you want to read more about how I think about personal information and online exposure, check out my
+    <a href="https://kinglee6mutwiri.co.ke/data-privacy-and-digital-footprint.html">
+      guide to data privacy and digital footprints
+    </a>.
+  </p>
+
+  <h3>Protect visitor trust</h3>
+
+  <p>
+    Trust takes time to earn and can be lost fast if a site uses tricky forms, fake-looking login screens, or unsafe scripts that put visitors in danger.
+  </p>
+
+  <p>
+    Being open about the tools I use and avoiding unnecessary data collection or sharing helps keep that trust intact.
+  </p>
+
+  <h2>9. I Understand That Website Security Is an Ongoing Process</h2>
+
+  <p>
+    One mistake I see people make—and one I have to guard against myself—is treating security like a one-time checklist you finish at launch and forget. A website keeps changing as new pages go up, updates happen, accounts get used, and tools evolve.
+  </p>
+
+  <p>
+    What worked fine months ago might need a fresh look today, so protecting my site is an ongoing habit rather than a one-off task.
+  </p>
+
+  <h3>Review important accounts</h3>
+
+  <p>
+    Every so often, I check the main accounts tied to my site—like my registrar, hosting, repository, and email—to review access, connected apps, and active sessions.
+  </p>
+
+  <h3>Pay attention to unusual changes</h3>
+
+  <p>
+    If I notice unexpected file changes, unfamiliar repository activity, odd account alerts, or DNS changes I do not recognize, I want to look into it.
+  </p>
+
+  <p>
+    Not every strange alert turns out to be an attack, of course, but checking what caused it is always smarter than brushing it off.
+  </p>
+
+  <h3>Know how to respond to a problem</h3>
+
+  <p>
+    If I ever thought an account was compromised, I would use a trusted device to go straight to the official service, change credentials, revoke suspicious sessions, and check my recovery settings.
+  </p>
+
+  <p>
+    If a secret ever got exposed in a public repository, I would revoke or rotate it with the service that issued it—not just delete the visible text and hope for the best.
+  </p>
+
+  <p>
+    And if my site files were ever changed without permission, I would keep helpful details where possible, check the accounts involved, fix the cause, and restore clean files from a good backup.
+  </p>
+
+  <h2>My Personal 6-Step Website Defense Checklist</h2>
+
+  <p>
+    These are the six practical things I look at first when I am protecting my own website or checking how solid a setup is.
+  </p>
+
+  <div class="checklist-card">
+    <h3>Website Security Checklist</h3>
+
+    <ul>
+      <li>
+        <strong>Lock the domain:</strong>
+        Turn on multi-factor authentication, protect recovery options, and keep registrar transfer protection enabled.
+      </li>
+
+      <li>
+        <strong>Enforce HTTPS:</strong>
+        Redirect HTTP to HTTPS, keep certificates valid, and watch renewal status.
+      </li>
+
+      <li>
+        <strong>Audit website files:</strong>
+        Clean out unnecessary files, leftover software, and unused dependencies after checking what they do.
+      </li>
+
+      <li>
+        <strong>Protect credentials:</strong>
+        Keep passwords, private keys, tokens, and sensitive settings out of public code.
+      </li>
+
+      <li>
+        <strong>Verify urgent emails:</strong>
+        Go straight to official dashboards instead of clicking unexpected login links.
+      </li>
+
+      <li>
+        <strong>Keep independent backups:</strong>
+        Keep updated copies somewhere separate and test restoring them regularly.
+      </li>
+    </ul>
+  </div>
+
+  <h2>Final Thoughts: Security Starts With Everyday Decisions</h2>
+
+  <p>
+    I do not have to be a full-time security specialist to take real, practical steps to protect my website. Most of the time, simply knowing how my accounts, files, and publishing steps work goes a long way.
+  </p>
+
+  <p>
+    Working on my site through a terminal workflow has shown me that protecting my website is not a single action on launch day. It comes down to small choices I repeat over time as my site grows.
+  </p>
+
+  <p>
+    A locked-down domain account, a clean repository, HTTPS, protected credentials, and dependable backups all fit together as one practical foundation rather than separate tricks.
+  </p>
+
+  <p>
+    Start with what controls your domain and site, know where your files live, check what you publish, protect the accounts that can make changes, and have a recovery option ready before you need it.
+  </p>
+
+  <p>
+    No single step can promise a website will never face an issue, but cutting out easy exposure and handling problems carefully makes a site much tougher to knock down.
+  </p>
+
+  <p>
+    When I think about how I protect my website, I come back to one simple idea: do not wait for something to go wrong before protecting the parts of your site that matter most.
+  </p>
+
+  <div class="related-box">
+
+    <h3>More From My Website</h3>
+
+    <ul>
+      <li>
+        <a href="https://kinglee6mutwiri.co.ke/annual-digital-security-audit.html">
+          Annual Digital Security Audit: My Step-by-Step Checklist
+        </a>
+      </li>
+
+      <li>
+        <a href="https://kinglee6mutwiri.co.ke/data-privacy-and-digital-footprint.html">
+          How I Audit and Protect My Digital Footprint
+        </a>
+      </li>
+
+      <li>
+        <a href="https://kinglee6mutwiri.co.ke/how-to-build-muscle.html">
+          How to Build Healthy Muscle: A Beginner's Guide
+        </a>
+      </li>
+    </ul>
+
+  </div>
+
+  <!-- AUTHOR INFORMATION -->
+  <section class="author-box" aria-label="About the author">
+
+    <img
+      src="assets/images/perfect_laptop_d1b8df7b.jpg"
+      alt="Eliphas Mutwiri Peter, author of Kinglee Mutwiri"
+      loading="lazy"
+      width="120"
+      height="120">
+
+    <div>
+      <h3>Eliphas Mutwiri Peter</h3>
+
+      <p>
+        I am an independent writer and website builder
+        behind Kinglee Mutwiri. I explore technology,
+        cybersecurity, personal development, money
+        and human behaviour through practical
+        explanations and lessons from my learning
+        and building experiences.
+      </p>
+
+      <p>
+        <a href="https://kinglee6mutwiri.co.ke/about.html">
+          Learn more about me
+        </a>.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <h3>1. What are website defense fundamentals?</h3>
+
+      <p>
+        Website defense fundamentals are the basic
+        security practices used to protect a website,
+        its accounts, files, visitors and infrastructure.
+        They include domain protection, HTTPS,
+        strong authentication, secure credentials,
+        software maintenance and reliable backups.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>2. Can a small personal website be attacked?</h3>
+
+      <p>
+        Yes. Automated scanning tools can discover
+        websites and search for common weaknesses
+        without an attacker specifically selecting
+        the website owner. Small websites should
+        therefore follow appropriate security
+        practices too.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>3. Does HTTPS make a website completely secure?</h3>
+
+      <p>
+        No. HTTPS protects information travelling
+        between a browser and a website server.
+        It does not prevent phishing, compromised
+        accounts, malicious scripts or insecure
+        website configurations.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>4. Why should I protect my Git repository?</h3>
+
+      <p>
+        A public repository can expose private
+        information if passwords, API keys or
+        authentication tokens are committed
+        accidentally. Reviewing changes and
+        keeping secrets outside public source
+        code reduces this risk.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>5. How often should I back up my website?</h3>
+
+      <p>
+        Backups should be made regularly and
+        whenever important changes are introduced.
+        The appropriate frequency depends on
+        how often the website changes and how
+        much information the owner can afford
+        to lose. Restoration should also be
+        tested periodically.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>6. What is the first step in protecting a website?</h3>
+
+      <p>
+        Start by securing the accounts that
+        control your domain and website.
+        Use strong unique passwords, enable
+        multi-factor authentication, protect
+        recovery methods and review who has
+        administrative access.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>7. Can a static website still have security problems?</h3>
+
+      <p>
+        Yes. Static websites reduce some
+        server-side risks, but they can still
+        be affected by compromised domain
+        accounts, stolen repository credentials,
+        malicious source changes, unsafe
+        external scripts and incorrect
+        hosting configurations.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>8. What should I do if I accidentally publish a secret?</h3>
+
+      <p>
+        Revoke or rotate the exposed credential
+        through the service that issued it.
+        Remove it from the repository and
+        review the commit history. Deleting
+        the visible copy alone does not
+        guarantee that the credential is
+        no longer usable.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>9. Why is a domain registrar account important?</h3>
+
+      <p>
+        A registrar account controls important
+        domain registration settings. If an
+        attacker gains access, they may be
+        able to make unauthorised changes
+        or attempt to transfer the domain.
+        Strong authentication and transfer
+        protection help reduce this risk.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>10. Are website backups enough to guarantee recovery?</h3>
+
+      <p>
+        No. Backups are important, but recovery
+        also depends on their integrity,
+        accessibility and completeness.
+        Website owners should keep independent
+        copies and test the restoration
+        process.
+      </p>
+    </div>
+
+  </section>
+
+</article>
+</main>
+
+<footer>
+
+  <div class="footer-inner">
+
+    <div>
+      <strong>Kinglee Mutwiri</strong>
+
+      <p>
+        Independent writing by Eliphas Mutwiri Peter.
+      </p>
+
+      <p>
+        Contact:
+        <a href="mailto:kinglee6mutwiri@gmail.com">
+          kinglee6mutwiri@gmail.com
+        </a>
+      </p>
+
+      <p>
+        © 2026 Kinglee Mutwiri. All rights reserved.
+      </p>
+    </div>
+
+    <div class="footer-links">
+      <a href="https://kinglee6mutwiri.co.ke/about.html">About</a>
+      <a href="https://kinglee6mutwiri.co.ke/privacy-policy.html">Privacy Policy</a>
+      <a href="https://kinglee6mutwiri.co.ke/contact.html">Contact</a>
+      <a href="https://kinglee6mutwiri.co.ke/terms.html">Terms</a>
+      <a href="https://kinglee6mutwiri.co.ke/disclaimer.html">Disclaimer</a>
+    </div>
+
+  </div>
+
+</footer>
+
+</body>
+</html>
+
