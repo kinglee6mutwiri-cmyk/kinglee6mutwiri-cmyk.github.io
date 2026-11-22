@@ -1,0 +1,1662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Website Defense Fundamentals: How I Protect My Site From Attackers | Kinglee Mutwiri</title>
+
+  <meta name="description" content="A practical first-person guide by Eliphas Mutwiri Peter covering domain security, Git repository protection, HTTPS, phishing prevention, website backups and essential website defense fundamentals.">
+
+  <meta name="author" content="Eliphas Mutwiri Peter">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#10243a">
+
+  <link rel="canonical" href="https://kinglee6mutwiri.co.ke/website-defense-fundamentals.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Website Defense Fundamentals: How I Protect My Site From Attackers">
+  <meta property="og:description" content="Practical website security lessons covering domain protection, Git, HTTPS, phishing and backups.">
+  <meta property="og:url" content="https://kinglee6mutwiri.co.ke/website-defense-fundamentals.html">
+  <meta property="og:site_name" content="Kinglee Mutwiri">
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S8VF9QWKET"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-S8VF9QWKET');
+  </script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js?client=ca-pub-5799841502846177"
+    crossorigin="anonymous"></script>
+
+  <style>
+    :root {
+      --bg: #faf9f6;
+      --surface: #ffffff;
+      --text: #1c1917;
+      --muted: #57534e;
+      --accent: #1e3a8a;
+      --accent-hover: #172554;
+      --border: #e7e5e4;
+      --code-bg: #f1f5f9;
+      --callout-bg: #eff6ff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Georgia, serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.85;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: var(--accent-hover);
+    }
+
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 1.2rem 1.5rem;
+    }
+
+    .nav-container {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .brand {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.1rem;
+      font-size: 0.94rem;
+    }
+
+    nav a {
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    main {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4.5rem;
+    }
+
+    .eyebrow {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+    }
+
+    h1 {
+      font-size: clamp(1.95rem, 4vw, 2.7rem);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .meta {
+      font-size: 0.92rem;
+      color: var(--muted);
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      font-size: 1.55rem;
+      margin-top: 2.6rem;
+      margin-bottom: 0.85rem;
+      line-height: 1.3;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      margin-top: 1.75rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      margin-bottom: 1.3rem;
+      font-size: 1.06rem;
+    }
+
+    ul, ol {
+      margin: 0 0 1.45rem 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.65rem;
+      font-size: 1.03rem;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo,
+        Monaco, Consolas, monospace;
+      background: var(--code-bg);
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      overflow-wrap: anywhere;
+    }
+
+    .callout {
+      background: var(--callout-bg);
+      border-left: 4px solid var(--accent);
+      padding: 1.3rem 1.45rem;
+      border-radius: 6px;
+      margin: 2rem 0;
+    }
+
+    .callout strong {
+      display: block;
+      margin-bottom: 0.35rem;
+      color: var(--accent);
+    }
+
+    .ad-container {
+      margin: 2.5rem 0;
+      min-height: 100px;
+      text-align: center;
+    }
+
+    .checklist-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.65rem;
+      margin: 2.5rem 0;
+    }
+
+    .checklist-card h3 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+
+    .related-box {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .related-box h3 {
+      margin-top: 0;
+      margin-bottom: 0.85rem;
+    }
+
+    .author-box {
+      display: flex;
+      align-items: center;
+      gap: 1.3rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .author-box img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .author-box h3 {
+      margin: 0 0 0.4rem;
+    }
+
+    .author-box p {
+      font-size: 0.96rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .faq {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .faq h2 {
+      margin-top: 0;
+    }
+
+    .faq-item {
+      margin-bottom: 1.6rem;
+    }
+
+    .faq-item h3 {
+      margin-top: 0;
+    }
+
+    footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 2.5rem 1.5rem;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .footer-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.1rem;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 1rem;
+      }
+
+      .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        gap: 0.8rem;
+      }
+
+      main {
+        padding: 2rem 1.1rem 3rem;
+      }
+
+      .author-box {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .author-box img {
+        width: 105px;
+        height: 105px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav-container">
+
+    <a href="https://kinglee6mutwiri.co.ke/" class="brand">
+      Kinglee Mutwiri
+    </a>
+
+    <nav aria-label="Primary Navigation">
+      <a href="https://kinglee6mutwiri.co.ke/about.html">About</a>
+      <a href="https://kinglee6mutwiri.co.ke/privacy-policy.html">Privacy Policy</a>
+      <a href="https://kinglee6mutwiri.co.ke/contact.html">Contact</a>
+      <a href="https://kinglee6mutwiri.co.ke/terms.html">Terms</a>
+      <a href="https://kinglee6mutwiri.co.ke/disclaimer.html">Disclaimer</a>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+<article>
+
+  <div class="eyebrow">Cybersecurity &bull; Personal Field Notes</div>
+
+  <h1>Website Defense Fundamentals: How I Protect My Own Site From Attackers</h1>
+
+  <div class="meta">
+    By <strong>Eliphas Mutwiri Peter</strong>
+    &bull; November 2026
+    &bull; Practical Website Security Guide
+  </div>
+
+  <!-- TOP ADVERTISEMENT -->
+  <div class="ad-container">
+    <ins class="adsbygoogle"
+      style="display:block"
+      data-ad-client="ca-pub-5799841502846177"
+      data-ad-slot="6388196362"
+      data-ad-format="auto"
+      data-full-width-responsive="true"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
+  <p>
+    When I first started publishing my writing online, I used to think
+    website security was something only big companies with massive
+    servers had to worry about. My thinking was simple: why would
+    anyone bother attacking a personal publication?
+  </p>
+
+  <p>
+    That mindset changed the moment I looked closely at how the
+    modern internet actually works. Attackers rarely sit at a keyboard
+    picking individual victims one by one. Automated scripts and
+    scanning tools can examine large numbers of domains looking for
+    easy mistakes: an unlocked domain registrar, a leaked API key
+    inside a public repository, an expired SSL certificate, or an
+    outdated plugin nobody bothered to update.
+  </p>
+
+  <p>
+    Over time, as I built, maintained and improved my own site,
+    I developed a straightforward defensive routine. I do not rely
+    on complicated enterprise tools. I focus on closing the obvious
+    doors first. I believe a website owner should understand the
+    basic systems controlling a website before investing in
+    complicated security products.
+  </p>
+
+  <p>
+    This is particularly important for independent publishers,
+    developers and people building their first online projects.
+    A website may look like a collection of pages and images to
+    a visitor, but behind that simple appearance are accounts,
+    domain settings, files, deployment processes and external
+    services that need protection.
+  </p>
+
+  <p>
+    Here is the practical approach I use to think about website
+    protection, together with steps other website owners can
+    apply to their own projects.
+  </p>
+
+  <h2>1. I Treat My Domain Registrar Like a Bank Vault</h2>
+
+  <p>
+    If someone takes control of your hosting server, you may be
+    able to rebuild the website from a backup. If someone hijacks
+    your domain registrar account, however, the situation can be
+    much more serious. Your domain is the address people use to
+    reach your website. Whoever controls its registration and
+    DNS settings may be able to redirect visitors somewhere else.
+  </p>
+
+  <p>
+    Imagine spending years building an online publication,
+    developing its reputation and encouraging readers to return.
+    A person who gains unauthorised control of the domain could
+    redirect that traffic to a fraudulent page. Readers might
+    believe the fake page belongs to you because it uses an
+    address they already recognise.
+  </p>
+
+  <p>
+    That is why I consider the domain registrar one of the most
+    important accounts connected to a website. I would not treat
+    it like an ordinary account used for entertainment or casual
+    browsing. It controls something essential to the identity
+    and availability of the publication.
+  </p>
+
+  <h3>Use strong multi-factor authentication</h3>
+
+  <p>
+    A password alone is not always enough to protect an important
+    account. Passwords can be guessed, reused from another
+    compromised service, stolen through phishing or exposed
+    through insecure devices.
+  </p>
+
+  <p>
+    Multi-factor authentication adds another verification step.
+    Where supported, I prefer an authenticator application or
+    a hardware security key over relying only on SMS messages.
+    Text-message verification can be vulnerable to certain
+    attacks, including SIM swapping.
+  </p>
+
+  <p>
+    The important lesson is to protect both the password and
+    the recovery process. An account with a strong password
+    can still become vulnerable if its recovery email is
+    poorly protected.
+  </p>
+
+  <h3>Keep domain transfer protection enabled</h3>
+
+  <p>
+    Domain registrars commonly provide transfer-lock features
+    that help prevent unauthorised transfers to another registrar.
+    I consider this an important protective setting because
+    an attacker should not be able to move control of a domain
+    simply by gaining access to a weak account.
+  </p>
+
+  <p>
+    I would also recommend reviewing the contact details
+    associated with the domain. Incorrect recovery information
+    can create difficulties when an owner needs to verify
+    ownership or respond to a legitimate registrar request.
+  </p>
+
+  <h3>Protect the recovery email account</h3>
+
+  <p>
+    The email account connected to your registrar deserves
+    the same attention as the registrar itself. If someone
+    compromises that mailbox, they may receive password-reset
+    messages and other sensitive account notifications.
+  </p>
+
+  <p>
+    I therefore recommend using a unique password, enabling
+    multi-factor authentication, reviewing recovery methods
+    and checking active account sessions. Remove devices
+    and application permissions that you no longer recognise.
+  </p>
+
+  <p>
+    This is one reason I believe a website security review
+    should not stop at the website itself. It should include
+    the accounts that control it. My
+    <a href="https://kinglee6mutwiri.co.ke/annual-digital-security-audit.html">
+      Annual Digital Security Audit
+    </a>
+    provides another useful way to think about reviewing
+    important digital accounts.
+  </p>
+
+  <h2>2. I Keep My Architecture Simple and Attack Surface Small</h2>
+
+  <p>
+    One of the best security decisions I made for my website
+    was resisting the urge to install heavy software I did
+    not actually need. Every database, third-party plugin,
+    contact form script and administrative interface introduces
+    another component that may need maintenance and protection.
+  </p>
+
+  <p>
+    Security professionals use the term attack surface to
+    describe the possible points through which an attacker
+    might interact with a system. A larger attack surface
+    can mean more opportunities for configuration errors,
+    vulnerable components and unintended exposure.
+  </p>
+
+  <p>
+    This does not mean every additional feature is dangerous.
+    Websites need functionality to serve their readers.
+    The important distinction is between a necessary feature
+    and one that adds complexity without providing enough
+    value to justify its maintenance requirements.
+  </p>
+
+  <h3>Why I value lightweight websites</h3>
+
+  <p>
+    My website follows a lightweight, static-first approach.
+    Its main content is delivered through HTML pages, stylesheets
+    and image assets. A traditional database is not required
+    simply to display those static pages.
+  </p>
+
+  <p>
+    This reduces the number of server-side components involved
+    in delivering the content. It also makes the website easier
+    to inspect, maintain and back up.
+  </p>
+
+  <p>
+    However, static does not mean invulnerable. A static website
+    can still be affected by a compromised domain account,
+    stolen repository credentials, malicious changes to its
+    source files, unsafe third-party scripts or incorrect
+    hosting configuration.
+  </p>
+
+  <p>
+    I would never describe a simple website as automatically
+    secure. Simplicity reduces certain risks, but the owner
+    must still protect the systems used to publish and maintain it.
+  </p>
+
+  <h3>Remove unnecessary software</h3>
+
+  <p>
+    If you use a content management system such as WordPress,
+    regularly review your installed plugins and themes.
+    Software that is no longer needed should be removed
+    rather than forgotten.
+  </p>
+
+  <p>
+    Deactivating a plugin is not always equivalent to removing
+    its files. Depending on the software, unused components
+    may still remain on the server. They may also become
+    outdated and create unnecessary maintenance obligations.
+  </p>
+
+  <p>
+    Before removing anything, check whether your website
+    depends on it. Keep a backup, understand what the
+    component does and avoid making changes blindly.
+  </p>
+
+  <h3>Be careful with external services</h3>
+
+  <p>
+    Analytics, advertising, embedded content and other
+    external services can add useful functionality. They
+    can also introduce dependencies outside your direct
+    control.
+  </p>
+
+  <p>
+    Before adding an external script, I recommend checking
+    its source, confirming that it belongs to the intended
+    provider and understanding what it does. Avoid copying
+    JavaScript from unknown websites simply because someone
+    claims it will improve your traffic or revenue.
+  </p>
+
+  <p>
+    A useful website is not necessarily the one with the
+    largest number of features. It is the one whose features
+    are necessary, maintained and appropriate for its purpose.
+  </p>
+
+  <h2>3. I Guard My Git Repository and Terminal Workflow</h2>
+
+  <p>
+    I manage and push updates to my website directly from
+    the command line using Git. This workflow gives me
+    visibility over changes to my website files, but it
+    also comes with one golden rule: never commit secrets
+    to a public repository.
+  </p>
+
+  <p>
+    A public repository can expose source code to anyone
+    who visits it. That is useful for transparency and
+    collaboration, but it becomes a serious problem when
+    private information is accidentally included.
+  </p>
+
+  <div class="callout">
+    <strong>A lesson every builder should remember:</strong>
+    Once you push an API key, password or private token to
+    a public repository, deleting it from the latest version
+    does not automatically remove it from the commit history.
+    It may already have been copied by automated scanners.
+  </div>
+
+  <h3>Understand what should remain private</h3>
+
+  <p>
+    Some information is intended to be public. HTML pages,
+    public images, stylesheets and ordinary website content
+    normally belong in a public website repository.
+  </p>
+
+  <p>
+    Other information must remain private. This includes
+    account passwords, private API keys, authentication
+    tokens, private SSH keys, database credentials and
+    sensitive configuration values.
+  </p>
+
+  <p>
+    I recommend separating public website content from
+    private credentials. If a project needs secrets during
+    development or deployment, use an appropriate secret
+    management mechanism rather than writing them directly
+    into public source files.
+  </p>
+
+  <h3>Review files before publishing</h3>
+
+  <p>
+    One habit that makes a difference is checking the
+    working directory before committing changes. A directory
+    may contain temporary scripts, old copies, test files
+    or personal notes that were never intended for public
+    distribution.
+  </p>
+
+  <p>
+    Git provides simple commands that help a developer
+    understand what is about to be published.
+  </p>
+
+  <ul>
+    <li><code>git status</code> displays changed and untracked files.</li>
+    <li><code>git diff</code> shows unstaged changes.</li>
+    <li><code>git diff --cached</code> displays staged changes.</li>
+    <li><code>git log --oneline -5</code> reviews recent commits.</li>
+  </ul>
+
+  <p>
+    I consider these commands useful because they encourage
+    deliberate publishing instead of treating every file
+    in a directory as something that should automatically
+    become public.
+  </p>
+
+  <h3>Use SSH keys responsibly</h3>
+
+  <p>
+    SSH keys provide a cryptographic method of authenticating
+    Git operations when the hosting service supports them.
+    They can reduce dependence on repeatedly entering
+    account passwords during repository operations.
+  </p>
+
+  <p>
+    A private SSH key must remain private. Do not upload it
+    to a public repository, send it to another person or
+    leave it unprotected on a shared device.
+  </p>
+
+  <p>
+    If you believe a private key has been exposed, remove
+    its authorisation from the relevant service and create
+    a replacement. Simply deleting the file from your
+    current directory is not enough if an attacker may
+    already have copied it.
+  </p>
+
+  <h3>Be cautious when using Termux</h3>
+
+  <p>
+    A mobile terminal can be a practical environment for
+    maintaining a lightweight website. However, using a
+    phone does not remove the normal responsibilities
+    of software security.
+  </p>
+
+  <p>
+    Keep your device protected with an appropriate screen
+    lock. Install tools from trusted sources, review
+    commands before executing them and avoid copying
+    unfamiliar scripts that request broad permissions.
+  </p>
+
+  <p>
+    When working with Git, check which account is
+    authenticated and which repository you are modifying.
+    This is particularly important when switching between
+    personal projects or working directories.
+  </p>
+
+  <p>
+    My broader lesson is that a good publishing workflow
+    should make mistakes easier to notice. A few seconds
+    spent reviewing changes can prevent an unnecessary
+    security problem.
+  </p>
+
+  <!-- IN-ARTICLE ADVERTISEMENT -->
+  <div class="ad-container">
+    <ins class="adsbygoogle"
+      style="display:block; text-align:center;"
+      data-ad-layout="in-article"
+      data-ad-format="fluid"
+      data-ad-client="ca-pub-5799841502846177"
+      data-ad-slot="1217574823"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
+  <h2>4. I Enforce HTTPS Everywhere Without Exception</h2>
+
+  <p>
+    There is no good reason to leave a modern public website
+    unnecessarily exposed to unencrypted HTTP connections.
+    HTTPS uses Transport Layer Security, commonly called
+    TLS, to protect information travelling between a
+    visitor's browser and the website server.
+  </p>
+
+  <p>
+    Without HTTPS, information sent through an unencrypted
+    connection may be exposed to interception or modification
+    by someone capable of monitoring that network connection.
+    This is especially concerning when a website handles
+    account details, forms or other private information.
+  </p>
+
+  <p>
+    On my site, HTTPS is the primary version of the website.
+    HTTP requests should redirect to their corresponding
+    HTTPS addresses. This helps visitors reach the intended
+    secure version rather than encountering different
+    versions of the same page.
+  </p>
+
+  <h3>Understand what HTTPS actually protects</h3>
+
+  <p>
+    HTTPS provides several important protections. It helps
+    encrypt information in transit, makes it harder for
+    third parties to modify that information without
+    detection and allows the browser to authenticate
+    the server through its digital certificate.
+  </p>
+
+  <p>
+    These protections are valuable, but HTTPS is not a
+    complete security solution. It cannot prevent someone
+    from stealing a website owner's password through
+    phishing. It cannot automatically remove malicious
+    JavaScript from a website. It also cannot guarantee
+    that a website operator handles personal information
+    responsibly.
+  </p>
+
+  <p>
+    A fraudulent website can also use HTTPS. The secure
+    connection only tells the browser that the connection
+    to that domain is protected; it does not prove that
+    the organisation behind the domain is honest.
+  </p>
+
+  <h3>Keep certificates valid</h3>
+
+  <p>
+    A website's TLS certificate needs to be valid and
+    correctly configured. An expired certificate or a
+    certificate that does not match the requested domain
+    can trigger browser security warnings.
+  </p>
+
+  <p>
+    Website owners should understand how their hosting
+    provider issues and renews certificates. If renewal
+    is automated, it is still sensible to monitor the
+    process rather than assume that it will never fail.
+  </p>
+
+  <h3>Use consistent canonical URLs</h3>
+
+  <p>
+    Canonical URLs help search engines understand which
+    address represents the preferred version of a page.
+    A page should identify its own correct canonical
+    address rather than sending every article to the
+    homepage.
+  </p>
+
+  <p>
+    For example, this article should use its complete
+    HTTPS address as its canonical URL. Other pages
+    should each have their own appropriate canonical
+    address.
+  </p>
+
+  <p>
+    Consistency also matters for internal links. Using
+    the preferred HTTPS version helps reduce confusion
+    between HTTP and HTTPS addresses and between
+    alternative domain versions.
+  </p>
+
+  <div class="callout">
+    <strong>My practical rule:</strong>
+    HTTPS is an essential part of website protection,
+    but it must work alongside secure accounts, careful
+    publishing practices and responsible maintenance.
+  </div>
+
+  <h2>5. I Defend Against Phishing Aimed at Site Owners</h2>
+
+  <p>
+    Technical firewalls cannot stop you from handing
+    over your own account details if you fall for a
+    convincing fraudulent message. This is why I believe
+    human awareness is an important part of website
+    security.
+  </p>
+
+  <p>
+    Once a website becomes visible online, its owner may
+    receive emails claiming that the domain is about
+    to expire, an SSL certificate has failed, a copyright
+    complaint has been filed or an advertising account
+    needs immediate verification.
+  </p>
+
+  <p>
+    Some messages are legitimate. Others are designed
+    to create panic and pressure the recipient into
+    visiting a fraudulent website.
+  </p>
+
+  <h3>Recognise the pressure tactics</h3>
+
+  <p>
+    Phishing messages often try to make people act before
+    thinking. They may claim that an account will be
+    suspended within minutes, that a payment has failed
+    or that important content will be removed unless
+    the recipient signs in immediately.
+  </p>
+
+  <p>
+    The urgency itself is not proof of fraud, but it
+    should encourage you to slow down and verify the
+    message independently.
+  </p>
+
+  <p>
+    Look at the sender's actual email address rather
+    than relying only on the display name. Be cautious
+    about unexpected attachments, unusual requests
+    for payment and links that lead to unfamiliar
+    domains.
+  </p>
+
+  <h3>Visit official dashboards directly</h3>
+
+  <p>
+    Whenever an unexpected urgent message lands in my
+    inbox, I do not automatically click the login link
+    inside it. Instead, I open a fresh browser tab,
+    type the official registrar or hosting address
+    myself and check the account dashboard.
+  </p>
+
+  <p>
+    If a genuine problem exists, it should normally
+    be possible to confirm it through the official
+    account or support channel. This independent
+    verification reduces the risk of entering
+    credentials into a fake login page.
+  </p>
+
+  <h3>Never disclose authentication codes</h3>
+
+  <p>
+    Verification codes are designed to prove that
+    the account holder controls an authorised device
+    or authentication method. Giving a code to someone
+    who contacts you unexpectedly can help that
+    person complete an account takeover.
+  </p>
+
+  <p>
+    Do not share one-time codes, recovery codes or
+    private authentication information with people
+    claiming to be support agents.
+  </p>
+
+  <p>
+    If you suspect that you have entered your password
+    into a fraudulent page, act quickly. Visit the
+    genuine service directly, change the affected
+    password, revoke suspicious sessions and review
+    recovery information and connected applications.
+  </p>
+
+  <h3>Think beyond email</h3>
+
+  <p>
+    Phishing attempts can also arrive through text
+    messages, social media, messaging applications
+    and fake technical support conversations.
+    A website owner should be cautious whenever
+    an unexpected communication asks for account
+    access, payment or confidential information.
+  </p>
+
+  <p>
+    I believe the safest habit is simple: verify
+    independently before taking action. A message
+    that looks professional is not necessarily
+    genuine.
+  </p>
+
+  <h2>6. I Maintain Clean Local Backups</h2>
+
+  <p>
+    Even with strong defenses, accidents happen.
+    You might accidentally overwrite an important
+    file during an edit, make an incorrect change
+    or experience an interruption from an upstream
+    service.
+  </p>
+
+  <p>
+    Because I maintain a local copy of my website
+    directory alongside my remote Git repository,
+    I have another way to recover my work if
+    something goes wrong.
+  </p>
+
+  <p>
+    Backups are particularly important for independent
+    website owners because a small mistake can affect
+    a large part of the publication. A missing image,
+    damaged stylesheet or overwritten HTML page
+    can reduce the quality of the visitor experience.
+  </p>
+
+  <h3>Do not rely on only one copy</h3>
+
+  <p>
+    Keeping a website directory on one phone or
+    computer is useful, but it should not be the
+    only recovery option. If the device is lost,
+    damaged or compromised, the local copy may
+    disappear too.
+  </p>
+
+  <p>
+    A stronger strategy keeps independent copies
+    in separate locations. For example, a website
+    owner may keep a working copy, a remote
+    repository and another secure backup that
+    is not dependent on the same device.
+  </p>
+
+  <p>
+    The important point is independence. If every
+    copy is stored in the same account or on the
+    same device, one incident could affect all
+    of them.
+  </p>
+
+  <h3>Back up the files needed to rebuild the website</h3>
+
+  <p>
+    A useful website backup should include more
+    than the main HTML pages. Images, stylesheets,
+    scripts and other assets may be essential
+    to restoring the original appearance and
+    functionality.
+  </p>
+
+  <p>
+    It is also useful to preserve documentation
+    describing the domain configuration, publishing
+    process and important project structure.
+    That information can make recovery easier
+    when the owner has to rebuild the website
+    on a new device.
+  </p>
+
+  <p>
+    Private credentials must be handled separately.
+    A backup should not become a new place where
+    passwords, tokens or private keys are exposed.
+  </p>
+
+  <h3>Test whether restoration works</h3>
+
+  <p>
+    A backup is only useful if the files can be
+    recovered. I recommend testing restoration
+    periodically instead of assuming that a
+    successful copy operation guarantees a
+    working recovery process.
+  </p>
+
+  <p>
+    A simple test might involve restoring a copy
+    of the website into a separate directory
+    and checking whether the pages and images
+    are present. For larger websites, the test
+    should also consider databases, configuration
+    and any required dependencies.
+  </p>
+
+  <h3>Keep a recovery plan</h3>
+
+  <p>
+    Website owners should know where their backups
+    are stored, when the most recent copy was made
+    and how to restore it. It is much easier to
+    make these decisions before an emergency
+    than after a website has already stopped
+    working.
+  </p>
+
+  <p>
+    I see backups as a form of preparation rather
+    than an admission that security has failed.
+    Responsible website maintenance includes
+    planning for mistakes, service interruptions
+    and unexpected events.
+  </p>
+
+  <h2>7. I Review Website Files and Configuration Regularly</h2>
+
+  <p>
+    A website can become untidy over time. New
+    pages are added, old files remain in the
+    directory, temporary scripts are created
+    and configurations change as the project
+    develops.
+  </p>
+
+  <p>
+    This is why I believe website maintenance
+    should include periodic reviews. The purpose
+    is not simply to make the directory look
+    organised. It is to understand what is
+    published and whether any unnecessary
+    exposure has been introduced.
+  </p>
+
+  <h3>Check for forgotten files</h3>
+
+  <p>
+    Backup copies, old test pages and temporary
+    files should not automatically be placed
+    in a public website directory. Some files
+    may contain information that was never
+    intended for visitors.
+  </p>
+
+  <p>
+    Review the directory and identify files
+    that are genuinely needed. Before deleting
+    anything, make sure it is not used by
+    another page or part of the publishing
+    process.
+  </p>
+
+  <h3>Check access permissions</h3>
+
+  <p>
+    Access permissions determine which users
+    and processes can read, modify or execute
+    files. Website owners should avoid granting
+    broader permissions than a component
+    actually needs.
+  </p>
+
+  <p>
+    If a hosting provider manages the server
+    configuration, follow its documented
+    recommendations rather than applying
+    random permission changes from online
+    tutorials.
+  </p>
+
+  <h3>Review third-party dependencies</h3>
+
+  <p>
+    Libraries, plugins and external services
+    can become outdated. An older component
+    may contain a vulnerability that has
+    already been corrected in a newer version.
+  </p>
+
+  <p>
+    Review the components your website actually
+    uses, check whether updates are available
+    and obtain updates from trusted sources.
+    Do not install an unfamiliar package
+    simply because it promises a quick fix.
+  </p>
+
+  <h2>8. I Take Website Privacy and Visitor Trust Seriously</h2>
+
+  <p>
+    Website security is closely connected to
+    privacy. Visitors may share information
+    through forms, email subscriptions,
+    account registrations or other website
+    features. Website owners should understand
+    what information they collect and why
+    they need it.
+  </p>
+
+  <p>
+    Collecting information without a clear
+    purpose creates unnecessary responsibility.
+    A website should not request sensitive
+    information simply because a form makes
+    it technically possible.
+  </p>
+
+  <h3>Collect only necessary information</h3>
+
+  <p>
+    Data minimisation means limiting collection
+    to information that is relevant and
+    necessary for a defined purpose. For a
+    simple publication, there may be little
+    reason to collect extensive personal
+    details from ordinary readers.
+  </p>
+
+  <p>
+    If a website uses analytics, advertising
+    or other external services, its owner
+    should understand the relevant data
+    practices and provide appropriate privacy
+    information to visitors.
+  </p>
+
+  <h3>Keep privacy information understandable</h3>
+
+  <p>
+    A privacy policy should explain what
+    information is collected, how it is used,
+    whether third-party services are involved
+    and how visitors can contact the website
+    owner about privacy questions.
+  </p>
+
+  <p>
+    The policy should describe the actual
+    website practices rather than copying
+    statements that may not apply. Accuracy
+    matters more than using complicated
+    legal language.
+  </p>
+
+  <p>
+    For another perspective on protecting
+    personal information and understanding
+    online exposure, read my
+    <a href="https://kinglee6mutwiri.co.ke/data-privacy-and-digital-footprint.html">
+      guide to data privacy and digital footprints
+    </a>.
+  </p>
+
+  <h3>Protect visitor trust</h3>
+
+  <p>
+    Trust takes time to build and can be
+    damaged quickly. A website that uses
+    misleading forms, deceptive login pages
+    or unsafe external scripts can put
+    visitors at risk.
+  </p>
+
+  <p>
+    Website owners should be transparent
+    about the services they use and avoid
+    unnecessary collection or disclosure
+    of visitor information.
+  </p>
+
+  <h2>9. I Understand That Website Security Is an Ongoing Process</h2>
+
+  <p>
+    One mistake website owners can make is
+    treating security as a task completed
+    once during the initial launch. A website
+    changes over time. New pages are published,
+    software is updated, accounts are added
+    and external services change their
+    requirements.
+  </p>
+
+  <p>
+    A setup that was appropriate several
+    months ago may need attention today.
+    Security therefore requires regular
+    observation and maintenance.
+  </p>
+
+  <h3>Review important accounts</h3>
+
+  <p>
+    Periodically check the accounts connected
+    to your website, including the registrar,
+    hosting provider, repository and email
+    service. Review authorised users,
+    connected applications and active sessions.
+  </p>
+
+  <h3>Pay attention to unusual changes</h3>
+
+  <p>
+    Unexpected changes to website files,
+    unfamiliar repository activity, unusual
+    account notifications or changes to
+    DNS settings deserve investigation.
+  </p>
+
+  <p>
+    Not every unusual event indicates an
+    attack. However, checking the source
+    of an unexpected change is better
+    than ignoring it.
+  </p>
+
+  <h3>Know how to respond to a problem</h3>
+
+  <p>
+    If you suspect an account has been
+    compromised, use a trusted device
+    to access the official service.
+    Change affected credentials, revoke
+    suspicious sessions and review
+    recovery methods.
+  </p>
+
+  <p>
+    If a secret has been exposed in a
+    public repository, revoke or rotate
+    it at the service that issued it.
+    Removing the visible text alone
+    does not guarantee that the secret
+    is no longer usable.
+  </p>
+
+  <p>
+    If a website has been modified without
+    authorisation, preserve relevant
+    information where possible, investigate
+    the affected accounts and restore
+    trusted files from a clean backup
+    after addressing the cause.
+  </p>
+
+  <h2>My Personal 6-Step Website Defense Checklist</h2>
+
+  <p>
+    These are the six practical areas I
+    would review first when securing a
+    personal website or independent
+    online publication.
+  </p>
+
+  <div class="checklist-card">
+    <h3>Website Security Checklist</h3>
+
+    <ul>
+      <li>
+        <strong>Lock the domain:</strong>
+        Enable multi-factor authentication,
+        protect recovery methods and enable
+        registrar transfer protection.
+      </li>
+
+      <li>
+        <strong>Enforce HTTPS:</strong>
+        Redirect HTTP traffic to HTTPS,
+        verify certificate validity and
+        monitor certificate renewal.
+      </li>
+
+      <li>
+        <strong>Audit website files:</strong>
+        Remove unnecessary files, abandoned
+        software and unused dependencies
+        after checking their purpose.
+      </li>
+
+      <li>
+        <strong>Protect credentials:</strong>
+        Keep passwords, private keys, tokens
+        and sensitive configuration values
+        out of public source code.
+      </li>
+
+      <li>
+        <strong>Verify urgent emails:</strong>
+        Visit official account dashboards
+        directly instead of following
+        unexpected login links.
+      </li>
+
+      <li>
+        <strong>Keep independent backups:</strong>
+        Maintain updated copies in a separate
+        secure location and test restoration
+        periodically.
+      </li>
+    </ul>
+  </div>
+
+  <h2>Final Thoughts: Security Starts With Everyday Decisions</h2>
+
+  <p>
+    You do not need to be a full-time security
+    engineer to take meaningful steps towards
+    protecting a website. Most small website
+    owners can improve their security by
+    understanding the accounts and systems
+    that control their online presence.
+  </p>
+
+  <p>
+    My experience building and maintaining
+    a website through a terminal-based
+    workflow has taught me that security
+    is not one action completed during
+    launch. It is a series of decisions
+    repeated throughout the life of a
+    website.
+  </p>
+
+  <p>
+    A secure domain account, a clean
+    repository, HTTPS, protected credentials
+    and reliable backups are not separate
+    ideas with no relationship. Together,
+    they form a practical foundation for
+    reducing avoidable risks.
+  </p>
+
+  <p>
+    Start with the systems that control
+    your domain and website. Understand
+    where your files are stored, review
+    what you publish, protect the accounts
+    that can change your website and
+    establish a recovery process before
+    you need one.
+  </p>
+
+  <p>
+    No single measure can guarantee that
+    a website will never experience a
+    security incident. However, reducing
+    unnecessary exposure and responding
+    carefully to problems can make a
+    website more resilient.
+  </p>
+
+  <p>
+    When I think about website defense,
+    I return to one simple principle:
+    do not wait for an incident to discover
+    which parts of your website you
+    should have protected.
+  </p>
+
+  <div class="related-box">
+
+    <h3>More From My Website</h3>
+
+    <ul>
+      <li>
+        <a href="https://kinglee6mutwiri.co.ke/annual-digital-security-audit.html">
+          Annual Digital Security Audit: My Step-by-Step Checklist
+        </a>
+      </li>
+
+      <li>
+        <a href="https://kinglee6mutwiri.co.ke/data-privacy-and-digital-footprint.html">
+          How I Audit and Protect My Digital Footprint
+        </a>
+      </li>
+
+      <li>
+        <a href="https://kinglee6mutwiri.co.ke/how-to-build-muscle.html">
+          How to Build Healthy Muscle: A Beginner's Guide
+        </a>
+      </li>
+    </ul>
+
+  </div>
+
+  <!-- AUTHOR INFORMATION -->
+  <section class="author-box" aria-label="About the author">
+
+    <img
+      src="assets/images/perfect_laptop_d1b8df7b.jpg"
+      alt="Eliphas Mutwiri Peter, author of Kinglee Mutwiri"
+      loading="lazy"
+      width="120"
+      height="120">
+
+    <div>
+      <h3>Eliphas Mutwiri Peter</h3>
+
+      <p>
+        I am an independent writer and website builder
+        behind Kinglee Mutwiri. I explore technology,
+        cybersecurity, personal development, money
+        and human behaviour through practical
+        explanations and lessons from my learning
+        and building experiences.
+      </p>
+
+      <p>
+        <a href="https://kinglee6mutwiri.co.ke/about.html">
+          Learn more about me
+        </a>.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <h3>1. What are website defense fundamentals?</h3>
+
+      <p>
+        Website defense fundamentals are the basic
+        security practices used to protect a website,
+        its accounts, files, visitors and infrastructure.
+        They include domain protection, HTTPS,
+        strong authentication, secure credentials,
+        software maintenance and reliable backups.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>2. Can a small personal website be attacked?</h3>
+
+      <p>
+        Yes. Automated scanning tools can discover
+        websites and search for common weaknesses
+        without an attacker specifically selecting
+        the website owner. Small websites should
+        therefore follow appropriate security
+        practices too.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>3. Does HTTPS make a website completely secure?</h3>
+
+      <p>
+        No. HTTPS protects information travelling
+        between a browser and a website server.
+        It does not prevent phishing, compromised
+        accounts, malicious scripts or insecure
+        website configurations.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>4. Why should I protect my Git repository?</h3>
+
+      <p>
+        A public repository can expose private
+        information if passwords, API keys or
+        authentication tokens are committed
+        accidentally. Reviewing changes and
+        keeping secrets outside public source
+        code reduces this risk.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>5. How often should I back up my website?</h3>
+
+      <p>
+        Backups should be made regularly and
+        whenever important changes are introduced.
+        The appropriate frequency depends on
+        how often the website changes and how
+        much information the owner can afford
+        to lose. Restoration should also be
+        tested periodically.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>6. What is the first step in protecting a website?</h3>
+
+      <p>
+        Start by securing the accounts that
+        control your domain and website.
+        Use strong unique passwords, enable
+        multi-factor authentication, protect
+        recovery methods and review who has
+        administrative access.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>7. Can a static website still have security problems?</h3>
+
+      <p>
+        Yes. Static websites reduce some
+        server-side risks, but they can still
+        be affected by compromised domain
+        accounts, stolen repository credentials,
+        malicious source changes, unsafe
+        external scripts and incorrect
+        hosting configurations.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>8. What should I do if I accidentally publish a secret?</h3>
+
+      <p>
+        Revoke or rotate the exposed credential
+        through the service that issued it.
+        Remove it from the repository and
+        review the commit history. Deleting
+        the visible copy alone does not
+        guarantee that the credential is
+        no longer usable.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>9. Why is a domain registrar account important?</h3>
+
+      <p>
+        A registrar account controls important
+        domain registration settings. If an
+        attacker gains access, they may be
+        able to make unauthorised changes
+        or attempt to transfer the domain.
+        Strong authentication and transfer
+        protection help reduce this risk.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>10. Are website backups enough to guarantee recovery?</h3>
+
+      <p>
+        No. Backups are important, but recovery
+        also depends on their integrity,
+        accessibility and completeness.
+        Website owners should keep independent
+        copies and test the restoration
+        process.
+      </p>
+    </div>
+
+  </section>
+
+</article>
+</main>
+
+<footer>
+
+  <div class="footer-inner">
+
+    <div>
+      <strong>Kinglee Mutwiri</strong>
+
+      <p>
+        Independent writing by Eliphas Mutwiri Peter.
+      </p>
+
+      <p>
+        Contact:
+        <a href="mailto:kinglee6mutwiri@gmail.com">
+          kinglee6mutwiri@gmail.com
+        </a>
+      </p>
+
+      <p>
+        &copy; 2026 Kinglee Mutwiri. All rights reserved.
+      </p>
+    </div>
+
+    <div class="footer-links">
+      <a href="https://kinglee6mutwiri.co.ke/about.html">About</a>
+      <a href="https://kinglee6mutwiri.co.ke/privacy-policy.html">Privacy Policy</a>
+      <a href="https://kinglee6mutwiri.co.ke/contact.html">Contact</a>
+      <a href="https://kinglee6mutwiri.co.ke/terms.html">Terms</a>
+      <a href="https://kinglee6mutwiri.co.ke/disclaimer.html">Disclaimer</a>
+    </div>
+
+  </div>
+
+</footer>
+
+</body>
+</html>
+
